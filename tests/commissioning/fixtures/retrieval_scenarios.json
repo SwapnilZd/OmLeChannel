@@ -1,0 +1,95 @@
+{
+  "sufficient": {
+    "candidates": [
+      {
+        "rlo_id": "rlo-change-resistance-signals",
+        "rlo_version": "1.0.0",
+        "title": "Recognizing Resistance Signals",
+        "topic": "Stakeholder resistance",
+        "domain": "Organizational Change Management",
+        "level": "introductory",
+        "estimated_duration_minutes": 12,
+        "governance_status": "approved",
+        "vector_scores": {"facet-1": 0.84},
+        "reciprocal_rank_fusion_score": 0.03,
+        "facet_boost_score": 0.2,
+        "final_score": 0.91,
+        "relevance_band": "strong",
+        "match_reasons": ["Directly teaches resistance signals"],
+        "source_query_ids": ["facet-1"],
+        "storage_uri": "minio://rlos/rlo-change-resistance-signals/1.0.0.json",
+        "index_revision": "rlo-index-v2"
+      }
+    ],
+    "gap_report": {
+      "sufficient": true,
+      "covered_subject_facets": ["recognizing stakeholder resistance"],
+      "covered_goals": ["Recognize common signals of stakeholder resistance"],
+      "gaps": [],
+      "retrieval_policy_version": "retrieval-v1",
+      "explanation": "Approved RLO content directly covers the requested subject."
+    }
+  },
+  "partial": {
+    "candidates": [
+      {
+        "rlo_id": "rlo-change-resistance-signals",
+        "rlo_version": "1.0.0",
+        "title": "Recognizing Resistance Signals",
+        "topic": "Stakeholder resistance",
+        "domain": "Organizational Change Management",
+        "level": "introductory",
+        "estimated_duration_minutes": 12,
+        "governance_status": "approved",
+        "vector_scores": {"facet-1": 0.82},
+        "reciprocal_rank_fusion_score": 0.03,
+        "facet_boost_score": 0.1,
+        "final_score": 0.86,
+        "relevance_band": "strong",
+        "match_reasons": ["Covers resistance recognition but not intervention selection"],
+        "source_query_ids": ["facet-1"],
+        "storage_uri": "minio://rlos/rlo-change-resistance-signals/1.0.0.json",
+        "index_revision": "rlo-index-v2"
+      }
+    ],
+    "gap_report": {
+      "sufficient": false,
+      "covered_subject_facets": ["recognizing stakeholder resistance"],
+      "covered_goals": ["Recognize common signals of stakeholder resistance"],
+      "gaps": [
+        {
+          "subject": "selecting interventions",
+          "desired_outcome": "Select a proportionate intervention for the diagnosed barrier",
+          "severity": "blocking",
+          "explanation": "No approved RLO teaches intervention selection.",
+          "nearest_candidate_ids": ["rlo-change-resistance-signals"],
+          "filters_responsible": [],
+          "recommendation": "Add an approved intervention-selection RLO before assembly."
+        }
+      ],
+      "retrieval_policy_version": "retrieval-v1",
+      "explanation": "The catalog covers recognition but not the required application outcome."
+    }
+  },
+  "insufficient": {
+    "candidates": [],
+    "gap_report": {
+      "sufficient": false,
+      "covered_subject_facets": [],
+      "covered_goals": [],
+      "gaps": [
+        {
+          "subject": "quantum supply-chain governance",
+          "desired_outcome": null,
+          "severity": "blocking",
+          "explanation": "No approved RLO is an acceptable semantic match.",
+          "nearest_candidate_ids": [],
+          "filters_responsible": [],
+          "recommendation": "Add approved RLOs for this subject before creating a blueprint."
+        }
+      ],
+      "retrieval_policy_version": "retrieval-v1",
+      "explanation": "The catalog does not contain sufficient approved RLO content for this request."
+    }
+  }
+}

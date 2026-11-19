@@ -1,0 +1,24 @@
+{% set q = s.questions[0] if s.questions else s %}
+<section class="slide-kc" data-screen-id="{{ s.screen_id }}">
+  <span class="kc-label">Knowledge Check</span>
+  <div class="kc-question" data-question-id="{{ q.question_id }}">
+    <p class="kc-stem">{{ q.stem }}</p>
+    {% set input_type = 'checkbox' if q.question_type == 'multiple_choice_multi' else 'radio' %}
+    {% if q.question_type == 'multiple_choice_multi' %}<p class="kc-hint">Select all that apply.</p>{% endif %}
+    <form class="kc-form" onsubmit="checkAnswer(event,this)">
+      <div class="kc-options">
+        {% for o in q.options %}
+        <label class="opt-label">
+          <input type="{{ input_type }}" name="q_{{ q.question_id }}" value="{{ o.id }}" data-correct="{{ 'true' if o.correct else 'false' }}" data-feedback="{{ o.feedback }}" />
+          <span class="option-text">{{ o.text }}</span>
+        </label>
+        {% endfor %}
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+      <div class="kc-feedback" aria-live="polite" tabindex="-1" hidden>
+        <div class="kc-feedback-outcome"></div>
+        <div class="kc-feedback-detail"></div>
+      </div>
+    </form>
+  </div>
+</section>

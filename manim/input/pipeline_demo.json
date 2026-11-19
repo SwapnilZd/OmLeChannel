@@ -1,0 +1,178 @@
+{
+  "id": "rlo-ai-pipeline-demo-001",
+  "version": "1.0",
+  "date": "2026-07-10",
+  "topic": "How the AI E-Learning Generation Pipeline Works",
+  "domain": "Platform Overview",
+  "level": "introductory",
+  "audience": ["stakeholders", "content authors", "technical reviewers"],
+  "prerequisites": [],
+  "related_rlos": [],
+  "source": {
+    "title": "Omnichannel Learning — Internal Platform Documentation",
+    "reference": "feature/manim — AI content generation pipeline"
+  },
+  "terminal_objective": "Describe how the pipeline converts a structured content specification into a rendered e-learning video, and identify the role of templates, the LLM, and the renderer at each stage.",
+  "performance_context": "A content author or stakeholder evaluating whether to adopt this pipeline needs to understand what they are responsible for authoring, what the system handles automatically, and where the LLM fits relative to the rendering infrastructure.",
+  "learning_objectives": [
+    {
+      "id": "lo-01",
+      "statement": "Identify the four stages of the AI content generation pipeline.",
+      "bloom_level": "remember"
+    },
+    {
+      "id": "lo-02",
+      "statement": "Explain the distinction between what the author writes, what the LLM generates, and what the renderer produces.",
+      "bloom_level": "understand"
+    },
+    {
+      "id": "lo-03",
+      "statement": "Recognise that templates are stable, reusable infrastructure and the LLM only fills their narrow data schema.",
+      "bloom_level": "understand"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Template library",
+      "definition": "A set of reusable scene patterns — such as vertical stacks, two-column comparisons, hub-and-spoke diagrams, and scenario walkthroughs — stored as Python code. Each template owns its own layout, animation logic, and data schema.",
+      "elaboration": "Templates are built once and reused across every course the pipeline generates. The author never touches them directly. When a new visual type is needed, a template is added to the library and immediately available to all future content. This separates visual infrastructure from content authorship.",
+      "misconceptions": [
+        {
+          "misconception": "The AI generates the visual templates each time a course is produced.",
+          "correction": "Templates are written once by engineers and stored in the codebase. The AI only fills in the content that goes inside each template — it does not design or rewrite the template itself."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Content specification",
+      "definition": "A structured JSON document — the Reusable Learning Object (RLO) — that describes the topic, learning objectives, core concepts, worked cases, and assessment items for a lesson. This is the author's sole deliverable.",
+      "elaboration": "The content spec is the system of record. It contains what needs to be taught, not how it will be presented. The pipeline reads this document and decides how to break it into scenes, which templates to use, and what narration to write. Authors who can write clear, structured content can produce lessons without any authoring tool expertise.",
+      "misconceptions": [
+        {
+          "misconception": "The author needs to specify which template to use for each slide.",
+          "correction": "The scene planner — powered by an LLM — reads the content spec and selects the most appropriate template for each concept automatically. The author only writes the content."
+        }
+      ]
+    },
+    {
+      "id": "c-03",
+      "name": "LLM scene planning and template fill",
+      "definition": "The language model performs two jobs: it reads the content spec and plans which scenes to create and in what order; then, for each scene, it fills the template's narrow JSON schema with content-specific data.",
+      "elaboration": "The LLM is constrained at both stages. Scene planning follows strict rules about scene count, narration length, and visual type selection. Template fill is validated against a fixed schema before being passed to the renderer — if the output does not match the schema, it is retried or falls back to a free-form renderer. The LLM accelerates generation but does not control the structure or layout of the output.",
+      "misconceptions": [
+        {
+          "misconception": "The LLM writes the Manim animation code directly.",
+          "correction": "The LLM fills a small JSON data object for each template. The template's Python render function converts that data into Manim code. The LLM never touches the animation logic."
+        }
+      ]
+    },
+    {
+      "id": "c-04",
+      "name": "Automated render and stitch",
+      "definition": "Manim renders each scene to an MP4 with TTS narration embedded. ffmpeg then concatenates all scene MP4s into a single final lesson video.",
+      "elaboration": "Rendering is fully automated from the moment the Manim code is generated. TTS narration is synthesised at render time and synchronised to scene animations by Manim Voiceover. The only manual step the pipeline requires is providing the initial content specification — everything from scene planning to final video is handled without human intervention.",
+      "misconceptions": [
+        {
+          "misconception": "A human narrator needs to record audio separately and sync it to the video.",
+          "correction": "Narration is generated by a TTS service at render time and automatically synchronised to each animation by Manim Voiceover. No manual recording or syncing is required."
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-01",
+      "title": "New training demand arrives",
+      "setup": "A compliance team needs a short e-learning module on a new policy by end of week. No slide deck exists. No recorded audio exists.",
+      "decision_point": "What does the content author need to produce to get a rendered lesson video?",
+      "correct_action": "The author writes a structured content specification — the RLO JSON — describing the policy topic, learning objectives, key concepts, and any worked examples. The pipeline reads the spec, plans scenes, fills templates, renders Manim animations with TTS narration, and stitches the final video automatically.",
+      "incorrect_actions": [
+        {
+          "action": "Open an authoring tool, manually build each slide, record a voiceover, and export an LMS package.",
+          "why_wrong": "This is the manual approach the pipeline replaces. With the automated pipeline, the author only writes structured content — the visual design, animation, narration, and packaging are handled by the system."
+        },
+        {
+          "action": "Ask the LLM to write the full lesson script, then paste it into a slide tool.",
+          "why_wrong": "Using an LLM to draft a script and then manually building slides misses the pipeline's value. The pipeline takes structured content and produces a rendered, narrated video end-to-end — no manual slide building is involved."
+        }
+      ],
+      "concepts_illustrated": ["c-01", "c-02", "c-03", "c-04"]
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A new course topic is needed. What does the content author write to trigger the pipeline?",
+      "type": "multiple_choice_single",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Manim Python animation file for each scene.",
+          "correct": false,
+          "feedback": "Manim code is generated automatically by the template render functions. The author never writes animation code directly.",
+          "misconception_targeted": "The LLM writes the Manim animation code directly."
+        },
+        {
+          "id": "B",
+          "text": "A structured content specification — the RLO JSON — describing the topic, objectives, concepts, and cases.",
+          "correct": true,
+          "feedback": "Correct. The content spec is the author's only deliverable. The pipeline handles scene planning, template fill, rendering, and stitching automatically.",
+          "misconception_targeted": null
+        },
+        {
+          "id": "C",
+          "text": "A prompt describing what the lesson should look like visually.",
+          "correct": false,
+          "feedback": "Visual decisions are made by the template system and scene planner, not by the author. The author provides structured instructional content, not visual direction.",
+          "misconception_targeted": "The author needs to specify which template to use for each slide."
+        },
+        {
+          "id": "D",
+          "text": "A new scene template written in Python.",
+          "correct": false,
+          "feedback": "Templates are reusable infrastructure built once by engineers. A content author uses the existing template library; they do not need to write or modify templates.",
+          "misconception_targeted": "The AI generates the visual templates each time a course is produced."
+        }
+      ],
+      "concepts_assessed": ["c-01", "c-02"]
+    },
+    {
+      "id": "q-02",
+      "stem": "What is the LLM's role when the pipeline processes a scene?",
+      "type": "multiple_choice_single",
+      "options": [
+        {
+          "id": "A",
+          "text": "It designs the visual layout for the scene.",
+          "correct": false,
+          "feedback": "Visual layout is owned by the template, which is pre-built Python code. The LLM never modifies or designs layout.",
+          "misconception_targeted": "The AI generates the visual templates each time a course is produced."
+        },
+        {
+          "id": "B",
+          "text": "It writes the Manim animation code that gets rendered.",
+          "correct": false,
+          "feedback": "The template's Python render function generates Manim code. The LLM fills a small JSON schema; the template converts that into animation code.",
+          "misconception_targeted": "The LLM writes the Manim animation code directly."
+        },
+        {
+          "id": "C",
+          "text": "It fills the template's narrow JSON schema with content-specific data, which the template then renders into Manim code.",
+          "correct": true,
+          "feedback": "Correct. The LLM is constrained to a small validated schema per template. It supplies content — labels, narration, items — and the template's render function handles all animation logic.",
+          "misconception_targeted": null
+        },
+        {
+          "id": "D",
+          "text": "It synthesises the TTS narration audio for the scene.",
+          "correct": false,
+          "feedback": "TTS narration is generated by a speech service (such as OpenAI TTS or Azure) called at render time by Manim Voiceover. The LLM writes the narration text, but audio synthesis is a separate step.",
+          "misconception_targeted": null
+        }
+      ],
+      "concepts_assessed": ["c-01", "c-03"]
+    }
+  ]
+}

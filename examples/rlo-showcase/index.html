@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A simple, presentation-ready Reusable Learning Object viewer." />
+    <title>RLO Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Return to the beginning">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>RLO showcase</span>
+        </a>
+        <label class="file-control">
+          <input id="rlo-file" type="file" accept="application/json,.json" />
+          <span>Open RLO</span>
+        </label>
+      </header>
+
+      <section id="viewer" class="viewer" aria-live="polite"></section>
+
+      <footer class="controls">
+        <button id="previous" class="button button-secondary" type="button">Back</button>
+        <div class="progress-group">
+          <span id="step-label" class="step-label"></span>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progress-bar" class="progress-bar"></span>
+          </div>
+        </div>
+        <button id="next" class="button button-primary" type="button">Next</button>
+      </footer>
+    </main>
+
+    <script src="sample-rlo.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

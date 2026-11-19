@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commission Learning</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --bg:#f5f6f8; --surface:#fff; --border:#dde1e7; --ink:#1a1d23;
+      --muted:#6b7280; --accent:#005587; --accent-bg:#e8f0f6;
+      --success:#1a7a4a; --success-bg:#edfaf3; --error:#b91c1c;
+      --error-bg:#fef2f2; --warning:#92400e; --warning-bg:#fffbeb;
+      --font:system-ui,-apple-system,sans-serif; --mono:ui-monospace,"Cascadia Code",monospace;
+    }
+    @media (prefers-color-scheme:dark) { :root {
+      --bg:#0f1117; --surface:#1c1f28; --border:#2e3340; --ink:#e8eaf0;
+      --muted:#8b93a6; --accent:#4a9fd4; --accent-bg:#1a2535;
+      --success:#34d399; --success-bg:#052e1a; --error:#f87171;
+      --error-bg:#2a0a0a; --warning:#fbbf24; --warning-bg:#1f1500;
+    }}
+    body { margin:0; padding:2rem 1rem; min-height:100vh; font-family:var(--font); background:var(--bg); color:var(--ink); }
+    .layout { max-width:1000px; margin:auto; display:grid; gap:1.5rem; }
+    header { display:flex; align-items:center; gap:1rem; }
+    h1 { margin:0; font-size:1.5rem; letter-spacing:-.02em; }
+    .chip,.badge { font-size:.72rem; font-weight:700; padding:3px 8px; border-radius:4px; background:var(--accent-bg); color:var(--accent); }
+    nav { margin-left:auto; display:flex; gap:.5rem; }
+    nav a { color:var(--muted); text-decoration:none; font-size:.85rem; font-weight:600; padding:.4rem .7rem; border-radius:5px; }
+    nav a:hover,nav a.active { color:var(--accent); background:var(--accent-bg); }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:1.5rem; }
+    .card-title { margin:0 0 1.15rem; font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+    .section-note { color:var(--muted); font-size:.86rem; margin:-.65rem 0 1.2rem; line-height:1.5; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+    .wide { grid-column:1/-1; }
+    .three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    label { display:block; font-size:.78rem; font-weight:650; color:var(--muted); margin-bottom:.35rem; }
+    input,textarea,select { width:100%; border:1px solid var(--border); border-radius:6px; padding:.65rem .75rem; color:var(--ink); background:var(--bg); font:inherit; }
+    textarea { min-height:95px; resize:vertical; }
+    .levels { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .level-option { display:flex; align-items:center; gap:.35rem; border:1px solid var(--border); border-radius:5px; padding:.48rem .65rem; color:var(--ink); }
+    .level-option input { width:auto; }
+    .actions { display:flex; align-items:center; gap:.75rem; margin-top:1.2rem; }
+    button { border:1px solid transparent; border-radius:6px; padding:.6rem 1.1rem; font-weight:700; cursor:pointer; }
+    button:disabled { opacity:.45; cursor:not-allowed; }
+    .primary { background:var(--accent); color:#fff; }
+    .secondary { background:transparent; border-color:var(--border); color:var(--ink); }
+    .status { color:var(--muted); font-size:.82rem; }
+    .notice { border-radius:6px; padding:.85rem 1rem; font-size:.88rem; line-height:1.45; }
+    .notice.error { color:var(--error); background:var(--error-bg); }
+    .notice.warning { color:var(--warning); background:var(--warning-bg); }
+    .notice.success { color:var(--success); background:var(--success-bg); }
+    .chips { display:flex; flex-wrap:wrap; gap:.45rem; }
+    .result-section { display:grid; gap:.8rem; margin-top:1.25rem; }
+    .gap,.candidate { border:1px solid var(--border); border-left-width:4px; border-radius:6px; padding:.85rem 1rem; }
+    .gap.blocking { border-left-color:var(--error); background:var(--error-bg); }
+    .gap.warning { border-left-color:var(--warning); background:var(--warning-bg); }
+    .candidate { border-left-color:var(--accent); }
+    .candidate-head { display:flex; gap:.7rem; align-items:center; }
+    .candidate-head strong { flex:1; }
+    .candidate-meta,.small { color:var(--muted); font-size:.78rem; margin-top:.4rem; }
+    .score { font-family:var(--mono); color:var(--accent); font-size:.8rem; }
+    .choice { width:115px; padding:.35rem .45rem; }
+    .curation { border:1px solid var(--accent); background:var(--accent-bg); border-radius:6px; padding:1rem; }
+    .curation strong { display:block; margin-bottom:.3rem; }
+    .rationale { color:var(--muted); font-size:.8rem; line-height:1.45; margin-top:.5rem; }
+    details { margin-top:1rem; color:var(--muted); font-size:.82rem; }
+    pre { overflow:auto; max-height:350px; padding:1rem; background:var(--bg); border-radius:6px; font:12px/1.5 var(--mono); color:var(--ink); }
+    #preview-card,#confirm-card,#job-card { display:none; }
+    .job-header { display:flex; align-items:center; gap:.7rem; flex-wrap:wrap; }
+    .job-header .status { margin-left:auto; }
+    .blueprint-outcomes { margin:.6rem 0 0; padding-left:1.2rem; line-height:1.55; }
+    .sequence { display:grid; gap:.65rem; margin-top:1rem; }
+    .sequence-item { display:grid; grid-template-columns:2rem 1fr; gap:.7rem; align-items:start; border:1px solid var(--border); border-radius:6px; padding:.8rem; }
+    .sequence-order { display:grid; place-items:center; width:2rem; height:2rem; border-radius:50%; background:var(--accent-bg); color:var(--accent); font-weight:800; }
+    @media(max-width:720px) { .grid,.three { grid-template-columns:1fr; } header { flex-wrap:wrap; } nav { width:100%; margin-left:0; } }
+  </style>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="app-header">
+      <a class="brand-lockup" href="/commission" aria-label="Omnichannel Learning home">
+        <img class="brand-logo" src="/static/brand/deloitte-logo-web.png" alt="Deloitte">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="product-name">Omnichannel Learning</span>
+      </a>
+      <nav aria-label="Primary"><a href="/source-upload">Source Intake</a><a href="/objective-jobs">Objective Jobs</a><a href="/rlo-drafts">RLO Review</a><a href="/">RLO Registry</a><a href="/commission" class="active">Commission Learning</a><a href="/jobs">Jobs</a><a href="/logout">Log out</a></nav>
+      <div class="page-heading"><h1>Commission Learning</h1></div>
+  </header>
+  <main class="layout">
+
+    <section class="card">
+      <h2 class="card-title">1. Describe the learning need</h2>
+      <p class="section-note">Describe what you want to learn or be able to do. The service interprets the request, searches approved RLOs, and shows its proposed coverage before anything can be confirmed.</p>
+      <form id="request-form">
+        <div class="grid">
+          <div class="wide"><label for="request-text">What would you like to learn?</label><textarea id="request-text" required>I want to recognize stakeholder resistance during organizational change and choose an appropriate response. Use financial-services examples where possible.</textarea></div>
+          <div><label>Deloitte levels</label><div class="levels" id="levels">
+            <label class="level-option"><input type="checkbox" value="25">25</label><label class="level-option"><input type="checkbox" value="35">35</label>
+            <label class="level-option"><input type="checkbox" value="45" checked>45</label><label class="level-option"><input type="checkbox" value="55">55</label>
+            <label class="level-option"><input type="checkbox" value="65">65</label>
+          </div></div>
+          <div class="grid wide">
+            <div><label for="current-proficiency">Current proficiency</label><select id="current-proficiency"><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+            <div><label for="target-proficiency">Target proficiency</label><select id="target-proficiency"><option>beginner</option><option selected>intermediate</option><option>advanced</option></select></div>
+          </div>
+          <div class="wide"><label for="industries">Industries, comma separated</label><input id="industries" value="Financial Services"></div>
+        </div>
+        <div class="actions"><button class="primary" id="preview-btn" type="submit">Find suitable RLOs</button><span class="status" id="request-status"></span></div>
+      </form>
+    </section>
+
+    <section class="card" id="preview-card">
+      <h2 class="card-title">2. Review interpretation and catalog coverage</h2>
+      <div id="preview-content"></div>
+      <details><summary>Preview JSON</summary><pre id="preview-json"></pre></details>
+    </section>
+
+    <section class="card" id="confirm-card">
+      <h2 class="card-title">3. Confirm the blueprint input</h2>
+      <p class="section-note">Confirmation locks the exact RLO versions. Blueprint assembly is the next pipeline stage.</p>
+      <div class="grid">
+        <div class="wide"><label for="course-goal">Confirmed course goal</label><textarea id="course-goal"></textarea></div>
+        <div class="wide"><label for="notes">Optional notes</label><input id="notes"></div>
+      </div>
+      <div class="actions"><button class="primary" id="confirm-btn">Confirm exact RLO set</button><span class="status" id="confirm-status"></span></div>
+    </section>
+
+    <section class="card" id="job-card" aria-live="polite">
+      <div class="job-header"><h2 class="card-title" style="margin:0">4. Course blueprint</h2><span class="badge" id="job-state">queued</span><span class="status" id="job-status"></span></div>
+      <div id="blueprint-content" class="result-section"></div>
+      <details id="blueprint-details" style="display:none"><summary>Blueprint JSON</summary><pre id="blueprint-json"></pre></details>
+      <details id="report-details" style="display:none"><summary>Assembly report JSON</summary><pre id="report-json"></pre></details>
+    </section>
+  </main>
+  <script>
+    const commissioningBase = '/commissioning-api';
+    async function commissioningFetch(path, options={}) {
+      const response=await fetch(`${commissioningBase}${path}`, {...options, credentials:'include'});
+      if(response.status===401){ location.href='/login'; throw new Error('Your session has expired.'); }
+      return response;
+    }
+    const form = document.getElementById('request-form');
+    const previewBtn = document.getElementById('preview-btn');
+    const requestStatus = document.getElementById('request-status');
+    const previewCard = document.getElementById('preview-card');
+    const previewContent = document.getElementById('preview-content');
+    const previewJson = document.getElementById('preview-json');
+    const confirmCard = document.getElementById('confirm-card');
+    const confirmBtn = document.getElementById('confirm-btn');
+    const confirmStatus = document.getElementById('confirm-status');
+    const jobCard = document.getElementById('job-card');
+    const jobState = document.getElementById('job-state');
+    const jobStatus = document.getElementById('job-status');
+    const blueprintContent = document.getElementById('blueprint-content');
+    const requestToken = globalThis.crypto?.randomUUID?.()
+      || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const requestId = `ui-${requestToken}`;
+    let preview = null;
+
+    const splitValues = id => document.getElementById(id).value.split(',').map(v => v.trim()).filter(Boolean);
+    const esc = value => String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+    function buildRequest() {
+      return {
+        request_id: requestId,
+        request_text: document.getElementById('request-text').value.trim(),
+        audience: {
+          roles: [],
+          deloitte_levels: [...document.querySelectorAll('#levels input:checked')].map(input => Number(input.value)),
+          current_proficiency: document.getElementById('current-proficiency').value,
+          target_proficiency: document.getElementById('target-proficiency').value,
+          industries: splitValues('industries'), service_lines: [],
+          business_context: {}, language: 'en', locale: 'en-US',
+        },
+        stated_goals: [], duration_limit_minutes: null,
+        required_rlo_ids: [], excluded_rlo_ids: [],
+        minimum_target_proficiency: document.getElementById('target-proficiency').value,
+        brand_contract: { tone: 'professional and practical' },
+        industry_filter_mode: 'boost',
+      };
+    }
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault(); previewBtn.disabled=true; previewBtn.textContent='Interpreting and searching…'; requestStatus.textContent='';
+      previewCard.style.display='none'; confirmCard.style.display='none'; jobCard.style.display='none';
+      try {
+        const response = await commissioningFetch('/api/learning-requests/preview', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(buildRequest()) });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail?.message || JSON.stringify(data.detail));
+        preview=data; renderPreview(); requestStatus.textContent=`Preview ${data.preview_id}`;
+      } catch(error) { requestStatus.textContent=`Request failed: ${error.message}`; }
+      finally { previewBtn.disabled=false; previewBtn.textContent='Find suitable RLOs'; }
+    });
+
+    function renderPreview() {
+      previewCard.style.display='block'; previewJson.textContent=JSON.stringify(preview,null,2);
+      const trace = preview.interpretation_trace;
+      const curation = preview.curation_review;
+      const decisions = new Map((curation?.decisions || []).map(decision => [`${decision.rlo_id}@${decision.rlo_version}`, decision]));
+      const inferredOutcomes = preview.intent.desired_outcomes.length ? `<div><div class="small">Suggested search outcomes · final outcomes will be grounded in the selected RLOs</div><div class="chips">${preview.intent.desired_outcomes.map(outcome=>`<span class="chip">${esc(outcome)}</span>`).join('')}</div></div>` : '';
+      const matchingDecisions=(curation?.decisions || []).filter(decision=>decision.recommendation==='include');
+      const matchingDecisionKeys=new Set(matchingDecisions.map(decision=>`${decision.rlo_id}@${decision.rlo_version}`));
+      const matchingCandidates=preview.candidates.filter(candidate=>matchingDecisionKeys.has(`${candidate.rlo_id}@${candidate.rlo_version}`));
+      const coverageSuccess=preview.confirmation_allowed && matchingCandidates.length>0;
+      const coverageMessage=coverageSuccess
+        ? `Found ${matchingCandidates.length} approved, compatible RLO${matchingCandidates.length===1?'':'s'} matching this request: ${matchingCandidates.map(candidate=>candidate.title).join('; ')}.`
+        : (preview.confirmation_allowed?'No RLO content was recommended as a match for this request.':preview.gap_report.explanation);
+      const header = `<div class="notice ${coverageSuccess?'success':'warning'}">${esc(coverageMessage)}</div>
+        <div class="result-section"><div><div class="small">Interpreted subject facets ${trace.fallback_reason?'· deterministic fallback':'· '+esc(trace.model)}</div>
+        <div class="chips">${preview.intent.subject_facets.map(f=>`<span class="chip">${esc(f)}</span>`).join('')}</div></div>${inferredOutcomes}`;
+      const smartReview = matchingCandidates.length && curation ? `<div class="curation"><strong>Why this content matches · ${esc(preview.curation_trace?.model || 'deterministic fallback')}</strong>
+        <div>${esc(curation.strategy_summary)}</div><div class="rationale">${esc(curation.framework_approach)}</div>
+        ${curation.warnings.length ? `<div class="rationale">${curation.warnings.map(esc).join(' · ')}</div>` : ''}</div>` : '';
+      const compatibility = preview.compatibility_errors?.length ? `<div class="notice warning"><strong>Catalog compatibility exclusions</strong><div class="rationale">${preview.compatibility_errors.map(esc).join('<br>')}</div></div>` : '';
+      const gaps = preview.gap_report.gaps.length ? `<div><div class="small">Coverage findings</div>${preview.gap_report.gaps.map(g=>`
+        <div class="gap ${esc(g.severity)}"><strong>${esc(g.subject)}</strong><div class="small">${esc(g.explanation)}</div><div class="small">${esc(g.recommendation)}</div></div>`).join('')}</div>` : '';
+      const candidates = matchingCandidates.length ? `<div><div class="small">Matching RLO content</div>${matchingCandidates.map(c=> {
+        const decision=decisions.get(`${c.rlo_id}@${c.rlo_version}`);
+        const recommendation=decision?.recommendation || (['strong','acceptable'].includes(c.relevance_band)?'include':'optional');
+        const defaultDisposition=recommendation==='include'?'include':'exclude';
+        const locked=c.relevance_band==='forbidden';
+        const dependencyBadge=c.required_as_prerequisite_for?.length?`<span class="badge">prerequisite</span>`:'';
+        return `<div class="candidate"><div class="candidate-head"><span class="badge">${esc(c.relevance_band)}</span><span class="badge">model: ${esc(recommendation)}</span>${dependencyBadge}<strong>${esc(c.title)}</strong><span class="score">${Number(c.final_score).toFixed(4)}</span>
+        <select class="choice" data-id="${esc(c.rlo_id)}" data-version="${esc(c.rlo_version)}" ${locked?'disabled title="Below minimum relevance threshold"':''}><option value="include" ${defaultDisposition==='include'?'selected':''}>Include</option><option value="required">Required</option><option value="exclude" ${defaultDisposition==='exclude'?'selected':''}>Exclude</option></select></div>
+        <div class="candidate-meta">${esc(c.rlo_id)}@${esc(c.rlo_version)} · ${esc(c.topic)} · ${esc(c.estimated_duration_minutes)} min${decision?.conceptual_framework?' · '+esc(decision.conceptual_framework):''}${c.required_as_prerequisite_for?.length?' · required by '+c.required_as_prerequisite_for.map(esc).join(', '):''}</div>
+        ${decision?`<div class="rationale">${esc(decision.rationale)}</div>`:''}</div>`;
+      }).join('')}</div>` : '<div class="notice warning">No active, approved, compatible RLO content matched this request.</div>';
+      previewContent.innerHTML=header+compatibility+smartReview+gaps+candidates+'</div>';
+      if (preview.confirmation_allowed && matchingCandidates.length) { confirmCard.style.display='block'; document.getElementById('course-goal').value=preview.request.request_text; }
+      else { confirmCard.style.display='none'; }
+    }
+
+    confirmBtn.addEventListener('click', async () => {
+      if (!preview) return; confirmBtn.disabled=true; confirmStatus.textContent='Confirming…';
+      const candidates=[...document.querySelectorAll('.choice')].map(select=>({rlo_id:select.dataset.id,rlo_version:select.dataset.version,disposition:select.value}));
+      const command={ preview_hash:preview.preview_hash, confirmed_course_goal:document.getElementById('course-goal').value.trim(), candidates,
+        confirmation_actor:'self-service-ui', requester_notes:document.getElementById('notes').value.trim()||null };
+      try { const response=await commissioningFetch(`/api/learning-requests/previews/${encodeURIComponent(preview.preview_id)}/confirm`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(command)}); const data=await response.json(); if(!response.ok) throw new Error(data.detail?.message||JSON.stringify(data.detail)); confirmStatus.innerHTML=`Confirmed at ${new Date(data.confirmed_at).toLocaleString()} · <a href="/jobs">View all jobs</a>`; await monitorBlueprint(preview.preview_id); }
+      catch(error){ confirmStatus.textContent=`Confirmation failed: ${error.message}`; }
+      finally { confirmBtn.disabled=false; }
+    });
+
+    const wait = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+    async function monitorBlueprint(previewId) {
+      jobCard.style.display='block'; blueprintContent.innerHTML='<div class="notice warning">The confirmed request is queued for generation.</div>';
+      let job, blueprintRendered=false;
+      const initial=await commissioningFetch(`/api/learning-requests/previews/${encodeURIComponent(previewId)}/job`);
+      job=await initial.json();
+      if(!initial.ok) throw new Error(job.detail?.message||JSON.stringify(job.detail));
+      while (true) {
+        const response=await commissioningFetch(`/api/commissioning-jobs/${encodeURIComponent(job.job_id)}`);
+        const data=await response.json();
+        if(!response.ok) throw new Error(data.detail?.message||JSON.stringify(data.detail));
+        job=data; jobState.textContent=job.status.replaceAll('_',' '); jobStatus.innerHTML=`Job ${esc(job.job_id)} · <a href="/jobs">View in Jobs</a>`;
+        if(job.blueprint_available && !blueprintRendered) {
+          const [blueprintResponse,reportResponse]=await Promise.all([
+            commissioningFetch(`/api/commissioning-jobs/${encodeURIComponent(job.job_id)}/blueprint`),
+            commissioningFetch(`/api/commissioning-jobs/${encodeURIComponent(job.job_id)}/report`),
+          ]);
+          if(blueprintResponse.ok) { renderBlueprint(await blueprintResponse.json(),await reportResponse.json()); blueprintRendered=true; }
+        }
+        if(job.status==='completed'||job.status==='failed') break;
+        if(!blueprintRendered) blueprintContent.innerHTML=`<div class="notice warning">${esc(job.stage_label)}…</div>`;
+        await wait(job.poll_after_ms||2000);
+      }
+      if(job.status==='failed') {
+        blueprintContent.insertAdjacentHTML('afterbegin',`<div class="notice error"><strong>Generation failed.</strong><div class="small">${esc(job.error_summary||'See the Jobs page for details.')}</div></div>`);
+        return;
+      }
+      const deliverableResponse=await commissioningFetch(`/api/commissioning-jobs/${encodeURIComponent(job.job_id)}/deliverables`);
+      const deliverables=deliverableResponse.ok?await deliverableResponse.json():[];
+      const primary=deliverables.find(item=>item.primary)||deliverables[0];
+      if(primary) blueprintContent.insertAdjacentHTML('afterbegin',`<div class="notice success"><strong>Generated content is ready.</strong> <a href="${commissioningBase}${esc(primary.download_url)}">Download ${esc(primary.filename)}</a></div>`);
+    }
+
+    function renderBlueprint(blueprint,report) {
+      const sequence=blueprint.ordered_rlo_refs.map(ref=>`<div class="sequence-item"><span class="sequence-order">${esc(ref.order)}</span><div><strong>${esc(ref.rlo_id)}@${esc(ref.rlo_version)}</strong><div class="small">${esc(ref.starting_proficiency)} → ${esc(ref.target_proficiency)} · ${esc(ref.content_depth)}</div><div class="rationale">${esc(ref.sequencing_rationale)}</div></div></div>`).join('');
+      blueprintContent.innerHTML=`<div class="notice success"><strong>${esc(blueprint.title)}</strong><div class="small">${esc(blueprint.estimated_duration_minutes)} minutes · ${esc(blueprint.blueprint_id)}</div></div>
+        <div><div class="small">Learning outcomes</div><ul class="blueprint-outcomes">${blueprint.learning_outcomes.map(outcome=>`<li>${esc(outcome)}</li>`).join('')}</ul></div>
+        <div><div class="small">Ordered RLO sequence</div><div class="sequence">${sequence}</div></div>`;
+      document.getElementById('blueprint-json').textContent=JSON.stringify(blueprint,null,2);
+      document.getElementById('report-json').textContent=JSON.stringify(report,null,2);
+      document.getElementById('blueprint-details').style.display='block';
+      document.getElementById('report-details').style.display='block';
+    }
+  </script>
+</body>
+</html>

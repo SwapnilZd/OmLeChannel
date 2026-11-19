@@ -1,0 +1,8 @@
+<section class="slide-video-slot" data-screen-id="{{ s.screen_id }}" data-slot-id="{{ s.slot_id }}">
+  {% if s.title %}<h2>{{ s.title }}</h2>{% endif %}
+  <div class="video-slot-placeholder">
+    <div class="video-slot-icon">▶</div>
+    <p class="video-slot-label">Video slot: <strong>{{ s.slot_id }}</strong></p>
+    <p class="video-slot-note">This slot will be replaced with a video during bundle assembly.</p>
+  </div>
+</section>

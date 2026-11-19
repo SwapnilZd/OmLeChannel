@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "simple-content-only",
+    "source_shape": "one concept with one example and no assessment",
+    "required_screen_families": ["title", "worked_example", "completion"],
+    "quality_gates": ["source_fidelity", "required_content", "learner_usability"]
+  },
+  {
+    "case_id": "grouped-approved-assessments",
+    "source_shape": "one concept with three approved multiple-choice items",
+    "required_screen_families": ["knowledge_check"],
+    "quality_gates": ["assessment_fidelity", "one_question_per_screen", "screen_budget"]
+  },
+  {
+    "case_id": "supported-decision-scenario",
+    "source_shape": "scenario, two supported choices, diagnostic feedback, and resolution",
+    "required_screen_families": ["scenario_setup", "scenario_branch", "scenario_resolution"],
+    "quality_gates": ["source_fidelity", "navigation", "learner_usability"]
+  },
+  {
+    "case_id": "relationship-diagram",
+    "source_shape": "four related concepts with supported labels and distinctions",
+    "required_screen_families": ["relationship_diagram"],
+    "quality_gates": ["source_fidelity", "layout_protection", "required_content"]
+  },
+  {
+    "case_id": "pedagogy-is-the-subject",
+    "source_shape": "approved content explicitly teaches an instructional-design principle",
+    "required_screen_families": ["rule_card"],
+    "quality_gates": ["source_fidelity", "no_false_leakage_block", "learner_usability"]
+  },
+  {
+    "case_id": "complex-overlapping-sources",
+    "source_shape": "several technical sources with overlapping concepts, required examples, and assessments",
+    "required_screen_families": ["tabbed_content", "process_sequence", "knowledge_check"],
+    "quality_gates": ["source_fidelity", "non_repetition", "screen_budget", "assessment_fidelity"]
+  },
+  {
+    "case_id": "mixed-authored-and-media",
+    "source_shape": "content screens surrounding one protected narrated animation slot",
+    "required_screen_families": ["title", "video_slot", "key_takeaways"],
+    "quality_gates": ["slot_preservation", "source_fidelity", "screen_order"]
+  },
+  {
+    "case_id": "revision-checkpoint-resume",
+    "source_shape": "one author-owned semantic defect followed by an interrupted targeted patch",
+    "required_screen_families": ["title", "completion"],
+    "quality_gates": ["scoped_patch", "checkpoint_resume", "bounded_calls"]
+  }
+]

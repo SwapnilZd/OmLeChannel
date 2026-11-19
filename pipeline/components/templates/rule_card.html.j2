@@ -1,0 +1,3 @@
+<section class="slide-rule" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2><div class="rule-layout {{ 'has-visual' if s.image_path else '' }}"><article class="rule-card"><p class="rule-principle">{{ s.principle }}</p><div class="rule-detail">{{ s.supporting_detail | paragraphs }}</div>{% if s.examples %}<ul>{% for example in s.examples %}<li>{{ example }}</li>{% endfor %}</ul>{% endif %}</article>{% if s.image_path %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}</div>
+</section>

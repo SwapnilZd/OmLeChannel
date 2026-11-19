@@ -1,0 +1,50 @@
+id: scenario_branch
+name: Scenario Branch Outcome
+description: >
+  Shows the outcome of one branch choice — correct (green) or incorrect (red)
+  — with a feedback title, detailed body, and a continue button that links to
+  the resolution screen.
+when_to_use: >
+  Use once per branch in a branching scenario. There must be one scenario_branch
+  screen for every choice listed on the scenario_setup screen.
+tags: [scenario, branching, feedback, mid-course]
+sequence_position: middle
+selection:
+  category: practice
+  purposes: [branch_feedback, explain_choice_outcome]
+  content_shapes: [single_choice_outcome]
+  relationships: [branching, feedback]
+  interactions: [continue_branch]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Practice feedback slide for one branch choice, showing whether the choice was appropriate and
+    explaining the outcome before continuing to a shared resolution. Must be paired with a
+    scenario setup and resolution. Not a standalone assessment or generic content slide.
+
+slots:
+  branch_id:
+    description: >
+      Unique ID for this branch. Must match the branch id referenced from
+      the scenario_setup screen.
+    required: true
+  outcome_type:
+    description: "'correct' or 'incorrect' — controls green vs red styling"
+    required: true
+  feedback_title:
+    description: Short outcome label, e.g. "Good Judgment" or "Reconsider This"
+    target_chars: 30
+    max_chars: 60
+  feedback_body:
+    description: >
+      Detailed explanation of why this choice is correct or incorrect.
+      2-4 sentences.
+    target_chars: 200
+    max_chars: 350
+  resolution_screen_id:
+    description: Screen ID of the scenario_resolution screen to link to
+    required: true
+
+image_slots: []

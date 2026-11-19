@@ -1,0 +1,22 @@
+<section class="slide-relationship variant-{{ s.layout_variant or 'linear_flow' }}" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>{% if s.introduction %}<p class="instruction">{{ s.introduction }}</p>{% endif %}
+  {% if s.layout_variant == 'matrix_2x2' %}
+  <div class="matrix-shell">
+    {% if s.y_axis_label %}<span class="matrix-y-label">{{ s.y_axis_label }}</span>{% endif %}
+    <div class="relationship-matrix">
+      {% for position in ['top_left', 'top_right', 'bottom_left', 'bottom_right'] %}<div class="matrix-quadrant quadrant-{{ position }}">
+        {% for node in s.nodes if node.position == position %}<article class="relationship-node"><h3>{{ node.label }}</h3>{% if node.detail %}<p>{{ node.detail }}</p>{% endif %}</article>{% endfor %}
+      </div>{% endfor %}
+    </div>
+    {% if s.x_axis_label %}<span class="matrix-x-label">{{ s.x_axis_label }}</span>{% endif %}
+  </div>
+  {% else %}
+  <div class="relationship-canvas">
+    <ol class="relationship-nodes node-count-{{ s.nodes | length }}">
+      {% for node in s.nodes %}<li class="relationship-node {{ 'flow-start' if loop.first else '' }} {{ 'flow-end' if loop.last else '' }}"><span class="node-index">{{ loop.index }}</span><h3>{{ node.label }}</h3>{% if node.detail %}<p>{{ node.detail }}</p>{% endif %}{% if s.layout_variant == 'linear_flow' and not loop.last %}<span class="flow-arrow" aria-hidden="true">→</span>{% endif %}</li>{% endfor %}
+    </ol>
+    {% if s.layout_variant == 'cycle' %}<div class="cycle-hub" aria-hidden="true"><span>↻</span>Continuous<br />cycle</div>{% endif %}
+  </div>
+  {% if s.x_axis_label and s.layout_variant == 'continuum' %}<div class="continuum-axis"><span>←</span><strong>{{ s.x_axis_label }}</strong><span>→</span></div>{% endif %}
+  {% endif %}
+</section>

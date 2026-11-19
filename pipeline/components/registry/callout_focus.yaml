@@ -1,0 +1,43 @@
+id: callout_focus
+name: Focused Callout
+description: High-emphasis treatment for one definition, statistic, quote, policy, or warning.
+when_to_use: Use sparingly when one grounded message deserves most of the slide's visual attention.
+tags: [content, callout, statistic, quote, policy, warning]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [emphasize_message]
+  content_shapes: [single_message_with_support]
+  relationships: [single_focus]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle]
+  media_supported: true
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    High-emphasis slide for one grounded message with an eyebrow, prominent headline, supporting
+    explanation, and optional attribution. Suitable for a definition, sourced statistic, quote,
+    policy, or critical warning. Not for multiple equal concepts.
+layout_variants:
+  definition:
+    when: One definition or principle needs emphasis and supporting explanation.
+    selection: {purposes: [define_concept, emphasize_principle], content_shapes: [definition_with_detail], densities: [balanced]}
+  key_stat:
+    when: One sourced number or percentage deserves primary attention.
+    selection: {purposes: [emphasize_statistic, establish_urgency], content_shapes: [single_metric_with_context], densities: [sparse]}
+  expert_quote:
+    when: One supplied quotation and attribution materially reinforces the message.
+    selection: {purposes: [reinforce_authority, humanize_message], content_shapes: [quotation_with_attribution], densities: [sparse], media_supported: true}
+  policy:
+    when: One mandatory source-authored policy statement must remain recognizable.
+    selection: {purposes: [state_policy, emphasize_requirement], content_shapes: [mandatory_statement_with_detail], densities: [balanced, text_heavy]}
+  warning:
+    when: One risk, consequence, or critical watch-out must be difficult to miss.
+    selection: {purposes: [highlight_risk, prevent_error], content_shapes: [warning_with_consequence], relationships: [cause_effect]}
+slots:
+  eyebrow: {target_chars: 20, max_chars: 40, required: false}
+  headline: {target_chars: 90, max_chars: 220}
+  body: {target_chars: 180, max_chars: 380}
+  attribution: {target_chars: 45, max_chars: 100, required: false}
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

@@ -1,0 +1,360 @@
+{
+  "id": "rlo-adkar-02-individual-model",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR as a Model of Individual Transition",
+  "topic": "ADKAR as a Model of Individual Transition",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-03-sequenced-within-individual",
+    "rlo-adkar-09-identify-barrier-point",
+    "rlo-adkar-10-differentiated-interventions"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain that ADKAR describes individual transitions through change, and distinguish it from models that describe organizational or leader-driven change processes.",
+  "performance_context": "When encountering discussions or plans that use ADKAR, the learner should be able to identify whether the framework is being applied appropriately \u2014 to individual experiences of change \u2014 or misapplied as a description of organizational activities.",
+  "enabling_objective": {
+    "id": "lo-02",
+    "statement": "Explain that ADKAR describes states an individual experiences during change, and distinguish these states from organizational activities or leader actions.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "ADKAR as individual-focused",
+      "definition": "ADKAR describes five states that an individual passes through during a successful change. Each element is a condition or outcome in a person \u2014 not a task, phase, or activity performed by an organization or its leaders.",
+      "elaboration": "This is the most important framing point about ADKAR and the one most commonly missed. Awareness is a state in which a person understands why the change is needed. Desire is a state in which a person has chosen to participate. Knowledge is what a person knows. Ability is what a person can do. Reinforcement is what sustains the change in a person. Leaders and organizations act to help individuals reach these states, but the states themselves reside in individuals. This is what distinguishes ADKAR from process models: it is a description of personal transition, not of organizational activity.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "ADKAR is a sequence of activities that leaders execute during a change effort.",
+          "correction": "ADKAR is a sequence of states individuals reach during a change. Leaders and change managers take actions to help individuals reach these states, but the elements themselves are conditions in people, not activities on a project plan. 'The organization is in Awareness' is a common but incorrect framing; individuals are in Awareness."
+        },
+        {
+          "id": "m-02",
+          "statement": "ADKAR is a checklist for what a change management team should do.",
+          "correction": "The ADKAR elements are outcomes to achieve in individuals, not tasks for a team to complete. A change management team's activities (communications, training, sponsor engagement) are the means to help individuals reach the ADKAR states, but the activities are not themselves the elements. Confusing activities with outcomes leads to teams checking off completed tasks while individuals remain stuck at the same barrier point."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Individual model vs. organizational model",
+      "definition": "Change frameworks generally fall into two categories: individual-transition models describe what people experience as they adapt to change, and organizational-process models describe what a change effort should do at each stage. ADKAR is an individual-transition model. Kotter's 8 Steps, Lewin's 3-stage model, and most other well-known frameworks are organizational-process models.",
+      "elaboration": "The distinction matters because the two model types answer different questions. Organizational models answer: 'What should a change effort do next?' Individual models answer: 'Where is this specific person, and what do they need?' A leader planning a change effort needs organizational guidance; a manager helping a specific team member through a change needs individual guidance. Prosci's own methodology pairs ADKAR (individual) with a separate organizational model for this reason. Using ADKAR to plan organizational activities is a category mistake \u2014 it will produce activity plans framed around individual states, which do not translate directly into leadership actions.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "ADKAR and organizational-process models are interchangeable \u2014 a team can use either for either purpose.",
+          "correction": "They answer different questions. An organizational-process model tells a change effort what to do next; ADKAR tells a change manager where a specific individual is stuck. Using ADKAR to run a change effort produces plans framed around individual states rather than leadership activities. Using an organizational-process model to help a specific person produces general activities that do not address that person's specific barrier."
+        },
+        {
+          "id": "m-04",
+          "statement": "Because ADKAR describes individuals, it does not apply to large-scale organizational change.",
+          "correction": "ADKAR applies to large-scale change precisely because large-scale change ultimately depends on many individuals adopting new behaviors. The model is used at scale by applying it to representative individuals or groups and identifying where the affected population is stuck. It scales through diagnosis and targeted intervention, not through organization-wide execution."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The most important thing to understand about ADKAR is what it is a model of. It is not a model of a change effort; it is a model of what happens inside a person during change. Awareness is a state a person is in, not a communications activity a leader performs. Desire is a choice a person makes, not a metric a program reports on. Missing this framing produces plans that check off activities while the people the change depends on remain exactly where they were."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The five ADKAR elements are states that reside in individuals: Awareness is what a person understands, Desire is what they have chosen, Knowledge is what they know, Ability is what they can do, and Reinforcement is what sustains them. Leaders and organizations take actions to help individuals reach these states, but the states themselves are personal outcomes \u2014 not organizational activities."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "ADKAR is an individual-transition model, distinct from organizational-process models that describe what a change effort should do at each stage. Individual models answer: 'Where is this specific person, and what do they need?' Organizational models answer: 'What should the change effort do next?' The two model types are complementary, not interchangeable."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "The same activity read two ways",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change management team runs a series of town halls to communicate a coming reorganization.",
+        "organizational_reading": "In an organizational-process view, the town halls are an activity in the change plan \u2014 a communications workstream. The question is whether the activity happened.",
+        "adkar_reading": "In the ADKAR view, the question is different: for each affected individual, is the town hall producing Awareness of the need for change? The activity is the means; the state of Awareness in individuals is the outcome. Town halls that were delivered but did not produce Awareness are a completed activity and an unmet outcome \u2014 and ADKAR is specifically the framework that surfaces this gap.",
+        "reasoning": "The same activity appears in both frames, but the frames measure different things. ADKAR forces the question 'did this produce the state we needed?' rather than 'did this activity happen?' Two teams reporting on the same town hall would produce different reports depending on which model they were using."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "A manager using ADKAR one-on-one",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A manager notices that one team member has quietly disengaged from a change effort while others are actively participating. She uses ADKAR to structure a one-on-one conversation.",
+        "process": "The manager asks, in effect: Does this person understand why the change is needed? (Awareness) Have they chosen to participate? (Desire) Do they know what they are supposed to do differently? (Knowledge) Can they do it in practice? (Ability) Would anything sustain the change if they made it? (Reinforcement)",
+        "outcome": "She discovers the team member has Awareness and Knowledge but lacks Desire \u2014 they understand the change and know what to do, but they do not believe the change will benefit them personally. This is a specific gap with a specific intervention, and it is a diagnosis that only an individual-level model could have produced.",
+        "reasoning": "This is ADKAR being used the way it was designed to be used: as an individual diagnostic. An organizational-process model would not have surfaced this specific person's specific barrier \u2014 it would have described what phase the change effort was in, which is not the question the manager needed answered."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "ADKAR misread as organizational phases",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A change management plan is structured with five phases: Awareness Phase (Q1), Desire Phase (Q2), Knowledge Phase (Q3), Ability Phase (Q4), Reinforcement Phase (Q5). The team reports monthly on the current phase.",
+        "why_wrong": "This treats ADKAR as an organizational timeline. But different individuals move through the elements on different clocks \u2014 one person may reach Ability while another is still stuck at Desire, in the same quarter. Framing the organization as being 'in the Desire phase' collapses this variation and produces a plan that fits no individual's actual experience.",
+        "correct_framing": "ADKAR describes where individuals are, not where the organization is. A change effort may have some individuals at Awareness, others at Desire, others at Knowledge, and others at Reinforcement \u2014 all at the same time. Organizing the change plan around a single element-per-quarter timeline treats a model of individual transition as if it were a model of organizational progression."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Activities substituted for outcomes",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change management team reports: 'Awareness: complete \u2014 town halls delivered, communications distributed, 100% of employees reached. Desire: complete \u2014 sponsor road show finished. Knowledge: complete \u2014 training rolled out.'",
+        "why_wrong": "The team is reporting on activities, not outcomes. Delivering town halls is not the same as producing Awareness; running training is not the same as producing Knowledge. The ADKAR elements are outcomes in individuals, and the outcomes must be measured in individuals \u2014 through diagnostic conversations, surveys, or observed behavior \u2014 not inferred from activity completion.",
+        "correct_framing": "ADKAR is a checklist of outcomes to achieve in individuals, not a checklist of activities to complete. A team can check off every activity and still have most of the affected population stuck at a specific barrier point. The activities are the means; the states in individuals are the outcomes."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what does ADKAR describe, and how does that differ from what most other change frameworks describe?",
+        "expected_answer": "ADKAR describes the five states an individual passes through during a successful change, whereas most other change frameworks describe activities or phases of an organizational change effort \u2014 ADKAR is a model of individual transition, not of organizational process."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change management team is preparing to launch a major transformation. They structure their change plan as follows: 'Q1 is the Awareness phase \u2014 we will deliver communications. Q2 is the Desire phase \u2014 we will engage sponsors. Q3 is the Knowledge phase \u2014 we will run training.' How should this plan structure be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The plan is well-structured \u2014 it applies ADKAR as intended by mapping each element to a quarter.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "This misapplies ADKAR by treating it as an organizational timeline. ADKAR describes states in individuals, and different individuals reach these states on different clocks. Some may be at Ability while others are still at Awareness \u2014 all in the same quarter. A single-element-per-quarter plan cannot accommodate that variation and treats an individual-transition model as if it were an organizational-process model."
+        },
+        {
+          "id": "B",
+          "text": "The plan misapplies ADKAR by treating individual-transition states as sequential organizational phases. Different individuals will be at different ADKAR states simultaneously.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The plan structure collapses the individual-transition nature of ADKAR into a single organizational timeline, which is a category mistake. ADKAR is diagnostic \u2014 it asks where each individual is and what they need \u2014 rather than descriptive of an organizational sequence. The right use of ADKAR alongside a change plan is to periodically diagnose where the affected population is distributed across the five states, not to schedule the states as project phases."
+        },
+        {
+          "id": "C",
+          "text": "The plan is fine because it addresses each ADKAR element.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Addressing each element as a sequential activity phase is not the same as achieving each element as an outcome in individuals. The plan may complete every quarterly activity while leaving substantial portions of the workforce stuck at Desire or Ability. ADKAR is a measure of outcomes in people, not a checklist of activity phases."
+        },
+        {
+          "id": "D",
+          "text": "The plan should add two more phases (Ability and Reinforcement) to complete the sequence.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Adding phases would preserve the underlying error. The problem is not that Ability and Reinforcement are missing from the timeline; it is that the timeline structure itself misapplies an individual-focused model to organizational scheduling. The fix is to change the plan structure, not to extend the flawed structure to more elements."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A leader argues: 'ADKAR is not useful for our transformation because we are changing an entire organization of 50,000 people, and ADKAR only describes individuals.' Which of the following best evaluates this argument?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The leader is correct \u2014 ADKAR does not scale to large organizations.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "The premise that ADKAR does not apply at scale is incorrect. Large-scale change ultimately depends on many individuals adopting new behaviors, and ADKAR provides the diagnostic framework for identifying where those individuals are stuck. Prosci and others routinely apply ADKAR to changes involving tens of thousands of people. The model scales through targeted diagnosis and intervention, not through organization-wide execution."
+        },
+        {
+          "id": "B",
+          "text": "The leader is misreading the model. ADKAR is applied at scale by diagnosing where affected populations are distributed across the five states, then targeting interventions accordingly.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Large-scale change depends on many individuals making the transition, and ADKAR is the model that surfaces where those individuals are stuck. At scale, ADKAR is typically applied to representative groups or personas \u2014 not to each individual person \u2014 but the underlying framework remains valid. Dismissing ADKAR because it is individual-focused misses that individual transitions are precisely what large-scale change ultimately requires."
+        },
+        {
+          "id": "C",
+          "text": "The leader is correct \u2014 a large organization should use an organizational-process model instead.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Organizational-process models and individual-transition models answer different questions and are complementary, not substitutes. A large organization typically needs both: a process model to structure the change effort, and ADKAR (or similar) to diagnose where individuals or groups are stuck. Choosing one because the other is 'wrong for the scale' is a false choice."
+        },
+        {
+          "id": "D",
+          "text": "The leader is correct \u2014 ADKAR should only be used by managers in one-on-one conversations.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "ADKAR is used in one-on-one contexts, but that is not the only use. At scale, it is applied through diagnostic surveys, focus groups, and analysis of representative personas to identify where the affected population is stuck. Restricting ADKAR to one-on-one use significantly understates its practical range."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Framing and slightly corrective. This RLO is teaching learners to see a specific structural fact about ADKAR that is easy to miss. The tone should support that reframing without being pedantic about it.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLO-01 and know the five elements and their order. This RLO builds on that by teaching what the model is a model of. Avoid re-teaching the element names.",
+    "feedback_policy": "Feedback must be explicit about the individual-vs-organizational distinction. Do not treat 'this misuses ADKAR' as a single failure mode \u2014 the two most common misuses (organizational timeline, activities-as-outcomes) require different corrections.",
+    "example_shape_hints": [
+      "Include at least one example where the same activity is read from both the organizational and the ADKAR frames, to make the distinction concrete.",
+      "Include at least one example of ADKAR being used correctly in an individual-diagnostic context \u2014 learners need a positive exemplar.",
+      "Non-examples should target the two main misuses: ADKAR-as-organizational-phases and activities-as-outcomes. Both are common in practice."
+    ],
+    "practice_shape_hints": [
+      "Practice should present described change plans or approaches and ask the learner to evaluate whether ADKAR is being applied correctly.",
+      "At least one item should test the 'ADKAR doesn't scale' misconception, since this is a common reason for the model being dismissed inappropriately."
+    ],
+    "salience_hook_description": "The hook should establish that ADKAR describes people, not projects. Learners should leave believing that this framing distinction is load-bearing \u2014 it changes what the model can be used for and what questions it can answer."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-01: the learner should already know the five element names. This RLO builds on that recognition by teaching what kind of things the five elements are.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLOs 09 and 10 revisit the individual-focus framing in an applied diagnostic context."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "conceptual_comparison_visual",
+      "rationale": "The individual-vs-organizational distinction is inherently comparative and benefits from a side-by-side visual treatment showing what each model type describes.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_vignette_module",
+      "rationale": "The 'same activity read two ways' example works well as a paired vignette, showing the same underlying facts through both frames.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_with_examples",
+      "rationale": "A 4-5 minute video walking through the framing point with concrete examples of both correct and incorrect use.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO establishes the framing that determines whether the rest of the ADKAR sequence lands. Without it, learners default to treating ADKAR as another change-management checklist and never surface the model's actual power \u2014 its diagnostic use for individual barrier points. The two-misuse framing (organizational timeline, activities-as-outcomes) is deliberately specific because these are the two failure patterns learners most commonly reproduce in practice. The 'ADKAR doesn't scale' misconception is included because it is a common reason for the model being dismissed inappropriately by learners who assume individual-focused means small-scale-only.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

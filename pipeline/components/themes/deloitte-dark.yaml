@@ -1,0 +1,27 @@
+id: deloitte-dark
+name: Deloitte Dark
+
+colors:
+  accent: deloitte_green
+  accent_lt: "#26331D"
+  ink: white
+  muted: cool_gray_7
+  surface: card_bg
+  bg: dark_gray
+  border: cool_gray_9
+  green: green_4
+  green_lt: "#17351F"
+  red: "#e05555"
+  red_lt: "#2a1010"
+
+typography:
+  heading_font: "Open Sans"
+  body_font: "Open Sans"
+
+border_radius: 10
+
+backgrounds:
+  title: null
+  default: null
+
+logo: null

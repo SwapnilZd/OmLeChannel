@@ -1,0 +1,5 @@
+<section class="slide-callout-focus variant-{{ s.layout_variant or 'definition' }}" data-screen-id="{{ s.screen_id }}">
+  <div class="callout-layout {{ 'has-visual' if s.image_path else '' }}"><article class="focus-callout">
+    {% if s.eyebrow %}<span class="focus-eyebrow">{{ s.eyebrow }}</span>{% endif %}<h2>{{ s.headline }}</h2><div class="focus-body">{{ s.body | paragraphs }}</div>{% if s.attribution %}<p class="focus-attribution">— {{ s.attribution }}</p>{% endif %}
+  </article>{% if s.image_path %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}</div>
+</section>

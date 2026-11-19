@@ -1,0 +1,15 @@
+<section class="slide-completion" data-screen-id="{{ s.screen_id }}">
+  <div class="completion-inner">
+    <div class="completion-badge">✓</div>
+    <h2>{{ s.heading }}</h2>
+    {{ s.message | paragraphs }}
+    <div class="skills-block">
+      <p class="skills-label">Skills reinforced</p>
+      <ul>
+        {% for sk in s.skills_reinforced %}
+        <li>{{ sk }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

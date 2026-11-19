@@ -1,0 +1,94 @@
+{
+  "schema_version": "source-extraction-benchmark-v1",
+  "thresholds": {
+    "text_coverage": 0.98,
+    "reading_order": 0.95,
+    "hierarchy_accuracy": 0.9,
+    "table_fidelity": 0.9,
+    "notes_coverage": 1.0,
+    "visual_coverage": 0.9,
+    "locator_accuracy": 0.98
+  },
+  "cases": [
+    {
+      "id": "nist-ai-risk-management-framework",
+      "path": "examples/poc2_samples/NIST.AI.100-1.pdf.pdf",
+      "format": "pdf",
+      "provenance": "Public NIST publication supplied as a representative source.",
+      "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+      "expectations": {
+        "minimum_pages": 1,
+        "feature_tags": ["born_digital", "tables", "figures", "hierarchy"]
+      }
+    },
+    {
+      "id": "nist-incident-response",
+      "path": "examples/poc2_samples/NIST.SP.800-61r3.pdf",
+      "format": "pdf",
+      "provenance": "Public NIST publication supplied as a representative source.",
+      "sha256": "e5593d6bb85daecec7e8d9549400c7b3473bcc3f06e469c82218073afa7fba2d",
+      "expectations": {
+        "minimum_pages": 1,
+        "feature_tags": ["born_digital", "tables", "citations", "hierarchy"]
+      }
+    },
+    {
+      "id": "gao-green-book",
+      "path": "examples/poc2_samples/gao_green_book.pdf",
+      "format": "pdf",
+      "provenance": "Public GAO publication supplied as a representative source.",
+      "sha256": "3e2a58bdfc1858fa84139785d675055d6ee95be11dac807c62ba797a3feb4103",
+      "expectations": {
+        "minimum_pages": 1,
+        "feature_tags": ["born_digital", "figures", "tables", "callouts", "hierarchy"]
+      }
+    },
+    {
+      "id": "synthetic-ordered-multicolumn",
+      "path": "tests/source_content/fixtures/generated/ordered-multicolumn.pdf",
+      "format": "pdf",
+      "provenance": "Generated topic-neutral benchmark fixture.",
+      "generated": true,
+      "gold_path": "tests/source_content/fixtures/gold/ordered-multicolumn.json",
+      "expectations": {
+        "minimum_pages": 2,
+        "feature_tags": ["multi_column", "table", "footnote", "reading_order"]
+      }
+    },
+    {
+      "id": "synthetic-image-only",
+      "path": "tests/source_content/fixtures/generated/image-only.pdf",
+      "format": "pdf",
+      "provenance": "Generated topic-neutral benchmark fixture.",
+      "generated": true,
+      "gold_path": "tests/source_content/fixtures/gold/image-only.json",
+      "expectations": {
+        "minimum_pages": 1,
+        "feature_tags": ["image_only", "ocr"]
+      }
+    },
+    {
+      "id": "synthetic-mixed-native-scanned",
+      "path": "tests/source_content/fixtures/generated/mixed-native-scanned.pdf",
+      "format": "pdf",
+      "provenance": "Generated topic-neutral benchmark fixture.",
+      "generated": true,
+      "expectations": {
+        "minimum_pages": 2,
+        "feature_tags": ["born_digital", "image_only", "selective_ocr"]
+      }
+    },
+    {
+      "id": "synthetic-structured-presentation",
+      "path": "tests/source_content/fixtures/generated/structured-presentation.pptx",
+      "format": "pptx",
+      "provenance": "Generated topic-neutral benchmark fixture.",
+      "generated": true,
+      "gold_path": "tests/source_content/fixtures/gold/structured-presentation.json",
+      "expectations": {
+        "minimum_slides": 3,
+        "feature_tags": ["speaker_notes", "shapes", "table", "chart", "reading_order"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "id": "rlo-swot-analysis-01-assess",
+  "version": "1.0.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Assessing Strategic Position Using SWOT Analysis",
+  "topic": "SWOT classification and TOWS strategy generation",
+  "domain": "Business Strategy",
+  "level": "introductory",
+  "audience": ["individual contributors", "people managers", "executives"],
+  "estimated_duration_minutes": 35,
+  "content_type": "procedure",
+  "performance_level": "create",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": [],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "SWOT analysis practitioner framework",
+      "reference": "SWOT is a widely adopted practitioner framework commonly traced to Albert Humphrey and Stanford Research Institute work in the 1960s and 1970s; no single founding academic paper is established.",
+      "authority": "reference",
+      "note": "The four-quadrant structure is presented as stable practitioner consensus rather than attributed to a single author."
+    },
+    {
+      "id": "src-02",
+      "title": "The TOWS Matrix — A Tool for Situational Analysis",
+      "reference": "Weihrich, H. (1982). The TOWS Matrix — A Tool for Situational Analysis. Long Range Planning, 15(2), 54-66.",
+      "authority": "primary",
+      "note": "This source anchors the SO, WO, ST, and WT strategy-generation layer. It is kept distinct from the consensus sourcing of the base SWOT grid."
+    }
+  ],
+  "terminal_objective": "Given a business situation, classify relevant factors into the four SWOT quadrants and generate strategic actions that correctly combine factors through SO, WO, ST, and WT logic.",
+  "performance_context": "Use SWOT and TOWS before setting strategic priorities, entering an annual planning cycle, evaluating a market position, or structuring a strategy discussion.",
+  "enabling_objective": {
+    "id": "eo-swot-assess",
+    "statement": "Classify business factors by internal or external origin and positive or negative effect, then combine the resulting SWOT factors into a defensible TOWS strategic action.",
+    "bloom_level": "create",
+    "concepts_addressed": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"]
+  },
+  "concepts": [
+    {
+      "id": "c-strengths",
+      "name": "Strengths",
+      "definition": "Internal capabilities, resources, or attributes currently under the organization's control that give it an advantage.",
+      "elaboration": "A strength belongs in the internal-positive quadrant and should be demonstrably true today, not merely aspirational. Ask whether the organization controls it and whether it provides a meaningful advantage.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-strength-aspiration",
+          "statement": "Something the organization wants to become can be listed as a current strength.",
+          "correction": "A strength must describe a current, supported internal advantage. An aspiration without present evidence is not a strength."
+        }
+      ]
+    },
+    {
+      "id": "c-weaknesses",
+      "name": "Weaknesses",
+      "definition": "Internal limitations or gaps currently under the organization's control that put it at a disadvantage.",
+      "elaboration": "A weakness belongs in the internal-negative quadrant. The key test is whether the condition sits inside the organization's capability, resources, processes, or performance rather than outside it.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-external-as-weakness",
+          "statement": "Any negative factor, including increasing competition, is a weakness.",
+          "correction": "A negative factor outside the organization's control is a threat. Weaknesses are internal limitations or gaps."
+        }
+      ]
+    },
+    {
+      "id": "c-opportunities",
+      "name": "Opportunities",
+      "definition": "External trends, market shifts, or conditions the organization could act on to its advantage but does not control.",
+      "elaboration": "An opportunity belongs in the external-positive quadrant. It is the favorable condition in the environment, not the internal initiative the organization might launch in response.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-initiative-as-opportunity",
+          "statement": "An internal action such as launching a new product is itself a SWOT opportunity.",
+          "correction": "The opportunity is the favorable external condition that makes the action attractive. The product launch is a potential strategic response."
+        }
+      ]
+    },
+    {
+      "id": "c-threats",
+      "name": "Threats",
+      "definition": "External conditions, trends, or actors outside the organization's control that could harm its position if unaddressed.",
+      "elaboration": "A threat belongs in the external-negative quadrant. Ask whether it comes from outside and can affect the organization even though the organization does not directly control it.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-internal-as-threat",
+          "statement": "An internally caused problem such as high turnover driven by culture is a threat.",
+          "correction": "An internally caused limitation is a weakness. Threats originate in the external environment."
+        }
+      ]
+    },
+    {
+      "id": "c-tows",
+      "name": "TOWS strategy combinations",
+      "definition": "TOWS generates strategic actions by pairing SWOT factors: SO uses a strength to capture an opportunity, WO uses an opportunity to overcome a weakness, ST uses a strength to defend against a threat, and WT minimizes a weakness while avoiding a threat.",
+      "elaboration": "A valid TOWS action must plausibly draw on both named source factors. The method turns a classified situation into action rather than stopping at a descriptive four-quadrant inventory.",
+      "source_refs": ["src-02"],
+      "misconceptions": [
+        {
+          "id": "m-tows-unlinked",
+          "statement": "Any sensible strategic recommendation can fill a TOWS cell even if it does not use both source quadrants.",
+          "correction": "Each TOWS action must explicitly connect the two relevant factors; otherwise it is a general recommendation rather than a derived combination."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "title": "Separate evidence before choosing action",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "canonical_content": {
+        "problem": "A planning team mixes internal initiatives, market shifts, current advantages, and operational problems into one list, then jumps directly to priorities.",
+        "purpose": "SWOT classifies the evidence by source and effect; TOWS then makes the relationship between that evidence and a strategic action explicit."
+      }
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "title": "Classify on two axes",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats"],
+      "misconceptions_addressed": ["m-external-as-weakness", "m-initiative-as-opportunity", "m-internal-as-threat"],
+      "canonical_content": {
+        "axes": {"source": "internal versus external", "effect": "positive versus negative"},
+        "grid": {
+          "internal_positive": "Strengths",
+          "internal_negative": "Weaknesses",
+          "external_positive": "Opportunities",
+          "external_negative": "Threats"
+        },
+        "classification_order": "Determine internal versus external first, then positive versus negative. Most classification errors occur on the source axis."
+      }
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "title": "Turn SWOT into TOWS actions",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "misconceptions_addressed": ["m-tows-unlinked"],
+      "canonical_content": {
+        "SO": "Use a strength to capture an opportunity.",
+        "WO": "Use an opportunity to overcome a weakness.",
+        "ST": "Use a strength to defend against a threat.",
+        "WT": "Minimize a weakness while avoiding a threat.",
+        "validation": "Name both source factors and explain how the proposed action connects them."
+      }
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Classify a generic business situation",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats"],
+      "canonical_content": {
+        "render_as": "two_by_two_grid",
+        "factors": {
+          "strength": "Strong brand recognition in the core market.",
+          "weakness": "Product development cycles are slower than competitors' cycles.",
+          "opportunity": "Customer demand for self-service digital channels is growing.",
+          "threat": "New low-cost entrants are targeting the same customer segment."
+        },
+        "reasoning": "Brand and development speed are internal attributes; demand growth and new entrants arise externally. Each factor's favorable or unfavorable effect determines its quadrant after source is established."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Derive actions from paired factors",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "canonical_content": {
+        "SO": {
+          "strength": "Strong brand recognition in the core market",
+          "opportunity": "Growing demand for self-service digital channels",
+          "action": "Use the trusted brand to accelerate adoption of a new self-service channel among existing customers."
+        },
+        "WT": {
+          "weakness": "Slow product development cycles",
+          "threat": "New low-cost entrants",
+          "action": "Narrow the initial response to the highest-risk customer segment and simplify approval steps rather than attempt a broad launch that the current development cycle cannot deliver quickly."
+        },
+        "reasoning": "Each action visibly pairs the two factors required by its TOWS combination."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "An internal initiative is not an opportunity",
+      "concepts_referenced": ["c-opportunities", "c-tows"],
+      "misconceptions_addressed": ["m-initiative-as-opportunity"],
+      "canonical_content": {
+        "incorrect_factor": "Opportunity: Launch a new digital product.",
+        "why_wrong": "Launching a product is an action controlled by the organization, not an external condition.",
+        "corrected_factor": "Opportunity: Customer demand for self-service digital channels is growing.",
+        "possible_action": "Launch a digital product to capture that external demand."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "title": "Classify, then combine",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "canonical_content": {
+        "prompt": "For each factor, decide whether its source is internal or external before deciding whether its effect is positive or negative. Then select two factors and name the TOWS combination they support.",
+        "checks": ["Is the factor current and evidence-based?", "Who controls or originates it?", "Is its effect favorable or unfavorable?", "Does the action use both selected factors?"]
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A manufacturer has aging plant equipment that causes higher unplanned downtime. Where does this factor belong in SWOT?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-weaknesses", "c-threats"],
+      "options": [
+        {"id": "A", "text": "Strength", "correct": false, "misconception_targeted": "m-strength-aspiration", "feedback": "The equipment is an internal factor, but its current effect is unfavorable rather than advantageous."},
+        {"id": "B", "text": "Weakness", "correct": true, "misconception_targeted": null, "feedback": "Correct. The equipment is an internal limitation with a negative operational effect."},
+        {"id": "C", "text": "Opportunity", "correct": false, "misconception_targeted": "m-initiative-as-opportunity", "feedback": "An opportunity is a favorable external condition. Replacing the equipment might be an action, but the aging equipment itself is an internal weakness."},
+        {"id": "D", "text": "Threat", "correct": false, "misconception_targeted": "m-internal-as-threat", "feedback": "The negative effect does not make it a threat. Because the equipment is inside the organization, it is a weakness."}
+      ],
+      "aligned_to_performance_level": "find"
+    },
+    {
+      "id": "q-02",
+      "stem": "Open-banking regulation enables new embedded-finance partnerships. For a financial institution evaluating its environment, which SWOT quadrant best fits this factor?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-opportunities"],
+      "options": [
+        {"id": "A", "text": "Strength", "correct": false, "misconception_targeted": "m-strength-aspiration", "feedback": "Regulation is external to the institution, so it is not an internal strength."},
+        {"id": "B", "text": "Weakness", "correct": false, "misconception_targeted": "m-external-as-weakness", "feedback": "The condition is external and potentially favorable, not an internal limitation."},
+        {"id": "C", "text": "Opportunity", "correct": true, "misconception_targeted": null, "feedback": "Correct. It is a favorable external condition the institution could act on."},
+        {"id": "D", "text": "Threat", "correct": false, "misconception_targeted": "m-internal-as-threat", "feedback": "The factor is external, but the scenario describes a favorable possibility rather than harm."}
+      ],
+      "aligned_to_performance_level": "find"
+    },
+    {
+      "id": "q-03",
+      "stem": "A company has strong compliance infrastructure (Strength) and sees new partnership options created by open-banking regulation (Opportunity). Which action correctly applies SO logic?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-strengths", "c-opportunities", "c-tows"],
+      "options": [
+        {"id": "A", "text": "Use the compliance infrastructure to enter suitable open-banking partnerships faster than less-prepared competitors.", "correct": true, "misconception_targeted": null, "feedback": "Correct. The action uses the named strength to capture the named opportunity."},
+        {"id": "B", "text": "Replace every legacy system over the next decade.", "correct": false, "misconception_targeted": "m-tows-unlinked", "feedback": "This action does not explain how the compliance strength captures the partnership opportunity."},
+        {"id": "C", "text": "Monitor fintech disruption and take no action until the market stabilizes.", "correct": false, "misconception_targeted": "m-tows-unlinked", "feedback": "The action neither uses the strength nor captures the opportunity."},
+        {"id": "D", "text": "List the regulation as an internal strength.", "correct": false, "misconception_targeted": "m-strength-aspiration", "feedback": "Regulation is external. The action must connect the internal compliance strength to the external opportunity."}
+      ],
+      "aligned_to_performance_level": "decide"
+    },
+    {
+      "id": "q-04",
+      "stem": "Which statement correctly describes a WT strategy?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-weaknesses", "c-threats", "c-tows"],
+      "options": [
+        {"id": "A", "text": "Use a strength to capture an opportunity.", "correct": false, "misconception_targeted": "m-tows-unlinked", "feedback": "That is SO logic."},
+        {"id": "B", "text": "Use an opportunity to overcome a weakness.", "correct": false, "misconception_targeted": "m-tows-unlinked", "feedback": "That is WO logic."},
+        {"id": "C", "text": "Use a strength to defend against a threat.", "correct": false, "misconception_targeted": "m-tows-unlinked", "feedback": "That is ST logic."},
+        {"id": "D", "text": "Minimize a weakness while avoiding or reducing exposure to a threat.", "correct": true, "misconception_targeted": null, "feedback": "Correct. WT is defensive logic connecting an internal weakness with an external threat."}
+      ],
+      "aligned_to_performance_level": "recall"
+    }
+  ],
+  "variant_examples": [
+    {
+      "id": "variant-financial-services",
+      "type": "variant",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "industry_tags": ["financial_services"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "render_as": "swot_and_tows_grid",
+        "factors": {
+          "strength": "Deep regulatory compliance infrastructure and capital reserve strength relative to peers.",
+          "weakness": "Legacy core banking systems constrain new-product launch speed.",
+          "opportunity": "Open-banking regulation enables new embedded-finance partnerships.",
+          "threat": "Fintech competitors are disrupting traditional fee-based revenue lines."
+        },
+        "strategies": {
+          "SO": "Use existing compliance infrastructure to move quickly into suitable open-banking partnerships ahead of less-prepared competitors.",
+          "WT": "Prioritize core-system modernization in the product lines most exposed to fintech disruption rather than attempt a full-system overhaul."
+        }
+      },
+      "annotations": []
+    },
+    {
+      "id": "variant-manufacturing",
+      "type": "variant",
+      "concepts_referenced": ["c-strengths", "c-weaknesses", "c-opportunities", "c-threats", "c-tows"],
+      "industry_tags": ["manufacturing"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "render_as": "swot_and_tows_grid",
+        "factors": {
+          "strength": "A vertically integrated supply chain reduces exposure to third-party input shocks.",
+          "weakness": "Aging plant equipment drives higher unplanned downtime.",
+          "opportunity": "Reshoring trends are increasing demand for domestic production capacity.",
+          "threat": "Global supply-chain disruption is increasing raw-material price volatility."
+        },
+        "strategies": {
+          "SO": "Use the vertically integrated supply chain to win reshoring-driven domestic contracts faster than competitors reliant on offshore suppliers.",
+          "WT": "Phase equipment replacement first on lines most exposed to raw-material-driven downtime rather than pursue a plant-wide upgrade."
+        }
+      },
+      "annotations": []
+    }
+  ],
+  "design_brief": {
+    "tone": "Analytical, evidence-based, and practical corporate training. Keep classification logic and strategic implications explicit without presenting speculative factors as facts.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Assume no prior formal SWOT knowledge. Teach the internal-versus-external decision before positive-versus-negative classification, then introduce TOWS as a separate action-generation step.",
+    "feedback_policy": "For classification, name the source axis first and the effect axis second. For TOWS, identify both source factors and explain whether the action uses the required combination. Do not place correctness explanations in visible answer-option text; reveal them after submission.",
+    "example_shape_hints": [
+      "Render SWOT as a true 2x2 grid and visually preserve the internal/external and positive/negative axes.",
+      "Pair every illustrated TOWS action with the two source factors it uses so the derivation remains visible.",
+      "Select a matching approved industry variant when available; never change framework definitions or source facts during personalization."
+    ],
+    "practice_shape_hints": [
+      "Present one factor at a time for classification, with distractors targeting internal-versus-external confusion.",
+      "After classification, ask which action genuinely combines a specified pair of factors.",
+      "A format may guide learners in drafting strategies, but scored assessment must use approved objective items until constructed-response strategy scoring is supported downstream."
+    ],
+    "salience_hook_description": "Establish that an unstructured list of business observations does not yet support strategy; classification clarifies the situation, and TOWS creates a traceable path from evidence to action."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Ask the learner to recall one internal capability and one external market condition affecting current work.",
+    "event_4_present_content": ["comp-rule-01", "comp-rule-02"],
+    "event_5_provide_guidance": ["comp-example-01", "comp-example-02", "comp-nonexample-01"],
+    "event_6_elicit_performance": ["comp-recall-01"],
+    "event_7_provide_feedback": "Use the per-option feedback in each assessment item and the design brief feedback policy.",
+    "event_8_assess_performance": ["q-01", "q-02", "q-03", "q-04"],
+    "event_9_enhance_retention": "Invite the learner to classify a current business factor and explain one strategic action derived from a valid TOWS pairing."
+  },
+  "content_type_recommendations": [
+    {"format": "interactive_elearning", "rationale": "A 2x2 classification interaction followed by paired-factor strategy selection makes both SWOT axes and TOWS derivation visible.", "priority": "primary"},
+    {"format": "short_video_explainer", "rationale": "A visual build can place factors into the grid and animate how one SO and one WT action are derived.", "priority": "secondary"},
+    {"format": "leadership_conversation_podcast", "rationale": "A planning conversation can explore one ambiguous classification and its strategic implication, but complex full-grid work is better suited to a visual format.", "priority": "optional"},
+    {"format": "swot_tows_job_aid", "rationale": "A one-page SWOT grid and TOWS worksheet supports use during planning sessions.", "priority": "secondary"}
+  ],
+  "authoring_rationale": "This RLO integrates SWOT classification and TOWS action generation because the intended performance is to move from evidence to strategy. It keeps the sourcing levels explicit: the base grid is stable practitioner consensus without a definitive founding paper, while the TOWS combination logic is anchored to Weihrich (1982). Definitions, axes, and assessment logic remain constant across contexts; only illustrative factors and actions vary.",
+  "role_tags": [],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": ["strategic_planning", "situational_analysis", "competitive_analysis", "strategy_development"],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-30",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial SWOT and TOWS sample authored in the unified RLO schema (2026-07-30)."
+  },
+  "accessibility": {"features": ["plain_language", "screen_reader_optimised_structure"], "wcag_conformance": null},
+  "rights": {"rights": "internal_use_all_service_lines", "sharing_constraints": "Internal only; not for external distribution."}
+}

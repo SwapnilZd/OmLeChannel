@@ -1,0 +1,7 @@
+pydantic
+python-dotenv
+jinja2
+pyyaml
+qdrant-client
+openai
+pytest

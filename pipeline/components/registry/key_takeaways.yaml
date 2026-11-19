@@ -1,0 +1,34 @@
+id: key_takeaways
+name: Key Takeaways
+description: Consolidates the most important ideas into a concise recap.
+when_to_use: Use near the end to recap 2-6 grounded ideas before assessment or completion.
+tags: [recap, summary, takeaways]
+sequence_position: end
+selection:
+  category: content
+  purposes: [recap, consolidate_learning]
+  content_shapes: [summary_list]
+  relationships: [summary]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle, end]
+  media_supported: true
+  capacity: {min_items: 2, max_items: 6}
+  retrieval_text: >
+    Recap slide for two to six concise grounded takeaways. Best near the end of a section or
+    course to consolidate learning. Supports sparse or balanced summaries and an optional image
+    when there are no more than four points. Not for new detailed instruction.
+layout_variants:
+  list_focus: {when: 5-6 takeaways or no useful image is available}
+  visual_split:
+    when: 2-4 takeaways and a useful supporting image is available
+    capacity: {min_items: 2, max_items: 4}
+slots:
+  heading: {target_chars: 40, max_chars: 75}
+  takeaways:
+    type: array
+    min_items: 2
+    max_items: 6
+    item_max_chars: 150
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

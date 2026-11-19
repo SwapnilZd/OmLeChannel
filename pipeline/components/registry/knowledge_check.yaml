@@ -1,0 +1,64 @@
+id: knowledge_check
+name: Knowledge Check
+description: >
+  One source-authored multiple-choice assessment question with immediate
+  diagnostic feedback shown only after submission in a green or red result panel.
+when_to_use: >
+  Use after the content it tests. Always present exactly one question per
+  learner-facing screen. Upstream approved assessment groups are expanded into
+  consecutive screens before rendering. Do not use this component for free-text
+  responses.
+tags: [assessment, knowledge-check, quiz, interactive]
+sequence_position: any
+selection:
+  category: assessment
+  purposes: [assess_understanding, diagnostic_feedback]
+  content_shapes: [multiple_choice_question]
+  relationships: [question_and_options]
+  interactions: [single_select, multi_select, submit_feedback]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle, end, any]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 5}
+  retrieval_text: >
+    Assessment slide for one single-select or multi-select question with two to five answer
+    options and source-authored diagnostic feedback for every option. Supports long stems and
+    text-heavy feedback through scrollable layout. Not for open response, passive reflection,
+    or ungraded content.
+
+slots:
+  question_id:
+    description: Unique question identifier (used for form element names)
+    required: true
+  stem:
+    description: The question text
+    target_chars: 180
+    max_chars: 500
+    required: true
+  question_type:
+    description: "'multiple_choice_single' or 'multiple_choice_multi'"
+    required: true
+  options:
+    type: array
+    min_items: 2
+    max_items: 5
+    item_slots:
+      id:
+        description: Option identifier
+        required: true
+      text:
+        description: Option text displayed to learner
+        target_chars: 100
+        max_chars: 240
+      correct:
+        description: Boolean — true if this option is correct
+        required: true
+      feedback:
+        description: >
+          Source-authored diagnostic feedback specific to this option. This is never part of
+          the visible option label; it is shown only after submission in the result panel.
+        target_chars: 160
+        max_chars: 500
+        required: true
+
+image_slots: []

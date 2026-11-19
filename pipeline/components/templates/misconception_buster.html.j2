@@ -1,0 +1,8 @@
+<section class="slide-misconceptions" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>
+  <div class="misconception-grid">
+    {% for pair in s.pairs %}
+    <article class="misconception-pair"><p class="myth"><span>Myth</span>{{ pair.claim }}</p><p class="truth"><span>Correction</span>{{ pair.correction }}</p></article>
+    {% endfor %}
+  </div>
+</section>

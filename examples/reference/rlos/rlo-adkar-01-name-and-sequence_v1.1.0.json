@@ -1,0 +1,252 @@
+{
+  "id": "rlo-adkar-01-name-and-sequence",
+  "version": "1.1.0",
+  "schema_version": "2.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR: Naming and Sequencing the Five Elements",
+  "topic": "ADKAR Change Model — Element Names and Order",
+  "domain": "Change Management",
+  "level": "Foundational",
+  "audience": ["Manager", "Senior Manager", "Director"],
+  "estimated_duration_minutes": 10,
+  "content_type": "Conceptual / Procedural",
+  "performance_level": "Remember and Understand",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": ["rlo-adkar-02-awareness", "rlo-adkar-03-desire", "rlo-adkar-04-knowledge", "rlo-adkar-05-ability", "rlo-adkar-06-reinforcement"],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-hiatt-2006",
+      "title": "ADKAR: A Model for Change in Business, Government and Our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A model for change in business, government and our community. Prosci Learning Center Publications.",
+      "authority": "Prosci",
+      "note": "Primary source for ADKAR model definition and sequence"
+    }
+  ],
+  "terminal_objective": "Given a change scenario, the learner can name the five ADKAR elements in their correct order and explain the purpose of each element.",
+  "performance_context": "Deloitte managers reviewing change project documentation, coaching team members through transitions, or diagnosing where individuals are stuck in a change journey.",
+  "enabling_objective": {
+    "id": "lo-01",
+    "statement": "Name the five ADKAR elements in their correct order (Awareness, Desire, Knowledge, Ability, Reinforcement) and distinguish Awareness from Ability.",
+    "bloom_level": "Remember",
+    "concepts_addressed": ["c-01"]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "The ADKAR Model",
+      "definition": "ADKAR is an acronym for the five outcomes an individual must achieve to make a change successful: Awareness of the need for change, Desire to support and participate in the change, Knowledge of how to change, Ability to implement required skills and behaviours, and Reinforcement to sustain the change.",
+      "elaboration": "The sequence is not arbitrary. Awareness precedes Desire because a person cannot want a change they do not understand. Desire precedes Knowledge because motivation must exist before skills training is effective. Knowledge precedes Ability because understanding what to do is a prerequisite for doing it. Ability precedes Reinforcement because sustainable behaviour change requires demonstrated performance before it can be reinforced. The two elements that share the letter A — Awareness (position 1) and Ability (position 4) — are the most commonly confused. Awareness is early-sequence and cognitive (understanding why). Ability is late-sequence and behavioural (demonstrated performance).",
+      "source_refs": ["src-hiatt-2006"],
+      "misconceptions": [
+        {
+          "id": "misc-01",
+          "statement": "The second A in ADKAR stands for Action, Achievement, or Adoption.",
+          "correction": "The second A stands specifically for Ability — demonstrated capability to implement the required skills and behaviours. Action and Achievement are not ADKAR elements. Adoption describes a broader outcome, not a specific step in the individual change journey."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "title": "Why Every Manager Encounters ADKAR",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": [],
+      "canonical_content": "Every week, Deloitte managers receive project communications, attend steering meetings, and coach team members through transitions — often without a shared vocabulary for what makes change stick. ADKAR gives you that vocabulary. Once you know the five elements and their order, you will recognise the pattern in almost every change challenge you face."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "title": "The ADKAR Sequence",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": [],
+      "canonical_content": "The five ADKAR elements, in order, are: 1. Awareness — understanding why the change is necessary; 2. Desire — motivation to support and participate; 3. Knowledge — knowing how to change; 4. Ability — demonstrated skill in the new way; 5. Reinforcement — mechanisms that sustain the change. A useful secondary grouping: Prepare the organisation (Awareness, Desire) → Manage the change (Knowledge, Ability) → Sustain outcomes (Reinforcement)."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A Manager Guides a Team Through a New Reporting Process",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": [],
+      "canonical_content": {
+        "scenario": "A senior manager is leading the rollout of a new financial-reporting system across her team of eight analysts.",
+        "adkar_trace": [
+          {"element": "Awareness", "position": 1, "illustration": "She holds a kick-off meeting explaining why the legacy system is being retired and what risks the new system addresses. Team members understand the reason for the change."},
+          {"element": "Desire", "position": 2, "illustration": "She connects the change to the team's own pain points — the legacy system caused month-end delays that affected everyone's workends. Team members now want the new system to succeed."},
+          {"element": "Knowledge", "position": 3, "illustration": "The team completes a two-hour training session on the new workflow and has access to a job aid."},
+          {"element": "Ability", "position": 4, "illustration": "Each analyst produces their first report in the new system with a buddy check. By the third cycle they are independent."},
+          {"element": "Reinforcement", "position": 5, "illustration": "The manager acknowledges the first clean month-end run in the team meeting. The new process is written into team SOPs."}
+        ]
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Distinguishing Awareness from Ability in Practice",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": [],
+      "canonical_content": {
+        "scenario": "A director is reviewing a stalled change initiative. Two team members are stuck at different points.",
+        "contrast": [
+          {"element": "Awareness", "position": 1, "description": "Team member A does not yet understand why the old process is being replaced. She has not had the rationale explained in terms she finds credible. This is an Awareness barrier — position 1. The intervention is communication, not training."},
+          {"element": "Ability", "position": 4, "description": "Team member B understands the change fully and wants to make it work, but cannot execute the new steps correctly under time pressure. She has Awareness, Desire, and Knowledge, but lacks Ability — position 4. The intervention is practice with coaching, not more explanation."}
+        ],
+        "key_insight": "Diagnosing the barrier correctly determines the right intervention. Sending team member B to another information session wastes her time. Coaching team member A on technique without addressing her Awareness concerns will fail."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Common Naming Error: Substituting Wrong Words for the Second A",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": ["misc-01"],
+      "canonical_content": {
+        "wrong_version": "A-D-K-A-R where the second A is Action, Achievement, or Adoption.",
+        "why_wrong": "None of these substitutions are ADKAR elements. Action is a behaviour, not a change-readiness outcome. Achievement is a result, not a stage of individual readiness. Adoption describes a population-level metric, not an individual's journey stage.",
+        "correct_version": "The second A is specifically Ability — the demonstrated capacity to implement required skills and behaviours in the new way. Without Ability, the change cannot become real performance, regardless of how much the individual wants it or knows about it."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "title": "Recall the Sequence",
+      "concepts_referenced": ["c-01"],
+      "misconceptions_addressed": ["misc-01"],
+      "canonical_content": {
+        "prompt": "Before we move on, take a moment. Without looking at your notes, can you name all five ADKAR elements in their correct order? What does each letter stand for? Pay particular attention to the two elements that both start with A — what makes each one distinct?",
+        "answer_key": "Awareness (1) — Desire (2) — Knowledge (3) — Ability (4) — Reinforcement (5). The first A (Awareness) is about understanding why the change is needed. The fourth element (Ability) is about demonstrated performance in the new way."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "Which of the following correctly states the five ADKAR elements in their proper order?",
+      "type": "multiple_choice",
+      "concepts_assessed": ["c-01"],
+      "options": [
+        {
+          "id": "q-01-a",
+          "text": "Awareness, Desire, Knowledge, Ability, Reinforcement",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. ADKAR follows this exact sequence. Each element builds on the previous one — you cannot sustain change (Reinforcement) without demonstrated performance (Ability), and so on."
+        },
+        {
+          "id": "q-01-b",
+          "text": "Awareness, Desire, Knowledge, Action, Reinforcement",
+          "correct": false,
+          "misconception_targeted": "misc-01",
+          "feedback": "Incorrect. The fourth element is Ability, not Action. Ability refers to demonstrated skill in the new behaviour. Action is a general term, not an ADKAR stage."
+        },
+        {
+          "id": "q-01-c",
+          "text": "Awareness, Direction, Knowledge, Ability, Reinforcement",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Incorrect. The second element is Desire — the motivation to support and participate in the change. Direction is not an ADKAR element."
+        },
+        {
+          "id": "q-01-d",
+          "text": "Adoption, Desire, Knowledge, Ability, Reinforcement",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Incorrect. The first element is Awareness — understanding why the change is necessary. Adoption describes a population-level outcome, not an individual change-readiness stage."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A team member fully understands why a new process is being introduced and wants it to succeed, but consistently makes errors when executing the new steps under time pressure. Which ADKAR barrier best describes her situation?",
+      "type": "multiple_choice",
+      "concepts_assessed": ["c-01"],
+      "options": [
+        {
+          "id": "q-02-a",
+          "text": "Awareness — she has not been adequately informed about the change rationale.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Incorrect. The scenario tells us she already understands why the change is needed — her Awareness barrier has been resolved. The problem is later in the sequence."
+        },
+        {
+          "id": "q-02-b",
+          "text": "Desire — she lacks the motivation to adopt the new process.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Incorrect. The scenario explicitly states she wants the change to succeed. Her Desire is present. Look further along the ADKAR sequence."
+        },
+        {
+          "id": "q-02-c",
+          "text": "Ability — she has the understanding and motivation but cannot yet perform consistently.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. With Awareness and Desire already resolved, and given that she understands the new steps (Knowledge), the barrier is at position 4 — Ability. She needs practice with coaching, not more communication or training on the rationale."
+        },
+        {
+          "id": "q-02-d",
+          "text": "Reinforcement — the organisation has not provided sufficient ongoing support.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Incorrect. Reinforcement operates after consistent performance has been established. The team member has not yet achieved consistent performance, so the barrier is at Ability, not Reinforcement."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Conversational and direct. The learner is a busy manager who values precision. Avoid academic language but do not oversimplify. The two-A distinction should be treated as genuinely important, not as a trivial memory trick.",
+    "scaffolding_level": "Minimal — the content is cognitively light but precision matters. The learner needs correct labelling, not elaborated explanation.",
+    "scaffolding_notes": "Lead with the salience hook. Establish the full sequence early. Return to the two-A distinction multiple times across the lesson to combat substitution misconceptions.",
+    "feedback_policy": "Immediate corrective feedback naming the specific error (e.g., 'Action is not an ADKAR element') rather than generic 'incorrect' responses.",
+    "example_shape_hints": ["Use team-management scenarios", "Show both the correct diagnosis and the wrong diagnosis side-by-side where possible"],
+    "practice_shape_hints": ["Sequence recall before labelling tasks", "Barrier-diagnosis scenarios that require distinguishing Awareness from Ability"],
+    "salience_hook_description": "Open with the manager's lived experience of change projects — project communications, team coaching, steering meetings — and establish that ADKAR provides the vocabulary to navigate all of them."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "comp-rule-01",
+    "event_3_stimulate_recall": null,
+    "event_4_present_content": ["comp-rule-01", "comp-example-01"],
+    "event_5_provide_guidance": ["comp-example-02", "comp-nonexample-01"],
+    "event_6_elicit_performance": ["comp-recall-01"],
+    "event_7_provide_feedback": "comp-recall-01",
+    "event_8_assess_performance": ["q-01", "q-02"],
+    "event_9_enhance_retention": null
+  },
+  "content_type_recommendations": [
+    {
+      "format": "podcast",
+      "rationale": "The content is definitional and sequential — well suited to narrated audio with a Host/Expert dialogue that models the diagnostic reasoning. Duration is short (10 min target). No visual interaction is required for recall-level objectives.",
+      "priority": "primary"
+    },
+    {
+      "format": "microlearning",
+      "rationale": "The five-element sequence and the two-A disambiguation are natural flashcard or carousel items.",
+      "priority": "supplementary"
+    }
+  ],
+  "authoring_rationale": "ADKAR is the most common change management framework encountered by Deloitte practitioners. The naming and sequencing objective is the essential prerequisite for all application-level ADKAR content. The two-A disambiguation (Awareness vs Ability) is the highest-value instructional intervention at this level because it is the most frequent error observed in practitioner conversations and written deliverables.",
+  "role_tags": ["Manager", "Senior Manager", "Director", "Change Lead"],
+  "industry_tags": ["Professional Services", "All Industries"],
+  "service_line_tags": ["Human Capital", "Strategy"],
+  "competency_map": ["Change Management Fundamentals", "People Leadership"],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Human Capital Practice Lead",
+    "reviewing_sme": "Prosci-certified Change Practitioner",
+    "signoff_date": "2024-03-15",
+    "signoff_authority": "HC Learning Director",
+    "review_cadence_months": 24,
+    "next_review_date": "2026-03-15",
+    "change_history": "v1.0.0 initial release 2023-09-01; v1.1.0 added two-A disambiguation non-example and assessment item q-02 2024-03-15"
+  },
+  "accessibility": {
+    "features": ["transcript-available", "no-time-pressure-interactions"],
+    "wcag_conformance": "AA"
+  }
+}

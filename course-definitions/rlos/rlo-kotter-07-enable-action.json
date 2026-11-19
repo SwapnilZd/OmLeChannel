@@ -1,0 +1,369 @@
+{
+  "id": "rlo-kotter-07-enable-action",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 5 \u2014 Enable Action by Removing Barriers",
+  "topic": "Kotter Step 5 \u2014 Enable Action by Removing Barriers",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-06-volunteer-army"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-08-short-term-wins"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what it means to enable action by removing barriers (Step 5), and identify common categories of barrier (structural, procedural, and behavioral).",
+  "performance_context": "When observing a change effort where enthusiasm exists but progress is slow, the learner should be able to identify the specific category of barrier likely blocking action and prescribe the appropriate removal approach.",
+  "enabling_objective": {
+    "id": "lo-07",
+    "statement": "Describe why removing barriers is necessary in a change effort, and identify the three main categories of barrier: structural, procedural, and behavioral.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Enabling action",
+      "definition": "The active removal of obstacles that prevent people who want to support the change from actually doing so. Step 5 is the shift from having willing participants (Step 4) to having participants who can act on their willingness.",
+      "elaboration": "Kotter emphasizes that by Step 5, the organization typically has volunteers who want to move the change forward. What stops them is not motivation but obstacles \u2014 organizational structures, procedures, incentives, or manager behaviors that prevent them from acting even when they want to. Step 5 is the coalition's job to systematically identify and remove these barriers.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "If people are motivated, they will find ways around the barriers.",
+          "correction": "Motivation is not a substitute for enablement. Even highly motivated employees are constrained by structures, procedures, and incentive systems that were designed for the old way of working. Expecting motivation to overcome systemic barriers wastes the volunteer energy Step 4 produced and produces cynicism when the effort visibly stalls."
+        },
+        {
+          "id": "m-02",
+          "statement": "Removing barriers is an IT or process problem, not a change leadership concern.",
+          "correction": "Barrier removal often requires leadership authority to override existing structures or reallocate resources. Delegating it to IT or process teams alone leaves the coalition without the visible actions that signal 'the change is real.' Barrier removal is a Step 5 responsibility of the coalition, not a downstream operational task."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Categories of barrier",
+      "definition": "Kotter and subsequent practitioners identify three broad categories: structural (organizational design, reporting lines, roles), procedural (policies, processes, systems, incentives), and behavioral (individual managers or teams whose behavior blocks change even when structures and procedures allow it).",
+      "elaboration": "The three categories require different removal approaches. Structural barriers are removed by reorganization or role redefinition. Procedural barriers are removed by policy or process change. Behavioral barriers are removed by direct management action \u2014 coaching, reassignment, or in some cases removal. Confusing the categories leads to using the wrong tool: trying to solve a behavioral barrier with a process change, for example, produces new processes that the same behavior still ignores.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "All barriers can be removed by changing processes or policies.",
+          "correction": "Procedural changes cannot fix behavioral barriers. A senior manager who quietly undermines the change will continue to do so regardless of what new policies say \u2014 sometimes precisely because those policies expose the misalignment. Behavioral barriers require behavioral responses: direct conversation, coaching, or personnel action."
+        },
+        {
+          "id": "m-04",
+          "statement": "Removing behavioral barriers means firing people who resist.",
+          "correction": "Personnel action is one option and sometimes necessary, but it is the last resort, not the default. Most behavioral barriers can be addressed by direct conversation, clarification of expectations, or reassignment to roles where the behavior no longer blocks the change. Coalition leaders who default to termination lose credibility and produce fear rather than change."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Step 5 is where a change effort discovers whether its earlier steps were real. If urgency was genuine, if the coalition has authority, if the vision is clear, and if volunteers have enlisted \u2014 but barriers remain \u2014 then all the earlier work is wasted, and everyone can see it happening. Step 5 is the coalition using its authority for the first visible time, on the specific things blocking the volunteer army from acting."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Enabling action means the coalition systematically identifies and removes obstacles that prevent willing participants from moving the change forward. This is active removal, not exhortation \u2014 the barriers exist in the organization's structures, procedures, and behaviors, and they will not remove themselves."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Barriers fall into three categories: structural (org design, roles, reporting lines), procedural (policies, processes, systems, incentives), and behavioral (individuals whose actions block the change). Each category requires a different removal approach \u2014 structural changes address structures, process changes address procedures, and behavioral action addresses behaviors. Using the wrong tool leaves the barrier in place."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A structural barrier removed",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change to a customer-centric operating model is blocked because product managers and customer service managers report to different regional VPs with different metrics. Volunteers on both sides want to collaborate, but their reporting lines produce conflicting priorities.",
+        "action": "The coalition restructures the reporting lines to place product management and customer service under a single customer-experience VP in each region.",
+        "reasoning": "This is a structural barrier \u2014 reporting lines and organizational design were preventing action. The removal is a structural change (reorganization), not a process change or a behavioral change. Applying a policy change instead would have left the reporting lines intact and the barrier in place."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "A procedural barrier removed",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A financial services firm's change to faster client responsiveness is blocked because expenses over $5,000 require approval from a three-person committee that meets weekly. Volunteers cannot commit to same-day client responses when spending decisions take up to a week.",
+        "action": "The coalition raises the approval threshold to $25,000 for change-related spending and moves committee approval to a rolling asynchronous process.",
+        "reasoning": "This is a procedural barrier \u2014 the policy and process were incompatible with the change. The removal is a policy change (threshold adjustment) and a process redesign (asynchronous approval). The barrier was neither structural (no reorg needed) nor behavioral (the committee members were willing to move faster if the process allowed it)."
+      }
+    },
+    {
+      "id": "comp-example-03",
+      "cdt_type": "example",
+      "title": "A behavioral barrier addressed",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change to cross-functional collaboration is blocked in one region because the regional VP consistently overrides collaborative decisions and reinstates hierarchical decision-making within his team. Structures allow the collaboration; processes support it; but the VP's behavior prevents it.",
+        "action": "The coalition's senior sponsor has a direct conversation with the VP, makes the expectation explicit, and monitors the next quarter's behavior. When the pattern continues, the VP is reassigned to a role that does not require the collaborative behavior.",
+        "reasoning": "This is a behavioral barrier. No process change or restructure would address it \u2014 the VP was already operating within structures and processes that permitted collaboration. The intervention required was direct: conversation first, personnel action as a follow-up. Notice that termination was not the default; reassignment addressed the barrier without escalating unnecessarily."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Motivation as a substitute for enablement",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A coalition observes that volunteers are stalling on execution. Rather than diagnose the specific barriers, the coalition responds with more town halls, more inspirational communication, and additional recognition for early movers.",
+        "why_wrong": "The volunteers were already motivated \u2014 that is what made them volunteers. What they lacked was the ability to act, not the motivation to act. Additional motivational activity does not remove the barriers; it produces additional frustration by asking already-willing people to try harder against obstacles that make trying futile.",
+        "correct_framing": "When motivated people are not making progress, the diagnosis is almost always structural, procedural, or behavioral \u2014 not motivational. Step 5's job is to identify and remove what is actually in the way."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Process change applied to a behavioral barrier",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "A senior leader is quietly undermining the change effort in her area. In response, the coalition institutes a new policy requiring cross-functional sign-off on all major decisions and additional reporting requirements for leaders.",
+        "why_wrong": "The new policy applies to everyone but was created to address one person's behavior. The leader in question will comply with the letter of the policy while continuing to undermine the change in ways the policy does not touch. Meanwhile, every other leader now has additional reporting requirements they did not need. The behavioral barrier remains; process overhead has increased.",
+        "correct_framing": "Behavioral barriers require behavioral responses. Applying process changes to behavior problems creates process debt without solving the underlying issue."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "Name the three categories of barrier, and give the corresponding removal approach for each.",
+        "expected_answer": "Structural barriers (org design, reporting lines) are removed by reorganization or role redefinition. Procedural barriers (policies, processes, incentives) are removed by policy or process change. Behavioral barriers (individual actions blocking the change) are addressed by direct conversation, coaching, or personnel action."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change effort has been running for nine months. Volunteers are enthusiastic and remain committed, but execution is slow. Diagnostic interviews reveal a consistent theme: volunteers report that their day jobs, their reporting structures, and their performance metrics have not changed to support the new work. What category of barrier is most likely at play?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Motivational \u2014 volunteers need additional inspiration and recognition.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The stem describes volunteers who are enthusiastic and committed. Motivation is not the missing element. Reaching for motivational interventions when barriers are structural is one of the most common Step 5 failures \u2014 it wastes volunteer energy on the problem that isn't the problem."
+        },
+        {
+          "id": "B",
+          "text": "Structural and procedural \u2014 the reporting structures and performance metrics that shape day jobs are misaligned with the change and need to be redesigned.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Willing people whose day jobs, reporting lines, and metrics were designed for the old way will be pulled back to that old way regardless of their motivation. The intervention is to change the structures and procedures \u2014 not to ask people to work around them."
+        },
+        {
+          "id": "C",
+          "text": "Behavioral \u2014 specific managers must be identified and removed.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "The stem describes a systemic pattern, not individual actions. When the barrier is structural or procedural, addressing individual behavior does not remove it \u2014 the next person in the same role will face the same constraints. Reaching for personnel action here would be premature and misdirected."
+        },
+        {
+          "id": "D",
+          "text": "None \u2014 nine months in, the change should have overcome these obstacles by momentum alone.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Change efforts do not overcome structural barriers by momentum. The obstacles must be actively removed by the coalition; assuming they will dissolve on their own is precisely the failure Step 5 exists to prevent."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A regional VP has been quietly undermining a change effort \u2014 publicly supportive, privately reinstating old ways of working within her team. The coalition responds by launching a company-wide policy requiring quarterly attestations of change alignment from all senior leaders. Six months later, the VP's team is still not aligned with the change, though her attestation forms are all filed on time. What is the most likely explanation?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The attestation policy is working \u2014 compliance is documented, so the barrier has been removed.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Compliance with the attestation is documented; alignment of the team is not. The VP is complying with the letter of the policy while continuing to undermine the change in ways the policy does not touch. Filed forms are not aligned behavior."
+        },
+        {
+          "id": "B",
+          "text": "The coalition applied a procedural response (a policy) to a behavioral barrier (the VP's actions). Behavioral barriers require behavioral responses \u2014 direct conversation and, if necessary, personnel action.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the classic category mismatch. The VP's behavior was the barrier; a policy applied to all senior leaders does not address that specific behavior and adds overhead for everyone else. The correct intervention was direct \u2014 a conversation, followed by consequences if the behavior did not change."
+        },
+        {
+          "id": "C",
+          "text": "The coalition should launch additional policies with stronger consequences.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "More policies will produce more compliance and no more alignment. The problem is category, not intensity \u2014 no volume of procedural response addresses a behavioral barrier. The right move is to switch category (behavioral response), not to escalate within the wrong category."
+        },
+        {
+          "id": "D",
+          "text": "The VP should be terminated immediately.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Termination is one option but should not be the default. The correct sequence is: direct conversation making the expectation explicit, opportunity to change, and only then personnel action if the pattern continues. Skipping to termination without the intervening steps produces fear across the organization and damages the coalition's credibility."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Diagnostic and slightly unsentimental. This RLO teaches learners to categorize barriers correctly and to resist the pull toward motivational or process-based responses that feel productive but do not remove the actual obstacle.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 06. Step 5's role as the first place the coalition uses its authority visibly is worth surfacing \u2014 earlier steps prepared the ground; Step 5 is where the coalition acts.",
+    "feedback_policy": "Feedback must name the specific category of barrier and the specific removal approach it requires. Do not treat 'the change is stalled' as a diagnosis \u2014 it is a symptom, and the useful teaching is in the differential diagnosis.",
+    "example_shape_hints": [
+      "Include one example each of structural, procedural, and behavioral barrier removal. The three-way contrast is the specific instructional content.",
+      "The behavioral example should show reassignment as a middle response between conversation and termination, since learners tend to see only two options.",
+      "Non-examples should target the two most common category errors: motivational responses to structural barriers, and procedural responses to behavioral barriers."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present a stalled-change symptom and ask the learner to identify the barrier category and the appropriate removal approach.",
+      "At least one item should target the procedural-response-to-behavioral-barrier failure, since this is the most common category error in professional-services environments."
+    ],
+    "salience_hook_description": "The hook should establish that Step 5 is where the coalition's authority becomes visible. Everyone can see whether the coalition is willing to remove real barriers or is retreating to motivational interventions."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-06: the volunteer army is what surfaces the barriers. Without volunteers, the coalition may not know what is actually blocking action.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-example-03",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-12 revisits barrier-diagnosis as one of the skipped-step failure patterns."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_matrix_visual",
+      "rationale": "The three-category framework maps naturally to a 3x2 or 3x3 diagnostic matrix (category \u00d7 removal approach). A visual tool supports application well.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_scenario_module",
+      "rationale": "The three-way category distinction is best taught through contrasting cases, each demonstrating a different category and its correct removal approach.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 5-6 minute video that walks through each of the three barrier categories with an example and the wrong tool that would be applied by default.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "The three-category framework (structural / procedural / behavioral) is the specific instructional payload. Beyond the framework, the emphasis is on category matching \u2014 the failure mode of applying the wrong tool to the wrong category is more consequential than any specific technique for barrier removal. The 'behavioral' category is given extra care because it is the one learners most often mishandle: either avoiding it entirely (procedural response) or escalating to termination as a default. The reassignment-as-middle-option content is included specifically to give learners a third mental model.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

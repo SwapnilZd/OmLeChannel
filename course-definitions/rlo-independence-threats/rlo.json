@@ -1,0 +1,287 @@
+{
+  "id": "rlo-audit-independence-001",
+  "version": "1.0.0",
+  "date": "2026-06-19",
+  "language": "en-US",
+  "firm": "Audit",
+  "level_intent": "entry",
+  "duration_minutes": 15,
+  "modalities": ["e-learning"],
+  "proficiency": "awareness",
+  "skills": [
+    "Independence Compliance",
+    "Professional Ethics",
+    "Risk Identification",
+    "Client Conflict Assessment"
+  ],
+
+  "learning_objective": {
+    "primary": "Identify the five categories of auditor independence threats and apply the appropriate safeguard response when a threat arises in a client engagement.",
+    "sub_objectives": [
+      "Define auditor independence and explain why it is foundational to audit quality.",
+      "Recognize each of the five IESBA independence threat categories.",
+      "Match real-world scenarios to the correct threat category.",
+      "Select appropriate safeguards for a given independence threat situation.",
+      "Know when to escalate an independence concern to a senior professional."
+    ]
+  },
+
+  "written_content": {
+    "introduction": {
+      "title": "Independence: The Foundation of Audit",
+      "body": "Auditor independence is the cornerstone of trust in the audit profession. Without independence, an audit opinion loses its credibility — and its value to investors, regulators, and the public.\n\nIndependence has two dimensions:\n- **Independence in fact**: your actual objectivity and freedom from conflicts.\n- **Independence in appearance**: whether a reasonable, informed observer would believe you are objective.\n\nBoth must be maintained at all times. A threat to one is a threat to both.",
+      "narrative_hook": "You've just been staffed on an engagement for a major retail client. The partner sends you the client file — and you recognize the CFO's name. It's a close friend from university. What do you do?"
+    },
+
+    "concepts": [
+      {
+        "id": "concept-001",
+        "type": "flip_card",
+        "sequence": 1,
+        "front": {
+          "label": "Self-Interest Threat",
+          "icon_hint": "dollar-sign",
+          "teaser": "A financial or personal stake that could inappropriately influence your judgment."
+        },
+        "back": {
+          "definition": "Arises when the auditor — or a close family member — has a financial interest in, or other direct personal benefit tied to, an audit client.",
+          "examples": [
+            "Owning shares or stock options in an audit client.",
+            "Having an outstanding loan from, or to, an audit client.",
+            "Hoping to receive a job offer from the client after the engagement closes."
+          ],
+          "safeguard_hint": "Divestiture, recusal from the engagement, or firm-level partner rotation may be required depending on severity."
+        }
+      },
+      {
+        "id": "concept-002",
+        "type": "flip_card",
+        "sequence": 2,
+        "front": {
+          "label": "Self-Review Threat",
+          "icon_hint": "rotate-ccw",
+          "teaser": "Auditing the results of work your own firm previously performed."
+        },
+        "back": {
+          "definition": "Arises when the auditor evaluates a judgment or service that they — or another professional in their firm — previously performed for the same client.",
+          "examples": [
+            "Auditing financial statements that the firm helped prepare.",
+            "Assessing internal controls that the firm's advisory team helped design.",
+            "Reviewing tax calculations that the firm's tax team created."
+          ],
+          "safeguard_hint": "Use completely separate teams for advisory work and audit work on the same client. When separation is insufficient, the engagement may need to be declined."
+        }
+      },
+      {
+        "id": "concept-003",
+        "type": "flip_card",
+        "sequence": 3,
+        "front": {
+          "label": "Advocacy Threat",
+          "icon_hint": "megaphone",
+          "teaser": "Acting as a promoter or champion for a client's position."
+        },
+        "back": {
+          "definition": "Arises when the auditor promotes a client's viewpoint or interests to the point that their objectivity as an auditor may be compromised.",
+          "examples": [
+            "Acting as an expert witness in support of a client in a legal dispute.",
+            "Underwriting or publicly marketing a client's securities offering.",
+            "Lobbying on behalf of a client's preferred accounting treatment."
+          ],
+          "safeguard_hint": "Decline advocacy roles that require defending client positions as your own. Disclose and consult the independence team before agreeing to any representative role for a client."
+        }
+      },
+      {
+        "id": "concept-004",
+        "type": "flip_card",
+        "sequence": 4,
+        "front": {
+          "label": "Familiarity Threat",
+          "icon_hint": "users",
+          "teaser": "Becoming too sympathetic to a client due to a close or long-standing relationship."
+        },
+        "back": {
+          "definition": "Arises from a close personal relationship or extended professional history with a client, causing the auditor to become sympathetic to their interests rather than maintaining independent judgment.",
+          "examples": [
+            "An auditor has served the same client for over a decade without rotation.",
+            "An auditor maintains a close personal friendship with the client's CFO.",
+            "A family member of the audit team holds a key financial management role at the client."
+          ],
+          "safeguard_hint": "Partner rotation policies and engagement quality reviews are the primary controls. Close family relationships in key client roles must be disclosed and assessed promptly."
+        }
+      },
+      {
+        "id": "concept-005",
+        "type": "flip_card",
+        "sequence": 5,
+        "front": {
+          "label": "Intimidation Threat",
+          "icon_hint": "alert-triangle",
+          "teaser": "Being deterred from objectivity by actual or perceived pressure."
+        },
+        "back": {
+          "definition": "Arises when the auditor is deterred from acting objectively due to actual or implied threats — from a client, a colleague, or a business relationship.",
+          "examples": [
+            "A client threatens to replace the firm if an adverse opinion is issued.",
+            "A dominant engagement partner pressures a team member to sign off on a questionable conclusion.",
+            "Client legal counsel threatens litigation over an audit finding."
+          ],
+          "safeguard_hint": "Document the situation thoroughly, escalate to the engagement partner and independence team, and engage the firm's ethics resources. Do not modify audit conclusions in response to pressure."
+        }
+      }
+    ],
+
+    "scenario": {
+      "id": "scenario-001",
+      "type": "branching",
+      "title": "The Familiar Face",
+      "setup": "Jordan is a first-year associate on the audit team for Meridian Retail Group. While reviewing the engagement file, Jordan notices that Meridian's CFO is a close university friend, Alex — someone Jordan still meets for dinner every few months. Jordan hasn't mentioned this to the engagement partner.",
+      "branch_prompt": "What should Jordan do first?",
+      "branches": [
+        {
+          "id": "branch-a",
+          "label": "Continue without disclosing. The friendship is personal, not professional — it won't affect the work.",
+          "outcome_type": "incorrect",
+          "feedback_title": "Not the right call.",
+          "feedback_body": "A close ongoing personal relationship with key client management is a familiarity threat regardless of whether Jordan believes it affects their objectivity. IESBA standards and firm independence policies require disclosure. Choosing not to disclose puts the engagement, the firm's reputation, and Jordan's career at significant risk — and creates the appearance of a cover-up if discovered later.",
+          "next": "branch-resolution"
+        },
+        {
+          "id": "branch-b",
+          "label": "Disclose the relationship to the engagement partner immediately.",
+          "outcome_type": "correct",
+          "feedback_title": "Correct — this is the right first step.",
+          "feedback_body": "Immediate disclosure to the engagement partner is required. The partner can then assess the nature and significance of the threat and apply appropriate safeguards — for example, restricting Jordan's involvement in areas where Alex's decisions are directly subject to testing. If the threat is significant, the matter may be escalated to the firm's independence team.",
+          "next": "branch-resolution"
+        },
+        {
+          "id": "branch-c",
+          "label": "Ask Alex not to mention the friendship and stay on the engagement quietly.",
+          "outcome_type": "incorrect",
+          "feedback_title": "This makes the situation significantly worse.",
+          "feedback_body": "Asking the client to conceal a conflict compounds the original familiarity threat with a potential integrity and ethics violation. It creates a documented risk for the firm and, if discovered, transforms a disclosure issue into a conduct issue. Disclosure to the engagement partner is always the correct starting point — it protects Jordan, the firm, and the engagement.",
+          "next": "branch-resolution"
+        }
+      ],
+      "resolution": {
+        "id": "branch-resolution",
+        "title": "What Happens After Disclosure",
+        "body": "After Jordan discloses, the engagement partner escalates to the firm's Independence team. Their assessment: Jordan can remain on the engagement with one documented safeguard — Jordan will not perform testing on any balance sheet items or processes where Alex's direct decisions are subject to audit scrutiny. The restriction is documented in the independence file. The engagement proceeds. Jordan's transparency is noted positively. The situation is resolved — because it was disclosed."
+      }
+    }
+  },
+
+  "written_learning_examples": [
+    {
+      "id": "example-001",
+      "type": "worked_example",
+      "title": "Stock Ownership: A Classic Self-Interest Threat",
+      "scenario": "A senior auditor on a public company engagement learns that her spouse recently purchased shares in the audit client as part of a retirement portfolio rebalancing.",
+      "analysis": "Even though the auditor did not personally make the purchase, financial interests held by an immediate family member are treated the same as the auditor's own interests under IESBA standards. Disclosure is required immediately. The shares must be divested within a reasonable period unless the firm's independence team determines that the holding is immaterial and does not create a significant threat.",
+      "resolution": "The auditor discloses to the engagement partner. The spouse divests the shares within 60 days. The situation is documented in the independence file. The auditor continues on the engagement with no further action required.",
+      "lesson": "Self-interest threats can arise from immediate family financial interests — not just your own. The standard is whether a reasonable observer would see the interest as compromising objectivity, not whether you personally made the decision."
+    },
+    {
+      "id": "example-002",
+      "type": "worked_example",
+      "title": "Advisory Work Crossing Into Audit: A Self-Review Trap",
+      "scenario": "A consulting team within the firm spends six months helping a mid-market client redesign their revenue recognition process. Shortly after implementation, the audit team is engaged to audit the same client's year-end financial statements — which include the newly redesigned revenue figures.",
+      "analysis": "The audit team would be assessing the effectiveness and accuracy of work that originated within their own firm. This is a self-review threat. The auditor cannot objectively evaluate work when their own organization has a stake in it being correct. Even using separate teams within the same firm does not fully resolve this when the advisory work is material to the financials.",
+      "resolution": "The firm declines the audit engagement for this client for the relevant period, given the materiality and recency of the advisory involvement. The client is advised to engage an independent external auditor. The firm documents its reasoning and the client's acknowledgement.",
+      "lesson": "Significant advisory services and audit work on the same client for the same period are difficult to separate meaningfully. The safeguard must be proportionate to the threat — and sometimes that means not taking the engagement."
+    },
+    {
+      "id": "example-003",
+      "type": "contrast_example",
+      "title": "Familiarity Threat: When Does Professional Closeness Cross the Line?",
+      "acceptable": {
+        "description": "An audit senior has worked with the same client for three years and has developed a productive, professional working relationship with the finance team. She understands the business well and communicates efficiently with client staff.",
+        "why_acceptable": "Familiarity gained through professional experience is expected and valuable. The threat level remains acceptable provided that engagement quality reviews are in place, the auditor's conclusions are independently supported, and there is no personal relationship that supersedes professional boundaries."
+      },
+      "unacceptable": {
+        "description": "An audit partner has managed the same client relationship for 14 years without rotation. The partner and the client CEO socialize regularly outside of work, exchange personal gifts, and the partner has advocated internally for the CEO's preferred accounting positions when the audit team raised concerns.",
+        "why_unacceptable": "The combination of long tenure, personal social closeness, and internal advocacy on the client's behalf creates a significant familiarity threat that cannot be addressed by normal safeguards alone. Partner rotation policies exist precisely to prevent this accumulation of closeness from undermining independence in appearance."
+      }
+    }
+  ],
+
+  "assessment": {
+    "passing_score": 80,
+    "max_attempts": 2,
+    "randomize_questions": true,
+    "randomize_answers": true,
+    "questions": [
+      {
+        "id": "q-001",
+        "sequence": 1,
+        "type": "multiple_choice_single",
+        "stem": "An auditor discovers that her brother was recently appointed as the Financial Controller of one of her audit clients. Which type of independence threat does this PRIMARILY represent?",
+        "options": [
+          { "id": "a", "text": "Self-interest threat", "correct": false },
+          { "id": "b", "text": "Familiarity threat", "correct": true },
+          { "id": "c", "text": "Advocacy threat", "correct": false },
+          { "id": "d", "text": "Intimidation threat", "correct": false }
+        ],
+        "feedback_correct": "Correct. A close family member in a key management position at an audit client is a familiarity threat. The relationship creates a risk that the auditor may be too sympathetic to the client's interests or reluctant to challenge management decisions.",
+        "feedback_incorrect": "Consider what makes this situation problematic: it is a close personal and family relationship with someone in a key client role. That is the defining characteristic of a familiarity threat."
+      },
+      {
+        "id": "q-002",
+        "sequence": 2,
+        "type": "multiple_choice_single",
+        "stem": "A firm's advisory team helped a client design and implement new internal controls over financial reporting. The same firm is then engaged to audit those controls. What is the MOST significant independence concern?",
+        "options": [
+          { "id": "a", "text": "Intimidation threat — the client may pressure the firm to approve its own prior work.", "correct": false },
+          { "id": "b", "text": "Self-review threat — the firm would be auditing work it previously performed.", "correct": true },
+          { "id": "c", "text": "Advocacy threat — the firm would effectively be defending its own prior recommendations.", "correct": false },
+          { "id": "d", "text": "Self-interest threat — the firm earns fees from both the advisory and audit engagements.", "correct": false }
+        ],
+        "feedback_correct": "Correct. Auditing work that your own firm performed is the definition of a self-review threat. The auditor cannot objectively evaluate their own organization's output.",
+        "feedback_incorrect": "Focus on who performed the work being audited. When the same firm both created something and is now asked to independently assess it, objectivity is structurally compromised."
+      },
+      {
+        "id": "q-003",
+        "sequence": 3,
+        "type": "multiple_choice_single",
+        "stem": "A client's CFO tells the engagement partner: 'If you issue a qualified opinion on the receivables balance, we will put the audit contract out to tender immediately.' This statement is an example of which threat?",
+        "options": [
+          { "id": "a", "text": "Familiarity threat", "correct": false },
+          { "id": "b", "text": "Self-interest threat", "correct": false },
+          { "id": "c", "text": "Intimidation threat", "correct": true },
+          { "id": "d", "text": "Advocacy threat", "correct": false }
+        ],
+        "feedback_correct": "Correct. Threatening to remove the audit contract if an adverse conclusion is issued is a direct intimidation threat. This must be documented, escalated, and must not influence the audit conclusion.",
+        "feedback_incorrect": "The client is applying pressure by threatening a consequence intended to change the audit conclusion. Which category describes being deterred from objectivity through actual or perceived pressure?"
+      },
+      {
+        "id": "q-004",
+        "sequence": 4,
+        "type": "multiple_choice_multi",
+        "stem": "Which of the following scenarios represent a self-interest threat? Select ALL that apply.",
+        "options": [
+          { "id": "a", "text": "An auditor holds unvested stock options in an audit client that will mature after the engagement closes.", "correct": true },
+          { "id": "b", "text": "The auditor's firm helped prepare the client's tax return and is now auditing the annual financials.", "correct": false },
+          { "id": "c", "text": "An auditor is actively hoping to be offered a full-time role at the client's finance team after the engagement.", "correct": true },
+          { "id": "d", "text": "The engagement partner has maintained the same client relationship for over 12 years.", "correct": false },
+          { "id": "e", "text": "An auditor's spouse has a material outstanding loan from the audit client.", "correct": true }
+        ],
+        "feedback_correct": "Correct. Financial interests (stock options, loans) and personal employment interests all create a direct personal stake in the engagement outcome — that is the hallmark of a self-interest threat.",
+        "feedback_incorrect": "Focus on scenarios where the auditor or an immediate family member has a personal financial gain or career benefit tied to the client. Options B and D describe different threat types — what are they?"
+      },
+      {
+        "id": "q-005",
+        "sequence": 5,
+        "type": "multiple_choice_single",
+        "stem": "Jordan discloses a familiarity threat to the engagement partner. What is the partner's FIRST responsibility?",
+        "options": [
+          { "id": "a", "text": "Remove Jordan from the engagement immediately as a precautionary measure.", "correct": false },
+          { "id": "b", "text": "Assess the nature and significance of the threat and determine proportionate safeguards.", "correct": true },
+          { "id": "c", "text": "Report Jordan to the firm's ethics team for not disclosing the conflict sooner.", "correct": false },
+          { "id": "d", "text": "Notify the client's audit committee of the potential independence issue right away.", "correct": false }
+        ],
+        "feedback_correct": "Correct. Disclosure triggers an assessment process, not an automatic outcome. The engagement partner must evaluate the specific situation — the nature of the relationship, Jordan's role, and the areas affected — before determining the appropriate safeguard.",
+        "feedback_incorrect": "Disclosure is the right action, but it does not automatically require removal or immediate external notification. The partner's first step is to assess the specific threat and determine what response is proportionate to its significance."
+      }
+    ]
+  }
+}

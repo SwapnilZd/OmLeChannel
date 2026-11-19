@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "id": "src-manual",
+      "title": "Coffee machine manual",
+      "reference": "Example manufacturer. Coffee machine operating manual.",
+      "authority": "primary",
+      "ingested_source_id": "source-coffee-manual",
+      "source_version_id": "source-coffee-manual-v1",
+      "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+      "canonical_locator": "Coffee machine manual"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-brew-procedure",
+      "source_ref": "src-manual",
+      "source_version_id": "source-coffee-manual-v1",
+      "node_ids": ["node-page-4-step-2"],
+      "locator": "page 4, step 2",
+      "role": "objective_defining",
+      "excerpt": "Press the brew button to begin extraction.",
+      "excerpt_sha256": "a7eb049723ee7bf05626d60730b710b917b75c558d39823e483b0d54353845a5",
+      "usage_note": "Defines the observable machine-operation step."
+    }
+  ],
+  "references": {
+    "enabling_objective": ["ev-brew-procedure"],
+    "concept": ["ev-brew-procedure"],
+    "misconception": ["ev-brew-procedure"],
+    "component": ["ev-brew-procedure"],
+    "assessment_item": ["ev-brew-procedure"],
+    "assessment_option": ["ev-brew-procedure"]
+  }
+}

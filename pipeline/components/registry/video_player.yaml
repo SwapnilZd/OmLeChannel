@@ -1,0 +1,27 @@
+id: video_player
+name: Video Player
+description: A media-first slide containing a supplied video asset inside the shared course navigation shell.
+when_to_use: Use only when a delivery specification or grounded source reference provides a playable video URL or file path.
+tags: [media, video, playback]
+sequence_position: any
+selection:
+  category: media
+  purposes: [play_video, show_animation]
+  content_shapes: [single_video_asset]
+  relationships: [single_focus]
+  interactions: [video_controls]
+  densities: [sparse]
+  sequence_positions: [middle, any]
+  media_supported: true
+  media_required: true
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Media-first slide for one supplied video or animation asset. The slide body is intentionally
+    minimal and relies on the shared course navigation shell plus native playback controls.
+    Requires a grounded playable video URL or path; never infer or invent a video asset from topic text.
+slots:
+  title: {target_chars: 40, max_chars: 80, required: false}
+  video_src: {min_chars: 1, max_chars: 2000, required: true}
+  poster_path: {required: false}
+  captions_path: {required: false}
+image_slots: []

@@ -1,0 +1,10 @@
+{% set cls = 'outcome-correct' if s.outcome_type == 'correct' else 'outcome-incorrect' %}
+{% set icon = '✓' if s.outcome_type == 'correct' else '✗' %}
+<section id="{{ s.branch_id }}" class="slide-scenario-branch {{ cls }}" data-screen-id="{{ s.screen_id }}">
+  <div class="branch-badge">
+    <span class="outcome-icon">{{ icon }}</span>
+    <span>{{ s.feedback_title }}</span>
+  </div>
+  <div class="branch-feedback">{{ s.feedback_body | paragraphs }}</div>
+  <a class="cta-btn" href="#{{ s.resolution_screen_id }}">Continue →</a>
+</section>

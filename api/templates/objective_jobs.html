@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Objective Jobs · Omnichannel Learning</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <style>
+    .jobs-layout{display:grid;width:min(100%,1320px);max-width:1320px;gap:1rem}.page-intro{margin:.3rem 0 0;color:var(--ink-muted);font-size:.9rem}.job-grid{display:grid;gap:.75rem}.job-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;padding:1rem;border:1px solid var(--border);border-radius:10px;background:#fff;color:inherit;text-decoration:none}.job-card:hover{border-color:var(--accent);box-shadow:var(--shadow-sm)}.job-card h2{margin:.1rem 0 .35rem;font-size:1rem}.meta{color:var(--ink-muted);font-size:.82rem}.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.65rem}.badge{padding:.22rem .55rem;border-radius:999px;background:var(--surface-soft);font-size:.74rem;font-weight:750}.badge.running,.badge.queued{background:#fff4cc;color:#6c5200}.badge.failed{background:var(--error-bg);color:var(--error)}.badge.complete,.badge.succeeded{background:#e5f5ed;color:#176b47}.counts{text-align:right}.empty{padding:2rem;text-align:center;color:var(--ink-muted)}@media(max-width:700px){.job-card{grid-template-columns:1fr}.counts{text-align:left}}
+  </style>
+</head>
+<body>
+<header class="app-header">
+    <a class="brand-lockup" href="/commission" aria-label="Omnichannel Learning home"><img class="brand-logo" src="/static/brand/deloitte-logo-web.png" alt="Deloitte"><span class="brand-divider" aria-hidden="true"></span><span class="product-name">Omnichannel Learning</span></a>
+    <nav aria-label="Primary"><a href="/source-upload">Source Intake</a><a href="/objective-jobs" class="active">Objective Jobs</a><a href="/rlo-drafts">RLO Review</a><a href="/">RLO Registry</a><a href="/commission">Commission Learning</a><a href="/jobs">Jobs</a><a href="/logout">Log out</a></nav>
+    <div class="page-heading"><h1>Objective Jobs</h1><p class="page-intro">Track source decomposition, LDS review, and objective detail approval.</p></div>
+</header>
+<main class="layout jobs-layout">
+  <section class="card" aria-labelledby="jobs-heading">
+    <h2 id="jobs-heading">Jobs</h2>
+    <p id="status" role="status" aria-live="polite">Loading objective jobs…</p>
+    <div id="jobs" class="job-grid"></div>
+  </section>
+</main>
+<script>
+const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+async function api(path){const response=await fetch(path,{credentials:'include'});if(response.status===401){location.href='/login';throw new Error('Session expired.')}if(!response.ok)throw new Error(`Request failed (${response.status})`);return response.json()}
+function label(value){return String(value||'').replaceAll('_',' ').replace(/\b\w/g,char=>char.toUpperCase())}
+function render(values){const root=document.getElementById('jobs');document.getElementById('status').textContent=values.length?`${values.length} objective job${values.length===1?'':'s'}.`:'No objective jobs yet. Start one from an extracted source.';root.innerHTML=values.length?values.map(job=>`<a class="job-card" href="/objective-jobs/${encodeURIComponent(job.job_id)}"><div><h2>${esc(job.source_collection_title)}</h2><div class="meta">${job.source_count} source${job.source_count===1?'':'s'} · Updated ${esc(new Date(job.updated_at).toLocaleString())}</div><div class="badges"><span class="badge ${esc(job.workflow_stage)}">${esc(label(job.workflow_stage))}</span><span class="badge ${esc(job.processing_status)}">${esc(label(job.processing_status))}</span>${job.current_operation?`<span class="badge">${esc(label(job.current_operation))}</span>`:''}${job.error_message?'<span class="badge failed">Needs attention</span>':''}${job.workspace_error?'<span class="badge failed">Regeneration required</span>':''}</div></div><div class="counts"><strong>${job.candidate_count}</strong><div class="meta">objectives</div><strong>${job.source_feature_count}</strong><div class="meta">source features</div></div></a>`).join(''):'<div class="empty">Upload and inspect a source, then start an objective job.</div>'}
+api('/api/objective-jobs').then(render).catch(error=>document.getElementById('status').textContent=error.message);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+id: deloitte-green
+name: Deloitte Green
+
+colors:
+  accent: deloitte_green
+  accent_lt: "#F1F8E5"
+  ink: dark_gray
+  muted: cool_gray_9
+  surface: white
+  bg: "#F7F7F7"
+  border: light_gray
+  green: deep_green
+  green_lt: "#E8F3EC"
+  red: "#b91c1c"
+  red_lt: "#fef2f2"
+
+typography:
+  heading_font: "Open Sans"
+  body_font: "Open Sans"
+
+border_radius: 10
+
+backgrounds:
+  title: null
+  default: null
+
+logo: null

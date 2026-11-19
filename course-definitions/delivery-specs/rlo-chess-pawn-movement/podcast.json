@@ -1,0 +1,338 @@
+{
+  "type": "delivery_spec",
+  "modality": "podcast",
+  "id": "chess-pawn-movement-podcast-001",
+  "rlo_id": "rlo-chess-pawn-movement-001",
+  "rlo_version": "1.0",
+  "version": "1.0",
+  "date": "2026-06-25",
+  "title": "Why Can't My Pawn Eat That?",
+  "series": "Move by Move",
+  "episode": 1,
+  "target_duration_minutes": 10,
+  "metadata": {
+    "soundscape_notes": "Quiet study room or home office atmosphere. Low, soft ambient hum. Occasional distant sound of a chess piece placed on a board — used sparingly for emphasis, not as constant background noise.",
+    "industry_folklore_theme": "The unassuming pawn: the piece every beginner misunderstands first and every grandmaster respects most.",
+    "voice_tone_profile": "Host (Alex): Warm, genuinely curious, has played casual chess but never learned the rules properly. Disarming and relatable — voices what beginners are afraid to admit they don't know. Expert (Morgan): Experienced club player and coach. Patient, enthusiastic about fundamentals, prone to vivid analogies. Never condescending."
+  },
+  "cast": [
+    {
+      "role": "Host",
+      "name": "Alex",
+      "voice_id": "nova",
+      "voice_description": "Warm, mid-range, conversational. Sounds like a curious friend, not a presenter."
+    },
+    {
+      "role": "Expert",
+      "name": "Morgan",
+      "voice_id": "onyx",
+      "voice_description": "Grounded, thoughtful, slightly dry sense of humour. Sounds like someone who has explained this a hundred times and still enjoys it."
+    }
+  ],
+  "script": [
+    {
+      "id": "s-01",
+      "type": "SFX",
+      "line": "Soft upbeat intro music — think coffee shop jazz, brisk tempo. Fades after 5 seconds.",
+      "audio_engineering_note": "Fade in over 1 second, hold at low volume for 3 seconds, then fade out cleanly."
+    },
+    {
+      "id": "s-02",
+      "type": "Host",
+      "line": "Welcome to Move by Move — the show where we slow chess down to the speed of actually understanding it. I'm Alex, I've been playing chess wrong for approximately fifteen years, and joining me today is Morgan, a chess coach who has spent a lot of time fixing people exactly like me. Morgan, welcome.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Normal mix. Slight warmth EQ."
+    },
+    {
+      "id": "s-03",
+      "type": "Expert",
+      "line": "Thanks, Alex. And I want to say — fifteen years of playing wrong is actually fine. Most of those mistakes usually come down to a handful of rules. The pawn is responsible for most of them.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "They always think they know the pawn. They never fully know the pawn.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Normal mix."
+    },
+    {
+      "id": "s-04",
+      "type": "Host",
+      "line": "[Laughing] Of course it is. Okay — so today we're talking purely about pawns: how they move, how they capture, and apparently how I've been misunderstanding them. Let's start from the top. How does a pawn actually move?",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-05",
+      "type": "Expert",
+      "line": "Straight forward. One square at a time, toward the opponent's side of the board. That's the whole movement rule — it doesn't go sideways, it doesn't go backward, it doesn't cut diagonally. Just straight ahead, one square.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "Keep it simple. The complications come later.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Slight pause after 'straight ahead' — let it land."
+    },
+    {
+      "id": "s-06",
+      "type": "Host",
+      "line": "Okay, that sounds simple enough. But I feel like I've definitely seen — or done — something with pawns where it gets more complicated than that.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-07",
+      "type": "Expert",
+      "line": "The first wrinkle is right at the start. If a pawn hasn't moved yet — it's sitting on its starting square, rank two for White or rank seven for Black — it has the option to move two squares forward instead of one. But here's the catch: both squares have to be completely empty. The square it crosses and the square it lands on.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "This is where the 'jump over' misconception usually surfaces.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-08",
+      "type": "Host",
+      "line": "Wait — so if there's a piece sitting on the first square, you can't skip over it to the second?",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-09",
+      "type": "Expert",
+      "line": "Exactly right. No skipping. Think of it like walking — you can't step over someone standing on the footpath. If that first square is occupied, the pawn can't advance at all, even if the second square is wide open. And — crucially — once a pawn has made any move, even just one square, that two-square option is gone forever for that pawn.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "The walking analogy helps this stick without needing a board in front of them.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Slight pause before 'gone forever' for emphasis."
+    },
+    {
+      "id": "s-10",
+      "type": "Host",
+      "line": "One-time deal. Alright. Now — what happens when a pawn runs right into an enemy piece? Like, there's something directly in front of it.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-11",
+      "type": "Expert",
+      "line": "It stops. Completely. A pawn cannot move forward if any piece — yours or theirs — is sitting on the square directly ahead. No bumping, no pushing, no capturing it. That piece is a wall.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "The blocked pawn is one of the most important positional concepts. Plant the seed now.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-12",
+      "type": "Host",
+      "line": "Hmm. That feels wrong to me, instinctively. I think I've definitely been playing that you can capture whatever's in front of you.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-13",
+      "type": "Expert",
+      "line": "[Knowing laugh] You and about ninety percent of people who learned casually. Here's the key insight — the pawn's movement direction and its capture direction are completely separate. The pawn moves straight forward, but it captures diagonally forward. One square to the left or right, angled toward the opponent. Those are two different paths, and they never overlap.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "This is the heart of the episode. Frame it as interesting, not a correction.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Slight lean-in quality — this is the conceptual core. Don't rush it."
+    },
+    {
+      "id": "s-14",
+      "type": "Host",
+      "line": "So a pawn literally cannot take the piece that is directly in front of it.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Let the sentence hang — half a beat of silence before Expert responds."
+    },
+    {
+      "id": "s-15",
+      "type": "Expert",
+      "line": "Cannot. I once watched two players in the park — both regulars, clearly there every weekend — and one of them advanced a pawn straight into the other player's pawn and said 'I take that.' The other player didn't argue. They'd both been playing this wrong for years. And because of that one mistaken rule, entire positions were being built on a lie.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "I genuinely have seen this. The warmth here is real.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Storytelling mode — slightly slower pace, warmer tone."
+    },
+    {
+      "id": "s-16",
+      "type": "Host",
+      "line": "Okay — make this concrete for me. White has a pawn on e4. Black has a pawn sitting on e5, right in front of it. What actually happens in that position?",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-17",
+      "type": "Expert",
+      "line": "The White pawn is stuck. Dead stop. It can't move forward because e5 is occupied, and it can't capture the e5 pawn because that pawn is directly ahead — and captures only go diagonally. If there are no Black pieces on d5 or f5, the two diagonal squares in front of it, then the White pawn has nowhere to go. It's frozen until the position changes.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "Classic blocked pawn. This exact structure decides games at every level.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-18",
+      "type": "Host",
+      "line": "But what if there IS a Black piece on one of those diagonal squares?",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-19",
+      "type": "Expert",
+      "line": "Then it can capture. Different position — same White pawn on e4, still can't go straight up because something's blocking it — but now Black has a bishop sitting on d5. That's one square diagonally forward. The White pawn can move from e4 to d5, remove the bishop, and now the pawn sits on d5. Clean, legal capture.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "Concrete board geometry. This is how you explain moves without a visual.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-20",
+      "type": "Host",
+      "line": "And the pawn doesn't have to take the bishop if it doesn't want to? That's optional?",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-21",
+      "type": "Expert",
+      "line": "Always optional — unless passing it up leaves your king in check, but that's a different episode. You might have a strategic reason to hold. The pawn sees the capture; you decide whether to pull the trigger.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "Don't go into check rules — keep the scope tight.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-22",
+      "type": "Host",
+      "line": "Alright — let me see if I can hold all of this. A pawn moves straight forward, one square normally, two from its starting position if both squares ahead are clear. It captures diagonally forward, one square left or right. It cannot capture what's directly in front of it — that piece just blocks it. And it can never, ever move backward.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Summative recap beat — slight energy lift."
+    },
+    {
+      "id": "s-23",
+      "type": "Expert",
+      "line": "That's the whole picture. And honestly, that summary alone puts you ahead of a lot of casual players. The backward thing catches people too — I've seen players try to retreat a pawn when it's under threat and then genuinely look confused when they can't. Pawns only go forward. That's partly what makes them interesting — every step is a commitment.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "Reinforce the confidence. And close the loop on backward movement before the challenge.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-24",
+      "type": "Expert",
+      "line": "Let me put a scenario to you. You have a White pawn on e4, and your opponent has placed a rook on e5, directly in front of it. What can that pawn do?",
+      "voice_id": "onyx",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-25",
+      "type": "Host",
+      "line": "My first instinct is to deal with the rook using that pawn, but the rules we've covered tell me it has no legal move. So my answer is: nothing.",
+      "voice_id": "nova",
+      "expert_inner_monologue": null,
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-26",
+      "type": "Expert",
+      "line": "Exactly. The rook is directly in front of the pawn, so the pawn can't advance. Because the rook is not diagonal, the pawn can't capture it either. The pawn is completely frozen this turn, and the move has to come from somewhere else.",
+      "voice_id": "onyx",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-27",
+      "type": "Host",
+      "line": "So the mistake is expecting the pawn to deal with whatever is in front of it, when moving and capturing follow two separate rules.",
+      "voice_id": "nova",
+      "expert_inner_monologue": null,
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Warm, slightly reflective tone. The conceptual payoff."
+    }
+  ],
+  "assessment": {
+    "assessment_type": "HostExpertKnowledgeCheck",
+    "id": "rc-01",
+    "rlo_assessment_refs": ["q-01", "q-02"],
+    "script_position": "after s-27",
+    "expert_prompt": "One final challenge for you. White has a pawn on g2, its starting square, with a White knight on g3 directly in front of it. The square h3 is empty. How many legal moves does that pawn have?",
+    "host_response": "I would say zero. Its own knight blocks the forward square, so it also cannot move two squares, and there is nothing on h3 to capture.",
+    "cognitive_pause_seconds": 0,
+    "pause_audio_note": "Use only the normal conversational gap between the Expert's question and the Host's response.",
+    "call_to_action": "Next time you sit down at a board, before you touch anything, find one of your own pawns that can't move — and ask yourself why.",
+    "expert_reveal": {
+      "id": "s-28",
+      "type": "Expert",
+      "line": "The pawn on g2 has zero legal moves. The White knight on g3 blocks the file — the pawn can't land there because it's a friendly piece, and because g3 is blocked, the two-square advance to g4 is also off the table. h3 is empty, so there's nothing on the diagonal to capture. The pawn is frozen — not by the opponent, but by its own knight. Your pieces can trap your own pawns just as effectively as theirs can.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": "The real lesson: awareness of self-blocking is half of positional chess.",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": "Let the insight settle. Warm, unhurried delivery."
+    }
+  },
+  "outro": [
+    {
+      "id": "s-29",
+      "type": "Host",
+      "line": "Morgan, this has been genuinely clarifying. I feel like I need to go replay some old games.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-30",
+      "type": "Expert",
+      "line": "[Laughing] Don't. Just play a new one and watch the pawns.",
+      "voice_id": "onyx",
+      "expert_inner_monologue": null,
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-31",
+      "type": "Host",
+      "line": "On the next episode of Move by Move, we look at the rook — the piece that can cross the entire board in one move, as long as nothing's in the way. If today helped, share it with someone who needs to understand why their pawn isn't eating anything. Thanks for listening.",
+      "voice_id": "nova",
+      "cognitive_pause_duration": 0,
+      "audio_engineering_note": null
+    },
+    {
+      "id": "s-32",
+      "type": "SFX",
+      "line": "Single chess piece placed cleanly on a board. Outro music fades in.",
+      "audio_engineering_note": "SFX first, then music starts. Fade to silence over 8 seconds."
+    }
+  ],
+  "rlo_coverage_map": {
+    "note": "Maps every field from rlo-chess-pawn-movement-001 to the script segment(s) that address it.",
+    "terminal_objective": "Applied directly in the reflective challenge (host_prompt) and expert_reveal (s-28) — identifies all legal pawn moves given a position.",
+    "performance_context": "Framed in s-16 through s-17 and s-24/s-25 — decision made during a game before committing a move.",
+    "learning_objectives": {
+      "lo-01": "s-05, s-07 through s-09 — one square normally, two from starting rank with both squares empty.",
+      "lo-02": "s-13 through s-15, s-26 — movement direction vs. capture direction as the central distinction.",
+      "lo-03": "s-24/s-25 (cognitive rehearsal) and the ReflectiveChallenge — determining blocked, free, or capture in a live position."
+    },
+    "concepts": {
+      "c-01": "s-05, s-10/s-11, s-22/s-23 — forward-only movement, blocked by any piece, no backward retreat.",
+      "c-02": "s-07 through s-09 — two-square option, starting rank only, no jumping the first square.",
+      "c-03": "s-13 through s-21 — diagonal capture, cannot capture forward, capture is optional."
+    },
+    "cases": {
+      "case-01": "s-16/s-17 — the blocked e4 vs e5 position used as a concrete scenario.",
+      "case-02": "s-07/s-08 — two-square advance discussion uses the same logical setup.",
+      "case-03": "s-18/s-19 — the e4 pawn capturing a bishop on d5."
+    },
+    "assessment_items": {
+      "q-01": "Converted to cognitive rehearsal at s-24/s-25 — e4 pawn blocked by rook on e5.",
+      "q-02": "Converted to ReflectiveChallenge — g2 pawn blocked by own knight on g3."
+    }
+  }
+}

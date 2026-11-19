@@ -1,0 +1,359 @@
+{
+  "id": "rlo-adkar-03-sequenced-within-individual",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR's Sequence and the 'Many Clocks' of Individual Change",
+  "topic": "ADKAR's Sequence and the 'Many Clocks' of Individual Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "principle",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-09-identify-barrier-point",
+    "rlo-adkar-10-differentiated-interventions"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain why ADKAR's elements are sequenced within an individual and distinguish this from a linear organizational timeline across a workforce.",
+  "performance_context": "When observing or planning a change effort, the learner should be able to reason about the fact that different individuals will be at different ADKAR states simultaneously, and use this to avoid the failure mode of assuming lockstep organizational progression.",
+  "enabling_objective": {
+    "id": "lo-03",
+    "statement": "Explain the dependency between ADKAR elements within a given individual, and explain why different individuals in the same change effort are typically at different ADKAR states at the same time.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Sequential dependency within an individual",
+      "definition": "For a given individual, each ADKAR element is a prerequisite for the next. Awareness must exist before Desire can form; Desire must exist before Knowledge can be effectively absorbed; Knowledge must exist before Ability can be built; and Ability must be reinforced or it decays. Skipping an element leaves the individual unable to complete the transition.",
+      "elaboration": "The dependency is not a matter of convenience; it is a description of how individual change actually works. A person who does not understand why a change is needed cannot form genuine desire to support it \u2014 any 'desire' would be compliance, not conviction. A person without desire cannot absorb knowledge with the engagement required to retain it. A person with knowledge but no practiced ability cannot perform the change under pressure. A person with ability but no reinforcement drifts back to prior behaviors. Each dependency has an underlying psychological or behavioral logic; the sequence is not an arbitrary ordering.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The elements can be pursued in any order because they are complementary.",
+          "correction": "The elements are sequential, not parallel. Attempting Knowledge before Awareness produces training that people ignore because they do not see why it matters. Attempting Ability before Desire produces reluctant compliance that reverts under pressure. The elements have a specific order for specific reasons rooted in how individual behavior change works."
+        },
+        {
+          "id": "m-02",
+          "statement": "A skipped element can be added in later without consequence.",
+          "correction": "Skipped elements can sometimes be remediated, but the cost is higher than doing them in sequence. A person taught Knowledge before they Desired the change often has to be re-engaged from scratch \u2014 the earlier training must be redone in the context of newly established Desire. Retrofitting is expensive and sometimes impossible when the person has already disengaged."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Many clocks: parallel individual transitions",
+      "definition": "Within a change effort involving many people, each individual moves through ADKAR on their own clock. The organization is not 'at' a single ADKAR state at any given moment; it is a distribution of individuals across the five states. Treating the organization as if it moves through ADKAR in lockstep is a common and costly misreading.",
+      "elaboration": "Some people are ahead \u2014 they reached Awareness early, formed Desire quickly, and are already building Ability. Others are behind \u2014 perhaps they are still at Awareness, or they reached Awareness but not Desire. This variation is normal and expected, not a failure. It means that at any given moment, a change effort typically needs to run different interventions for different populations: Awareness-building activities for one group, Desire-building for another, training for a third, reinforcement for a fourth. Assuming the whole organization is at the same state produces one-size-fits-all interventions that miss most of the actual population.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "In a well-run change effort, most people should be at the same ADKAR state at any given time.",
+          "correction": "Variation across individuals is normal and expected, not a sign of a poorly-run change effort. Individuals bring different starting positions, different personal contexts, and different receptiveness to change. A well-run change effort acknowledges this variation and targets interventions accordingly, rather than treating variation itself as a problem to eliminate."
+        },
+        {
+          "id": "m-04",
+          "statement": "The change effort can only advance when the slowest individuals catch up.",
+          "correction": "Different individuals moving at different speeds is not a queuing problem to be resolved before advancing. Individuals ahead in ADKAR should be supported at their current state (Ability-building, Reinforcement), while individuals behind receive interventions targeted at their state (Awareness, Desire). Slowing the whole effort to a lockstep pace disserves both populations."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "ADKAR is sequential \u2014 but the sequence runs inside each person, not across the organization. This is the single most important structural fact about how ADKAR works in practice. A change effort involving a thousand people has a thousand ADKAR sequences running in parallel, each at its own pace, each in its own state. Treating the whole thousand as if they moved together, or worse as if the organization itself had a single ADKAR state, produces the specific failure mode where mass-scale interventions miss almost everyone."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Within a given individual, ADKAR is strictly sequential. Awareness enables Desire; Desire enables genuine Knowledge; Knowledge enables Ability; Ability requires Reinforcement to persist. Skipping an element leaves the individual unable to complete the transition, regardless of how much effort is applied to later elements."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Across many individuals in the same change effort, ADKAR states are distributed \u2014 not synchronized. Some people are further along, others are further behind. A change effort is best understood as a distribution across the five states at any given moment, and interventions should be targeted to where individuals actually are, not to where a schedule says they should be."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Why Knowledge before Desire fails",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A change team rolls out extensive training on a new operating model before employees have been engaged on why the change is needed or invited to support it.",
+        "what_happens": "Attendance is high (training is mandatory), but retention is low. Employees complete the training modules, pass the assessments, and immediately forget most of the content. Six months later, when the new operating model launches, employees say they were 'never trained.'",
+        "reasoning": "Knowledge cannot be absorbed effectively without Desire. Attending training does not produce Knowledge in the ADKAR sense \u2014 Knowledge means the person retains and can apply what they have learned. Compliance-driven training without underlying Desire produces the appearance of Knowledge (training completed) without the reality (retention and applicability). The sequence exists because each element enables the next; violating the order breaks the enabling relationship."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Different individuals, different states, same effort",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change effort has been running for six months. Diagnostic conversations across 200 employees produce the following distribution: 15% are still at Awareness (they do not clearly understand why the change is happening), 30% are at Desire (they understand but have not committed), 25% are at Knowledge (they know what to do but have not practiced), 20% are at Ability (they are doing the new work), and 10% are already in need of Reinforcement (they were early adopters and are now drifting back without ongoing support).",
+        "implication": "No single intervention would serve all five populations. The 15% at Awareness need explanation of the change rationale \u2014 not training, which they would not absorb. The 30% at Desire need engagement with what the change means for them personally \u2014 not further communication of the rationale, which they already understand. The 25% at Knowledge need practice opportunities, not more information. The 20% at Ability need continued practice support. The 10% at Reinforcement need visible mechanisms sustaining the change.",
+        "reasoning": "This is what ADKAR looks like in practice at scale. Not a single organization-wide state, but a distribution \u2014 and the diagnostic value of ADKAR is precisely in surfacing that distribution so that different interventions can reach different populations."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "The lockstep assumption",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03",
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A change management leader reports: 'Our organization is currently in the Desire phase. We have completed Awareness and will move to Knowledge next month.'",
+        "why_wrong": "The organization is not in a phase. Individuals within the organization are at different ADKAR states, and treating them as a single monolithic 'phase' collapses the variation that ADKAR is specifically designed to surface. The people ahead (already at Knowledge or Ability) are being under-served by continued Desire-building; the people behind (still at Awareness) are being ignored by the assumption that the organization has moved past their state.",
+        "correct_framing": "There is no organization-wide ADKAR state. There is a distribution of individuals across the five states, and the change effort's job is to identify that distribution and target interventions to where people actually are."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Skipping Desire to save time",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01",
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "Under schedule pressure, a change team decides to skip Desire-building activities and go directly from Awareness to Knowledge. Their reasoning: 'People will develop Desire once they see the change is happening anyway.'",
+        "why_wrong": "Desire does not develop on its own once the change proceeds. People who have Awareness but no Desire treat mandatory activities (training, meetings, new processes) as compliance obligations rather than personal commitments. The Knowledge that follows is superficial; the Ability that follows is grudging; and the change reverts as soon as pressure eases. The saved time on Desire-building is spent multiple times over on repeated interventions that would not have been needed if Desire had been built in the first place.",
+        "correct_framing": "The sequence exists because each element enables the next. Skipping Desire does not just leave a gap in the sequence; it undermines every subsequent element. The 'time saved' is illusory."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is the relationship between ADKAR's sequence within an individual and the state of a change effort across many individuals?",
+        "expected_answer": "Within an individual, ADKAR is strictly sequential \u2014 each element enables the next \u2014 but across many individuals, the states are distributed rather than synchronized, so a change effort is a mix of individuals at different ADKAR states at the same time, not a single organization-wide state."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "Under schedule pressure, a change management team decides to run Knowledge-building activities (training) at the same time as Awareness-building activities (communications about why the change is needed) \u2014 the reasoning being that parallel execution will save time. Which of the following best describes the likely outcome for employees?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The parallel approach will succeed, since employees can absorb Awareness and Knowledge simultaneously.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Awareness and Knowledge are sequential within an individual, not parallel. An employee who does not yet understand why the change is needed cannot effectively absorb Knowledge about how to do it \u2014 the training is context-free from their perspective and slides off. Parallel scheduling of the two activities does not make them parallel in the individual's experience."
+        },
+        {
+          "id": "B",
+          "text": "Employees who lack Awareness will absorb the training superficially, since they do not yet understand why it matters. The parallel approach will save calendar time but produce weaker Knowledge outcomes.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The dependency between Awareness and Knowledge is not a scheduling preference \u2014 it is a description of how individual absorption works. Training delivered to people who do not yet understand why it matters produces low retention and low applicability. The saved calendar time is not saved in practice; the same content must often be re-delivered later once Awareness has been established."
+        },
+        {
+          "id": "C",
+          "text": "Employees will develop Awareness naturally through the Knowledge activities, since the training itself explains the change.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Training that explains the change does not reliably produce Awareness in the ADKAR sense \u2014 'Awareness' requires the employee to understand and internalize why the change is needed for themselves, not to hear it embedded within technical training. Assuming the training will substitute for dedicated Awareness activities produces the same problem: superficial engagement without genuine understanding."
+        },
+        {
+          "id": "D",
+          "text": "Awareness is optional if training is comprehensive enough.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Awareness is not optional. The ADKAR sequence is a description of what an individual needs, in order, to make a successful change. Comprehensive training addresses Knowledge, not Awareness \u2014 and Knowledge without Awareness produces the specific failure pattern described (superficial absorption, low retention, low applicability)."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change management leader reports: 'We have moved the organization from Awareness to Desire. Next month, we will move to Knowledge.' How should this framing be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The framing is correct and reflects a well-structured change effort.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The framing treats ADKAR as an organizational timeline, but ADKAR describes individual states \u2014 and individuals within a change effort are typically at different states simultaneously. Reporting the organization as 'currently at Desire' collapses this variation and produces one-size-fits-all interventions that miss most of the actual population."
+        },
+        {
+          "id": "B",
+          "text": "The framing misapplies ADKAR by treating the organization as being at a single state, when in reality individuals within the organization are distributed across all five states.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. There is no organization-wide ADKAR state. A well-diagnosed change effort at any given moment has some individuals still at Awareness, some at Desire, some at Knowledge, some at Ability, and some already needing Reinforcement. The leader's framing hides this distribution and produces interventions calibrated for a fictional average population."
+        },
+        {
+          "id": "C",
+          "text": "The framing is fine as long as most people are at the reported state.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Even if most people are at the reported state, the framing hides the substantial minority who are not \u2014 including individuals ahead (who need different interventions) and individuals behind (who are being under-served by the assumption that the organization has moved past them). Reporting a modal state as if it were the organizational state is misleading, not merely imprecise."
+        },
+        {
+          "id": "D",
+          "text": "The framing is problematic, and the effort should be paused until everyone is at the same state.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Pausing until everyone is at the same state treats variation as a problem to be eliminated, which is not how ADKAR views it. Variation is expected and normal; the correct response is targeted intervention across the distribution, not synchronization of the population."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Explanatory and slightly counterintuitive. This RLO teaches a specific structural fact \u2014 many clocks running in parallel \u2014 that is not the default intuition. The tone should support the learner in holding both the strict-within-individual sequence and the distributed-across-individuals variation without conflating them.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01 and 02. The individual-focus of ADKAR is established; this RLO adds the two structural facts about how the sequence actually behaves \u2014 within an individual and across many individuals.",
+    "feedback_policy": "Feedback must distinguish between the two rules explicitly. A learner who understands one but not the other will produce specific errors \u2014 either violating sequence within an individual, or assuming lockstep across many individuals. The feedback should surface which rule is at stake in any given wrong answer.",
+    "example_shape_hints": [
+      "Include at least one example of a sequence violation within an individual (e.g., Knowledge before Desire) and one example of the distributed-states pattern across many individuals \u2014 the two facts are complementary and both should be practiced.",
+      "The 200-employee distribution example is high-value because it makes the many-clocks framing concrete; keep it prominent.",
+      "Non-examples should target both misuses: skipping elements within an individual, and treating the organization as being at a single state."
+    ],
+    "practice_shape_hints": [
+      "Practice items should include both types of failure \u2014 within-individual sequence violations and across-individual lockstep assumptions.",
+      "At least one item should test the 'parallel to save time' misconception, since this is the specific rationalization learners most often give for violating the sequence."
+    ],
+    "salience_hook_description": "The hook should establish that ADKAR runs many sequences in parallel, one per person, and that this fact is what makes the diagnostic use of the model possible. Learners should leave believing that the many-clocks framing is not a caveat \u2014 it is the model's central operating fact."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-02: ADKAR describes states in individuals. This RLO adds the two structural facts about how those states are ordered (within an individual) and distributed (across many individuals).",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-10 explicitly requires the many-clocks framing as the basis for differentiated interventions."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "distribution_visualization",
+      "rationale": "The many-clocks framing is inherently distributional and benefits from a visual that shows a population spread across the five states, updating over time. A stacked-bar or population-flow visualization makes the framing concrete.",
+      "priority": "primary"
+    },
+    {
+      "format": "paired_scenario_module",
+      "rationale": "The two rules (within-individual sequence, across-individual distribution) are best taught in tandem, each with contrasting examples.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video that walks through both rules with concrete examples of the failure modes each rule prevents.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO does the essential structural work that turns ADKAR from a checklist into a diagnostic tool. The two facts (strict sequence within an individual, distributed states across many individuals) are the specific instructional payload. Both must be internalized for the applied RLOs (09 and 10) to make sense. The distribution example is deliberately quantitative because learners often need to see the numbers to grasp that variation is normal \u2014 a purely qualitative treatment tends to leave the impression that variation is a marginal case rather than the standard.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

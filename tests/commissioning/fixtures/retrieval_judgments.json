@@ -1,0 +1,44 @@
+[
+  {
+    "request": "Diagnose which ADKAR barrier is preventing an individual from progressing through change",
+    "expected": ["rlo-adkar-09-identify-barrier-point"],
+    "acceptable": ["rlo-adkar-04-awareness", "rlo-adkar-05-desire", "rlo-adkar-06-knowledge", "rlo-adkar-07-ability"],
+    "weak": ["rlo-adkar-02-individual-model"],
+    "forbidden": ["rlo-kotter-03-urgency"]
+  },
+  {
+    "request": "Choose a proportionate intervention for a diagnosed ADKAR barrier",
+    "expected": ["rlo-adkar-10-differentiated-interventions"],
+    "acceptable": ["rlo-adkar-09-identify-barrier-point"],
+    "weak": ["rlo-adkar-04-awareness", "rlo-adkar-05-desire", "rlo-adkar-06-knowledge", "rlo-adkar-07-ability"],
+    "forbidden": ["rlo-adkar-01-name-and-sequence"]
+  },
+  {
+    "request": "Identify which step was skipped in a Kotter organizational change initiative",
+    "expected": ["rlo-kotter-12-identify-skipped-step"],
+    "acceptable": ["rlo-kotter-11-identify-current-step", "rlo-kotter-02-sequenced-process"],
+    "weak": ["rlo-kotter-01-name-and-sequence"],
+    "forbidden": ["rlo-adkar-09-identify-barrier-point"]
+  },
+  {
+    "request": "Build an effective guiding coalition for a major transformation",
+    "expected": ["rlo-kotter-04-coalition"],
+    "acceptable": ["rlo-kotter-03-urgency", "rlo-kotter-05-vision"],
+    "weak": ["rlo-kotter-06-volunteer-army"],
+    "forbidden": ["rlo-adkar-08-reinforcement"]
+  },
+  {
+    "request": "Sustain acceleration and institute organizational change so it lasts",
+    "expected": ["rlo-kotter-09-sustain-acceleration", "rlo-kotter-10-institute-change"],
+    "acceptable": ["rlo-kotter-08-short-term-wins"],
+    "weak": ["rlo-adkar-08-reinforcement"],
+    "forbidden": ["rlo-kotter-03-urgency"]
+  },
+  {
+    "request": "Apply quantum cryptography controls to pharmaceutical cold-chain logistics",
+    "expected": [],
+    "acceptable": [],
+    "weak": [],
+    "forbidden": ["rlo-adkar-01-name-and-sequence", "rlo-kotter-01-name-and-sequence"]
+  }
+]

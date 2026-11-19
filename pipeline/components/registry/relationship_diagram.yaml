@@ -1,0 +1,57 @@
+id: relationship_diagram
+name: Relationship Diagram
+description: Structured visual layouts for cycles, levels, scales, matrices, and simple flows.
+when_to_use: Use when the relationship among concepts is more important than independent prose.
+tags: [diagram, cycle, hierarchy, continuum, matrix, flow]
+sequence_position: middle
+design_notes: Use only relationships and axis meanings present in the source. The rendered text order remains meaningful without the visual arrangement.
+selection:
+  category: content
+  purposes: [explain_relationships, classify_items, show_structure]
+  content_shapes: [related_nodes]
+  relationships: [cyclic, hierarchical, continuum, two_dimensional, ordered]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 8}
+  retrieval_text: >
+    Visual relationship family for two to eight concise nodes. Supports recurring cycles, ranked
+    hierarchy levels, ordered continua, supplied two-axis matrices, and simple linear flows. Use
+    only when the source explicitly establishes the relationship or axes.
+layout_variants:
+  cycle:
+    when: Three to six recurring stages feed back into the first.
+    capacity: {min_items: 3, max_items: 6}
+    selection: {purposes: [show_cycle, explain_continuous_process], content_shapes: [cyclic_stages], relationships: [cyclic]}
+  hierarchy:
+    when: Three to six supplied levels are ranked, nested, or foundational.
+    capacity: {min_items: 3, max_items: 6}
+    selection: {purposes: [show_hierarchy, explain_levels], content_shapes: [ranked_levels], relationships: [hierarchical]}
+  continuum:
+    when: Two to seven states differ by degree along a supplied scale.
+    capacity: {min_items: 2, max_items: 7}
+    selection: {purposes: [show_degree, position_examples], content_shapes: [ordered_scale], relationships: [continuum]}
+  matrix_2x2:
+    when: Items are classified by two meaningful supplied axes.
+    capacity: {min_items: 2, max_items: 8}
+    selection: {purposes: [classify_items, show_tradeoff], content_shapes: [two_axis_matrix], relationships: [two_dimensional]}
+  linear_flow:
+    when: Three to eight stages proceed in one direction without branching.
+    capacity: {min_items: 3, max_items: 8}
+    selection: {purposes: [show_flow, explain_dependencies], content_shapes: [ordered_nodes], relationships: [ordered, directed]}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  introduction: {target_chars: 90, max_chars: 170, required: false}
+  nodes:
+    type: array
+    min_items: 2
+    max_items: 8
+    item_slots:
+      id: {target_chars: 10, max_chars: 30}
+      label: {target_chars: 25, max_chars: 55}
+      detail: {target_chars: 70, max_chars: 140, required: false}
+      position: {max_chars: 20, required: false}
+  x_axis_label: {target_chars: 30, max_chars: 65, required: false}
+  y_axis_label: {target_chars: 30, max_chars: 65, required: false}
+image_slots: []

@@ -1,0 +1,58 @@
+id: title
+name: Title Screen
+description: >
+  Course opening screen displaying the course name, a one-sentence subtitle,
+  metadata pills (firm, level, duration), and a narrative hook card to engage
+  the learner before content begins.
+when_to_use: >
+  Always first. Exactly one per course. Use to establish context and draw the
+  learner in before content begins.
+tags: [intro, opening, course-start]
+sequence_position: intro
+selection:
+  category: intro
+  purposes: [course_opening, establish_context]
+  content_shapes: [course_metadata_and_hook]
+  relationships: [none]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [intro]
+  media_supported: true
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Opening slide for a course title, concise subtitle, metadata, and one engaging hook.
+    Best for establishing context before instruction. Supports sparse or balanced copy and
+    an optional hero visual. Not for teaching multiple concepts or presenting assessment.
+
+slots:
+  course_title:
+    description: Full course title
+    target_chars: 50
+    max_chars: 80
+    required: true
+  subtitle:
+    description: >
+      One-sentence description of what the course covers.
+      Only the first sentence will be displayed on screen.
+    target_chars: 80
+    max_chars: 200
+    required: true
+  hook:
+    description: >
+      A brief scenario or question that creates urgency or curiosity.
+      Draws the learner in before content begins. No more than 2 sentences.
+    target_chars: 120
+    max_chars: 200
+    required: true
+  metadata:
+    description: >
+      Key course metadata rendered as pills: firm, level, duration_minutes.
+      Rendered automatically from RLO top-level fields.
+    required: false
+
+image_slots:
+  - id: background
+    optional: true
+    role: full_bleed_background
+    generate: false
+    fallback: theme_gradient

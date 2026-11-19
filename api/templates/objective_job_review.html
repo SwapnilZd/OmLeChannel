@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Objective Review · Omnichannel Learning</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <style>
+    :root{
+      --bg:#f3f5f5;--surface:#fff;--soft:#eef5f6;
+      --border:#d7dfe1;--border-strong:#b0bec5;
+      --ink:#12233f;--muted:#60717c;
+      --accent:#0f8792;--accent-strong:#076d77;--accent-light:#e3f1f2;
+      --green:#86bc25;
+      --ok:#2e7d32;--ok-bg:#edf7ed;
+      --err:#b3261e;--err-bg:#fceeed;
+      --warn:#8a5a00;--warn-bg:#fff6df;
+      --shadow:0 1px 4px rgba(18,35,63,.08);
+      --r:10px
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+    /* Header */
+    .app-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;max-width:none;margin:0;padding:.55rem 1.25rem;background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink)}
+    .brand-logo{width:112px;height:auto;display:block}
+    .brand-div{width:1px;height:1.35rem;background:var(--border)}
+    .brand-name{font-size:1.05rem;font-weight:750;color:var(--accent)}
+    .app-nav{display:flex;gap:.2rem}
+    .app-nav a{padding:.38rem .65rem;border-radius:7px;color:var(--muted);font-size:.78rem;font-weight:700;text-decoration:none}
+    .app-nav a:hover,.app-nav a.active{background:var(--accent-light);color:var(--accent-strong)}
+
+    /* Job bar */
+    .job-bar{padding:.6rem 1.25rem;background:#fff;border-bottom:1px solid var(--border);flex-shrink:0}
+    .job-bar-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.45rem}
+    .job-title{font-size:.9rem;font-weight:700}
+    .job-status{font-size:.75rem;color:var(--muted);margin-top:.1rem}
+    .job-status.err{color:var(--err)}
+    .prog-pill{font-size:.74rem;font-weight:700;padding:.22rem .65rem;border-radius:99px;background:var(--accent-light);color:var(--accent-strong)}
+    .btn-primary{padding:.38rem .9rem;border-radius:7px;background:var(--accent);color:#fff;font-weight:700;font-size:.78rem;border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--accent-strong)}
+    .btn-primary:disabled{opacity:.45;cursor:not-allowed}
+
+    /* Timeline */
+    .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;list-style:none;margin-bottom:.4rem}
+    .tl-item{padding:.42rem .3rem;border-radius:7px;font-size:.67rem;text-align:center;color:var(--muted);background:var(--soft)}
+    .tl-item.done{background:#e5f5ed;color:#176b47}
+    .tl-item.current{background:var(--accent-light);color:var(--accent-strong);font-weight:800;box-shadow:inset 0 -3px var(--accent)}
+
+    /* Activity bar */
+    @keyframes actpulse{from{transform:translateX(-20%)}to{transform:translateX(205%)}}
+    .act-bar{height:.42rem;border-radius:999px;background:var(--soft);overflow:hidden;margin-top:.2rem}
+    .act-bar-inner{width:35%;height:100%;border-radius:inherit;background:var(--accent);animation:actpulse 1.4s ease-in-out infinite alternate}
+
+    /* Progress bar */
+    .prog-bar-wrap{height:3px;background:var(--border);flex-shrink:0}
+    .prog-bar-fill{height:100%;background:var(--accent);transition:width .3s;border-radius:0 2px 2px 0;width:0%}
+
+    /* Filters */
+    .filters{display:flex;align-items:center;gap:.4rem;padding:.45rem 1.25rem;background:var(--soft);border-bottom:1px solid var(--border);flex-shrink:0;flex-wrap:wrap}
+    .fbtn{padding:.27rem .65rem;border-radius:99px;border:1px solid var(--border);background:#fff;font-size:.74rem;font-weight:700;color:var(--muted);cursor:pointer}
+    .fbtn.active{border-color:var(--accent);background:var(--accent-light);color:var(--accent-strong)}
+    .fsel{padding:.25rem .45rem;border-radius:6px;border:1px solid var(--border);background:#fff;font-size:.74rem;color:var(--ink);cursor:pointer}
+    .flbl{font-size:.74rem;color:var(--muted)}
+    .fcnt{font-size:.74rem;color:var(--muted);margin-left:auto}
+
+    /* Split */
+    .split{display:grid;grid-template-columns:320px 1fr;flex:1;overflow:hidden;min-height:0}
+
+    /* Left list */
+    .list-panel{border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;background:var(--soft)}
+    .list-hdr{padding:.58rem 1rem;font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--border);flex-shrink:0;background:#fff}
+    .obj-list{overflow-y:auto;flex:1;padding:6px 8px;display:grid;gap:5px;align-content:start}
+
+    /* Card items */
+    .obj-item{display:block;width:100%;padding:.7rem .85rem;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer;text-align:left;color:inherit;font:inherit;transition:border-color .12s,box-shadow .12s}
+    .obj-item:hover{border-color:#b0cfd2;box-shadow:0 1px 4px rgba(15,135,146,.08)}
+    .obj-item.selected{background:var(--accent-light);border-color:var(--accent);border-width:1.5px;box-shadow:0 1px 6px rgba(15,135,146,.12)}
+    .item-num{font-size:.69rem;color:var(--muted);margin-bottom:.2rem}
+    .obj-item.selected .item-num{color:var(--accent-strong)}
+    .item-stmt{font-size:.84rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:.35rem}
+    .obj-item.selected .item-stmt{color:var(--accent-strong)}
+    .item-meta{font-size:.69rem;color:var(--muted);margin-bottom:.3rem}
+    .item-tags{display:flex;gap:.25rem;flex-wrap:wrap}
+
+    /* Tags */
+    .tag{display:inline-block;padding:.16rem .48rem;border-radius:99px;font-size:.68rem;font-weight:700}
+    .t-content{background:var(--soft);color:var(--muted);border:1px solid var(--border)}
+    .t-bloom{background:var(--accent-light);color:var(--accent-strong)}
+    .t-high{background:var(--ok-bg);color:var(--ok)}
+    .t-medium{background:var(--warn-bg);color:var(--warn)}
+    .t-low{background:var(--err-bg);color:var(--err)}
+    .t-pending{background:var(--soft);color:var(--muted);border:1px solid var(--border)}
+    .t-approved{background:var(--ok-bg);color:var(--ok)}
+    .t-rejected{background:var(--err-bg);color:var(--err)}
+    .t-revision_requested{background:var(--warn-bg);color:var(--warn)}
+    .t-adequate{background:var(--ok-bg);color:var(--ok)}
+    .t-partial{background:var(--warn-bg);color:var(--warn)}
+    .t-missing,.t-source_insufficient{background:var(--err-bg);color:var(--err)}
+
+    /* Right panel */
+    .detail-panel{display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+    .detail-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--muted)}
+
+    /* Tabs */
+    .tab-bar{display:flex;border-bottom:1px solid var(--border);background:#fff;flex-shrink:0}
+    .tab-btn{padding:.5rem .9rem;font-size:.76rem;font-weight:700;color:var(--muted);border:none;background:transparent;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+    .tab-btn:hover{color:var(--ink)}
+    .tab-btn.active{color:var(--accent-strong);border-bottom-color:var(--accent)}
+    .tab-pane{display:none;flex:1;overflow-y:auto;padding:1rem 1.25rem}
+    .tab-pane.active{display:block}
+
+    /* Detail */
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1.1rem;margin-bottom:.85rem}
+    .d-origin{font-size:.76rem;color:var(--muted);margin-bottom:.35rem}
+    .card h2.d-stmt{font-size:1.15rem;font-weight:700;line-height:1.45;color:var(--ink);margin-bottom:.8rem;letter-spacing:-.015em;text-transform:none}
+    .d-tags{display:flex;flex-wrap:wrap;gap:.38rem;margin-bottom:.75rem}
+    .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+    .dbox{padding:.65rem .8rem;border:1px solid var(--border);border-radius:8px;background:var(--soft)}
+    .dbox.full{grid-column:1/-1}
+    .dbox.key{border-left:2.5px solid var(--accent);background:#fff}
+    .dbox h3{font-size:.67rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-strong);margin-bottom:.28rem}
+    .dbox p{font-size:.81rem;color:var(--ink);line-height:1.55}
+    .review-summary{padding:.65rem .8rem;border-left:3px solid var(--accent);background:var(--soft);font-size:.82rem;line-height:1.5}
+    .review-summary strong{display:block;margin-bottom:.15rem;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-strong)}
+    .more-context{margin-top:.7rem;border:1px solid var(--border);border-radius:8px;background:#fff}
+    .more-context>summary{padding:.6rem .75rem;cursor:pointer;font-size:.77rem;font-weight:800;color:var(--accent-strong)}
+    .more-context .detail-grid{padding:0 .75rem .75rem}
+
+    /* Findings */
+    .finding{padding:.55rem .75rem;border-left:3px solid var(--err);background:var(--err-bg);border-radius:0 8px 8px 0;margin-bottom:.4rem}
+    .finding strong{font-size:.76rem;color:var(--err);display:block}
+    .finding p{font-size:.78rem;color:var(--ink);margin-top:.18rem}
+
+    /* Source lineage */
+    .sl-hdr{display:flex;align-items:center;gap:.5rem;margin-top:.85rem;margin-bottom:.55rem;padding-top:.75rem;border-top:1px solid var(--border)}
+    .sl-lbl{font-size:.67rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-strong)}
+    .sl-rule{flex:1;height:1px;background:var(--border)}
+    .evidence-art{border-left:3px solid var(--accent);background:var(--soft);padding:.6rem .75rem;border-radius:0 8px 8px 0;margin-bottom:.45rem}
+    .evidence-art strong{font-size:.72rem;color:var(--accent-strong);display:block;margin-bottom:.25rem}
+    .evidence-art blockquote{font-size:.8rem;color:var(--ink);line-height:1.5;margin:0 0 .28rem;font-style:italic}
+    .evidence-art .emuted{font-size:.7rem;color:var(--muted);margin-bottom:.2rem}
+    .evidence-art a{font-size:.73rem;color:var(--accent);text-decoration:none}
+    .evidence-art a:hover{text-decoration:underline}
+
+    /* Seven-part source availability */
+    .parts-hdr{margin-top:.9rem;padding-top:.8rem;border-top:1px solid var(--border)}
+    .parts-hdr h3{font-size:.78rem;color:var(--accent-strong);margin-bottom:.2rem}
+    .parts-hdr p{font-size:.75rem;color:var(--muted);line-height:1.4}
+    .parts-list{display:grid;gap:.4rem;margin-top:.6rem}
+    .part-row{border:1px solid var(--border);border-radius:8px;background:#fff;overflow:hidden}
+    .part-row summary{display:grid;grid-template-columns:minmax(125px,.35fr) auto minmax(180px,1fr);align-items:center;gap:.65rem;padding:.58rem .7rem;cursor:pointer;list-style:none}
+    .part-row summary::-webkit-details-marker{display:none}
+    .part-name{font-size:.78rem;font-weight:800;color:var(--ink)}
+    .part-summary{font-size:.74rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .part-body{padding:0 .7rem .7rem;border-top:1px solid var(--border)}
+    .part-body .evidence-art{margin-top:.55rem}
+    .t-found{background:var(--ok-bg);color:var(--ok)}
+    .t-possible{background:var(--warn-bg);color:var(--warn)}
+    .t-not_found{background:var(--soft);color:var(--muted);border:1px solid var(--border)}
+
+    /* Actions */
+    .actions{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-top:.85rem;padding-top:.8rem;border-top:1px solid var(--border)}
+    .act-edit{display:flex;gap:.35rem;flex-wrap:wrap}
+    .act-dec{display:flex;gap:.35rem;flex-wrap:wrap}
+    .btn{padding:.38rem .78rem;border-radius:7px;border:1px solid var(--border);background:#fff;font-size:.76rem;font-weight:700;color:var(--ink);cursor:pointer}
+    .btn:hover{background:var(--soft)}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-approve{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btn-approve:hover{background:var(--accent-strong)}
+    .btn-reject{color:var(--err);border-color:var(--err)}
+    .btn-reject:hover{background:var(--err-bg)}
+    .btn-muted{color:var(--muted)}
+
+    /* Sidebar tabs */
+    .feat-card{padding:.6rem .8rem;border-radius:8px;background:#fff;border:1px solid var(--border);margin-bottom:.5rem}
+    .feat-card strong{font-size:.76rem;font-weight:700;color:var(--ink);display:block;margin-bottom:.25rem}
+    .feat-card p{font-size:.78rem;color:var(--muted);line-height:1.45;margin-bottom:.3rem}
+    .feat-tags{display:flex;gap:.3rem;flex-wrap:wrap}
+    .tab-empty{font-size:.82rem;color:var(--muted);padding:.5rem 0}
+    .hist-row{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.78rem}
+    .hist-row:last-child{border-bottom:none}
+    .hist-row strong{color:var(--ink);display:block}
+    .hist-row span{color:var(--muted);font-size:.72rem}
+    .coverage-purpose{border-left:3px solid var(--accent);padding:.7rem .85rem;background:var(--soft);border-radius:0 8px 8px 0;margin-bottom:.8rem}
+    .coverage-purpose strong{display:block;font-size:.69rem;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-strong);margin-bottom:.25rem}
+    .coverage-purpose p{font-size:.82rem;line-height:1.5}
+    .coverage-domain{display:grid;grid-template-columns:minmax(190px,.8fr) auto minmax(220px,1.4fr);gap:.65rem;align-items:start}
+    .coverage-domain .coverage-rationale{font-size:.77rem;color:var(--muted);line-height:1.45}
+    .coverage-actions{display:flex;gap:.35rem;align-items:center;flex-wrap:wrap;margin-top:.45rem}
+
+    /* Nav */
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.55rem 1.25rem;background:#fff;border-top:1px solid var(--border);flex-shrink:0;flex-wrap:wrap}
+    .nav-left{display:flex;align-items:center;gap:.4rem}
+    .pos-lbl{font-size:.78rem;color:var(--muted)}
+
+    /* Processing state */
+    .proc-state{padding:1.5rem 1rem;text-align:center;color:var(--muted);line-height:1.9}
+    .proc-state strong{display:block;font-size:.85rem;color:var(--ink);margin-bottom:.5rem}
+    .proc-detail{font-size:.76rem}
+
+    /* Error banner */
+    .err-banner{background:var(--err-bg);color:var(--err);font-size:.8rem;padding:.5rem 1.25rem;border-bottom:1px solid var(--err);flex-shrink:0;display:none}
+    dialog{width:min(900px,92vw);max-height:88vh;padding:1rem;border:0;border-radius:10px;box-shadow:0 12px 40px rgba(18,35,63,.3)}
+    dialog::backdrop{background:rgba(18,35,63,.45)}
+    .prompt-text{max-height:300px;overflow:auto;margin:.5rem 0 1rem;padding:.75rem;border-radius:7px;background:#17243a;color:#eef4f4;font:12px/1.5 ui-monospace,monospace;white-space:pre-wrap}
+
+    .hidden{display:none!important}
+    @media(max-width:800px){body{height:auto;min-height:100vh;overflow:auto}.split{grid-template-columns:1fr;overflow:visible}.list-panel{max-height:38vh;border-right:0;border-bottom:1px solid var(--border)}.detail-panel,.tab-pane{overflow:visible}.part-row summary,.coverage-domain{grid-template-columns:1fr auto}.part-summary,.coverage-rationale{grid-column:1/-1;white-space:normal}.app-nav{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="brand" href="/">
+    <img class="brand-logo" src="/static/brand/deloitte-logo-web.png" alt="Deloitte"
+         onerror="this.style.display='none';document.getElementById('btxt').style.display='inline-flex'">
+    <span id="btxt" style="display:none;align-items:center;font-size:1.2rem;font-weight:800;letter-spacing:-.04em;color:#111">Deloitte<span style="color:#86bc25">.</span></span>
+    <span class="brand-div"></span>
+    <span class="brand-name">Omnichannel Learning</span>
+  </a>
+  <nav class="app-nav">
+    <a href="/source-upload">Source Intake</a>
+    <a href="/objective-jobs" class="active">Objective Jobs</a>
+    <a href="/rlo-drafts">RLO Review</a>
+    <a href="/">RLO Registry</a>
+    <a href="/commission">Commission Learning</a>
+    <a href="/jobs">Jobs</a>
+    <a href="/logout">Log out</a>
+  </nav>
+</header>
+
+<div class="err-banner" id="err-banner"></div>
+
+<div class="job-bar">
+  <div class="job-bar-top">
+    <div>
+      <div class="job-title" id="job-title">Loading…</div>
+      <div class="job-status" id="job-status">Loading job status…</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.5rem">
+      <span class="prog-pill" id="prog-pill">—</span>
+      <a class="btn" id="export-link" href="#">Export objectives to Excel</a>
+      <button class="btn-primary" id="advance-btn" disabled>Finalize approved objectives</button>
+    </div>
+  </div>
+  <ul class="timeline" id="timeline"></ul>
+  <div class="act-bar hidden" id="act-bar"><div class="act-bar-inner"></div></div>
+</div>
+
+<div class="prog-bar-wrap"><div class="prog-bar-fill" id="prog-bar"></div></div>
+
+<div class="filters">
+  <button class="fbtn active" data-filter="">All</button>
+  <button class="fbtn" data-filter="pending">Pending</button>
+  <button class="fbtn" data-filter="approved">Approved</button>
+  <button class="fbtn" data-filter="rejected">Rejected</button>
+  <button class="fbtn" data-filter="revision_requested">Revision requested</button>
+  <label class="flbl">Confidence
+    <select class="fsel" id="conf-f"><option value="">All</option><option>high</option><option>medium</option><option>low</option></select>
+  </label>
+  <label class="flbl">Origin
+    <select class="fsel" id="origin-f"><option value="">All</option><option value="model">Model</option><option value="lds">LDS</option></select>
+  </label>
+  <label class="flbl">Curriculum domain
+    <select class="fsel" id="domain-f"><option value="">All</option></select>
+  </label>
+  <label class="flbl">Coverage role
+    <select class="fsel" id="role-f"><option value="">All</option><option value="primary">Primary</option><option value="supporting">Supporting</option><option value="peripheral">Peripheral</option></select>
+  </label>
+  <span class="fcnt" id="fcnt"></span>
+</div>
+
+<div class="layout-shell split">
+  <div class="list-panel">
+    <div class="list-hdr" id="list-hdr">Learning objectives</div>
+    <div class="obj-list" id="obj-list">
+      <div class="proc-state"><strong>Loading…</strong></div>
+    </div>
+  </div>
+
+  <div class="detail-panel">
+    <div class="tab-bar hidden" id="tab-bar" role="tablist" aria-label="Objective review information">
+      <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="detail">Objective detail</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="coverage">Curriculum coverage</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="features">Unassociated source material</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="excluded">Excluded proposals</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="prompts">Prompts used</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="history">Job history</button>
+    </div>
+
+    <div class="detail-empty" id="d-empty">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+      <div style="text-align:center">
+        <div style="font-weight:700;color:var(--muted);margin-bottom:.25rem">No objective selected</div>
+        <div style="font-size:.8rem;color:var(--border)">Pick one from the list to start reviewing</div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="tab-detail"></div>
+    <div class="tab-pane" id="tab-coverage"><p class="tab-empty">Loading curriculum coverage…</p></div>
+    <div class="tab-pane" id="tab-features"><p class="tab-empty">Loading source features…</p></div>
+    <div class="tab-pane" id="tab-excluded"><p class="tab-empty">Loading excluded proposals…</p></div>
+    <div class="tab-pane" id="tab-prompts"><p class="tab-empty">Loading prompts…</p></div>
+    <div class="tab-pane" id="tab-history"><div id="hist-content"><p class="tab-empty">Loading history…</p></div></div>
+
+    <div class="nav-bar hidden" id="nav-bar">
+      <div class="nav-left">
+        <button class="btn" id="prev-btn" disabled>← Previous</button>
+        <span class="pos-lbl" id="pos-lbl"></span>
+        <button class="btn" id="next-btn">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<dialog id="prompt-dialog"><button class="btn" id="prompt-close" style="float:right">Close</button><h2 id="prompt-title">Prompt</h2><p class="job-status" id="prompt-meta"></p><h3>System prompt</h3><pre class="prompt-text" id="prompt-text"></pre><h3>Exact structured input</h3><pre class="prompt-text" id="prompt-input"></pre></dialog>
+
+<script>
+'use strict';
+const esc=v=>String(v??''). replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":"&#39;"}[c]));
+const lbl=v=>String(v||'').replace(/[_-]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+const $=id=>document.getElementById(id);
+
+const JOB_ID=window.location.pathname.split('/').filter(Boolean).pop();
+$('export-link').href=`/api/objective-jobs/${encodeURIComponent(JOB_ID)}/export.xlsx`;
+const STAGES=[['draft','Discovery'],['objective_review','Objective + Source Review'],['complete','Ready for RLO Planning']];
+const REVIEW_STAGES=new Set(['objective_review','complete']);
+
+let ALL=[],candidates=[],selected=-1,jobVersion=1,jobMeta={};
+let blueprint=null,coverage=null,coverageCurrent=false;
+let fDec='',fConf='',fOrigin='',fDomain='',fRole='';
+const decisions={};
+let pollTimer=null;
+
+async function api(path,opts={}){
+  const res=await fetch(path,{headers:{'Content-Type':'application/json'},...opts});
+  if(!res.ok){const e=await res.json().catch(()=>({detail:res.statusText}));throw new Error(e.detail||res.statusText);}
+  return res.status===204?null:res.json();
+}
+
+function showError(msg){
+  const el=$('err-banner');
+  if(!el)return;
+  el.style.display='block';
+  el.textContent=msg;
+  setTimeout(()=>{el.style.display='none';},7000);
+}
+
+function renderTimeline(stage){
+  const cur=STAGES.findIndex(([value])=>value===stage);
+  $('timeline').style.gridTemplateColumns=`repeat(${STAGES.length},1fr)`;
+  $('timeline').innerHTML=STAGES.map(([value,label],i)=>
+    `<li class="tl-item${i===cur?' current':i<cur?' done':''}">${esc(label)}</li>`
+  ).join('');
+}
+
+function setActivityBar(show){
+  const el=$('act-bar');
+  if(!el)return;
+  show?el.classList.remove('hidden'):el.classList.add('hidden');
+}
+
+async function loadJob(){
+  try{
+    jobMeta=await api(`/api/objective-jobs/${JOB_ID}`);
+    jobVersion=jobMeta.version||1;
+    $('job-title').textContent=jobMeta.source_filename||jobMeta.source_collection_title||'Objective Job';
+    const lastUpdate=jobMeta.updated_at?new Date(jobMeta.updated_at).toLocaleTimeString():'';
+    const statusEl=$('job-status');
+    if(jobMeta.error_message){
+      statusEl.textContent=`Stopped: ${jobMeta.error_message}`;
+      statusEl.classList.add('err');
+    } else if(jobMeta.current_operation){
+      statusEl.textContent=`${jobMeta.current_operation} · ${jobMeta.completed_model_operations||0} model operations completed · last activity ${lastUpdate}`;
+      statusEl.classList.remove('err');
+    } else {
+      statusEl.textContent=`${lbl(jobMeta.workflow_stage)} · ${lbl(jobMeta.processing_status)} · last activity ${lastUpdate}`;
+      statusEl.classList.remove('err');
+    }
+    renderTimeline(jobMeta.workflow_stage||'draft');
+    const active=['running','queued'].includes(jobMeta.processing_status);
+    setActivityBar(active);
+    const READY_STATUSES=new Set(['ready','succeeded','complete','idle']);
+    const isReview=REVIEW_STAGES.has(jobMeta.workflow_stage)&&READY_STATUSES.has(jobMeta.processing_status);
+    if(!isReview){
+      $('advance-btn').disabled=true;
+      $('prog-pill').textContent=lbl(jobMeta.processing_status||'queued');
+      $('list-hdr').textContent='Processing…';
+      $('obj-list').innerHTML=`
+        <div class="proc-state">
+          <strong>Pipeline is processing</strong>
+          <div class="proc-detail">Stage: <strong>${esc(lbl(jobMeta.workflow_stage||'draft'))}</strong></div>
+          ${jobMeta.current_operation?`<div class="proc-detail">Operation: <strong>${esc(jobMeta.current_operation)}</strong></div>`:''}
+          ${jobMeta.completed_model_operations?`<div class="proc-detail">${jobMeta.completed_model_operations} model operations completed</div>`:''}
+          <div class="proc-detail" style="margin-top:.5rem;font-size:.72rem">Auto-refreshing every 5 seconds…</div>
+        </div>`;
+      if(!pollTimer)pollTimer=setInterval(pollJob,5000);
+    } else {
+      if(pollTimer){clearInterval(pollTimer);pollTimer=null;}
+      await loadCandidates();
+      loadSourceFeatures();
+      loadPrompts();
+      loadHistory();
+    }
+  }catch(e){
+    if(e.message&&e.message.toLowerCase().includes('not ready')){
+      $('job-status').textContent='Objectives not ready yet — pipeline still processing';
+      setActivityBar(true);
+      renderTimeline('draft');
+      $('obj-list').innerHTML=`
+        <div class="proc-state">
+          <strong>Objectives not ready yet</strong>
+          <div class="proc-detail">The pipeline is still generating candidate objectives.</div>
+          <div class="proc-detail" style="font-size:.72rem;margin-top:.5rem">Auto-refreshing every 5 seconds…</div>
+        </div>`;
+      if(!pollTimer)pollTimer=setInterval(pollJob,5000);
+    } else {
+      showError(`Failed to load job: ${e.message}`);
+      $('job-title').textContent='Error loading job';
+    }
+  }
+}
+
+async function pollJob(){
+  try{
+    const meta=await api(`/api/objective-jobs/${JOB_ID}`);
+    const lastUpdate=meta.updated_at?new Date(meta.updated_at).toLocaleTimeString():'';
+    const statusEl=$('job-status');
+    if(meta.current_operation){
+      statusEl.textContent=`${meta.current_operation} · ${meta.completed_model_operations||0} model operations completed · last activity ${lastUpdate}`;
+    } else {
+      statusEl.textContent=`${lbl(meta.workflow_stage)} · ${lbl(meta.processing_status)} · last activity ${lastUpdate}`;
+    }
+    renderTimeline(meta.workflow_stage||'draft');
+    const active=['running','queued'].includes(meta.processing_status);
+    setActivityBar(active);
+    // Update proc-state in list if still showing
+    const procEl=$('obj-list').querySelector('.proc-state');
+    if(procEl){
+      procEl.innerHTML=`
+        <strong>Pipeline is processing</strong>
+        <div class="proc-detail">Stage: <strong>${esc(lbl(meta.workflow_stage||'draft'))}</strong></div>
+        ${meta.current_operation?`<div class="proc-detail">Operation: <strong>${esc(meta.current_operation)}</strong></div>`:''}
+        ${meta.completed_model_operations?`<div class="proc-detail">${meta.completed_model_operations} model operations completed</div>`:''}
+        <div class="proc-detail" style="margin-top:.5rem;font-size:.72rem">Auto-refreshing every 5 seconds…</div>`;
+    }
+    const READY_STATUSES2=new Set(['ready','succeeded','complete','idle']);
+      const isReady=REVIEW_STAGES.has(meta.workflow_stage)&&READY_STATUSES2.has(meta.processing_status);
+    if(isReady){
+      clearInterval(pollTimer);pollTimer=null;
+      jobMeta=meta;jobVersion=meta.version||1;
+      setActivityBar(false);
+      await loadCandidates();
+      loadSourceFeatures();
+      loadPrompts();
+      loadHistory();
+    }
+  }catch(e){/* keep polling */}
+}
+
+async function loadCandidates(){
+  try{
+    const data=await api(`/api/objective-jobs/${JOB_ID}/candidates?limit=200`);
+    ALL=data.items||data||[];
+    blueprint=data.curriculum_blueprint||null;
+    coverage=data.curriculum_coverage||null;
+    coverageCurrent=Boolean(data.curriculum_coverage_current);
+    const domainSelect=$('domain-f');
+    const selectedDomain=domainSelect.value;
+    domainSelect.innerHTML='<option value="">All</option>'+((blueprint?.domains||[]).map(domain=>`<option value="${esc(domain.domain_id)}">${esc(domain.title)}</option>`).join(''));
+    domainSelect.value=(blueprint?.domains||[]).some(domain=>domain.domain_id===selectedDomain)?selectedDomain:'';
+    ALL.forEach(c=>{decisions[c.candidate_id]=c.decision||'pending';});
+    renderList();
+    renderDetail();
+    renderCoverage();
+  }catch(e){showError(`Could not load candidates: ${e.message}`);}
+}
+
+function renderCoverage(){
+  const el=$('tab-coverage');
+  if(!blueprint||!coverage){el.innerHTML='<p class="tab-empty">No curriculum coverage analysis is available for this objective set.</p>';return;}
+  const findings=new Map((coverage.domain_coverage||[]).map(item=>[item.domain_id,item]));
+  const discoveries=new Map((coverage.gap_discovery_records||[]).map(item=>[item.domain_id,item]));
+  const acknowledged=new Set(coverage.acknowledged_domain_ids||[]);
+  const canReview=jobMeta.workflow_stage==='objective_review';
+  const domains=(blueprint.domains||[]).map(domain=>{
+    const finding=findings.get(domain.domain_id)||{state:'missing',rationale:'No coverage result was returned.',missing_performances:[]};
+    const discovery=discoveries.get(domain.domain_id);
+    const targetRecords=discovery?.target_records||[];
+    const directCount=targetRecords.reduce((total,item)=>total+(item.direct_candidate_ids||[]).length,0);
+    const supportingCount=targetRecords.reduce((total,item)=>total+(item.supporting_candidate_ids||[]).length,0);
+    const discoveryStatus=discovery?discovery.selected_for_discovery?`${directCount} directly aligned and ${supportingCount} supporting candidate${directCount+supportingCount===1?'':'s'}`:'Not selected for focused discovery':'No focused discovery record';
+    const targetOutcomes=targetRecords.map(item=>{const offTarget=(item.alignments||[]).filter(value=>value.alignment==='off_target').length;return `<li><strong>${esc(item.target.performance)}</strong> — ${(item.direct_candidate_ids||[]).length} direct, ${(item.supporting_candidate_ids||[]).length} supporting, ${offTarget} off-target${item.no_candidate_found?' · no defensible candidate retained':''}</li>`;}).join('');
+    return `<div class="feat-card coverage-domain">
+      <div><strong>${domain.ordinal} · ${esc(domain.title)}</strong><div class="coverage-actions"><label class="flbl">Model-recommended importance <select class="fsel" data-domain-importance="${esc(domain.domain_id)}" ${canReview?'':'disabled'}><option value="core" ${domain.importance==='core'?'selected':''}>Core</option><option value="supporting" ${domain.importance==='supporting'?'selected':''}>Supporting</option><option value="peripheral" ${domain.importance==='peripheral'?'selected':''}>Peripheral</option></select></label></div></div>
+      <span class="tag t-${esc(finding.state)}">${esc(lbl(finding.state))}</span>
+      <div class="coverage-rationale">${esc(finding.rationale)}${(finding.missing_performances||[]).length?`<div style="margin-top:.3rem"><strong>Still needed after the final review:</strong> ${esc(finding.missing_performances.join('; '))}</div>`:''}<div style="margin-top:.35rem"><strong>Initial focused discovery:</strong> ${esc(discoveryStatus)}</div>${targetOutcomes?`<ul style="margin:.35rem 0 0;padding-left:1.2rem">${targetOutcomes}</ul>`:''}${discovery?.eligibility_rationale||finding.gap_discovery_rationale?`<div style="margin-top:.2rem"><strong>Initial eligibility rationale:</strong> ${esc(discovery?.eligibility_rationale||finding.gap_discovery_rationale)}</div>`:''}<div class="coverage-actions"><button type="button" class="btn" data-domain-ack="${esc(domain.domain_id)}" ${canReview?'':'disabled'}>${acknowledged.has(domain.domain_id)?'Remove acknowledgement':'Acknowledge finding'}</button>${acknowledged.has(domain.domain_id)?'<span class="tag t-approved">Acknowledged by LDS</span>':''}</div></div>
+    </div>`;
+  }).join('');
+  const questions=(coverage.reviewer_questions||[]).map(item=>`<li>${esc(item)}</li>`).join('');
+  const insufficiencies=(coverage.source_insufficiencies||[]).map(item=>`<li>${esc(item)}</li>`).join('');
+  el.innerHTML=`
+    ${coverageCurrent?'':'<div class="finding"><strong>Coverage needs refresh</strong><p>An LDS edit changed this objective set after the analysis ran. Existing findings remain visible as historical guidance.</p></div>'}
+    <div class="coverage-purpose"><strong>Central purpose</strong><p>${esc(blueprint.central_purpose)}</p></div>
+    <div class="coverage-purpose"><strong>Intended use</strong><p>${esc(blueprint.intended_use)}</p></div>
+    ${domains}
+    ${questions?`<div class="card"><h3 style="font-size:.78rem;margin-bottom:.4rem">Questions for LDS review</h3><ul style="padding-left:1.2rem;font-size:.8rem;line-height:1.5">${questions}</ul></div>`:''}
+    ${insufficiencies?`<div class="card"><h3 style="font-size:.78rem;margin-bottom:.4rem">Source limitations</h3><ul style="padding-left:1.2rem;font-size:.8rem;line-height:1.5">${insufficiencies}</ul></div>`:''}`;
+  el.querySelectorAll('[data-domain-importance]').forEach(select=>select.addEventListener('change',()=>saveDomainReview(select.dataset.domainImportance,{importance:select.value})));
+  el.querySelectorAll('[data-domain-ack]').forEach(button=>button.addEventListener('click',()=>saveDomainReview(button.dataset.domainAck,{acknowledged:!acknowledged.has(button.dataset.domainAck)})));
+}
+
+async function saveDomainReview(domainId,changes){
+  try{
+    const updated=await api(`/api/objective-jobs/${JOB_ID}/coverage/domains/${encodeURIComponent(domainId)}`,{method:'PATCH',body:JSON.stringify({...changes,expected_job_version:jobVersion})});
+    jobMeta=updated;jobVersion=updated.version;await loadCandidates();
+  }catch(e){showError(`Could not save curriculum review: ${e.message}`);await loadCandidates();}
+}
+
+async function loadSourceFeatures(){
+  try{
+    const feats=await api(`/api/objective-jobs/${JOB_ID}/source-features`);
+    const el=$('tab-features');
+    const items=feats.items||[];
+    const associated=new Set(ALL.flatMap(c=>c.source_feature_ids||[]));
+    const unassociated=items.filter(f=>!associated.has(f.feature_id));
+    if(!unassociated.length){el.innerHTML='<p class="tab-empty">No unassociated source material.</p>';return;}
+    el.innerHTML=unassociated.map(f=>`
+      <div class="feat-card">
+        <strong>${esc(f.title||f.feature_type)}</strong>
+        <p>${esc(f.description||(f.evidence_details||[{}])[0]?.text||'')}</p>
+        <div class="feat-tags">
+          <span class="tag t-bloom">${esc(lbl(f.feature_type))}</span>
+          <span class="tag t-content">${esc(lbl(f.status))}</span>
+        </div>
+      </div>`).join('');
+  }catch(e){$('tab-features').innerHTML='<p class="tab-empty">Could not load source features.</p>';}
+}
+
+async function loadHistory(){
+  const events=jobMeta.events||[],el=$('hist-content');
+  if(!events.length){el.innerHTML='<p class="tab-empty">No history yet.</p>';return;}
+  el.innerHTML=events.map(event=>`
+      <div class="hist-row">
+        <strong>${esc(lbl(event.event_type||'Event'))}</strong>
+        <span>${esc(event.created_at?new Date(event.created_at).toLocaleString():'')}${event.actor?' · '+esc(event.actor):''}</span>
+      </div>`).join('');
+}
+
+async function loadPrompts(){
+  try{
+    const prompts=await api(`/api/objective-jobs/${JOB_ID}/prompts`),el=$('tab-prompts');
+    if(!prompts.length){el.innerHTML='<p class="tab-empty">No prompts have run yet.</p>';return;}
+    el.innerHTML=prompts.map(p=>`<div class="hist-row"><strong>${esc(p.prompt_id)}</strong><span>${esc(p.operation)} · ${esc(p.prompt_version)} · ${esc(p.model_alias)}</span><div><button class="btn" data-prompt-id="${esc(p.prompt_run_id)}">View exact prompt</button></div></div>`).join('');
+    el.querySelectorAll('[data-prompt-id]').forEach(button=>button.onclick=()=>showPrompt(button.dataset.promptId));
+  }catch(e){$('tab-prompts').innerHTML='<p class="tab-empty">Could not load prompts.</p>';}
+}
+
+async function showPrompt(promptRunId){
+  try{
+    const p=await api(`/api/objective-jobs/${JOB_ID}/prompts/${encodeURIComponent(promptRunId)}`);
+    $('prompt-title').textContent=p.prompt_id;$('prompt-meta').textContent=`${p.prompt_version} · ${p.operation} · SHA-256 ${p.prompt_sha256}`;
+    $('prompt-text').textContent=p.prompt_snapshot;$('prompt-input').textContent=p.input_snapshot;$('prompt-dialog').showModal();
+  }catch(e){showError(`Could not load prompt: ${e.message}`);}
+}
+
+function confCls(c){return c==='high'?'t-high':c==='medium'?'t-medium':'t-low';}
+function classConf(c){return String(c.classification?.combined_confidence||c.confidence||'');}
+function decCls(d){return `t-${d||'pending'}`;}
+function reviewed(){return ALL.filter(c=>['approved','rejected'].includes(decisions[c.candidate_id]||'pending')).length;}
+
+function renderList(){
+  candidates=ALL.filter(c=>{
+    const dec=decisions[c.candidate_id]||'pending';
+    if(fDec&&dec!==fDec)return false;
+    if(fConf&&classConf(c)!==fConf)return false;
+    if(fOrigin&&String(c.origin)!==fOrigin)return false;
+    if(fDomain&&!(c.curriculum_assignment?.domain_ids||[]).includes(fDomain))return false;
+    if(fRole&&c.curriculum_assignment?.role!==fRole)return false;
+    return true;
+  });
+  const rev=reviewed(),total=ALL.length,pct=total?Math.round(rev/total*100):0;
+  $('list-hdr').textContent=`${candidates.length} learning objective${candidates.length!==1?'s':''}`;
+  $('fcnt').textContent=`${candidates.length} shown`;
+  $('prog-pill').textContent=`${rev} of ${total} reviewed`;
+  $('prog-bar').style.width=pct+'%';
+  $('advance-btn').disabled=jobMeta.workflow_stage!=='objective_review'||rev!==total||total===0;
+  $('advance-btn').title=rev===total?'Finalize this reviewed objective set':`${total-rev} objective${total-rev===1?'':'s'} still require approval or rejection`;
+  const list=$('obj-list');
+  if(!candidates.length){
+    list.innerHTML='<div style="padding:1rem;font-size:.83rem;color:var(--muted)">No objectives match this filter.</div>';
+    return;
+  }
+  list.innerHTML=candidates.map((c,i)=>{
+    const dec=decisions[c.candidate_id]||'pending';
+    return `<button type="button" class="obj-item${i===selected?' selected':''}" data-idx="${i}">
+      <div class="item-num">${String(i+1).padStart(2,'0')} · ${esc(lbl(String(c.origin||'model')))} authored · ${c.expected_effort_minutes||'?'} min</div>
+      <div class="item-stmt">${esc(c.statement)}</div>
+      <div class="item-meta">Content hint: ${esc(lbl(String(c.content_type_hint||'')))} · Bloom hint: ${esc(lbl(String(c.bloom_level||'' )))}</div>
+      ${c.support_profile?`<div class="item-meta">${esc(lbl(c.support_profile.discovery_basis))} · ${esc(lbl(c.support_profile.source_support_level))} source support</div>`:''}
+      ${c.curriculum_assignment?.domains?.length?`<div class="item-meta">Domain: ${esc(c.curriculum_assignment.domains.map(domain=>domain.title).join(', '))}</div>`:''}
+      ${c.gap_discovery?.target?`<div class="item-meta">Focused target: ${esc(c.gap_discovery.target.performance)}</div>`:''}
+      <div class="item-tags">
+        <span class="tag t-bloom">${esc(lbl(String(c.bloom_level||'')))}</span>
+        <span class="tag ${confCls(classConf(c))}">${esc(lbl(classConf(c)))}</span>
+        <span class="tag ${decCls(dec)}">${esc(lbl(dec))}</span>
+      </div>
+    </button>`;
+  }).join('');
+  list.querySelectorAll('.obj-item').forEach(el=>{
+    el.addEventListener('click',()=>{selected=Number(el.dataset.idx);renderList();renderDetail();});
+  });
+}
+
+function renderDetail(){
+  const empty=$('d-empty'),detPane=$('tab-detail'),nav=$('nav-bar'),tabBar=$('tab-bar');
+  if(selected<0||!candidates[selected]){
+    empty.classList.remove('hidden');detPane.classList.remove('active');
+    nav.classList.add('hidden');tabBar.classList.add('hidden');
+    return;
+  }
+  empty.classList.add('hidden');detPane.classList.add('active');
+  nav.classList.remove('hidden');tabBar.classList.remove('hidden');
+  const c=candidates[selected],dec=decisions[c.candidate_id]||'pending';
+  const classification=c.classification;
+  const scopeSupported=c.poc2_scope_status==='supported';
+  const scopeReason=c.poc2_scope_reason||'This objective does not have a supported POC2 classification.';
+  const support=c.support_profile;
+  const curriculumAssignment=c.curriculum_assignment;
+  $('pos-lbl').textContent=`${selected+1} of ${candidates.length}`;
+  $('prev-btn').disabled=selected===0;
+  $('next-btn').disabled=selected===candidates.length-1;
+  const prereqTxt=(c.prerequisites||[]).length?c.prerequisites.join(', '):'None identified';
+  const findingsHTML=(c.critic_findings||[]).map(f=>`<div class="finding"><strong>${esc(lbl(f.code||f.severity))}</strong><p>${esc(f.message)}</p></div>`).join('');
+  const evidenceHTML=(c.evidence_details||c.evidence||[]).map(e=>`
+    <article class="evidence-art">
+      <strong>${esc(lbl(e.role||''))} · ${esc((e.locators||[{}])[0]?.page?'Page '+e.locators[0].page:(e.locators||[{}])[0]?.slide?'Slide '+e.locators[0].slide:(e.locators||[{}])[0]?.chapter?'Chapter '+e.locators[0].chapter:e.locator||'')}</strong>
+      <blockquote>${esc(e.text||'Source node unavailable')}</blockquote>
+      <div class="emuted">${esc(e.source_version_id||'')}${e.node_id?' · '+esc(e.node_id):''}</div>
+      <a href="/api/source-uploads/${esc(e.source_run_id||'')}/original" target="_blank" rel="noopener">Open original source</a>
+    </article>`).join('')|| '<p style="font-size:.8rem;color:var(--muted)">No resolved evidence.</p>';
+  const partAvailabilityHTML=(c.part_availability||[]).map(part=>{
+    const partEvidence=(part.evidence||[]).map(e=>{
+      const loc=(e.locators||[{}])[0]||{};
+      const where=loc.page?`Page ${loc.page}`:loc.slide?`Slide ${loc.slide}`:loc.chapter?`Chapter ${loc.chapter}`:loc.section?`Section ${loc.section}`:'Source location';
+      const fragment=loc.page?`#page=${loc.page}`:'';
+      return `<article class="evidence-art"><strong>${esc(where)}</strong><blockquote>${esc(e.text||'Source node unavailable')}</blockquote><div class="emuted">${esc(e.source_filename||e.source_version_id||'')} · ${esc(e.node_id||'')}</div>${e.source_run_id?`<a href="/api/source-uploads/${encodeURIComponent(e.source_run_id)}/original${fragment}" target="_blank" rel="noopener">Open original source</a>`:''}</article>`;
+    }).join('');
+    return `<details class="part-row"><summary><span class="part-name">${part.ordinal} · ${esc(part.label)}</span><span class="tag t-${esc(part.status)}">${esc(lbl(part.status))}</span><span class="part-summary">${esc(part.summary)}</span></summary><div class="part-body">${partEvidence||'<p class="tab-empty">No associated material surfaced. This is a search result, not proof that the source contains none.</p>'}</div></details>`;
+  }).join('');
+  const canReview=jobMeta.workflow_stage==='objective_review';
+  detPane.innerHTML=`
+    <div class="card">
+      <div class="d-origin">Objective ${selected+1} of ${candidates.length} · ${esc(lbl(String(c.origin||'model')))} authored · approximately ${c.expected_effort_minutes||'?'} minutes</div>
+      <h2 class="d-stmt">${esc(c.statement)}</h2>
+      <div class="d-tags">
+        <span class="tag ${confCls(classConf(c))}">Classification confidence: ${esc(lbl(classConf(c)))}</span>
+        <span class="tag t-bloom">Suggested Bloom: ${esc(lbl(String(c.bloom_level||'')))}</span>
+        ${c.content_type_hint?`<span class="tag t-content">Suggested kind: ${esc(lbl(String(c.content_type_hint)))}</span>`:''}
+        ${classification?.escalation_required?'<span class="tag t-medium">Classification needs input</span>':''}
+        ${scopeSupported?'<span class="tag t-approved">Within POC2 authoring scope</span>':'<span class="tag t-medium">Outside POC2 authoring scope</span>'}
+        ${curriculumAssignment?`<span class="tag t-content">Coverage role: ${esc(lbl(curriculumAssignment.role))}</span>`:'<span class="tag t-medium">Coverage not assessed</span>'}
+        ${c.gap_discovery?`<span class="tag t-bloom">${esc(lbl(c.gap_discovery.alignment?.alignment||'focused gap candidate'))}</span>`:''}
+        ${support?`<span class="tag t-content">${esc(lbl(support.discovery_basis))}</span><span class="tag t-${support.source_support_level==='substantial'?'approved':'medium'}">${esc(lbl(support.source_support_level))} source support</span>`:''}
+        <span class="tag ${decCls(dec)}">${esc(lbl(dec))}</span>
+      </div>
+      <div class="review-summary"><strong>Why this may matter to a Deloitte practitioner</strong>${esc(c.practitioner_relevance||'—')}</div>
+      ${scopeSupported?'':`<div class="review-summary"><strong>Why this cannot be authored in POC2</strong>${esc(scopeReason)} You may revise or reject it, but approval will not start RLO generation.</div>`}
+      ${support?`<div class="detail-grid">
+        <div class="dbox"><h3>What the source contributes</h3><p>${esc((support.source_contributions||[]).join(' · ')||'No substantive contribution recorded.')}</p></div>
+        <div class="dbox"><h3>What model knowledge must contribute</h3><p>${esc((support.anticipated_llm_contributions||[]).join(' · ')||'No additional domain knowledge anticipated.')}</p>${support.discovery_basis==='source_related'?'<p>These additions are proposed model knowledge, not source-verified facts.</p>':''}</div>
+        ${(support.missing_knowledge||[]).length?`<div class="dbox full key"><h3>Knowledge not supplied by the source</h3><p>${esc(support.missing_knowledge.join(' · '))}</p></div>`:''}
+        ${support.review_note?`<div class="dbox full key"><h3>Support review needed</h3><p>${esc(support.review_note)}</p></div>`:''}
+      </div>`:''}
+      ${canReview&&dec==='approved'?`<div class="actions"><div class="act-dec"><span class="tag t-approved">RLO generation started</span></div></div>`:canReview?`<div class="actions">
+        <div class="act-edit">
+          <button class="btn" id="edit-btn">Edit objective</button>
+          <button class="btn" id="add-btn">Add related objective</button>
+          <button class="btn" id="split-btn">Split objective</button>
+          <button class="btn" id="merge-btn">Merge with next</button>
+          ${scopeSupported?'':'<button class="btn" id="reclassify-btn">Reclassify objective</button>'}
+        </div>
+        <div class="act-dec">
+          <button class="btn btn-reject" id="reject-btn">Reject</button>
+          <button class="btn" id="revision-btn">Request revision</button>
+          <button class="btn btn-approve" id="approve-btn" ${scopeSupported?'':'disabled title="Outside POC2 authoring scope"'}>Approve</button>
+          <button class="btn btn-muted" id="undo-btn">Undo decision</button>
+        </div>
+      </div>`:''}
+      <div class="parts-hdr"><h3>Source availability for the seven RLO parts</h3><p>This shows material surfaced for this objective. It does not assess extraction quality or certify that an eventual RLO section is complete.</p></div>
+      <div class="parts-list">${partAvailabilityHTML}</div>
+      <details class="more-context"><summary>More objective context</summary><div class="detail-grid">
+        <div class="dbox"><h3>Performance context</h3><p>${esc(c.performance_context||'—')}</p></div>
+        <div class="dbox"><h3>Scope</h3><p>${esc(c.scope||'—')}</p></div>
+        <div class="dbox"><h3>Potential prerequisite capabilities</h3><p>${esc(prereqTxt)} These may become relationships to other RLOs during later planning.</p></div>
+        <div class="dbox"><h3>Confidence rationale</h3><p>${esc(c.confidence_rationale||'—')}</p></div>
+        ${classification?`<div class="dbox"><h3>Content-kind classification</h3><p>${esc(classification.content_kind.rationale)} (${esc(lbl(classification.content_kind.confidence))} confidence)</p></div>
+        <div class="dbox"><h3>Bloom classification</h3><p>${esc(classification.bloom.rationale)} (${esc(lbl(classification.bloom.confidence))} confidence)</p><p><strong>Expected practice:</strong> ${esc(classification.bloom.expected_practice)}</p><p><strong>Rules applied:</strong> ${esc((classification.rule_ids||[]).join(', '))}</p></div>
+        ${classification.escalation_required?`<div class="dbox full key"><h3>Classification question</h3><p>Plausible alternatives: ${esc((classification.plausible_alternative_cells||[]).join(', '))}</p><p>${esc(classification.discriminator_question||'')}</p></div>`:''}
+        ${classification.verb_practice_mismatch?`<div class="dbox full"><h3>Verb/practice mismatch</h3><p>${esc(classification.verb_practice_mismatch)}</p></div>`:''}`:''}
+        <div class="dbox full"><h3>Why it was surfaced</h3><p>${esc(c.rationale||c.selected_reason||'—')}</p></div>
+        ${curriculumAssignment?`<div class="dbox full"><h3>Curriculum contribution</h3><p>${esc(curriculumAssignment.contribution)}</p><p><strong>Domains:</strong> ${esc((curriculumAssignment.domains||[]).map(domain=>domain.title).join(', '))}</p></div>`:''}
+        ${c.gap_discovery?.target?`<div class="dbox full"><h3>Focused missing-performance target</h3><p><strong>Target:</strong> ${esc(c.gap_discovery.target.performance)}</p><p><strong>Domain:</strong> ${esc(c.gap_discovery.domain.title)}</p><p><strong>Source claims:</strong> ${esc((c.gap_discovery.target.claim_ids||[]).join(', '))}</p><p><strong>Alignment:</strong> ${esc(lbl(c.gap_discovery.alignment?.alignment||'not assessed'))}. ${esc(c.gap_discovery.alignment?.rationale||'')}</p><p>${esc(c.gap_discovery.eligibility_rationale)}</p></div>`:''}
+        ${c.terminal_outcome?`<div class="dbox full key"><h3>Broader outcome anchor</h3><p>${esc(c.terminal_outcome)}</p></div>`:''}
+      </div>${findingsHTML}</details>
+      <div class="sl-hdr"><span class="sl-lbl">Source lineage</span><span class="sl-rule"></span></div>
+      ${evidenceHTML}
+    </div>`;
+
+  async function setDec(status){
+    try{
+      await api(`/api/objective-jobs/${JOB_ID}/candidates/${c.candidate_id}/reviews`,{
+        method:'POST',body:JSON.stringify({review_kind:'objective',status})
+      });
+      decisions[c.candidate_id]=status;
+      jobVersion++;
+      if(status!=='pending'&&selected<candidates.length-1)selected++;
+      renderList();renderDetail();
+    }catch(e){showError(`Could not save: ${e.message}`);}
+  }
+
+  if(canReview&&dec!=='approved'){
+  if(scopeSupported)$('approve-btn').onclick =()=>setDec('approved');
+  if(!scopeSupported)$('reclassify-btn').onclick=async()=>{
+    try{
+      const updated=await api(`/api/objective-jobs/${JOB_ID}/candidates/${c.candidate_id}/reclassify`,{
+        method:'POST',body:JSON.stringify({expected_job_version:jobVersion})
+      });
+      jobVersion=updated.version;await loadCandidates();
+    }catch(e){showError(`Could not reclassify: ${e.message}`);}
+  };
+  $('reject-btn').onclick  =()=>setDec('rejected');
+  $('revision-btn').onclick=()=>setDec('revision_requested');
+  $('undo-btn').onclick    =()=>setDec('pending');
+
+  $('edit-btn').onclick=async()=>{
+    const val=prompt('Edit objective statement:',c.statement);
+    if(!val?.trim())return;
+    try{
+      const updated=await api(`/api/objective-jobs/${JOB_ID}/candidates/${c.candidate_id}`,{
+        method:'PATCH',body:JSON.stringify({statement:val.trim(),expected_job_version:jobVersion})
+      });
+      jobVersion=updated.version;
+      const classified=await api(`/api/objective-jobs/${JOB_ID}/candidates/${c.candidate_id}/reclassify`,{
+        method:'POST',body:JSON.stringify({expected_job_version:jobVersion})
+      });
+      jobVersion=classified.version;await loadCandidates();
+    }catch(e){showError(`Could not edit: ${e.message}`);}
+  };
+
+  $('add-btn').onclick=async()=>{
+    const val=prompt('New objective statement:');
+    if(!val?.trim())return;
+    try{
+      const updated=await api(`/api/objective-jobs/${JOB_ID}/candidates`,{
+        method:'POST',body:JSON.stringify({statement:val.trim(),based_on_candidate_id:c.candidate_id,expected_job_version:jobVersion})
+      });
+      jobVersion=updated.version;await loadCandidates();selected=Math.max(candidates.length-1,0);renderList();renderDetail();
+    }catch(e){showError(`Could not add: ${e.message}`);}
+  };
+
+  $('split-btn').onclick=async()=>{
+    const s1=prompt('First objective:');if(!s1?.trim())return;
+    const s2=prompt('Second objective:');if(!s2?.trim())return;
+    try{
+      const updated=await api(`/api/objective-jobs/${JOB_ID}/candidates/${c.candidate_id}/split`,{
+        method:'POST',body:JSON.stringify({statements:[s1.trim(),s2.trim()],expected_job_version:jobVersion})
+      });
+      jobVersion=updated.version;selected=-1;await loadCandidates();
+    }catch(e){showError(`Could not split: ${e.message}`);}
+  };
+
+  $('merge-btn').onclick=async()=>{
+    if(selected>=candidates.length-1){showError('No next objective to merge with.');return;}
+    const next=candidates[selected+1];
+    const stmt=prompt('Merged objective statement:',c.statement);
+    if(!stmt?.trim())return;
+    try{
+      const updated=await api(`/api/objective-jobs/${JOB_ID}/candidates/merge`,{
+        method:'POST',body:JSON.stringify({candidate_ids:[c.candidate_id,next.candidate_id],statement:stmt.trim(),expected_job_version:jobVersion})
+      });
+      jobVersion=updated.version;selected=-1;await loadCandidates();
+    }catch(e){showError(`Could not merge: ${e.message}`);}
+  };
+  }
+}
+
+// Advance
+$('advance-btn').addEventListener('click',async()=>{
+  if(!confirm('Finalize this objective set and enable cross-RLO relationship and duplication checks?'))return;
+  try{
+    const updated=await api(`/api/objective-jobs/${JOB_ID}/advance`,{method:'POST',body:JSON.stringify({expected_job_version:jobVersion})});
+    const first=updated.rlo_generation_batch?.child_job_ids?.[0];
+    location.href=first?`/rlo-drafts?draft=${encodeURIComponent(first)}`:'/rlo-drafts';
+  }catch(e){showError(`Could not advance: ${e.message}`);}
+});
+
+// Filters
+document.querySelectorAll('.fbtn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');fDec=b.dataset.filter;selected=-1;renderList();renderDetail();
+  });
+});
+$('conf-f').addEventListener('change',e=>{fConf=e.target.value;selected=-1;renderList();renderDetail();});
+$('origin-f').addEventListener('change',e=>{fOrigin=e.target.value;selected=-1;renderList();renderDetail();});
+$('domain-f').addEventListener('change',e=>{fDomain=e.target.value;selected=-1;renderList();renderDetail();});
+$('role-f').addEventListener('change',e=>{fRole=e.target.value;selected=-1;renderList();renderDetail();});
+$('prompt-close').addEventListener('click',()=>$('prompt-dialog').close());
+
+// Nav
+$('prev-btn').addEventListener('click',()=>{if(selected>0){selected--;renderList();renderDetail();}});
+$('next-btn').addEventListener('click',()=>{if(selected<candidates.length-1){selected++;renderList();renderDetail();}});
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b=>b.setAttribute('aria-selected','false'));
+    document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    const pane=document.getElementById('tab-'+btn.dataset.tab);
+    if(pane)pane.classList.add('active');
+  });
+});
+
+loadJob();
+</script>
+</body>
+</html>

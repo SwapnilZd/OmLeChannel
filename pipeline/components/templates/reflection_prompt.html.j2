@@ -1,0 +1,3 @@
+<section class="slide-reflection" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2><div class="reflection-layout {{ 'has-visual' if s.image_path else '' }}"><div class="reflection-card"><span class="reflection-label">Consider this</span><p class="reflection-question">{{ s.prompt }}</p><div class="consider-guidance"><span aria-hidden="true">→</span><p>{{ s.guidance }}</p></div></div>{% if s.image_path %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}</div>
+</section>

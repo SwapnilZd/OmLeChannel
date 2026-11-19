@@ -1,0 +1,209 @@
+{
+  "id": "rlo-chess-pawn-movement-001",
+  "version": "1.0",
+  "date": "2026-06-25",
+  "topic": "Pawn Movement and Capture",
+  "domain": "FIDE Piece Rules",
+  "level": "beginner",
+  "audience": ["new players", "casual learners"],
+  "prerequisites": [],
+  "related_rlos": [
+    "rlo-chess-pawn-en-passant-002",
+    "rlo-chess-pawn-promotion-003"
+  ],
+  "source": {
+    "title": "FIDE Laws of Chess",
+    "reference": "Article 3.7 — The Pawn"
+  },
+  "terminal_objective": "Given any legal board position, correctly identify all legal moves available to a specified pawn.",
+  "performance_context": "During a game, a player must decide whether a pawn can advance, capture, or is blocked before committing to a move.",
+  "learning_objectives": [
+    {
+      "id": "lo-01",
+      "statement": "State the conditions under which a pawn may move one or two squares forward.",
+      "bloom_level": "remember"
+    },
+    {
+      "id": "lo-02",
+      "statement": "Distinguish between a pawn's movement direction and its capture direction.",
+      "bloom_level": "understand"
+    },
+    {
+      "id": "lo-03",
+      "statement": "Given a board position, determine whether a pawn is blocked, free to advance, or able to capture.",
+      "bloom_level": "apply"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Forward movement",
+      "definition": "A pawn moves one square forward toward the opponent's side of the board. It cannot move sideways or backward.",
+      "elaboration": "White pawns move from lower rank numbers to higher (e.g. rank 2 toward rank 8). Black pawns move in the opposite direction. A pawn cannot move forward if any piece — regardless of colour — occupies the square directly in front of it.",
+      "misconceptions": [
+        {
+          "misconception": "A pawn can move backward to return to safety.",
+          "correction": "Pawns never move backward under any circumstances. Once advanced, they cannot retreat."
+        },
+        {
+          "misconception": "A pawn can jump over a piece blocking its path.",
+          "correction": "Pawns cannot jump. If the square directly ahead is occupied, the pawn is completely blocked and has no forward move."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Initial two-square advance",
+      "definition": "A pawn that has not yet moved may advance two squares forward in a single move, provided both the square it crosses and the destination square are unoccupied.",
+      "elaboration": "This option is only available once per pawn, from its starting rank (rank 2 for White, rank 7 for Black). If either intervening square is occupied, the two-square advance is not legal, even if only the middle square is blocked.",
+      "misconceptions": [
+        {
+          "misconception": "A pawn can move two squares forward from any position.",
+          "correction": "The two-square advance is only available from the pawn's starting rank. Once it has moved at all, it may only advance one square at a time."
+        },
+        {
+          "misconception": "A pawn can leap over a piece on the first square to land on the second.",
+          "correction": "Both squares must be empty. If the first square is occupied, the pawn cannot advance at all — it cannot jump to the second square."
+        }
+      ]
+    },
+    {
+      "id": "c-03",
+      "name": "Diagonal capture",
+      "definition": "A pawn captures by moving one square diagonally forward. It can only capture in this way — it cannot capture a piece directly in front of it.",
+      "elaboration": "A pawn captures to either of the two squares diagonally ahead of it. An opponent's piece on one of those squares may be captured. A pawn cannot capture a piece that is directly in front of it — that piece simply blocks the pawn's advance.",
+      "misconceptions": [
+        {
+          "misconception": "A pawn can capture the piece directly in front of it.",
+          "correction": "This is the most common pawn misconception. A pawn cannot capture forward. The piece in front blocks the pawn's advance; it does not become a capture target."
+        },
+        {
+          "misconception": "A pawn must capture if a diagonal capture is available.",
+          "correction": "Captures are never forced in chess unless the alternative leaves the king in check. A player may choose not to capture with a pawn."
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-01",
+      "title": "The blocked pawn",
+      "setup": "White has a pawn on e4. Black has a pawn on e5. Both pawns face each other on the same file.",
+      "decision_point": "Can the White pawn on e4 advance or capture?",
+      "correct_action": "The White pawn cannot move. The square directly in front of it (e5) is occupied by a Black pawn, which blocks forward movement. There are no Black pieces on d5 or f5 to capture.",
+      "incorrect_actions": [
+        {
+          "action": "Advance to e5, capturing the Black pawn.",
+          "why_wrong": "Pawns cannot capture forward. The piece directly ahead blocks movement; it is not a capture target."
+        },
+        {
+          "action": "Advance to e5 as a normal move, pushing the Black pawn back.",
+          "why_wrong": "Pieces in chess do not push each other. An occupied square cannot be entered except by a legal capture, and pawns do not capture forward."
+        }
+      ],
+      "concepts_illustrated": ["c-01", "c-03"]
+    },
+    {
+      "id": "case-02",
+      "title": "The starting pawn's choice",
+      "setup": "White has a pawn on d2 (its starting square). The squares d3 and d4 are both unoccupied. A Black knight sits on e3.",
+      "decision_point": "What moves are available to the White pawn on d2?",
+      "correct_action": "The pawn may advance one square to d3, or two squares to d4. The Black knight on e3 is one rank ahead and one file to the right — a valid diagonal capture square — so the pawn may also capture by moving to e3.",
+      "incorrect_actions": [
+        {
+          "action": "Advance to d4 only, assuming the two-square advance skips d3.",
+          "why_wrong": "The two-square advance does not skip the middle square. Both d3 and d4 must be empty — if d3 were occupied, d4 would also be unavailable."
+        }
+      ],
+      "concepts_illustrated": ["c-02", "c-03"]
+    },
+    {
+      "id": "case-03",
+      "title": "The available capture",
+      "setup": "White has a pawn on c4. Black has a bishop on d5. The square c5 is empty.",
+      "decision_point": "Can the White pawn capture the Black bishop?",
+      "correct_action": "Yes. The Black bishop on d5 is one square diagonally forward of the White pawn on c4. The pawn may move to d5, capturing the bishop.",
+      "incorrect_actions": [
+        {
+          "action": "Decline to capture because the pawn can only move straight ahead.",
+          "why_wrong": "Pawns capture diagonally forward — this is their only means of taking an opponent's piece. A pawn on c4 with an opponent's piece on d5 is a legal capture opportunity."
+        }
+      ],
+      "concepts_illustrated": ["c-03"]
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "White has a pawn on e4. Black has a rook on e5. There are no other pieces adjacent to the White pawn. What can the White pawn do?",
+      "type": "multiple_choice_single",
+      "options": [
+        {
+          "id": "A",
+          "text": "Capture the Black rook by moving to e5.",
+          "correct": false,
+          "feedback": "Pawns cannot capture forward. The Black rook on e5 is directly in front of the pawn, which means it blocks the pawn's advance — it does not become a capture target.",
+          "misconception_targeted": "A pawn can capture the piece directly in front of it."
+        },
+        {
+          "id": "B",
+          "text": "The pawn is blocked and has no legal move.",
+          "correct": true,
+          "feedback": "Correct. A pawn cannot move forward into an occupied square, and it cannot capture forward. With no opponent pieces on d5 or f5, the pawn has no legal move from e4.",
+          "misconception_targeted": null
+        },
+        {
+          "id": "C",
+          "text": "Advance to e6, jumping over the Black rook.",
+          "correct": false,
+          "feedback": "Pawns cannot jump over other pieces. Unlike the knight, a pawn's path must be clear. If e5 is occupied, the pawn cannot advance to e6 or any square beyond.",
+          "misconception_targeted": "A pawn can jump over a piece blocking its path."
+        },
+        {
+          "id": "D",
+          "text": "Retreat to e3 to avoid being captured.",
+          "correct": false,
+          "feedback": "Pawns never move backward. Once advanced, a pawn cannot retreat regardless of the threat it faces.",
+          "misconception_targeted": "A pawn can move backward to return to safety."
+        }
+      ],
+      "concepts_assessed": ["c-01", "c-03"]
+    },
+    {
+      "id": "q-02",
+      "stem": "White has a pawn on g2. The square g3 is occupied by a White knight. The square h3 is empty. Which of the following correctly describes all legal moves for the White pawn?",
+      "type": "multiple_choice_single",
+      "options": [
+        {
+          "id": "A",
+          "text": "The pawn can advance to g3 or g4.",
+          "correct": false,
+          "feedback": "The White knight on g3 blocks the pawn completely. Since g3 is occupied, the pawn cannot advance to g3, and because the two-square advance requires both g3 and g4 to be empty, it cannot reach g4 either.",
+          "misconception_targeted": "A pawn can leap over a piece on the first square to land on the second."
+        },
+        {
+          "id": "B",
+          "text": "The pawn can advance to g4 by jumping over the White knight on g3.",
+          "correct": false,
+          "feedback": "Pawns cannot jump. The White knight on g3 blocks the pawn's path entirely — the pawn cannot skip g3 to reach g4.",
+          "misconception_targeted": "A pawn can jump over a piece blocking its path."
+        },
+        {
+          "id": "C",
+          "text": "The pawn has no legal forward moves and no captures available.",
+          "correct": true,
+          "feedback": "Correct. The White knight on g3 blocks the pawn's forward advance entirely, including the two-square option. The pawn could only capture by moving diagonally to f3 or h3 if an opponent's piece occupied one of those squares — but both are empty, so no capture is available.",
+          "misconception_targeted": null
+        },
+        {
+          "id": "D",
+          "text": "The pawn can capture the White knight on g3 to clear its path.",
+          "correct": false,
+          "feedback": "A pawn cannot capture its own pieces — only opponent's pieces can be captured. Additionally, the pawn cannot capture forward in any case; captures are always diagonal.",
+          "misconception_targeted": "A pawn can capture the piece directly in front of it."
+        }
+      ],
+      "concepts_assessed": ["c-01", "c-02", "c-03"]
+    }
+  ]
+}

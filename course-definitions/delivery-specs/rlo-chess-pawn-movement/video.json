@@ -1,0 +1,320 @@
+{
+  "type": "delivery_spec",
+  "modality": "video",
+  "id": "chess-pawn-movement-video-001",
+  "rlo_id": "rlo-chess-pawn-movement-001",
+  "rlo_version": "1.0",
+  "version": "1.0",
+  "date": "2026-07-13",
+  "title": "How the Pawn Moves",
+  "series": "Move by Move",
+  "episode": 1,
+  "target_duration_minutes": 5,
+  "metadata": {
+    "format_notes": "Avatar-led explainer. Single presenter avatar — warm, approachable, instructional tone. No co-host. Each scene is self-contained so segments can be re-ordered or replaced.",
+    "visual_style": "Clean, dark background with chess board graphic as a recurring anchor visual. Avatar occupies the left two-thirds of frame. Slide content appears on the right third as animated overlays or full-screen takeovers for board diagrams.",
+    "intended_context": "Self-paced learning module embedded in LMS. No pre-knowledge assumed beyond knowing what a chessboard looks like.",
+    "assessment_note": "The knowledge check scene is a reflective pause, not a graded interaction. Branching or scored assessment is out of scope for this spec version."
+  },
+  "cast": [
+    {
+      "role": "Presenter",
+      "avatar_id": "placeholder-avatar-01",
+      "avatar_description": "Professional, gender-neutral presenter. Business-casual attire. Warm facial expression. Suitable for enterprise learning context.",
+      "voice_id": "placeholder-voice-en-01",
+      "voice_description": "Clear, mid-range, measured pacing. Authoritative but approachable. Not overly enthusiastic."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "sc-01",
+      "title": "Introduction",
+      "scene_type": "intro",
+      "concepts_covered": [],
+      "los_addressed": [],
+      "avatar_script": "The pawn is the most common piece on the chess board — eight per player — and it has rules that trip up beginners more often than any other piece. In this short lesson, we'll cover exactly how the pawn moves, how it captures, and when it has a choice of two squares. Let's get into it.",
+      "slide_content": {
+        "layout": "title_card",
+        "title": "How the Pawn Moves",
+        "subtitle": "Movement, capture, and the two-square option",
+        "visual": "Chess board showing starting position, pawns highlighted"
+      },
+      "visual_notes": "Open on a clean chess board graphic — starting position, White pawns highlighted in a soft glow. Fade to avatar. Keep the board visible as a small graphic in the corner during the avatar intro.",
+      "duration_hint_seconds": 20,
+      "cognitive_pause_after": 0
+    },
+    {
+      "id": "sc-02",
+      "title": "Learning Objectives",
+      "scene_type": "objectives",
+      "concepts_covered": [],
+      "los_addressed": ["lo-01", "lo-02", "lo-03"],
+      "avatar_script": "By the end of this lesson, you'll be able to: state when a pawn can move one square or two, tell apart how it moves from how it captures — these are different — and look at any board position and work out exactly what moves a pawn has available.",
+      "slide_content": {
+        "layout": "bullets",
+        "title": "What You'll Learn",
+        "bullets": [
+          "When a pawn can move one or two squares forward",
+          "How pawn movement differs from pawn capture",
+          "How to identify all legal pawn moves from any position"
+        ]
+      },
+      "visual_notes": "Each bullet animates in as the avatar reaches it. Simple icon per bullet: arrow for movement, crossed swords for capture, magnifying glass for analysis.",
+      "duration_hint_seconds": 18,
+      "cognitive_pause_after": 0
+    },
+    {
+      "id": "sc-03",
+      "title": "Forward Movement",
+      "scene_type": "concept",
+      "concepts_covered": ["c-01"],
+      "los_addressed": ["lo-01"],
+      "avatar_script": "A pawn moves straight forward — one square toward the opponent's side. That's it. It can't go sideways. It can't go backwards. And it can't jump over another piece. If there is any piece — yours or your opponent's — sitting directly in front of it, the pawn is completely stuck. It has no forward move.",
+      "slide_content": {
+        "layout": "board_diagram",
+        "title": "Pawn Movement: Straight Ahead Only",
+        "diagram": {
+          "description": "White pawn on e4. Arrow pointing to e5 (valid). Crossed-out arrows pointing to d4, f4 (no sideways), e3 (no backward). A blocking piece on e5 to illustrate the blocked state in a second frame.",
+          "frames": [
+            {
+              "label": "Free to advance",
+              "highlight_squares": ["e4", "e5"],
+              "arrows": [{"from": "e4", "to": "e5", "type": "valid"}]
+            },
+            {
+              "label": "Blocked — no move",
+              "highlight_squares": ["e4", "e5"],
+              "piece_overrides": [{"square": "e5", "piece": "black_pawn"}],
+              "arrows": [{"from": "e4", "to": "e5", "type": "blocked"}]
+            }
+          ]
+        }
+      },
+      "visual_notes": "Transition between the two diagram frames on a natural pause in the script. Use animated arrow that turns red and fades when showing the blocked state.",
+      "duration_hint_seconds": 30,
+      "cognitive_pause_after": 1
+    },
+    {
+      "id": "sc-04",
+      "title": "The Two-Square Option",
+      "scene_type": "concept",
+      "concepts_covered": ["c-02"],
+      "los_addressed": ["lo-01"],
+      "avatar_script": "There's one exception to the one-square rule, and it only applies once per pawn. A pawn that hasn't moved yet — sitting on its starting square — may advance two squares on its first move. But only if both squares ahead of it are empty. Both squares. If the first square is occupied, the pawn cannot jump to the second. Once a pawn has moved at all, this option is gone permanently.",
+      "slide_content": {
+        "layout": "board_diagram",
+        "title": "First Move: One or Two Squares",
+        "diagram": {
+          "description": "White pawn on d2 (starting square). Arrows to d3 (one square) and d4 (two squares), both valid. Second frame: a piece on d3 blocks even the d4 advance.",
+          "frames": [
+            {
+              "label": "Two options from starting rank",
+              "highlight_squares": ["d2", "d3", "d4"],
+              "arrows": [
+                {"from": "d2", "to": "d3", "type": "valid"},
+                {"from": "d2", "to": "d4", "type": "valid"}
+              ]
+            },
+            {
+              "label": "Middle square blocked — both options lost",
+              "highlight_squares": ["d2", "d3", "d4"],
+              "piece_overrides": [{"square": "d3", "piece": "black_pawn"}],
+              "arrows": [
+                {"from": "d2", "to": "d3", "type": "blocked"},
+                {"from": "d2", "to": "d4", "type": "blocked"}
+              ]
+            }
+          ]
+        }
+      },
+      "visual_notes": "Emphasise the second frame — this is the common misconception. Avatar can gesture toward the board graphic when saying 'both squares'.",
+      "duration_hint_seconds": 35,
+      "cognitive_pause_after": 1
+    },
+    {
+      "id": "sc-05",
+      "title": "Diagonal Capture",
+      "scene_type": "concept",
+      "concepts_covered": ["c-03"],
+      "los_addressed": ["lo-02"],
+      "avatar_script": "Now here's the part that confuses almost everyone at first. A pawn captures differently from how it moves. It does not capture the piece in front of it. Instead, it captures diagonally forward — one square to the left or right of its forward direction. A piece directly in front of a pawn doesn't get captured; it just blocks the pawn. A piece sitting one square diagonally ahead can be taken.",
+      "slide_content": {
+        "layout": "board_diagram",
+        "title": "Capture Direction vs. Movement Direction",
+        "diagram": {
+          "description": "White pawn on e4. Black piece on e5 (blocked, not captured — red X). Black pieces on d5 and f5 (valid captures — green arrows).",
+          "frames": [
+            {
+              "label": "Captures go diagonal — not forward",
+              "highlight_squares": ["e4", "e5", "d5", "f5"],
+              "piece_overrides": [
+                {"square": "e5", "piece": "black_rook"},
+                {"square": "d5", "piece": "black_bishop"},
+                {"square": "f5", "piece": "black_knight"}
+              ],
+              "annotations": [
+                {"square": "e5", "type": "blocked", "label": "Blocked — not captured"},
+                {"square": "d5", "type": "capture_arrow"},
+                {"square": "f5", "type": "capture_arrow"}
+              ]
+            }
+          ]
+        }
+      },
+      "visual_notes": "This diagram is the most important in the lesson. Hold on it for the full explanation. The 'Blocked — not captured' annotation should be visually distinct from the capture arrows — red with an X vs. green with an arrow.",
+      "duration_hint_seconds": 38,
+      "cognitive_pause_after": 2
+    },
+    {
+      "id": "sc-06",
+      "title": "Worked Example: Reading a Position",
+      "scene_type": "case",
+      "concepts_covered": ["c-01", "c-02", "c-03"],
+      "los_addressed": ["lo-03"],
+      "case_id": "case-02",
+      "avatar_script": "Let's look at a real position. White has a pawn on d2 — its starting square. d3 and d4 are empty. And there's a Black knight sitting on e3. What moves does this pawn have? Take a moment to think it through before I tell you.",
+      "slide_content": {
+        "layout": "board_diagram",
+        "title": "What Moves Does This Pawn Have?",
+        "diagram": {
+          "description": "White pawn on d2. Black knight on e3. d3 and d4 empty.",
+          "frames": [
+            {
+              "label": "The position",
+              "highlight_squares": ["d2", "e3"],
+              "piece_overrides": [{"square": "e3", "piece": "black_knight"}]
+            }
+          ]
+        }
+      },
+      "visual_notes": "Hold the 'question' frame for 4 seconds before revealing the answer in the next scene. Avatar should pause and make eye contact after 'before I tell you'.",
+      "duration_hint_seconds": 22,
+      "cognitive_pause_after": 4
+    },
+    {
+      "id": "sc-07",
+      "title": "Worked Example: The Answer",
+      "scene_type": "case_reveal",
+      "concepts_covered": ["c-01", "c-02", "c-03"],
+      "los_addressed": ["lo-03"],
+      "case_id": "case-02",
+      "avatar_script": "Three moves. The pawn can advance one square to d3. It can advance two squares to d4 — because both squares ahead of it are empty. And it can capture diagonally by moving to e3, taking the Black knight. Notice that e3 is one square diagonally ahead — that's a legal capture square. All three options are valid from a pawn on its starting rank.",
+      "slide_content": {
+        "layout": "board_diagram",
+        "title": "Three Legal Moves",
+        "diagram": {
+          "description": "White pawn on d2. Black knight on e3. d3 and d4 empty. Arrows: d2→d3 (valid), d2→d4 (valid), d2→e3 (capture).",
+          "frames": [
+            {
+              "label": "All three options revealed",
+              "highlight_squares": ["d2", "d3", "d4", "e3"],
+              "piece_overrides": [{"square": "e3", "piece": "black_knight"}],
+              "arrows": [
+                {"from": "d2", "to": "d3", "type": "valid"},
+                {"from": "d2", "to": "d4", "type": "valid"},
+                {"from": "d2", "to": "e3", "type": "capture"}
+              ]
+            }
+          ]
+        }
+      },
+      "visual_notes": "Each arrow should animate in as the avatar describes that option. Sequence: d3 arrow → d4 arrow → e3 capture arrow.",
+      "duration_hint_seconds": 32,
+      "cognitive_pause_after": 1
+    },
+    {
+      "id": "sc-08",
+      "title": "Knowledge Check",
+      "scene_type": "assessment",
+      "concepts_covered": ["c-01", "c-03"],
+      "los_addressed": ["lo-02", "lo-03"],
+      "assessment_id": "q-01",
+      "avatar_script": "Before we wrap up, here's a quick check. White has a pawn on e4. Black has a rook sitting directly on e5. There are no other pieces near the pawn. What can the White pawn do? Pause here and think about it. Then check the options on screen.",
+      "slide_content": {
+        "layout": "knowledge_check",
+        "title": "What Can the Pawn Do?",
+        "diagram": {
+          "description": "White pawn on e4. Black rook on e5.",
+          "frames": [
+            {
+              "label": "The position",
+              "highlight_squares": ["e4", "e5"],
+              "piece_overrides": [{"square": "e5", "piece": "black_rook"}]
+            }
+          ]
+        },
+        "options": [
+          {"id": "A", "text": "Capture the Black rook by moving to e5."},
+          {"id": "B", "text": "The pawn is blocked and has no legal move."},
+          {"id": "C", "text": "Advance to e6, jumping over the Black rook."},
+          {"id": "D", "text": "Retreat to e3 to avoid being captured."}
+        ],
+        "correct_id": "B",
+        "reveal_note": "This is a reflective pause — no interactivity in this spec version. The answer is revealed in the next scene."
+      },
+      "visual_notes": "Hold on the question for 5 seconds minimum. Options should appear on screen while the avatar holds the pause.",
+      "duration_hint_seconds": 20,
+      "cognitive_pause_after": 5
+    },
+    {
+      "id": "sc-09",
+      "title": "Knowledge Check: Answer",
+      "scene_type": "assessment_reveal",
+      "concepts_covered": ["c-01", "c-03"],
+      "los_addressed": ["lo-02", "lo-03"],
+      "assessment_id": "q-01",
+      "avatar_script": "The answer is B — the pawn is blocked and has no legal move. The Black rook is directly in front of the pawn on e5. That blocks the pawn's forward advance. Pawns cannot capture forward — they can only capture diagonally — so the rook is not a capture target. And pawns never move backward. With no opponent piece sitting diagonally ahead, the pawn simply has nowhere to go.",
+      "slide_content": {
+        "layout": "knowledge_check_reveal",
+        "correct_id": "B",
+        "correct_explanation": "The rook on e5 blocks forward movement. Pawns cannot capture forward — only diagonally. No diagonal opponent pieces = no moves available.",
+        "highlight_misconceptions": [
+          {"id": "A", "misconception": "Pawns don't capture forward."},
+          {"id": "C", "misconception": "Pawns can't jump over pieces."},
+          {"id": "D", "misconception": "Pawns never move backward."}
+        ]
+      },
+      "visual_notes": "Highlight option B in green on reveal. Briefly flag A, C, D with the misconception label in a smaller annotation.",
+      "duration_hint_seconds": 30,
+      "cognitive_pause_after": 1
+    },
+    {
+      "id": "sc-10",
+      "title": "Summary and Close",
+      "scene_type": "outro",
+      "concepts_covered": ["c-01", "c-02", "c-03"],
+      "los_addressed": ["lo-01", "lo-02", "lo-03"],
+      "avatar_script": "To recap: pawns move straight forward, one square at a time. From their starting square, they can move two squares if the path is clear. They capture diagonally, not forward — and a piece in front of them blocks, rather than becomes, a target. If you can remember those three points, you've understood the most frequently misunderstood piece on the board. Up next: we'll cover en passant — the only move in chess where a pawn captures a square it doesn't land on.",
+      "slide_content": {
+        "layout": "summary_card",
+        "title": "Pawn Movement — Summary",
+        "bullets": [
+          "Moves forward only — one square at a time",
+          "Two-square option from starting rank if path is clear",
+          "Captures diagonally — not the piece directly ahead"
+        ],
+        "next_lesson": {
+          "title": "En Passant",
+          "rlo_id": "rlo-chess-pawn-en-passant-002"
+        }
+      },
+      "visual_notes": "End card with summary bullets animating in. 'Next Lesson' teaser appears at the bottom after a 1-second pause. Logo or series branding in the corner.",
+      "duration_hint_seconds": 35,
+      "cognitive_pause_after": 0
+    }
+  ],
+  "platform_notes": {
+    "heygen": {
+      "mapping_status": "draft — see T2-F2-TK1 for full field mapping",
+      "avatar_id_placeholder": "Replace cast[0].avatar_id with HeyGen avatar_id from your account",
+      "voice_id_placeholder": "Replace cast[0].voice_id with HeyGen voice_id; match to voice_description",
+      "scene_mapping": "Each scenes[] entry maps to one HeyGen scene. avatar_script → voice_script. slide_content → background or slide template depending on layout type.",
+      "board_diagrams": "Diagrams must be pre-rendered as static images or short MP4 clips and referenced as HeyGen background assets. Dynamic in-video animation requires HeyGen Pro or manual composition.",
+      "unsupported_fields": [
+        "diagram.frames (multi-frame animation not natively supported in basic HeyGen scene)",
+        "annotations (must be baked into background asset)",
+        "cognitive_pause_after (must be handled by splitting scenes or adding silence to voice_script)"
+      ]
+    }
+  }
+}

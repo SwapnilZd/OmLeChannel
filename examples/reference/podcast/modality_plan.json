@@ -1,0 +1,45 @@
+{
+  "plan_id": "mp-adkar-01-podcast-manager-l55",
+  "modality": "podcast",
+  "narrative": "Two-segment podcast. Segment one builds the foundational ADKAR acronym and sequence from the hook through the core rule and the mnemonic example. Segment two targets the two-A disambiguation using a contrast example, a non-example correcting the most common naming error, a spoken recall prompt, and two assessment questions.",
+  "scenes": [
+    {
+      "id": "scene-intro-adkar",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": ["c-01"],
+          "component_ids": ["comp-hook-01", "comp-rule-01", "comp-example-01"],
+          "assessment_item_ids": []
+        }
+      ],
+      "learning_objective": "State the five ADKAR elements in their correct order using the acronym as a memory aid.",
+      "teaching_pattern": "hook_then_rule_then_example",
+      "preferred_capability": "narration",
+      "acceptable_fallbacks": [],
+      "content_direction": "Open with the salience hook establishing why every manager encounters ADKAR in the field. Present the five elements as a numbered sequence aligned one-for-one with the acronym letters. Close with the three-phase grouping (prepare: Awareness and Desire / manage: Knowledge and Ability / sustain: Reinforcement) as a secondary mnemonic for listeners who prefer conceptual chunking. Tone is conversational and direct. Do not introduce application-level content.",
+      "target_duration_seconds": 180
+    },
+    {
+      "id": "scene-two-as",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": ["c-01"],
+          "component_ids": ["comp-example-02", "comp-nonexample-01", "comp-recall-01"],
+          "assessment_item_ids": ["q-01", "q-02"]
+        }
+      ],
+      "learning_objective": "Distinguish Awareness (the first A, understanding why) from Ability (the fourth element, demonstrated performance) and correct the most common ADKAR naming substitution error.",
+      "teaching_pattern": "example_nonexample_then_recall",
+      "preferred_capability": "narration",
+      "acceptable_fallbacks": [],
+      "content_direction": "Explicitly contrast the two A elements: Awareness is early-sequence understanding of why change is needed; Ability is late-sequence demonstrated skill in practice. Present the wrong-word substitution non-example (Decision, Action, Results) and name each error specifically. Close with the Expert asking the Host to recall all five elements, the Host answering as the learner proxy, and the Expert correcting or confirming the response. Present both assessment questions through the same Expert question, Host response, and Expert feedback pattern.",
+      "target_duration_seconds": 180
+    }
+  ]
+}

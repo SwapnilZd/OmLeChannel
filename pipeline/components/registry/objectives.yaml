@@ -1,0 +1,46 @@
+id: objectives
+name: Learning Objectives
+description: >
+  A screen listing the learning objectives for the course using a clean
+  arrow-prefixed list.
+when_to_use: >
+  Always second, directly after the title screen. Exactly one per course.
+  Present the primary objective and 2-5 supporting sub-objectives.
+tags: [intro, objectives, learning-goals]
+sequence_position: intro
+selection:
+  category: intro
+  purposes: [learning_objectives, orient_learner]
+  content_shapes: [outcome_list]
+  relationships: [parallel]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [intro]
+  media_supported: true
+  capacity: {min_items: 2, max_items: 6}
+  retrieval_text: >
+    Introductory slide for two to six learner outcomes or objectives. Best for a concise
+    parallel list near the beginning of a course. Can use an optional contextual image.
+    Not for detailed explanations, ordered procedures, or assessment.
+layout_variants:
+  list_focus: {when: no useful image is available}
+  visual_split: {when: a supporting image reinforces the course context}
+
+slots:
+  heading:
+    description: Section heading, e.g. "What You'll Learn"
+    target_chars: 30
+    max_chars: 60
+    required: true
+  objectives:
+    type: array
+    min_items: 2
+    max_items: 6
+    item_slots:
+      text:
+        description: One objective written as a learner-facing outcome statement
+        target_chars: 80
+        max_chars: 140
+
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

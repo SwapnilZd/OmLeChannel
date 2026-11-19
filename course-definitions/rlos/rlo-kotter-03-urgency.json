@@ -1,0 +1,365 @@
+{
+  "id": "rlo-kotter-03-urgency",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 1 \u2014 Create a Sense of Urgency",
+  "topic": "Kotter Step 1 \u2014 Create a Sense of Urgency",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-04-coalition"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "A Sense of Urgency",
+      "reference": "Kotter, J. P. (2008). A Sense of Urgency. Harvard Business Review Press.",
+      "authority": "primary",
+      "note": "Kotter's dedicated treatment of Step 1, including the distinction between true urgency, false urgency, and complacency."
+    }
+  ],
+  "terminal_objective": "Explain what it means to create a sense of urgency (Step 1), and distinguish genuine urgency from manufactured pressure or complacency.",
+  "performance_context": "When observing or participating in the early stages of a change effort, the learner should be able to assess whether genuine urgency has been established, or whether the effort is proceeding on the basis of false urgency or complacency.",
+  "enabling_objective": {
+    "id": "lo-03",
+    "statement": "Define urgency in Kotter's sense, and distinguish it from false urgency and complacency.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Genuine urgency",
+      "definition": "A shared, action-oriented conviction that change is necessary now, grounded in an honest read of external threats and opportunities. Genuine urgency produces sustained, purposeful action across the organization \u2014 not just at the top.",
+      "elaboration": "Kotter emphasizes that urgency is not the same as anxiety, activity, or fear. It is a settled belief, held broadly, that the current path leads somewhere unacceptable and that action cannot wait. It is created by exposing the organization to real data about its situation \u2014 customer feedback, competitive threats, market shifts \u2014 not by exhortation.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Urgency means telling people the change is important and asking them to move faster.",
+          "correction": "Urgency is a belief, not an instruction. Telling people to hurry produces compliance at best and cynicism at worst. Urgency is created by showing people evidence that makes them believe change is necessary."
+        },
+        {
+          "id": "m-02",
+          "statement": "If the CEO says the situation is urgent, urgency has been created.",
+          "correction": "Urgency at the top does not equal urgency in the organization. Kotter's threshold is that a substantial majority \u2014 he often cites 75% of leadership and a broad base below \u2014 must genuinely believe change cannot wait. A CEO statement is a starting input, not the finished state."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "False urgency and complacency",
+      "definition": "False urgency is high activity without direction \u2014 meetings, initiatives, and anxiety that produce motion but not progress. Complacency is the opposite failure: comfort with the status quo, often masked by past success or by the belief that current problems will resolve themselves.",
+      "elaboration": "Both are common substitutes for genuine urgency, and both are dangerous because they look like the real thing from the outside. False urgency feels like the organization is moving, but the motion is undirected and exhausting. Complacency feels stable, but it leaves the organization unable to respond when change becomes unavoidable. Kotter argues that complacency is more common than leaders realize, particularly in organizations that have been successful.",
+      "source_refs": [
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "A busy, stressed organization has urgency.",
+          "correction": "Busyness is often false urgency \u2014 activity without focus. Genuine urgency produces directed action toward a specific change, not general stress or overwork."
+        },
+        {
+          "id": "m-04",
+          "statement": "A calm, profitable organization does not need urgency because things are working.",
+          "correction": "Current success is the leading indicator of complacency, not the absence of a need for urgency. Kotter's argument is that the time to create urgency is before it becomes obvious \u2014 by which point the response window has usually closed."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "Step 1 is the step most often skipped, and its absence is the failure mode Kotter identifies most frequently. Leaders skip it because it feels uncomfortable \u2014 creating urgency means telling the organization that its current path is not working, and that message is unwelcome. But without urgency, everything downstream stalls: coalitions do not form with conviction, visions are received politely and ignored, and the effort dies quietly. Understanding what urgency actually is \u2014 and what it isn't \u2014 is the single highest-leverage piece of the model."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Genuine urgency has three features: it is grounded in evidence (specific data about threats or opportunities, not general assertion); it is broadly held (not confined to the top); and it is action-oriented (produces movement toward a specific change, not generalized anxiety). If any of the three is missing, the urgency is not yet genuine."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "False urgency looks like high activity and stress but produces no directed progress. Complacency looks like calm and confidence but leaves the organization unable to respond to real change. Both are substitutes for genuine urgency, and both are dangerous because they look plausible from the outside."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Urgency grounded in evidence",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's leadership brings a group of managers to a warehouse floor to sit with customer complaint audio for a full day. Managers hear, in customers' own voices, the friction points that internal metrics have been smoothing over.",
+        "what_happens": "By the end of the day, the managers are visibly changed. They return to their teams not with an instruction to work harder, but with a specific and vivid sense that current operations are failing customers in ways that must be addressed. The urgency spreads through the organization not by announcement but by retelling.",
+        "reasoning": "Urgency here is grounded in evidence (real complaint audio), broadly held (the day expanded the base of believers beyond the top), and action-oriented (managers know specifically what needs to change). All three features are present."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "False urgency in a busy organization",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A software company runs at high intensity \u2014 long hours, frequent all-hands meetings, weekly emergency escalations. Leaders describe the culture as 'urgent.'",
+        "what_happens": "When a real transformation is attempted, it is one more initiative among many. It gets a workstream, a status update, and eventually fades. The organization was too busy to notice which fires actually mattered.",
+        "reasoning": "The company had false urgency \u2014 high activity, high stress, no direction. When genuine change was needed, the false urgency could not be converted into real change because the organization had lost the ability to distinguish signal from noise."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Urgency by exhortation",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01",
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A CEO opens an all-hands meeting by saying: 'This is an urgent moment for our company. I need everyone to feel that urgency and act on it. We need to move fast.'",
+        "why_wrong": "This is exhortation, not urgency creation. No evidence has been presented, no specific threat has been named, and no one has been given a reason to believe. The audience will nod, applaud, and return to their desks unchanged.",
+        "correct_framing": "Urgency is created by exposing the organization to information that changes what people believe \u2014 customer data, competitor moves, market shifts, financial trends. Telling people to feel urgent is not a substitute for giving them a reason to."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "The comfort of past success",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A profitable company has held market share for five years. Leaders point to strong financials and describe the organization as 'well-positioned.' A proposal for major transformation is set aside as unnecessary.",
+        "why_wrong": "This is complacency, not stability. The absence of a visible crisis is not evidence that no change is needed. Kotter's argument is that the moment to create urgency is precisely when the organization feels comfortable \u2014 because by the time discomfort arrives, the response window has usually narrowed.",
+        "correct_framing": "Sustained profitability is a leading indicator of complacency, not proof against the need for change. The urgency conversation is harder in a comfortable organization, and it matters more."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what makes urgency 'genuine' in Kotter's sense, and what are the two main things it gets mistaken for?",
+        "expected_answer": "Genuine urgency is an evidence-grounded, broadly held, action-oriented belief that change cannot wait; it is commonly mistaken for false urgency (high activity without direction) or complacency (comfort with the status quo)."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A leadership team wants to create urgency for a major transformation. Which of the following actions is most likely to produce genuine urgency in Kotter's sense?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The CEO delivers a strong all-hands speech emphasizing that the company must change and that the pace must accelerate immediately.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "This is exhortation, not urgency creation. It tells the organization to feel urgent without giving it a reason to. The audience will nod and return to their desks unchanged."
+        },
+        {
+          "id": "B",
+          "text": "Leaders organize direct exposure to customer feedback, competitive analysis, or market data that makes the case for change concrete and specific for a broad audience.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Genuine urgency is created by exposing the organization to evidence that changes what people believe. Direct exposure to real data \u2014 customer voices, competitor moves, market trends \u2014 is the mechanism, not exhortation."
+        },
+        {
+          "id": "C",
+          "text": "The leadership team schedules more meetings and increases the reporting cadence to signal that the situation is serious.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "More meetings and faster reporting produce activity, not urgency. This is precisely how false urgency emerges \u2014 high busyness that looks like movement but produces no directed change."
+        },
+        {
+          "id": "D",
+          "text": "The team notes that the organization is calm and profitable and concludes that urgency-creation is not necessary at this time.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "This is complacency. Kotter's argument is that the moment to create urgency is precisely when the organization feels comfortable \u2014 because by the time discomfort forces the issue, the response window has usually closed."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A manager describes her organization as follows: 'We're incredibly busy. Everyone works long hours, we run weekly emergency escalations, and there's constant pressure to deliver. So we definitely have urgency \u2014 the real problem is just execution.' How should this description be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The manager is correct \u2014 the busyness and pressure indicate genuine urgency is present.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Busyness is not urgency. Kotter specifically identifies this pattern \u2014 high activity, high stress, constant escalations \u2014 as false urgency: motion without direction. Genuine urgency produces movement toward a specific change, not generalized overwork."
+        },
+        {
+          "id": "B",
+          "text": "The description points to false urgency \u2014 high activity without focus on a specific change effort. Real urgency requires directed motion, not just stress.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the classic profile of false urgency: an organization that feels urgent from the inside because it is stressed and overworked, but which cannot mobilize toward any specific change because the activity is undirected. The 'execution problem' framing usually masks this."
+        },
+        {
+          "id": "C",
+          "text": "The organization has complacency, since the busyness is a distraction from the real work.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Complacency is comfort with the status quo \u2014 calm and confidence, not stress and overwork. The pattern described is false urgency (motion without direction), which is a different failure mode. Both are substitutes for genuine urgency, but they present very differently."
+        },
+        {
+          "id": "D",
+          "text": "The manager has correctly diagnosed an execution problem \u2014 urgency is not the relevant concept here.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "'Execution problem' is often how false urgency is described from the inside. When an organization cannot make progress despite high activity, the diagnosis is rarely a pure execution failure \u2014 it is more often that the activity is undirected because genuine urgency around a specific change is missing."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Direct and slightly confrontational. This RLO is teaching learners to see through comfortable self-descriptions ('we're urgent,' 'we're stable'). The tone should support that critical stance without being cynical.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01 and 02, so the sequenced-process framing is established. This RLO can assume that context and focus on the specific character of Step 1.",
+    "feedback_policy": "Feedback must distinguish between the three states (genuine urgency, false urgency, complacency) explicitly. Do not treat 'not urgent' as a single state \u2014 the two failure modes present very differently and require different responses.",
+    "example_shape_hints": [
+      "Every example should be diagnosable against the three features of genuine urgency: evidence-grounded, broadly held, action-oriented.",
+      "Include at least one example of false urgency and at least one of complacency \u2014 these are different failure modes and learners tend to conflate them.",
+      "The 'urgency by exhortation' non-example is high-value; keep it prominent."
+    ],
+    "practice_shape_hints": [
+      "Practice should present a described organizational state and ask the learner to diagnose it as genuine urgency, false urgency, or complacency.",
+      "Include at least one distractor that reframes the situation as an execution problem \u2014 this is a common learner escape hatch."
+    ],
+    "salience_hook_description": "The hook should establish that Step 1 is both the most-skipped step and the most consequential to skip. Learners should leave believing that urgency-creation is difficult, uncomfortable, and non-negotiable."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-02: the learner should already accept that skipping steps produces predictable failure. This RLO shows what skipping Step 1 specifically looks like.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-12 revisits urgency-skipping as one of the diagnosable failure patterns."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "case_vignette_module",
+      "rationale": "The three states (genuine, false, complacent) are best taught by contrast, and short case vignettes support that structure well.",
+      "priority": "primary"
+    },
+    {
+      "format": "interactive_diagnostic",
+      "rationale": "A tool that presents organizational descriptions and asks the learner to diagnose the urgency state can reinforce the three-way distinction efficiently.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_with_examples",
+      "rationale": "A 5-6 minute video walking through one example of each state, with the diagnostic features surfaced explicitly.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Step 1 gets more airtime than the other per-step RLOs because it is the step Kotter himself treats as foundational and the one most commonly misunderstood. The three-way distinction (genuine / false / complacent) is the specific instructional payload \u2014 learners who leave with only 'urgency is important' have missed the useful content. The 'busy = urgent' misconception is targeted heavily because it is the specific mistake most likely in professional-services and high-intensity corporate environments where this material will be used.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

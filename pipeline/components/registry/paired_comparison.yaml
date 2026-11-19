@@ -1,0 +1,48 @@
+id: paired_comparison
+name: Paired Comparison
+description: Two coordinated panels for states, trade-offs, or behavioral guidance.
+when_to_use: Use when the source establishes exactly two sides that should be inspected together.
+tags: [comparison, before-after, pros-cons, do-dont]
+sequence_position: middle
+design_notes: Preserve the semantic relationship between sides; do not turn neutral trade-offs into right-versus-wrong guidance.
+selection:
+  category: content
+  purposes: [compare_states, explain_tradeoffs, guide_behavior]
+  content_shapes: [two_sided_lists, paired_states, paired_behavior_lists]
+  relationships: [contrast, tradeoff, before_after]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 2}
+  retrieval_text: >
+    Two coordinated panels for exactly two source-grounded sides. Supports before and after,
+    current and future, pros and cons, or do and don't guidance. Each side has a label, optional
+    summary, and two to five concise points. Not for multi-option or row-by-row comparison.
+layout_variants:
+  before_after:
+    when: Two directly corresponding states show a change over time.
+    selection: {purposes: [show_transformation, compare_states], content_shapes: [paired_states], relationships: [before_after]}
+  pros_cons:
+    when: One option has genuine advantages and disadvantages.
+    selection: {purposes: [explain_tradeoffs, evaluate_option], content_shapes: [two_sided_lists], relationships: [tradeoff]}
+  do_dont:
+    when: The source distinguishes recommended and discouraged behaviors.
+    selection: {purposes: [guide_behavior, prevent_errors], content_shapes: [paired_behavior_lists], relationships: [contrast]}
+  current_future:
+    when: Current and intended future conditions should be contrasted without claiming a completed transformation.
+    selection: {purposes: [describe_target_state, compare_states], content_shapes: [paired_states], relationships: [current_future]}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  introduction: {target_chars: 90, max_chars: 170, required: false}
+  left:
+    slots:
+      label: {target_chars: 20, max_chars: 40}
+      summary: {target_chars: 80, max_chars: 150, required: false}
+      points: {type: array, min_items: 2, max_items: 5, item_max_chars: 120}
+  right:
+    slots:
+      label: {target_chars: 20, max_chars: 40}
+      summary: {target_chars: 80, max_chars: 150, required: false}
+      points: {type: array, min_items: 2, max_items: 5, item_max_chars: 120}
+image_slots: []

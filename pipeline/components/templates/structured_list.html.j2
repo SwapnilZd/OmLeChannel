@@ -1,0 +1,4 @@
+<section class="slide-structured-list variant-{{ s.layout_variant or 'numbered_list' }}" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>{% if s.introduction %}<p class="instruction">{{ s.introduction }}</p>{% endif %}
+  <ol class="structured-items">{% for item in s['items'] %}<li><span class="structured-marker" aria-hidden="true">{% if s.layout_variant == 'checklist' %}✓{% elif s.layout_variant == 'tips' %}◆{% else %}{{ loop.index }}{% endif %}</span><div>{% if item.label %}<h3>{{ item.label }}</h3>{% endif %}<p>{{ item.detail }}</p></div></li>{% endfor %}</ol>
+</section>

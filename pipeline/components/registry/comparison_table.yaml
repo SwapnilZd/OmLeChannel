@@ -1,0 +1,39 @@
+id: comparison_table
+name: Comparison Table
+description: Compares multiple items consistently across shared dimensions.
+when_to_use: Use when 2-4 items have parallel attributes that benefit from row-by-row comparison.
+tags: [comparison, table, dimensions]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [compare_items, distinguish_options]
+  content_shapes: [items_by_dimensions]
+  relationships: [comparison]
+  interactions: []
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 4}
+  retrieval_text: >
+    Content slide comparing two to four items across one to five shared dimensions. Best when
+    every item has parallel attributes and the learner must inspect similarities or differences.
+    Supports balanced or text-heavy cells. Not for unrelated concepts or ordered processes.
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  columns:
+    type: array
+    min_items: 2
+    max_items: 4
+    item_max_chars: 45
+  rows:
+    type: array
+    min_items: 1
+    max_items: 5
+    item_slots:
+      label: {target_chars: 25, max_chars: 50}
+      values:
+        type: array
+        min_items: 2
+        max_items: 4
+        item_max_chars: 120
+image_slots: []

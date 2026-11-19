@@ -1,0 +1,19 @@
+<section class="slide-scenario-setup" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.title }}</h2>
+  <div class="scenario-layout">
+    <div class="scenario-body">
+      <div class="scenario-text">{{ s.setup_text | paragraphs }}</div>
+      <p class="scenario-prompt">{{ s.prompt }}</p>
+      <ul class="branch-list">
+        {% for b in s.branches %}
+        <li><a class="branch-btn" href="#{{ b.id }}">{{ b.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if s.image_path %}
+    <div class="scenario-image-col">
+      <img class="scenario-image" src="{{ s.image_path }}" alt="" />
+    </div>
+    {% endif %}
+  </div>
+</section>

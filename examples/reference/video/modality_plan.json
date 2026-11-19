@@ -1,0 +1,53 @@
+{
+  "plan_id": "mp-adkar-01-video-manager-l55",
+  "modality": "video",
+  "narrative": "A two-scene avatar-led video introducing the ADKAR change framework to a manager audience. The first scene hooks the learner with the business case for structured change management. The second scene teaches the five ADKAR elements with a concrete management application.",
+  "scenes": [
+    {
+      "id": "video-hook",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": [],
+          "component_ids": [],
+          "assessment_item_ids": []
+        }
+      ],
+      "learning_objective": "Learner understands why structured change management matters for managers.",
+      "teaching_pattern": "hook_then_rule",
+      "preferred_capability": "avatar_led_hook",
+      "acceptable_fallbacks": [],
+      "content_direction": "Open with a relatable scenario of a change initiative that failed without ADKAR structure. Establish urgency and relevance for managers.",
+      "target_duration_seconds": 60,
+      "narrative_role": "hook",
+      "learner_engagement": null,
+      "transition_direction": null,
+      "presentation_direction": "Avatar presents directly to camera against an approved deep-navy solid-color background. Framing is direct and professional."
+    },
+    {
+      "id": "video-adkar-explanation",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": ["c-01"],
+          "component_ids": [],
+          "assessment_item_ids": []
+        }
+      ],
+      "learning_objective": "Learner can name the five ADKAR elements and describe how each applies to a manager's role.",
+      "teaching_pattern": "direct_instruction",
+      "preferred_capability": "avatar_led_explanation",
+      "acceptable_fallbacks": [],
+      "content_direction": "Explain each of the five ADKAR elements — Awareness, Desire, Knowledge, Ability, Reinforcement — with a brief management-specific example for each. Keep the tone conversational and authoritative.",
+      "target_duration_seconds": 120,
+      "narrative_role": "explanation",
+      "learner_engagement": null,
+      "transition_direction": null,
+      "presentation_direction": "Avatar presents directly to camera against an approved solid-color background throughout. Pacing should allow the learner to absorb each element before moving to the next."
+    }
+  ]
+}

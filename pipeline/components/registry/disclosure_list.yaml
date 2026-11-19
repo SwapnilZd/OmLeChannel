@@ -1,0 +1,46 @@
+id: disclosure_list
+name: Disclosure List
+description: Accessible expandable sections for optional or text-heavy detail.
+when_to_use: Use when several independent sections should be scanned first and expanded selectively.
+tags: [accordion, faq, reveal, disclosure]
+sequence_position: middle
+design_notes: Native disclosure controls remain keyboard accessible; critical information must not be hidden solely to make a slide look sparse.
+selection:
+  category: content
+  purposes: [explore_details, provide_reference, answer_questions]
+  content_shapes: [grouped_detail, question_answer_pairs, prompt_and_reveal]
+  relationships: [parallel, question_answer]
+  interactions: [accordion, reveal]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle, end]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 8}
+  retrieval_text: >
+    Keyboard-accessible disclosure list for two to eight independent sections. Supports accordion
+    detail, grounded frequently asked questions, and ungraded click-to-reveal explanations. Best
+    when headings should remain scannable while substantial detail is opened selectively.
+layout_variants:
+  accordion:
+    when: Three to eight peer topics contain substantial optional detail.
+    capacity: {min_items: 3, max_items: 8}
+    selection: {purposes: [explore_details, organize_reference], content_shapes: [peer_items, grouped_detail], relationships: [parallel]}
+  faq:
+    when: The source is genuinely expressed as learner questions and answers.
+    capacity: {min_items: 2, max_items: 8}
+    selection: {purposes: [answer_questions, provide_reference], content_shapes: [question_answer_pairs], relationships: [question_answer]}
+  click_reveal:
+    when: Learners should predict or consider an explanation before revealing it.
+    capacity: {min_items: 1, max_items: 3}
+    selection: {category: practice, purposes: [prompt_prediction, reveal_explanation], content_shapes: [prompt_and_reveal], relationships: [question_answer]}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  instruction: {target_chars: 65, max_chars: 120}
+  items:
+    type: array
+    min_items: 1
+    max_items: 8
+    item_slots:
+      label: {target_chars: 35, max_chars: 75}
+      heading: {target_chars: 45, max_chars: 85, required: false}
+      body: {target_chars: 180, max_chars: 360}
+image_slots: []

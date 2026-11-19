@@ -1,0 +1,254 @@
+model_list:
+  # Direct model endpoint for ad hoc calls that do not need a purpose-specific
+  # application alias or reasoning override.
+  - model_name: gpt-5.6-sol
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: gpt-5.5
+    litellm_params:
+      model: openai/gpt-5.5
+      api_key: os.environ/OPENAI_API_KEY
+
+  # Planning and authoring aliases are purpose-specific. Application code calls
+  # these names; provider model IDs are configured only in this file.
+  - model_name: curriculum-assembly
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: format-selection
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: medium
+
+  - model_name: podcast-modality-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: video-modality-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: elearning-modality-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: podcast-workflow-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: video-workflow-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: elearning-workflow-planning
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: elearning-course-authoring
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: elearning-course-review
+    litellm_params:
+      model: openai/gpt-5.5
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: medium
+
+  - model_name: manim-scene-generation
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: manim-scene-repair
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: slide-needs-planning
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: slide-template-selection
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: slide-content-fitting
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: medium
+
+  - model_name: legacy-course-video-generation
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  # Commissioning aliases remain separate for feature-level usage attribution.
+  - model_name: commissioning-request-interpretation
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: commissioning-candidate-curation
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: commissioning-course-assembly
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-visual-explanation
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-segment-embedding
+    litellm_params:
+      model: openai/text-embedding-3-small
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-section-mapping
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-document-synthesis
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-practitioner-lens
+    litellm_params:
+      model: openai/gpt-5.6-luna
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: source-objective-proposal
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-related-objective-discovery
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-objective-evidence-verification
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-objective-pedagogy-critique
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-rlo-drafting
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-rlo-domain-enrichment
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-rlo-grounding-review
+    litellm_params:
+      model: openai/gpt-5.6-terra
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: source-rlo-pedagogy-review
+    litellm_params:
+      model: openai/gpt-5.6-sol
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+      reasoning_effort: low
+
+  - model_name: rlo-catalog-embedding
+    litellm_params:
+      model: openai/text-embedding-3-small
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: component-catalog-embedding
+    litellm_params:
+      model: openai/text-embedding-3-small
+      api_base: https://us.api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: slide-image-generation
+    litellm_params:
+      model: openai/gpt-image-2
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: podcast-speech-synthesis
+    litellm_params:
+      model: vertex_ai/gemini-3.1-flash-tts-preview
+      vertex_project: os.environ/GOOGLE_CLOUD_PROJECT
+      vertex_location: os.environ/GOOGLE_CLOUD_LOCATION
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.00002
+
+  - model_name: manim-speech-synthesis
+    litellm_params:
+      model: vertex_ai/gemini-3.1-flash-tts-preview
+      vertex_project: os.environ/GOOGLE_CLOUD_PROJECT
+      vertex_location: os.environ/GOOGLE_CLOUD_LOCATION
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.00002
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  database_url: os.environ/DATABASE_URL
+  disable_reset_budget: true
+  disable_error_logs: true
+
+router_settings:
+  # Bound a slow provider attempt to 10 minutes and allow one retry. This keeps
+  # unusually complex generations viable without letting one task wait for hours.
+  timeout: 600
+  num_retries: 1
+
+litellm_settings:
+  max_budget: 200
+  budget_duration: os.environ/LITELLM_BUDGET_DURATION
+  # All application model traffic already passes through this proxy. Exporting
+  # here captures every provider/model consistently without per-call decorators.
+  callbacks: ["langfuse_otel"]

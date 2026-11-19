@@ -1,0 +1,7 @@
+<section class="slide-tabs" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2><p class="instruction">{{ s.instruction }}</p>
+  <div class="tab-list" role="tablist" aria-label="{{ s.heading }}">
+    {% for tab in s.tabs %}<button role="tab" id="tab-{{ s.screen_id }}-{{ loop.index0 }}" aria-controls="panel-{{ s.screen_id }}-{{ loop.index0 }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}" onclick="activateTab(this)" onkeydown="tabKey(event,this)">{{ tab.label }}</button>{% endfor %}
+  </div>
+  {% for tab in s.tabs %}<div class="tab-panel" role="tabpanel" id="panel-{{ s.screen_id }}-{{ loop.index0 }}" aria-labelledby="tab-{{ s.screen_id }}-{{ loop.index0 }}" {% if not loop.first %}hidden{% endif %}><h3>{{ tab.heading }}</h3>{{ tab.body | paragraphs }}</div>{% endfor %}
+</section>

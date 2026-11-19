@@ -1,0 +1,29 @@
+{
+  "request_id": "commission-change-managers-01",
+  "request_text": "Create learning for managers who need to recognize stakeholder resistance during organizational change and choose an appropriate response. Use financial-services examples where possible.",
+  "audience": {
+    "roles": ["Manager", "Senior Manager"],
+    "deloitte_levels": [45, 55],
+    "current_proficiency": "beginner",
+    "target_proficiency": "intermediate",
+    "industries": ["Financial Services"],
+    "service_lines": ["Human Capital"],
+    "business_context": {
+      "engagement_type": "change transformation"
+    },
+    "language": "en",
+    "locale": "en-US"
+  },
+  "stated_goals": [
+    "Recognize common signals of stakeholder resistance",
+    "Select a proportionate intervention for the diagnosed barrier"
+  ],
+  "duration_limit_minutes": 30,
+  "required_rlo_ids": [],
+  "excluded_rlo_ids": [],
+  "minimum_target_proficiency": "intermediate",
+  "brand_contract": {
+    "tone": "professional and practical"
+  },
+  "industry_filter_mode": "boost"
+}

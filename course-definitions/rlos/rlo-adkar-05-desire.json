@@ -1,0 +1,363 @@
+{
+  "id": "rlo-adkar-05-desire",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR Element D \u2014 Desire to Participate and Support the Change",
+  "topic": "ADKAR Element D \u2014 Desire to Participate and Support the Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-04-awareness"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-06-knowledge"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what Desire means in ADKAR, and distinguish it from compliance and from Awareness.",
+  "performance_context": "When observing individuals in a change effort, the learner should be able to distinguish employees who genuinely support the change (Desire) from those who are complying under pressure and from those who understand the rationale but have not chosen to participate.",
+  "enabling_objective": {
+    "id": "lo-05",
+    "statement": "Define Desire in ADKAR terms, and distinguish it from Awareness (understanding why) and from compliance (following instructions without choice).",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Desire in ADKAR",
+      "definition": "Desire is the state in which an individual has chosen to support and participate in the change. It is a personal decision \u2014 a commitment made by the individual, not something that can be produced in them through instruction or pressure.",
+      "elaboration": "Prosci is specific that Desire is the most difficult element to influence because it is fundamentally a choice made by the individual based on their assessment of the change's costs and benefits to them personally. Change managers can influence Desire through communications, sponsor engagement, and manager coaching, but they cannot produce it directly. This makes Desire the element where change efforts most commonly stall \u2014 leaders can complete activities but cannot compel commitment.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Desire can be produced by a strong enough communications campaign.",
+          "correction": "Communications influence Desire but cannot produce it. Desire is a choice by the individual. An employee may understand the rationale, receive all the communications, and still choose not to commit \u2014 perhaps because the change disadvantages them personally, or because they have low trust in leadership, or because they have seen previous changes fail. Communications are inputs; the choice remains the individual's."
+        },
+        {
+          "id": "m-02",
+          "statement": "Once an employee has Awareness, Desire will follow naturally.",
+          "correction": "Awareness does not automatically produce Desire. An employee can fully understand why the change is needed and still choose not to support it \u2014 because they disagree with the approach, because the change will cost them something personally, or because they lack trust in the outcome. Awareness is necessary for Desire but not sufficient; the transition from one to the other requires active engagement with the individual's specific concerns."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Desire vs. compliance",
+      "definition": "Desire is a personal commitment to support the change; compliance is following instructions without underlying commitment. Both may produce visible participation in the short term, but they behave very differently under pressure \u2014 Desire persists, compliance reverts.",
+      "elaboration": "The distinction matters because it determines what happens when the change is stressed. Employees with Desire continue to support the change when it becomes inconvenient \u2014 when workarounds are available, when the pressure eases, when the change is not being monitored. Employees who are complying stop supporting the change the moment they can. This is why Prosci treats Desire, not compliance, as the actual second ADKAR element: the two look similar in easy conditions and diverge sharply in hard ones.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "An employee who follows the new process has Desire.",
+          "correction": "Following the new process may indicate Desire, but it may also indicate compliance under management pressure. The diagnostic is what happens when the pressure eases \u2014 does the employee continue to support the change, or do they revert? Visible compliance in monitored conditions is not a reliable indicator of Desire."
+        },
+        {
+          "id": "m-04",
+          "statement": "Employees can be required to have Desire as a condition of employment.",
+          "correction": "Desire is a choice by the individual and cannot be required. What can be required is compliance \u2014 following the new process \u2014 but requiring compliance does not produce Desire; it typically produces the opposite. Attempts to mandate commitment are a category mistake and reliably backfire, producing resentment rather than support."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Desire is the element where change efforts most often break, and it is the element leaders have the least direct control over. Awareness can be produced through communication; Knowledge can be produced through training; Ability can be produced through practice. Desire is different \u2014 it is a choice each person makes, and no amount of activity by the change team can override it. Change efforts that treat Desire as producible fail specifically in this way: they run out of interventions and discover that the people they were trying to move never chose to move."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Desire is a personal choice by the individual to support and participate in the change. It can be influenced \u2014 through communications, sponsor engagement, addressing specific concerns, connecting the change to what the individual cares about \u2014 but it cannot be produced directly by the change team. The choice remains the individual's."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Desire and compliance can look similar in monitored conditions but diverge under pressure. Desire persists when the change becomes inconvenient; compliance reverts as soon as it can. The diagnostic for Desire is not whether the employee is currently following the new process \u2014 it is whether they would continue to support the change if the pressure eased."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Desire and compliance under pressure",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "Two employees, A and B, are both following the new operating model six months into a change effort. On the surface, they look identical.",
+        "employee_a": "A has Desire. When a peer asks her whether she thinks the new model is working, she says yes and explains why. When she encounters a case where the old process would have been faster, she still uses the new one and flags the case to help refine it. When her manager is out for two weeks, her behavior does not change.",
+        "employee_b": "B is complying. When a peer asks him the same question, he shrugs and says 'it is what it is.' When he encounters a case where the old process would have been faster, he uses the old one quietly. When his manager is out, his use of the new model drops noticeably.",
+        "reasoning": "Under monitored, easy conditions, A and B look the same. Under pressure \u2014 pressure from convenience, from peers, from the absence of supervision \u2014 they diverge sharply. Only A has Desire. B has visible compliance without underlying commitment. The change effort that counts B as 'in Desire' is misdiagnosing the state and will discover the error the moment conditions become difficult."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Awareness without Desire",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "An employee, asked why the change is happening, gives a clear and accurate explanation: 'The company is losing customers to faster competitors, and this change is meant to address that.' She has Awareness. Yet when asked whether she supports the change, she says: 'I understand why the company needs to change. I just don't think this particular change is the right answer, and I don't intend to support it beyond the minimum required.'",
+        "diagnosis": "The employee has Awareness but not Desire. She understands why the change is needed (Awareness) but has chosen not to commit to this specific change (no Desire). This is a common state and one that is invisible to activity-based measurement \u2014 she has read the communications, attended the sessions, and could pass an Awareness assessment.",
+        "reasoning": "Awareness enables Desire but does not produce it. Moving this employee from Awareness to Desire requires engaging with her specific reasons for not supporting the change \u2014 perhaps she disagrees with the approach, perhaps she has been through similar changes before that failed, perhaps the change disadvantages her role. Whatever the reason, the intervention is not more Awareness content; it is targeted engagement with the specific barrier to her commitment."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Communications treated as sufficient to produce Desire",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A change team, faced with reports of low Desire, responds by intensifying its communications: more town halls, more sponsor speeches, more inspirational messages about the change.",
+        "why_wrong": "Communications are a legitimate influence on Desire, but they act primarily on Awareness. Employees whose issue is Desire \u2014 who understand the change but have chosen not to commit \u2014 are not moved by more of the same message. They are moved by engagement with their specific reasons for not committing: concerns about their role, distrust of leadership, history of previous failed changes, disagreement with the approach. Doubling the communications treats a Desire problem as an Awareness problem, and the result is that Desire remains where it was.",
+        "correct_framing": "Desire interventions are targeted, individual, and often uncomfortable. They involve managers having direct conversations with team members about specific concerns; they involve sponsors addressing skepticism head-on; they involve giving individuals a voice in how the change is implemented. They rarely involve more general communications."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Mandating Desire",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A senior leader, frustrated by slow adoption, announces: 'Full support for the change is now a required job expectation. Employees who cannot demonstrate commitment will be managed out.'",
+        "why_wrong": "This can produce compliance, not Desire. Desire is a choice by the individual; requiring it forces employees to perform commitment they may not feel. The performance is visible support (attending meetings, using the new process in monitored conditions) without the underlying commitment. Under pressure, this reverts. The leader has produced short-term compliance and destroyed the long-term trust needed for Desire to form organically.",
+        "correct_framing": "Compliance can be required; Desire cannot. Leaders can require certain behaviors, but the underlying commitment must be earned through engagement with the individual's actual concerns. Attempts to short-circuit this process reliably produce the opposite of what they aim for."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is Desire in ADKAR, and how is it distinguished from compliance?",
+        "expected_answer": "Desire is a personal choice by the individual to support and participate in the change; it is distinguished from compliance by what happens under pressure \u2014 Desire persists when the change becomes inconvenient, while compliance reverts as soon as the pressure eases."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A senior leader, dissatisfied with the pace of change adoption, announces that supporting the transformation is now a formal job expectation and that lack of demonstrated commitment will be reflected in performance reviews. Three months later, visible adoption of the new operating model has increased sharply. Which of the following best evaluates what has been produced?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Desire has been successfully produced through clear expectations.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "What has been produced is compliance, not Desire. Requiring visible support does not produce personal commitment \u2014 it produces performance of commitment under pressure. The two look similar in monitored conditions but diverge sharply when the pressure eases. The leader has produced the appearance of Desire, not Desire itself."
+        },
+        {
+          "id": "B",
+          "text": "Compliance has been produced, not Desire. The increased adoption reflects performance under required expectations, which is likely to revert if the pressure decreases.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The leader can require certain behaviors, but the underlying commitment that constitutes Desire must be chosen by the individual. Required behavior under performance pressure typically produces compliance \u2014 visible adoption that reverts when monitoring or consequences ease. The diagnostic is what would happen if the requirement were relaxed; Desire persists in that scenario, compliance does not."
+        },
+        {
+          "id": "C",
+          "text": "The approach has produced both \u2014 required expectations create the conditions for Desire.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Required expectations produce compliance; they do not create the conditions for Desire and often actively undermine it. Employees who feel their commitment is being coerced typically develop resistance to the change rather than commitment to it. Compliance and Desire are not on a continuum where compliance leads to Desire; they are different responses that behave very differently under pressure."
+        },
+        {
+          "id": "D",
+          "text": "The result is fine because visible adoption is what matters.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Visible adoption under pressure is not the same as sustained adoption. If the change effort's goal is durable behavior change, compliance without Desire is a short-term result that reverts as soon as conditions allow. What matters depends on the timescale \u2014 and if the timescale is beyond the pressure being applied, Desire matters and compliance is insufficient."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "An employee is interviewed six months into a change effort. She accurately explains why the change is needed, describes the business drivers in detail, and expresses continued understanding of the rationale. However, when asked whether she supports the change, she says: 'I get it, but I don't think this is the right way to do it. I'll do what's required, but I don't buy in.' How should this employee's ADKAR state be diagnosed?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "She has Awareness and Desire \u2014 she understands and is willing to comply.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Willingness to comply is not the same as Desire. The employee has explicitly stated that she does not 'buy in' \u2014 she is complying without committing. Diagnosing this as Desire misses her explicit statement of non-commitment and would lead to interventions targeting later ADKAR elements when the actual gap is at Desire."
+        },
+        {
+          "id": "B",
+          "text": "She has Awareness but not Desire \u2014 she understands the rationale but has chosen not to commit to this specific change.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The employee has clearly demonstrated Awareness (she can articulate the reasons for the change). But her explicit statement \u2014 she does not 'buy in' and is complying only with what is required \u2014 indicates she has not chosen to commit. This is the classic Awareness-without-Desire state, and the intervention required is engagement with her specific reasons for not supporting the approach, not more communication of the rationale (which she already understands)."
+        },
+        {
+          "id": "C",
+          "text": "She has neither Awareness nor Desire \u2014 her disagreement indicates she has not understood the rationale.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Disagreement is not the same as not understanding. The employee can articulate the business drivers clearly \u2014 she has Awareness. What she disagrees with is the specific approach chosen, not the rationale for changing. Diagnosing her as lacking Awareness misses that she has that element and simply has not moved to Desire."
+        },
+        {
+          "id": "D",
+          "text": "The employee is resistant and should be managed accordingly.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "'Resistant' is not an ADKAR diagnosis \u2014 it is a label that skips the specific analysis ADKAR is designed to produce. The employee has Awareness but not Desire, and the specific gap is her disagreement with the approach. The intervention is engagement with that specific concern, not general management action against 'resistance.' The point of ADKAR is to produce more precise diagnoses than 'resistance,' which by itself does not tell you what to do."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Direct and slightly sober. This RLO teaches learners a specific limit of what change teams can do \u2014 Desire cannot be manufactured \u2014 and the tone should support acceptance of that limit rather than false optimism about workarounds.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 04. The Awareness element is established as the prerequisite; this RLO explains why Awareness does not automatically produce Desire and what actually does influence it.",
+    "feedback_policy": "Feedback must distinguish between Desire and compliance in every relevant case, and must name the specific diagnostic (what happens under pressure). Feedback should also distinguish between 'resistant' as a label and the specific ADKAR diagnosis, since 'resistance' is a lazy substitute for real analysis.",
+    "example_shape_hints": [
+      "Include a paired example showing Desire and compliance that look identical in monitored conditions but diverge under pressure \u2014 this is the specific instructional payload.",
+      "Include an example of Awareness without Desire, since this is the most common Desire-related failure state.",
+      "Non-examples should target both the 'more communications will fix it' and the 'require commitment' failure modes."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present described employee states and ask the learner to diagnose whether the employee has Desire, compliance, or neither.",
+      "At least one item should test the 'mandate Desire' misconception, since this is a common leadership instinct with predictably backfiring consequences.",
+      "Distractors should include the 'resistance' label as a wrong answer, to teach learners to reach for the specific ADKAR diagnosis instead."
+    ],
+    "salience_hook_description": "The hook should establish that Desire is the element change teams have the least control over and where the most careful diagnostic work is needed. Learners should leave believing that Desire is chosen, influenced but not produced, and that compliance is not a substitute for it."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-04: Awareness is the precondition for Desire but does not produce it. Learners should already know that Awareness is a state of understanding; this RLO explains why understanding does not automatically become commitment.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-09 revisits the Awareness-without-Desire and compliance-without-Desire patterns as diagnostic cases."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "paired_scenario_module",
+      "rationale": "The Desire vs. compliance distinction is best taught through contrasting scenarios that look identical initially and diverge under pressure. A module that presents such pairs is well-suited.",
+      "priority": "primary"
+    },
+    {
+      "format": "diagnostic_conversation_module",
+      "rationale": "Diagnosing Desire requires direct conversation with the individual. An interactive module that lets learners practice these conversations against varied responses supports the objective.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video that walks through the Desire-vs-compliance distinction with concrete cases.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Desire is the ADKAR element most commonly mishandled because it does not respond to the standard change-management tools. The instructional payload is (a) the compliance-vs-Desire distinction, tested by what happens under pressure, and (b) the recognition that Desire cannot be mandated. The 'resistance' label is targeted specifically because it is the lazy substitute for real ADKAR diagnosis that learners in professional-services environments will most commonly reach for. The example of Awareness-without-Desire is deliberately included to model the diagnostic conversation and to counter the intuition that Awareness naturally cascades into commitment.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

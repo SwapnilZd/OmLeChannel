@@ -1,0 +1,358 @@
+{
+  "id": "rlo-kotter-08-short-term-wins",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 6 \u2014 Generate Short-Term Wins",
+  "topic": "Kotter Step 6 \u2014 Generate Short-Term Wins",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-07-enable-action"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-09-sustain-acceleration"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain the purpose of generating short-term wins (Step 6), and distinguish a genuine short-term win from a superficial or premature declaration of success.",
+  "performance_context": "When observing or planning the middle-to-late phase of a change effort, the learner should be able to identify what counts as a genuine short-term win and recognize the common failure modes of manufactured or premature wins.",
+  "enabling_objective": {
+    "id": "lo-08",
+    "statement": "Describe the purpose of short-term wins in Kotter's model, and identify the characteristics that distinguish genuine wins from manufactured or premature ones.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Short-term wins",
+      "definition": "Visible, credible results produced by the change effort within the first six to eighteen months, which demonstrate that the change is working and provide evidence to build further momentum.",
+      "elaboration": "Kotter identifies three functions of short-term wins: they build credibility with skeptics, they provide evidence to the coalition that the effort is on track, and they weaken the position of those actively resisting. A change effort that goes 18 months without visible results loses political support even if the underlying work is progressing.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Short-term wins are a distraction from the real work of the transformation.",
+          "correction": "Short-term wins are not a distraction; they are what makes the sustained work possible. Kotter argues that change efforts without visible wins in the first 18 months typically lose political support regardless of underlying progress. The wins are the mechanism that keeps the coalition funded and the volunteers engaged."
+        },
+        {
+          "id": "m-02",
+          "statement": "Any positive news that emerges during the change period counts as a short-term win.",
+          "correction": "A short-term win has specific requirements: it must be visible (people can see it), unambiguously tied to the change effort (not incidental), and meaningful (not trivial). Positive news that could have happened without the change effort does not count."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Genuine vs manufactured wins",
+      "definition": "A genuine win is a real result produced by the change effort. A manufactured win is a declared success without underlying substance \u2014 often a repackaged existing achievement or a premature claim about incomplete work. Manufactured wins damage credibility more than the absence of wins would.",
+      "elaboration": "The pressure to produce wins is real, and it produces a predictable failure mode: the coalition, under pressure to show progress, declares wins that do not withstand scrutiny. When the organization discovers the win was manufactured \u2014 usually within weeks \u2014 trust in the coalition and the change collapses. Kotter is explicit that manufactured wins are worse than no wins.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Any win is better than no win, so declaring uncertain progress as a success is a reasonable strategy.",
+          "correction": "Manufactured wins are worse than no wins. When the organization discovers the declared success was not real, the coalition loses credibility and the change effort loses momentum. Waiting for a genuine win is better than manufacturing a fake one."
+        },
+        {
+          "id": "m-04",
+          "statement": "Once a short-term win is generated, the change effort has succeeded and can be scaled back.",
+          "correction": "Short-term wins are milestones, not conclusions. Treating an early win as the finish line is one of the most common late-stage failures in change efforts and is specifically what Step 7 (sustain acceleration) exists to prevent. The wins are fuel for continued effort, not a signal that effort can end."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Change efforts run on political capital, and political capital depletes over time. Short-term wins are how the coalition replenishes it. Without visible wins in the first 18 months, the coalition runs out of runway \u2014 skeptics gain traction, funding gets questioned, and the effort dies not because it was wrong but because it looked like nothing was happening. Step 6 is the coalition making sure something visible is."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "A short-term win has three characteristics: it is visible (the organization can see it), it is unambiguously tied to the change effort (not incidental), and it is meaningful (not trivial). Results that lack any of these three do not function as wins even if they are labeled as such."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Manufactured wins \u2014 declared successes without underlying substance \u2014 are worse than no wins. When the organization discovers the declared success was hollow, the coalition loses credibility that took months to build. Waiting for a real win is better than manufacturing a fake one."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A short-term win with all three characteristics",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change to a customer-centric operating model targets a specific pilot: reducing the customer complaint resolution time in one region from 14 days to under 48 hours. Twelve months in, the pilot region has achieved a 36-hour average and customer satisfaction scores in that region have risen 15 points.",
+        "evaluation": "Visible \u2014 the improvement is measurable and reported. Unambiguously tied to the change \u2014 the pilot was designed and executed under the change effort's structure. Meaningful \u2014 a 12-day reduction in resolution time is a substantive result, not a rounding error.",
+        "reasoning": "This is what Kotter is asking for. The win demonstrates that the change works in at least one place, provides evidence for skeptics, and gives the coalition something to point to when asking for continued investment."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The pilot as win-generator",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "Rather than attempting change across all regions simultaneously, a coalition selects three pilot regions where the conditions are most favorable and where wins can be produced within 12 months.",
+        "what_happens": "By month 12, all three pilots have produced visible improvements. The coalition uses these wins to justify expansion to the remaining regions. The wins were designed for from the beginning, not hoped for.",
+        "reasoning": "Short-term wins do not happen by luck. Kotter emphasizes that the coalition should plan for them \u2014 selecting initiatives specifically because they can produce visible results within the political runway available. This is not manufacturing; it is deliberately structuring the effort to produce genuine wins on a workable timeline."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "The repackaged achievement",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A coalition, under pressure to show progress, points to a customer satisfaction improvement in one product line as evidence that the change effort is working. Investigation reveals that the improvement was driven by a product update planned two years earlier \u2014 before the change effort began \u2014 and would have occurred regardless.",
+        "why_wrong": "The improvement is real, but it is not a win produced by the change effort. Attributing it to the change effort is a form of manufacturing: the win is real, but the causal claim is false. When the organization discovers this \u2014 and it will \u2014 the coalition's credibility on future claims is damaged.",
+        "correct_framing": "Wins must be unambiguously attributable to the change effort. If the same result would have happened without the effort, it is not a Step 6 win."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "The premature declaration",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "A coalition is nine months into a change effort and has not yet produced visible results. Under pressure from executive stakeholders, the coalition declares an 'interim win' based on early leading indicators \u2014 process changes deployed, training completed \u2014 and communicates broadly that the change is working.",
+        "why_wrong": "Process changes deployed and training completed are activities, not outcomes. They do not demonstrate that the change is working \u2014 only that work is being done. When the organization looks for actual outcomes (customer satisfaction changes, financial results, behavior change) and does not find them, the earlier declaration is exposed as premature. The coalition loses more credibility than it would have by simply acknowledging that wins were not yet available.",
+        "correct_framing": "It is better to say 'we do not yet have wins, but here is our timeline for producing them' than to declare wins that do not exist. Honest interim reporting maintains credibility; premature declarations spend it."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what makes a short-term win 'genuine,' and why is a manufactured win worse than no win?",
+        "expected_answer": "A genuine short-term win is visible, unambiguously tied to the change effort, and meaningful; a manufactured win is worse than no win because when it is exposed \u2014 as it will be \u2014 the coalition loses more credibility than it would have by acknowledging the absence of wins."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A coalition claims a short-term win: quarterly revenue in the pilot region rose 8% year-over-year, coinciding with the deployment of the change effort's new operating model. Investigation reveals the region also benefited from a competitor's exit from the market during the same quarter. How should this claim be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The claim is valid because the revenue increase is visible and meaningful.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Visibility and meaningfulness are two of the three requirements. The third \u2014 unambiguous attribution to the change effort \u2014 is not met. A competitor's exit is a plausible alternative explanation for the revenue rise, which means the claim cannot function as evidence that the change effort is working."
+        },
+        {
+          "id": "B",
+          "text": "The claim is problematic because the win is not unambiguously attributable to the change effort. Publicizing it as a change-effort win risks credibility damage when the alternative explanation is noticed.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The win must be unambiguously tied to the change effort \u2014 otherwise, the organization can rationally attribute the improvement to other causes and the win does not build credibility for the change. Publishing this as a change-effort win is a form of manufacturing: the result is real, but the causal claim is contestable."
+        },
+        {
+          "id": "C",
+          "text": "The claim is valid because any win is better than no win.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "This is precisely the manufactured-wins-are-fine framing Kotter warns against. When the organization discovers that the claimed win had an alternative explanation, the coalition's credibility on future claims is damaged more than it would have been by simply not making the claim."
+        },
+        {
+          "id": "D",
+          "text": "The claim is fine because the coalition will not know about the alternative explanation.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The organization will notice. Alternative explanations for visible results are almost always identified by someone, and when they are, the coalition's credibility is damaged. Assuming the organization will not notice is a poor strategy in general and a very poor strategy for change communication."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A coalition twelve months into a change effort produces a genuine short-term win. Executive stakeholders congratulate the team, and there is broad discussion of scaling back the change program because 'we are clearly on the right track.' How should the coalition respond to Step 6 being complete?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 6 completion signals the change effort has succeeded; scaling back is appropriate.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Short-term wins are milestones, not conclusions. Treating a Step 6 win as the finish line is one of the most common late-stage failures in change efforts. The wins are fuel for continued effort, not a signal that effort can end \u2014 that is precisely why Steps 7 and 8 exist."
+        },
+        {
+          "id": "B",
+          "text": "The coalition should use the win as evidence to build momentum for continued and even accelerated effort, not as justification for scaling back.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the correct use of a Step 6 win: as fuel, not as a finish line. The wins are what makes continued effort possible, but continued effort is still required. Steps 7 (sustain acceleration) and 8 (institute change) explicitly warn against the trap of treating early wins as the end of the effort."
+        },
+        {
+          "id": "C",
+          "text": "The coalition should decline to publicize the win to avoid the appearance that the effort is complete.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Suppressing a genuine win defeats the purpose of Step 6. The win should be publicized \u2014 but framed as evidence that the approach is working, not that the work is finished. The framing matters; the win itself is not the problem."
+        },
+        {
+          "id": "D",
+          "text": "The coalition should manufacture additional wins to ensure momentum continues.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Manufacturing wins to sustain momentum is worse than no wins. If genuine additional wins can be produced through Step 7 activity, that is the correct path. Fabricating them to maintain the appearance of progress damages the coalition's credibility precisely when it needs credibility for the sustained work of Steps 7 and 8."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Practical and slightly stern. This RLO is teaching learners to resist two common pressures: (1) declaring premature or attributable wins under stakeholder pressure, and (2) treating wins as endpoints rather than milestones.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 07. The connection to political capital and coalition credibility is worth making explicit \u2014 Step 6 is the coalition's mechanism for staying funded and trusted through the long middle of the effort.",
+    "feedback_policy": "Feedback must distinguish between the three characteristics (visible, attributable, meaningful) and identify which is missing when a claimed win fails. Do not treat 'not a win' as a single failure mode.",
+    "example_shape_hints": [
+      "Include one example of a well-formed win that has all three characteristics \u2014 learners need a positive exemplar.",
+      "Include one non-example for each of the two main failure modes: repackaged achievement (attribution failure) and premature declaration (meaningfulness failure).",
+      "The pilot-as-win-generator example is high-value because it teaches learners that wins should be designed for, not hoped for."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present a claimed win and ask the learner to evaluate it against the three characteristics.",
+      "At least one item should target the 'win as finish line' failure, since this is the transition point from Step 6 to Step 7 and the most common late-stage failure mode."
+    ],
+    "salience_hook_description": "The hook should establish that Step 6 is about political capital, not celebration. Learners should leave believing that visible wins are load-bearing for the effort's survival and that manufacturing them is not a viable shortcut."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-07: barriers must be removed before wins can be generated at scale. A coalition still fighting structural barriers at month 12 cannot produce genuine wins.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-09 (sustain acceleration) opens with the trap of treating Step 6 wins as endpoints."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_module",
+      "rationale": "Evaluating claimed wins against the three characteristics is a diagnostic task that supports interactive treatment well.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_scenario_video",
+      "rationale": "The pilot-as-win-generator example and the manufactured-win non-examples work well as short narrated cases.",
+      "priority": "secondary"
+    },
+    {
+      "format": "text_module_with_scenarios",
+      "rationale": "The core content is compact enough that a text module with worked examples is sufficient.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "The three-characteristic framework (visible, attributable, meaningful) is the specific instructional payload. The 'manufactured wins are worse than no wins' point is included as an explicit rule because it is counterintuitive to learners who default to 'any positive news is better than no news.' The transition to Step 7 is foreshadowed here \u2014 treating wins as endpoints is the specific bridge failure the sequence targets next.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "id": "rlo-smart-goals-01-construct",
+  "version": "1.0.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Writing Effective Goals Using the SMART Framework",
+  "topic": "SMART goal construction",
+  "domain": "Business Performance Management",
+  "level": "introductory",
+  "audience": [
+    "individual contributors",
+    "people managers",
+    "executives"
+  ],
+  "estimated_duration_minutes": 25,
+  "content_type": "procedure",
+  "performance_level": "create",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": [],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "There's a S.M.A.R.T. way to write management's goals and objectives",
+      "reference": "Doran, G. T. (1981). There's a S.M.A.R.T. way to write management's goals and objectives. Management Review, AMA FORUM, 70(11), 35-36.",
+      "authority": "primary",
+      "note": "Doran's original formulation used Specific, Measurable, Assignable, Realistic, and Time-related. This RLO teaches the now-dominant corporate usage of Achievable and Relevant while retaining the original terms for source accuracy. The modern wording emerged through later management practice and is not attributed to Doran."
+    }
+  ],
+  "terminal_objective": "Given a vague or poorly constructed goal statement, rewrite it as a SMART goal that satisfies all five criteria and is appropriate to the learner's role and industry context.",
+  "performance_context": "Use the framework when setting an individual, team, performance, development, or delivery goal that others must be able to execute against and evaluate objectively.",
+  "enabling_objective": {
+    "id": "eo-smart-construct",
+    "statement": "Construct a single goal statement that satisfies the Specific, Measurable, Achievable, Relevant, and Time-bound criteria.",
+    "bloom_level": "create",
+    "concepts_addressed": [
+      "c-specific",
+      "c-measurable",
+      "c-achievable",
+      "c-relevant",
+      "c-time-bound"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-specific",
+      "name": "Specific",
+      "definition": "The goal states exactly what will be accomplished and in what area, avoiding vague verbs such as 'improve' or 'help' without a concrete object.",
+      "elaboration": "A specific goal names a concrete outcome, owner, and scope clearly enough that two readers can agree on what completion means.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-specific-aspiration",
+          "statement": "An aspirational direction such as 'be more strategic' is specific enough to guide execution.",
+          "correction": "A direction is not specific until it identifies the concrete outcome, owner, and scope that will demonstrate completion."
+        }
+      ]
+    },
+    {
+      "id": "c-measurable",
+      "name": "Measurable",
+      "definition": "The goal includes a metric and a way to track progress, such as a number, percentage, rate, or defined milestone.",
+      "elaboration": "A measurable goal provides the evidence needed to determine with data, rather than opinion, whether the target was met. Where relevant, it includes both a baseline and a target.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-measurable-direction",
+          "statement": "Directional words such as 'increase' or 'reduce' make a goal measurable.",
+          "correction": "Direction alone does not define success. Add a quantified target or an objectively verifiable milestone, and include a baseline when it is needed to interpret the change."
+        }
+      ]
+    },
+    {
+      "id": "c-achievable",
+      "name": "Achievable",
+      "definition": "The goal is challenging but attainable given the resources, skills, authority, and time available to the person or team responsible.",
+      "elaboration": "The modern term is Achievable. Doran's 1981 source used Assignable, emphasizing that responsibility should be clearly allocated. A useful feasibility check asks whether the owner controls enough of the resources and decisions needed to move the target.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-achievable-control",
+          "statement": "A goal is achievable whenever its intended outcome is theoretically possible.",
+          "correction": "The named owner must have realistic access to the authority, resources, and time required; theoretical possibility is not sufficient."
+        }
+      ]
+    },
+    {
+      "id": "c-relevant",
+      "name": "Relevant",
+      "definition": "The goal connects to a broader team, business-unit, or organizational priority rather than existing only as an isolated task.",
+      "elaboration": "The modern term is Relevant. Doran's 1981 source used Realistic. Relevance explains why achieving the goal matters beyond the goal owner and makes the link to an actual priority explicit.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-relevant-activity",
+          "statement": "Any useful professional-development activity is automatically a relevant business goal.",
+          "correction": "An activity becomes relevant when the goal states how it supports a team, client, operational, or organizational priority."
+        }
+      ]
+    },
+    {
+      "id": "c-time-bound",
+      "name": "Time-bound",
+      "definition": "The goal specifies a deadline or time window for completion, creating urgency and enabling progress checkpoints.",
+      "elaboration": "Doran's original term was Time-related. A concrete date or bounded period makes it possible to schedule action and evaluate the result at an agreed point.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-time-vague",
+          "statement": "A broad phrase such as 'eventually' or 'this year' always makes a goal time-bound.",
+          "correction": "The time window must be specific enough to establish when the result will be evaluated and, where needed, when progress will be checked."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "title": "From intention to an executable goal",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "canonical_content": {
+        "weak_goal": "Improve customer service.",
+        "problem": "The intention is understandable, but the statement does not tell an owner exactly what to change, how success will be measured, whether the target is feasible, why it matters, or when it is due.",
+        "purpose": "SMART turns a broad intention into a goal that can be executed and evaluated objectively."
+      }
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "title": "The five SMART criteria",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "canonical_content": {
+        "specific": {
+          "test": "Could two people disagree about what 'done' looks like?",
+          "requirement": "Name the concrete outcome, owner, and scope."
+        },
+        "measurable": {
+          "test": "Will data or an objectively verifiable milestone show whether the goal succeeded?",
+          "requirement": "State the measure, target, and any baseline needed to interpret progress."
+        },
+        "achievable": {
+          "test": "Does the owner have the authority, resources, skills, and time to move the target?",
+          "requirement": "Set a challenging but feasible target within the owner's practical control."
+        },
+        "relevant": {
+          "test": "If this goal is achieved, why will it matter beyond the goal owner?",
+          "requirement": "Connect the result to a broader priority."
+        },
+        "time_bound": {
+          "test": "By what specific date or bounded period must the result be true?",
+          "requirement": "State the deadline or evaluation window."
+        }
+      }
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Build a complete SMART goal",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "canonical_content": {
+        "weak_goal": "Improve customer service.",
+        "strong_goal": "Reduce average customer-support ticket resolution time in North America from 48 hours to 24 hours by the end of Q3 by implementing the three highest-volume self-service opportunities, supporting the company's Q3 customer-satisfaction commitment.",
+        "annotation": {
+          "specific": "Reduce average customer-support ticket resolution time in North America",
+          "measurable": "from 48 hours to 24 hours",
+          "achievable": "by implementing the three highest-volume self-service opportunities",
+          "relevant": "supporting the company's Q3 customer-satisfaction commitment",
+          "time_bound": "by the end of Q3"
+        }
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "A detailed goal can still be incomplete",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "misconceptions_addressed": [
+        "m-measurable-direction",
+        "m-relevant-activity",
+        "m-time-vague"
+      ],
+      "canonical_content": {
+        "goal": "Reduce the support team's ticket resolution time by improving internal processes this year.",
+        "what_it_has": "It names an outcome and a general area of action.",
+        "what_it_lacks": "It has no baseline or target, gives no evidence that the action is feasible, does not connect the result to a broader priority, and uses an imprecise evaluation window.",
+        "correction": "Add a quantified baseline and target, an attainable action within the owner's control, a business-priority link, and a specific deadline."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "title": "Diagnose before rewriting",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "canonical_content": {
+        "prompt": "For a goal you are working with, identify which SMART criteria are already supported by evidence and which are missing before you rewrite it.",
+        "checks": {
+          "specific": "Is the outcome, owner, and scope unambiguous?",
+          "measurable": "Is success objectively verifiable?",
+          "achievable": "Can the owner realistically influence the result with available authority and resources?",
+          "relevant": "Does the result support a broader priority?",
+          "time_bound": "Is there a concrete evaluation date or window?"
+        }
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A manager writes: 'Reduce average onboarding turnaround from 5 business days to 2 business days.' Which addition most directly supplies the missing Time-bound criterion?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-time-bound"],
+      "options": [
+        {
+          "id": "A",
+          "text": "by the end of Q3",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. A specific deadline establishes when the target will be evaluated."
+        },
+        {
+          "id": "B",
+          "text": "for retail banking clients",
+          "correct": false,
+          "misconception_targeted": "m-time-vague",
+          "feedback": "This clarifies scope, which supports Specific, but it does not state when the target must be met."
+        },
+        {
+          "id": "C",
+          "text": "to improve client experience",
+          "correct": false,
+          "misconception_targeted": "m-time-vague",
+          "feedback": "This explains relevance, but it does not provide a deadline or evaluation window."
+        },
+        {
+          "id": "D",
+          "text": "as soon as practical",
+          "correct": false,
+          "misconception_targeted": "m-time-vague",
+          "feedback": "'As soon as practical' is not specific enough to establish an agreed evaluation point."
+        }
+      ],
+      "aligned_to_performance_level": "find"
+    },
+    {
+      "id": "q-02",
+      "stem": "Which goal best satisfies all five SMART criteria?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Improve the quality of our work this year.",
+          "correct": false,
+          "misconception_targeted": "m-specific-aspiration",
+          "feedback": "The statement gives a broad direction but lacks a concrete outcome, objective measure, feasible action, priority link, and precise deadline."
+        },
+        {
+          "id": "B",
+          "text": "Reduce Line 3 first-pass defect rate from 4.2% to 2.0% by the end of Q3 by addressing the two highest-frequency root causes from the Q2 audit, supporting the plant's annual cost-of-quality target.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The goal identifies a scoped outcome, baseline and target, feasible action, broader priority, and deadline."
+        },
+        {
+          "id": "C",
+          "text": "Eliminate every defect immediately so the plant performs better.",
+          "correct": false,
+          "misconception_targeted": "m-achievable-control",
+          "feedback": "The outcome is measurable in principle, but an immediate zero-defect target is not shown to be attainable with the available resources and authority."
+        },
+        {
+          "id": "D",
+          "text": "Learn statistical process-control software by September 30.",
+          "correct": false,
+          "misconception_targeted": "m-relevant-activity",
+          "feedback": "This names an activity and deadline, but it does not define an objective measure of successful application or connect the activity to a broader priority."
+        }
+      ],
+      "aligned_to_performance_level": "decide"
+    },
+    {
+      "id": "q-03",
+      "stem": "A goal says: 'Reduce average KYC turnaround from 5 business days to 2 business days by the end of Q3.' The owner cannot change staffing, systems, or review policy, and no approved improvement action is named. Which SMART criterion most needs further evidence?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-achievable"],
+      "options": [
+        {
+          "id": "A",
+          "text": "Specific",
+          "correct": false,
+          "misconception_targeted": "m-achievable-control",
+          "feedback": "The outcome is specific enough to identify what will change. The unresolved issue is whether the owner can realistically influence it."
+        },
+        {
+          "id": "B",
+          "text": "Measurable",
+          "correct": false,
+          "misconception_targeted": "m-achievable-control",
+          "feedback": "The baseline and target make the result measurable. Measurement does not establish feasibility."
+        },
+        {
+          "id": "C",
+          "text": "Achievable",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The statement does not yet show that the owner has a feasible action or control over the resources and decisions needed to reach the target."
+        },
+        {
+          "id": "D",
+          "text": "Time-bound",
+          "correct": false,
+          "misconception_targeted": "m-achievable-control",
+          "feedback": "The end-of-Q3 deadline is explicit. The gap concerns practical control and feasibility, not timing."
+        }
+      ],
+      "aligned_to_performance_level": "find"
+    }
+  ],
+  "variant_examples": [
+    {
+      "id": "variant-financial-services",
+      "type": "variant",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "industry_tags": ["financial_services"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "weak_goal": "Improve client onboarding.",
+        "strong_goal": "Reduce average KYC documentation turnaround for retail banking clients from 5 business days to 2 business days by the end of Q3 by digitizing the two highest-volume document types, supporting the firm's client-experience commitments ahead of the Q4 regulatory exam.",
+        "annotation": {
+          "specific": "KYC documentation turnaround for retail banking clients",
+          "measurable": "from 5 business days to 2 business days",
+          "achievable": "by digitizing the two highest-volume document types",
+          "relevant": "supporting client-experience commitments ahead of the Q4 regulatory exam",
+          "time_bound": "by the end of Q3"
+        }
+      },
+      "annotations": []
+    },
+    {
+      "id": "variant-manufacturing",
+      "type": "variant",
+      "concepts_referenced": [
+        "c-specific",
+        "c-measurable",
+        "c-achievable",
+        "c-relevant",
+        "c-time-bound"
+      ],
+      "industry_tags": ["manufacturing"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "weak_goal": "Improve quality.",
+        "strong_goal": "Reduce Line 3 first-pass defect rate from 4.2% to 2.0% by the end of Q3 by addressing the two highest-frequency root causes identified in the Q2 audit, supporting the plant's annual cost-of-quality target.",
+        "annotation": {
+          "specific": "Line 3 first-pass defect rate",
+          "measurable": "from 4.2% to 2.0%",
+          "achievable": "by addressing the two highest-frequency root causes identified in the Q2 audit",
+          "relevant": "supporting the plant's annual cost-of-quality target",
+          "time_bound": "by the end of Q3"
+        }
+      },
+      "annotations": []
+    }
+  ],
+  "design_brief": {
+    "tone": "Clear, practical, and precise corporate training. Keep the five tests concrete and avoid turning the mnemonic into abstract pedagogical commentary.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Assume no prior formal knowledge of SMART. Introduce each criterion briefly, then spend most of the learning time diagnosing and improving realistic goal statements. Preserve factual definitions while adapting examples to the learner's context.",
+    "feedback_policy": "For each response, identify the criterion that is satisfied or missing, point to the exact evidence in the goal statement, and state the smallest change needed. Do not show correctness explanations as part of answer-option text; reveal them only after submission.",
+    "example_shape_hints": [
+      "Show a weak goal and a progressively improved goal so learners can see what each criterion adds.",
+      "Annotate the finished goal by mapping each clause to its SMART criterion through labels, highlights, captions, or spoken emphasis.",
+      "Select an approved industry variant when it matches the learner context; otherwise use the generic example without changing definitions or facts."
+    ],
+    "practice_shape_hints": [
+      "Ask learners to identify which criteria are present or missing before asking them to improve a goal.",
+      "Use one objective question at a time with straightforward distractors drawn from the documented misconceptions.",
+      "A delivery format may invite a learner to draft a rewritten goal, but scored assessment must use the approved objective items until constructed-response scoring is supported downstream."
+    ],
+    "salience_hook_description": "Establish that a vague goal can express a valid intention while still being impossible to execute or evaluate consistently; SMART supplies the missing operational clarity."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Ask the learner to recall a goal whose completion was difficult to judge and identify what made it ambiguous.",
+    "event_4_present_content": ["comp-rule-01"],
+    "event_5_provide_guidance": ["comp-example-01", "comp-nonexample-01"],
+    "event_6_elicit_performance": ["comp-recall-01"],
+    "event_7_provide_feedback": "Use the per-option feedback in each assessment item and the design brief feedback policy.",
+    "event_8_assess_performance": ["q-01", "q-02", "q-03"],
+    "event_9_enhance_retention": "Invite the learner to apply the five diagnostic questions to a current goal after completing the module."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "interactive_elearning",
+      "rationale": "A progressive rewrite and criterion-labeling interaction makes the five-part diagnostic visible while supporting objective checks and contextual examples.",
+      "priority": "primary"
+    },
+    {
+      "format": "short_video_explainer",
+      "rationale": "A short visual build can introduce each definition and annotate a full example clause by clause.",
+      "priority": "secondary"
+    },
+    {
+      "format": "coached_conversation_podcast",
+      "rationale": "A host can guide an expert through diagnosing and rewriting one manageable goal while verbalizing the five diagnostic questions.",
+      "priority": "optional"
+    },
+    {
+      "format": "one_page_job_aid",
+      "rationale": "The five definitions and diagnostic questions form a compact reference for use during goal-setting conversations.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO treats SMART as one integrated goal-construction procedure because the target performance is a single goal statement that satisfies all five criteria simultaneously. Definitions, diagnostic questions, and assessment logic remain stable across audiences. Only illustrative examples vary by industry, preserving factual fidelity while allowing downstream personalization. The source note distinguishes Doran's original 1981 wording from contemporary corporate usage rather than attributing Achievable and Relevant to the primary source.",
+  "role_tags": [],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "goal_setting",
+    "performance_management",
+    "leadership_development",
+    "individual_development_planning"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-30",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial SMART goals sample authored in the unified RLO schema (2026-07-30)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  },
+  "rights": {
+    "rights": "internal_use_all_service_lines",
+    "sharing_constraints": "Internal only; not for external distribution."
+  }
+}

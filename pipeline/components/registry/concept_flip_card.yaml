@@ -1,0 +1,83 @@
+id: concept_flip_card
+name: Concept Flip Card
+description: >
+  Presents 2-5 discrete concepts as interactive flip cards. Each card shows
+  a term on the front and a definition, examples, and safeguard hint on the
+  back. Learners click or press Enter/Space to flip a card.
+when_to_use: >
+  Use when introducing 2-5 named concepts that have a term/definition
+  structure — vocabulary, key terms, or regulatory categories. Do not use
+  for narrative or procedural content. Batch all flip-card concepts from
+  the RLO onto one screen.
+tags: [concept, vocabulary, definition, interactive, mid-course]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [introduce_concepts, explain_terms]
+  content_shapes: [peer_items, term_definition_example]
+  relationships: [parallel, independent]
+  interactions: [reveal, flip]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 5}
+  retrieval_text: >
+    Interactive content slide for two to five peer concepts. Each item needs a label, teaser,
+    substantial definition, one or two examples, and a watch-out. Good for balanced or
+    text-heavy term-and-definition content revealed on demand. Not for ordered steps,
+    continuous narrative, or cross-dimensional comparison.
+layout_variants:
+  compact_horizontal:
+    when: 2-3 cards
+    behavior: Cards expand evenly across the available width.
+    capacity: {min_items: 2, max_items: 3}
+  dense_grid:
+    when: 4-5 cards
+    behavior: Cards use a compact equal-column grid.
+    capacity: {min_items: 4, max_items: 5}
+
+slots:
+  section_label:
+    description: Section heading shown above the card grid
+    target_chars: 40
+    max_chars: 60
+    required: true
+  instruction:
+    description: One-line instruction, e.g. "Click each card to explore the concept."
+    target_chars: 60
+    max_chars: 100
+    required: true
+  cards:
+    type: array
+    min_items: 2
+    max_items: 5
+    item_slots:
+      front_label:
+        description: Term or concept name shown on card front
+        target_chars: 20
+        max_chars: 40
+      front_teaser:
+        description: One-line hint or category label shown on card front
+        target_chars: 60
+        max_chars: 100
+      back_definition:
+        description: Full definition shown on card back
+        target_chars: 120
+        max_chars: 200
+      back_examples:
+        description: List of 1-2 brief examples shown on card back
+        type: array
+        min_items: 1
+        max_items: 2
+        item_max_chars: 100
+      back_safeguard:
+        description: Short safeguard or watch-out note shown at bottom of card back
+        target_chars: 80
+        max_chars: 130
+
+image_slots:
+  - id: background
+    optional: true
+    role: full_bleed_background
+    generate: false
+    fallback: theme_gradient

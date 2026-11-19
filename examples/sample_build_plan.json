@@ -1,0 +1,35 @@
+{
+  "workflow_id": "sample-workflow",
+  "source_plan_id": "sample-production-plan",
+  "modality": "elearning",
+  "tasks": [
+    {
+      "id": "hello",
+      "task_type": "local.emit",
+      "depends_on": [],
+      "inputs": {"text": {"kind": "literal", "value": "Hello "}},
+      "output_keys": ["text"],
+      "max_attempts": 2
+    },
+    {
+      "id": "world",
+      "task_type": "local.emit",
+      "depends_on": [],
+      "inputs": {"text": {"kind": "literal", "value": "world"}},
+      "output_keys": ["text"],
+      "max_attempts": 2
+    },
+    {
+      "id": "join",
+      "task_type": "local.concat",
+      "depends_on": ["hello", "world"],
+      "inputs": {
+        "left": {"kind": "task_output", "task_id": "hello", "output_key": "text"},
+        "right": {"kind": "task_output", "task_id": "world", "output_key": "text"}
+      },
+      "output_keys": ["text"],
+      "max_attempts": 2
+    }
+  ],
+  "deliverable_task_ids": ["join"]
+}

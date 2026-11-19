@@ -1,0 +1,366 @@
+:root {
+  --bg: #f3f5f5;
+  --surface: #ffffff;
+  --surface-soft: #eef5f6;
+  --border: #d7dfe1;
+  --ink: #12233f;
+  --ink-muted: #60717c;
+  --muted: #60717c;
+  --accent: #0f8792;
+  --accent-strong: #076d77;
+  --accent-light: #e3f1f2;
+  --accent-bg: #e3f1f2;
+  --brand-green: #86bc25;
+  --success: #2e7d32;
+  --success-bg: #edf7ed;
+  --error: #b3261e;
+  --error-bg: #fceeed;
+  --warning: #8a5a00;
+  --warning-bg: #fff6df;
+  --radius: 14px;
+  --font: Arial, Helvetica, sans-serif;
+  --page-gutter: 1.25rem;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 var(--page-gutter) 2.5rem;
+  background:
+    radial-gradient(circle at 2px 2px, rgba(15, 135, 146, 0.13) 1.25px, transparent 1.4px) 0 0 / 24px 24px,
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+}
+
+.layout {
+  width: min(100%, 1160px);
+  max-width: 1160px;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem 2rem;
+  align-items: center;
+  width: min(100%, 1320px);
+  margin: 0 auto 1rem;
+  padding: 0.8rem clamp(1rem, 2vw, 1.5rem);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 2px 10px rgba(18, 35, 63, 0.05);
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-name {
+  color: #111111;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.brand-logo {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+.brand-dot {
+  color: var(--brand-green);
+}
+
+.brand-divider {
+  width: 1px;
+  height: 1.35rem;
+  background: var(--border);
+}
+
+.product-name {
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.app-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-left: 0;
+}
+
+.app-header nav a {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.app-header nav a:hover,
+.app-header nav a.active {
+  background: var(--accent-light);
+  color: var(--accent-strong);
+}
+
+.app-header nav a.active {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.page-heading {
+  grid-column: 1 / -1;
+  display: block;
+}
+
+.page-heading h1,
+.app-header h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.chip,
+.badge {
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent-strong);
+}
+
+.card {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  background: var(--surface);
+  border: 1px solid rgba(215, 223, 225, 0.95);
+  border-radius: var(--radius);
+  box-shadow: 0 5px 18px rgba(18, 35, 63, 0.055);
+}
+
+.card-title,
+.card h2 {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+}
+
+.section-note,
+.status,
+.meta,
+.updated,
+.refresh,
+.empty,
+.search-meta,
+.candidate-meta,
+.small,
+.rationale {
+  color: var(--ink-muted);
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #bdc9cc;
+  border-radius: 9px;
+  background: #ffffff;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(15, 135, 146, 0.14);
+}
+
+label {
+  color: #425766;
+}
+
+button,
+.action {
+  border-radius: 9px;
+  transition: background 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+button:not(:disabled):hover,
+.action:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary,
+.primary,
+.action {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(15, 135, 146, 0.18);
+}
+
+.btn-primary:hover,
+.primary:hover,
+.action:hover {
+  background: var(--accent-strong);
+}
+
+.btn-ghost,
+.secondary,
+.action.secondary {
+  border-color: #b9cacc;
+  background: #ffffff;
+  color: var(--accent-strong);
+  box-shadow: none;
+}
+
+#drop-zone {
+  border-color: #a9c7ca;
+  border-radius: 12px;
+  background: var(--surface-soft);
+}
+
+#drop-zone:hover,
+#drop-zone.drag-over {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.level-option,
+.candidate,
+.gap,
+.search-hit,
+.sequence-item,
+.result-row {
+  border-radius: 10px;
+}
+
+.level-option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent-strong);
+}
+
+table th {
+  color: #526874;
+}
+
+table tr:hover td {
+  background: #f1f8f8;
+}
+
+.rlo-id,
+.score {
+  color: var(--accent-strong);
+}
+
+.job {
+  border-color: var(--border);
+}
+
+.job .title {
+  color: var(--ink);
+}
+
+.login-page {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.login-shell {
+  width: min(100%, 440px);
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(18, 35, 63, 0.14);
+}
+
+.login-brand {
+  display: flex;
+  justify-content: center;
+  padding: 1.15rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.login-content {
+  padding: 2rem;
+}
+
+.login-content h1 {
+  color: var(--ink);
+  font-size: 1.65rem;
+}
+
+.login-content p {
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.login-content button {
+  background: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  .app-header {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .app-header nav {
+    grid-row: 2;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .page-heading {
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    --page-gutter: 0.75rem;
+  }
+
+  .app-header {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name {
+    font-size: 0.95rem;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .login-content {
+    padding: 1.5rem;
+  }
+}

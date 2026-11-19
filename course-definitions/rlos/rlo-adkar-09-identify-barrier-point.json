@@ -1,0 +1,395 @@
+{
+  "id": "rlo-adkar-09-identify-barrier-point",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Identifying the Barrier Point in an Individual or Group",
+  "topic": "Identifying the Barrier Point in an Individual or Group",
+  "domain": "Organizational Change Management",
+  "level": "intermediate",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 18,
+  "content_type": "procedure",
+  "performance_level": "do",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-03-sequenced-within-individual",
+    "rlo-adkar-04-awareness",
+    "rlo-adkar-05-desire",
+    "rlo-adkar-06-knowledge",
+    "rlo-adkar-07-ability",
+    "rlo-adkar-08-reinforcement"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-10-differentiated-interventions"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Given a described individual or group struggling with a change, identify the ADKAR element that is the current barrier point, and justify the identification using the observable symptoms.",
+  "performance_context": "When helping a specific individual or team through a change, the learner should be able to move from observed symptoms to a specific ADKAR diagnosis \u2014 identifying the first element in the sequence where the person is stuck \u2014 rather than defaulting to generic 'resistance' or 'more training' responses.",
+  "enabling_objective": {
+    "id": "lo-09",
+    "statement": "Given a described case, identify the ADKAR barrier point and justify the identification by mapping observable symptoms to the definition of the element.",
+    "bloom_level": "apply",
+    "concepts_addressed": [
+      "c-01",
+      "c-02",
+      "c-03"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Barrier point",
+      "definition": "The barrier point is the first ADKAR element in the sequence that an individual has not achieved. Because the elements are sequential, this is the element blocking the individual's progress \u2014 the specific gap where intervention is needed.",
+      "elaboration": "Prosci uses 'barrier point' as a technical term for the earliest unmet element in an individual's ADKAR sequence. It is not the element the individual is 'furthest from' or the one that seems most difficult in the abstract; it is specifically the first sequential gap. An individual who has Awareness and Desire but lacks Knowledge has Knowledge as their barrier point \u2014 even if Reinforcement will also be needed eventually. The diagnostic value of the concept is that identifying the barrier point tells you where intervention should be targeted right now.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The barrier point is whichever element seems to be causing the most visible trouble.",
+          "correction": "The barrier point is the earliest unmet element in the sequence, not necessarily the most visible one. Visible trouble often shows up at a later element (poor performance, reversion) when the actual barrier is earlier (missing Desire, missing Awareness). Identifying the barrier point requires working through the sequence from the beginning, not diagnosing from surface symptoms."
+        },
+        {
+          "id": "m-02",
+          "statement": "An individual can have multiple barrier points at once.",
+          "correction": "By definition, the barrier point is the first unmet element \u2014 a single element per individual at any given time. An individual may have gaps at multiple elements (missing Desire and Knowledge, for example), but the barrier point is the earlier one, because later elements cannot be effectively addressed until the earlier gap is closed. Treating multiple simultaneous barriers as equal is a common misuse that leads to scattered interventions."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Diagnostic questions per element",
+      "definition": "Each ADKAR element has a specific diagnostic question that surfaces whether that element is achieved: Awareness \u2014 'Can the individual explain why the change is needed?'; Desire \u2014 'What happens under pressure \u2014 does the individual continue to support the change?'; Knowledge \u2014 'Can the individual walk through what they are supposed to do differently?'; Ability \u2014 'Can the individual perform the change fluently under real conditions?'; Reinforcement \u2014 'Are ongoing mechanisms in place to sustain the change?'",
+      "elaboration": "The diagnostic questions are not interchangeable. Each is calibrated to the specific character of the element it assesses. Asking 'what is changing?' produces a Knowledge diagnostic, not an Awareness one. Asking whether the employee is currently following the new process produces a compliance signal, not a Desire diagnostic. The precision of the questions is what makes the barrier-point diagnosis reliable \u2014 vague questions produce vague answers that can be attributed to any of several elements.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "The barrier point can be identified from observed performance alone.",
+          "correction": "Observed performance surfaces symptoms but does not by itself identify the barrier point. Poor performance can indicate an Ability gap, a Desire problem, or missing Knowledge \u2014 the symptoms overlap. The barrier point diagnosis requires the specific diagnostic questions per element, applied in sequence, not just observation of outcomes."
+        }
+      ]
+    },
+    {
+      "id": "c-03",
+      "name": "Common symptom-to-barrier mappings",
+      "definition": "Certain observable symptoms are strongly associated with specific barrier points: employees who cannot explain why the change is happening \u2192 Awareness barrier; employees who express understanding but say they do not support the change or comply only under monitoring \u2192 Desire barrier; employees who cannot walk through the new process \u2192 Knowledge barrier; employees who can describe the process but revert under pressure \u2192 Ability barrier; adoption that peaked and is now declining after the active change effort ended \u2192 Reinforcement barrier.",
+      "elaboration": "These mappings are diagnostic aids, not definitions. A pattern of reversion under pressure is a strong signal of an Ability barrier, but confirming the diagnosis requires the specific Ability question ('can you perform this fluently?'). The mappings help direct attention to the likely element; the diagnostic questions confirm it. Skipping straight from symptom to intervention without the confirmatory step produces the specific misdiagnoses this RLO exists to prevent: 'reverts under pressure' misread as Desire, 'poor performance' misread as Knowledge, 'quiet decline after launch' misread as adoption never having occurred at all.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-04",
+          "statement": "Labeling an individual as 'resistant' constitutes a diagnosis.",
+          "correction": "'Resistance' is a label, not a diagnosis. It does not identify the barrier point and does not indicate what intervention is needed. Behind the label of resistance is typically a specific ADKAR gap \u2014 most often Desire, sometimes Awareness, sometimes an Ability gap misread as unwillingness. Reaching the specific diagnosis requires the diagnostic questions; 'resistance' by itself substitutes a label for the analytical work."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-03"
+      ],
+      "canonical_content": "The whole diagnostic power of ADKAR comes down to one question: given a specific individual or group struggling with a change, which element is the barrier point? Get that right and the intervention is usually straightforward. Get it wrong and you deliver the wrong intervention \u2014 training for a Desire problem, motivational engagement for an Ability gap, more communications for a Reinforcement issue \u2014 and the situation does not improve. Identifying the barrier point is where ADKAR earns its keep."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The barrier point is the earliest unmet element in an individual's ADKAR sequence. To identify it, work through the elements in order (Awareness \u2192 Desire \u2192 Knowledge \u2192 Ability \u2192 Reinforcement) and identify the first element that is not achieved. That is the barrier point \u2014 the specific gap where intervention should be targeted."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02",
+        "c-03"
+      ],
+      "canonical_content": "Each element has a specific diagnostic question: for Awareness, ask why the change is happening; for Desire, ask what happens under pressure; for Knowledge, ask the individual to walk through the process; for Ability, observe performance under real conditions; for Reinforcement, ask what mechanisms will sustain the change. Symptoms suggest the likely barrier point; the diagnostic questions confirm it."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Working through the sequence: a manager's diagnostic",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A manager notices that one team member has quietly disengaged from a change effort while others are participating. She sits down with him to identify the barrier point.",
+        "diagnostic_walkthrough": "Awareness: 'Why do you think the company is making this change?' He answers accurately \u2014 the current model is losing customers to faster competitors. Awareness is present. Desire: 'How do you feel about it? What happens when the deadline pressure eases?' He says he understands why but doesn't believe this particular approach will work, and admits he uses the old process when he can get away with it. Desire is the barrier point.",
+        "reasoning": "The diagnostic worked because the manager walked through the sequence in order. If she had started with Knowledge ('do you know how to do the new process?'), she would have received a confident yes and might have concluded there was no problem. If she had defaulted to labeling him 'resistant,' she would have skipped identifying the specific gap. Working sequentially and using the specific diagnostic questions is what produced the actionable diagnosis."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Reverts under pressure: Ability, not Desire",
+      "concepts_referenced": [
+        "c-03"
+      ],
+      "canonical_content": {
+        "setup": "An employee has expressed clear support for a change, can describe the new process accurately, but under time pressure reliably reverts to the old process. Her manager is considering whether the barrier point is Desire (she does not really support the change) or Ability (she cannot yet perform fluently under pressure).",
+        "confirmatory_test": "The manager applies the Ability diagnostic: he observes her performance under low-pressure conditions and under high-pressure conditions. Under low pressure, she uses the new process fluently. Under high pressure, she reverts. This is the classic Ability signature \u2014 fluent when there is time, reversion when there is not \u2014 because the new process has not yet become automatic.",
+        "reasoning": "Desire and Ability produce similar surface symptoms (reversion), but the diagnostic conditions distinguish them. Desire reversion is chosen; Ability reversion is a fluency limit. The confirmatory observation \u2014 'does the reversion happen only under pressure?' \u2014 is what tells the two apart. The barrier point is Ability, and the intervention is coached practice under increasing pressure, not motivational engagement."
+      }
+    },
+    {
+      "id": "comp-example-03",
+      "cdt_type": "example",
+      "title": "Quiet decline after launch: Reinforcement",
+      "concepts_referenced": [
+        "c-03"
+      ],
+      "canonical_content": {
+        "setup": "Twelve months after a successful change launch, adoption metrics have quietly declined from 90% to 65%. The affected employees are the same people who successfully adopted at launch. They still support the change conceptually and can still describe the process.",
+        "barrier_diagnosis": "This is not an Awareness, Desire, Knowledge, or Ability barrier \u2014 all four elements were reached at launch. The barrier point is Reinforcement. The change team dispersed after the launch celebration, no ongoing mechanisms were established to sustain the change, and individuals have gradually drifted back to prior behaviors as they encountered situations where old behaviors were more convenient.",
+        "reasoning": "Reinforcement barriers show up as quiet decline months to years after apparent success. They are frequently misdiagnosed as 'adoption never really happened' or as new Desire problems, when in fact the earlier elements were achieved and are being lost due to missing sustained mechanisms. The signature is peak-then-decline, not 'never adopted' \u2014 and the correct intervention is establishing durable mechanisms, not restarting the change effort."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "'Resistance' substituted for diagnosis",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A change team, faced with a group of employees who are not adopting the new process, labels the group 'resistant' and recommends stronger sponsor communications.",
+        "why_wrong": "'Resistant' is a label, not a barrier-point diagnosis. It does not identify which ADKAR element is the specific gap. The recommended intervention (stronger sponsor communications) addresses Awareness \u2014 but if the actual barrier point is Ability (they cannot yet perform) or Desire (they have specific concerns about the approach), stronger communications will produce no improvement. The label short-circuits the analytical work that would have identified the actual barrier point.",
+        "correct_framing": "Working through the ADKAR sequence with these employees would identify a specific element as the barrier point. That specific diagnosis then indicates a specific intervention. 'Resistance' as a label neither identifies the barrier nor prescribes the intervention \u2014 it is a description of the symptom, not an analysis of the cause."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Diagnosing from the visible element only",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01",
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "Employees are performing the new process poorly. A change manager concludes the barrier point is Ability and prescribes more coaching.",
+        "why_wrong": "Poor performance is the visible symptom, but Ability may not be the barrier point. If employees do not have Desire, they will perform poorly regardless of coaching \u2014 the barrier is earlier in the sequence. If they lack Knowledge, coaching without Knowledge grounding will not stick. The manager has jumped from a visible symptom to a plausible-seeming element without working through the sequence.",
+        "correct_framing": "Poor performance is a signal to investigate, not a diagnosis. The barrier point is identified by working from the beginning of the sequence: Do they have Awareness? Do they have Desire? Do they have Knowledge? Then, and only then, if the earlier elements are all present, is Ability the correct diagnosis. Skipping the earlier checks produces the most common misdiagnosis pattern in ADKAR practice."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "Describe the process for identifying the barrier point in a struggling individual, and name the diagnostic question associated with each ADKAR element.",
+        "expected_answer": "Work through the elements in order (Awareness, Desire, Knowledge, Ability, Reinforcement) and identify the first that is not achieved. The diagnostic questions: Awareness \u2014 why is the change happening? Desire \u2014 what happens under pressure or when compliance is not being enforced? Knowledge \u2014 walk me through the new process. Ability \u2014 can the individual perform fluently under real conditions? Reinforcement \u2014 what mechanisms will sustain the change after the effort ends?"
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "An employee has been through training on a new operating model. In conversation, she accurately explains why the company is making the change, and she has told her manager she supports the effort. When asked to walk through the new process, she describes each step correctly and confidently. However, in actual client work over the past month, she has been slow and hesitant, and under time pressure has frequently reverted to the old process. What is the barrier point?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-03"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Awareness \u2014 she does not really understand the change.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The stem specifies that she can accurately explain why the change is being made \u2014 that is the Awareness diagnostic, and she passes it. Diagnosing Awareness as the barrier point ignores the specific evidence that Awareness is present."
+        },
+        {
+          "id": "B",
+          "text": "Desire \u2014 she is not really committed to the change.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Reverting under pressure can look like a Desire problem, but the stem specifies that she has expressed clear support for the change. What distinguishes Desire reversion from Ability reversion is whether the reversion happens under pressure specifically (Ability) or across conditions (Desire). Reversion specifically under time pressure, in someone who has expressed support and can describe the process, is the signature Ability pattern."
+        },
+        {
+          "id": "C",
+          "text": "Ability \u2014 she can describe the process but cannot yet perform it fluently under real conditions.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The employee has Awareness (can explain why), Desire (has expressed support), and Knowledge (can walk through the steps). Her reversion specifically under time pressure \u2014 while performing correctly when there is more time \u2014 is the classic Ability signature. She has the cognitive understanding but has not yet built the fluency needed to perform under pressure. The intervention is coached practice under increasing pressure, not more training or motivational engagement."
+        },
+        {
+          "id": "D",
+          "text": "Reinforcement \u2014 the change is not being sustained.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Reinforcement barriers show up as gradual decline in previously adopted behavior across a population that had reached Ability. The stem describes an individual who has not yet reached Ability \u2014 the reversion is not from a prior state of fluent performance, it is a signature of Ability still being built. Reinforcement is not yet the relevant element here."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change was launched twelve months ago. Adoption reached 88% at the six-month mark. Since then, adoption has quietly declined to 62%. The employees now not using the new process are the same employees who successfully adopted at launch. In conversation, they still express support for the change and can still describe the new process accurately. What is the barrier point?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-03"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Desire \u2014 they must have lost commitment since launch.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The stem specifies that the employees still express support for the change. Their behavior has changed while their stated Desire has not \u2014 this pattern is characteristic of missing Reinforcement, not lost Desire. Diagnosing Desire as the barrier point misreads the evidence and would prescribe motivational interventions that would not address the actual issue."
+        },
+        {
+          "id": "B",
+          "text": "Ability \u2014 the training was insufficient.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "These employees reached 88% adoption at the six-month mark \u2014 they had Ability. Their subsequent decline is not from never having built the capability; it is from losing it in the absence of ongoing support. The pattern is peak-then-decline, which is not what an Ability barrier looks like (Ability barriers show up as never reaching adoption in the first place)."
+        },
+        {
+          "id": "C",
+          "text": "Reinforcement \u2014 the change is decaying because no ongoing mechanisms were established to sustain it.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The pattern \u2014 peaked at 88%, quietly declined to 62% among employees who still support the change and know how to do it \u2014 is the classic Reinforcement barrier signature. The earlier elements were all reached at launch; what is missing is the ongoing mechanisms (updated performance systems, management routines, embedded measurement) that would prevent drift. The intervention is establishing durable Reinforcement mechanisms, not restarting the change effort or re-engaging on Desire."
+        },
+        {
+          "id": "D",
+          "text": "The employees have become resistant to change.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "'Resistant' is a label, not a barrier-point diagnosis. And in this case, the label is contradicted by the evidence \u2014 the employees continue to express support for the change. What is happening is drift in the absence of Reinforcement, which is a specific and diagnosable pattern that generic 'resistance' framing obscures."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Analytic and precise. This RLO teaches a diagnostic skill, and the tone should support careful reasoning from evidence to conclusion rather than pattern-matching from surface symptoms.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01-08. All five elements are established individually; this RLO combines them into an applied diagnostic. The main new content is the diagnostic process itself (working through the sequence) and the symptom-to-barrier mappings.",
+    "feedback_policy": "Feedback must name the specific evidence in the stem that supports or rules out each element. Do not accept 'plausible sounding' diagnoses that ignore stated evidence. When a wrong answer targets a misconception, the feedback must name the misconception and correct it directly.",
+    "example_shape_hints": [
+      "Include at least one full sequential walk-through of the diagnostic process, showing how a manager identifies the barrier point by working through the elements in order.",
+      "Include at least one case that requires distinguishing between symptomatically similar barriers (Desire vs. Ability reversion, decline vs. never-adopted).",
+      "Non-examples should target the two most common misdiagnostic patterns: 'resistance' as a label, and jumping to the visible element without working through the sequence."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present rich cases with multiple pieces of evidence \u2014 some supporting a candidate diagnosis, some ruling out alternatives.",
+      "At least one item should target the Desire-vs-Ability reversion distinction, since this is the most common confusion.",
+      "At least one item should target the Reinforcement barrier (post-adoption decline), since this is commonly misdiagnosed as never having adopted.",
+      "Distractors should include the 'resistance' label as a wrong answer to teach learners to reach for the specific ADKAR diagnosis instead."
+    ],
+    "salience_hook_description": "The hook should establish that the whole practical value of ADKAR compresses into this diagnostic skill \u2014 get the barrier point right and the intervention follows; get it wrong and the intervention fails. Learners should leave believing that the diagnostic sequence is worth doing carefully, even when the surface answer seems obvious."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "This RLO requires all five element RLOs (04-08) plus the individual-focus framing (RLO-02). The recall event should surface the definition of each element briefly before the diagnostic process is introduced.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-example-03",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-10 extends the diagnostic to differentiated interventions across populations."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_case_module",
+      "rationale": "The barrier-point diagnosis is fundamentally a case-analysis skill. A module of rich cases with feedback on the reasoning (not just the answer) supports the applied nature of the objective.",
+      "priority": "primary"
+    },
+    {
+      "format": "guided_diagnostic_walkthrough",
+      "rationale": "An interactive walkthrough that prompts the learner through the sequential diagnostic (element by element) models the process the RLO is teaching.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 5-6 minute video showing a manager working through the diagnostic on a specific case, with commentary on the reasoning at each step.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO is the diagnostic capstone \u2014 the first of the two Apply-level RLOs. Its instructional payload is the process of identifying the barrier point from observed evidence: (a) working through the elements in sequence rather than pattern-matching from symptoms, (b) using specific diagnostic questions per element, (c) distinguishing between symptomatically similar barriers (especially Desire vs. Ability reversion, and Reinforcement decline vs. never-adopted). The 'resistance' label is targeted heavily because it is the most common lazy substitute for barrier-point analysis, and rejecting it in favor of specific diagnoses is a core practical skill the RLO exists to build. Prosci's 'barrier point' terminology is kept as the technical term to support learners who will encounter Prosci-native materials in practice.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

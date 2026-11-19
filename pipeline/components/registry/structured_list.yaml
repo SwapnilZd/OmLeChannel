@@ -1,0 +1,52 @@
+id: structured_list
+name: Structured List
+description: Flexible list treatment for checklists, numbered factors, tips, agendas, and next steps.
+when_to_use: Use when list items share a short label/detail structure and do not require richer diagrams.
+tags: [content, list, checklist, agenda, next-steps]
+sequence_position: any
+selection:
+  category: content
+  purposes: [summarize_points, provide_checklist]
+  content_shapes: [labeled_list]
+  relationships: [parallel]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [intro, middle, end]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 8}
+  retrieval_text: >
+    Flexible slide for two to eight list items with optional short labels and explanatory detail.
+    Supports checklists, numbered factors, tips, agendas, and next steps. Not for complex
+    relationships, long narratives, or interactive assessment.
+layout_variants:
+  checklist:
+    when: Three to eight independent actions or verification points.
+    capacity: {min_items: 3, max_items: 8}
+    selection: {category: content, purposes: [provide_checklist, support_performance], content_shapes: [checklist], relationships: [independent]}
+  numbered_list:
+    when: Two to eight factors benefit from numbering without implying a process diagram.
+    capacity: {min_items: 2, max_items: 8}
+    selection: {category: content, purposes: [enumerate_factors, summarize_points], content_shapes: [numbered_list]}
+  tips:
+    when: Two to six practical recommendations need a friendly scannable treatment.
+    capacity: {min_items: 2, max_items: 6}
+    selection: {category: content, purposes: [provide_tips, guide_behavior], content_shapes: [recommendation_list]}
+  agenda:
+    when: Two to eight ordered modules or topics should be previewed near the opening.
+    capacity: {min_items: 2, max_items: 8}
+    selection: {category: intro, purposes: [preview_course, show_agenda], content_shapes: [ordered_topic_list], relationships: [ordered], sequence_positions: [intro]}
+  next_steps:
+    when: One to six grounded follow-on actions or resources close the experience.
+    capacity: {min_items: 1, max_items: 6}
+    selection: {category: completion, purposes: [direct_next_steps, continue_learning], content_shapes: [action_list], relationships: [recommended], sequence_positions: [end]}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  introduction: {target_chars: 90, max_chars: 170, required: false}
+  items:
+    type: array
+    min_items: 1
+    max_items: 8
+    item_slots:
+      label: {target_chars: 25, max_chars: 55, required: false}
+      detail: {target_chars: 90, max_chars: 170}
+image_slots: []

@@ -1,0 +1,35 @@
+{
+  "schema_version": "source-extraction-gold-v1",
+  "case_id": "synthetic-ordered-multicolumn",
+  "ordered_text": [
+    "Ordered extraction fixture",
+    "L1 first left block",
+    "L2 second left block",
+    "L3 third left block",
+    "R1 first right block",
+    "R2 second right block",
+    "R3 third right block",
+    "Table A",
+    "Second section",
+    "A footnote marker appears here [1].",
+    "[1] Footnote content must remain attached to its reference."
+  ],
+  "hierarchy": [
+    {"node_id": "pdf-title", "parent_id": null, "kind": "title", "order": 0},
+    {"node_id": "pdf-section-2", "parent_id": "pdf-title", "kind": "section", "order": 1}
+  ],
+  "tables": [
+    {
+      "node_id": "pdf-table-a",
+      "headers": ["Role", "Decision"],
+      "rows": [["Reviewer", "Approve"], ["Author", "Revise"]]
+    }
+  ],
+  "notes": ["[1] Footnote content must remain attached to its reference."],
+  "visuals": [],
+  "locators": [
+    {"node_id": "pdf-title", "page": 1},
+    {"node_id": "pdf-table-a", "page": 1},
+    {"node_id": "pdf-section-2", "page": 2}
+  ]
+}

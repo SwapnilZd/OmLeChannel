@@ -1,0 +1,11 @@
+<section class="slide-objectives" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>
+  <div class="objectives-layout {{ 'has-visual' if s.image_path else '' }}">
+  <ul class="obj-list">
+    {% for obj in s.objectives %}
+    <li>{{ obj }}</li>
+    {% endfor %}
+  </ul>
+  {% if s.image_path %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}
+  </div>
+</section>

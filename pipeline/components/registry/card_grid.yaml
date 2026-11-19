@@ -1,0 +1,47 @@
+id: card_grid
+name: Card Grid
+description: Reusable equal-card layout for concise parallel concepts, categories, or metrics.
+when_to_use: Use for two to six peer items that should be scanned together rather than progressively revealed.
+tags: [content, cards, concepts, icons, metrics]
+sequence_position: middle
+design_notes: Cards are static simultaneous content, not controls. Use flip cards, tabs, or disclosures when activation should reveal additional information.
+selection:
+  category: content
+  purposes: [introduce_categories, summarize_concepts]
+  content_shapes: [peer_items]
+  relationships: [parallel]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 6}
+  retrieval_text: >
+    Equal-card content layout for two to six concise parallel concepts or categories. Each card
+    supports an eyebrow, heading, short explanation, and optional simple icon. Best when all items
+    should remain visible together; not for long definitions, ordered procedures, or click-to-reveal behavior.
+layout_variants:
+  text_cards:
+    when: Two to six concise peer concepts need equal visual weight.
+    selection: {purposes: [introduce_categories, summarize_concepts], content_shapes: [peer_items], densities: [balanced]}
+  icon_cards:
+    when: Two to six peer concepts have recognizable supplied or generic icons.
+    selection: {purposes: [introduce_categories, support_scanning], content_shapes: [icon_labeled_items], densities: [sparse, balanced], media_supported: true}
+  numbered_cards:
+    when: Two to six related items benefit from reference numbers but are not a strict process.
+    selection: {purposes: [summarize_points, enumerate_factors], content_shapes: [numbered_peer_items], relationships: [parallel]}
+  metric_cards:
+    when: Two to six supplied quantitative facts need short interpretation.
+    selection: {purposes: [highlight_metrics, establish_scale], content_shapes: [metric_cards], densities: [sparse]}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  introduction: {target_chars: 90, max_chars: 160, required: false}
+  cards:
+    type: array
+    min_items: 2
+    max_items: 6
+    item_slots:
+      eyebrow: {target_chars: 16, max_chars: 35, required: false}
+      heading: {target_chars: 28, max_chars: 55}
+      body: {target_chars: 90, max_chars: 170}
+      icon: {max_chars: 8, required: false}
+image_slots: []

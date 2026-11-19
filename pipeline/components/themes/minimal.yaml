@@ -1,0 +1,27 @@
+id: minimal
+name: Minimal
+
+colors:
+  accent: "#2d3748"
+  accent_lt: "#edf2f7"
+  ink: "#1a202c"
+  muted: "#718096"
+  surface: "#ffffff"
+  bg: "#f7fafc"
+  border: "#e2e8f0"
+  green: "#276749"
+  green_lt: "#f0fff4"
+  red: "#9b2c2c"
+  red_lt: "#fff5f5"
+
+typography:
+  heading_font: "Inter"
+  body_font: "Inter"
+
+border_radius: 8
+
+backgrounds:
+  title: null
+  default: null
+
+logo: null

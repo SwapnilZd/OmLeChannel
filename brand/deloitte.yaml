@@ -1,0 +1,70 @@
+id: deloitte
+name: Deloitte
+# Canonical Deloitte brand tokens for the repo, sourced from the Deloitte Brand
+# Space color guidelines (Guidelines / Elements / Color) and the color appendix.
+# manim/templates/_shared.py mirrors these values; the pairing is enforced by
+# tests/tools/manim_video/test_brand_consistency.py.
+#
+# Brand rules encoded here:
+# - Green code: green must be prominent on primary surfaces; blues/teals are
+#   supporting colors only (accent_cycle therefore leads with green).
+# - Functional colors (red/orange/yellow) require a functional association
+#   (e.g. marking a wrong answer) and are used sparingly — icons and strokes,
+#   never body text or large fills.
+# - Typography is Open Sans. STIX Two italic exists ONLY inside the approved
+#   tagline logo lockup artwork (brand/Deloitte Tagline Lockup/) and must
+#   never be re-rendered as text.
+
+palette:
+  # Greens (primary identity)
+  deloitte_green: "#86BC25"   # primary
+  mid_green:      "#26890D"
+  deep_green:     "#046A38"
+  dark_green:     "#1C3D26"
+  green_2:        "#C4D600"
+  green_4:        "#43B02A"
+  green_5:        "#009A44"
+  # Teals
+  teal_3:         "#6FC2B4"
+  teal_4:         "#00ABAB"
+  teal_6:         "#007680"
+  # Blues
+  blue_2:         "#62B5E5"
+  blue_3:         "#00A3E0"
+  blue_4:         "#0076A8"
+  # Neutrals
+  cool_gray_7:    "#97999B"
+  cool_gray_9:    "#75787B"
+  dark_gray:      "#222222"
+  light_gray:     "#E6E6E6"
+  card_bg:        "#F7F7F7"   # derived light surface — matches the HTML theme bg
+  white:          "#FFFFFF"
+  black:          "#000000"
+
+# Limited-use functional colors (Brand Space: "must have a functional
+# association and cannot be used otherwise"; sparing highlight, never large
+# areas of color or text).
+functional:
+  red:    "#DA291C"   # Pantone 485 — negative/incorrect marking
+  orange: "#ED8B00"   # Pantone 144 — warning/caution
+  yellow: "#FFCD00"   # Pantone 116 — attention/highlight
+
+# Semantic roles used by renderers. Values reference palette/functional keys.
+# Renderers apply functional.red exactly for graphic elements (icons, strokes).
+# Where a theme needs red TEXT (e.g. HTML feedback copy), it may use a
+# contrast-adjusted derivative to stay WCAG-compliant on its surface — the
+# component themes' `red` tokens are such derivatives, not drift.
+semantic:
+  positive: deloitte_green
+  negative: functional.red      # ✗ icons and strokes only — body text stays neutral
+  warning:  functional.orange
+  attention: functional.yellow
+
+typography:
+  heading_font: "Open Sans"
+  body_font: "Open Sans"
+
+# Accent colors cycled across multi-item visuals (matches manim's _ACCENT order).
+# Leads with green to satisfy the green code; restricted to the palette's dark
+# end so strokes and accent text keep WCAG-viable contrast on white surfaces.
+accent_cycle: [mid_green, teal_6, blue_4, green_5, deep_green, dark_green]

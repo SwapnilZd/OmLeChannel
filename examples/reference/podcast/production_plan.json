@@ -1,0 +1,50 @@
+{
+  "plan_id": "pp-adkar-01-podcast-manager-l55",
+  "modality": "podcast",
+  "narrative": "Three-job production plan. The two speech jobs synthesise narration for each segment independently and can run in parallel. The assembly job joins the two audio outputs into a single podcast file and is the sole deliverable.",
+  "jobs": [
+    {
+      "id": "speech-segment-1",
+      "source_scene_ids": ["scene-intro-adkar"],
+      "capability": "narration",
+      "depends_on": [],
+      "inputs": {
+        "scene_id": {"kind": "literal", "value": "scene-intro-adkar"}
+      },
+      "output_keys": ["audio_file"],
+      "max_attempts": 2
+    },
+    {
+      "id": "speech-segment-2",
+      "source_scene_ids": ["scene-two-as"],
+      "capability": "narration",
+      "depends_on": [],
+      "inputs": {
+        "scene_id": {"kind": "literal", "value": "scene-two-as"}
+      },
+      "output_keys": ["audio_file"],
+      "max_attempts": 2
+    },
+    {
+      "id": "assemble-podcast",
+      "source_scene_ids": ["scene-intro-adkar", "scene-two-as"],
+      "capability": "audio_assembly",
+      "depends_on": ["speech-segment-1", "speech-segment-2"],
+      "inputs": {
+        "segment_1": {
+          "kind": "task_output",
+          "task_id": "speech-segment-1",
+          "output_key": "audio_file"
+        },
+        "segment_2": {
+          "kind": "task_output",
+          "task_id": "speech-segment-2",
+          "output_key": "audio_file"
+        }
+      },
+      "output_keys": ["podcast_file"],
+      "max_attempts": 2
+    }
+  ],
+  "deliverable_job_ids": ["assemble-podcast"]
+}

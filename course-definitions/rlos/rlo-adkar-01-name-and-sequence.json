@@ -1,0 +1,325 @@
+{
+  "id": "rlo-adkar-01-name-and-sequence",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Prosci ADKAR \u2014 Naming and Sequencing the Five Elements",
+  "topic": "Prosci ADKAR \u2014 Naming and Sequencing the Five Elements",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 7,
+  "content_type": "concept",
+  "performance_level": "recall",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-03-sequenced-within-individual",
+    "rlo-adkar-04-awareness",
+    "rlo-adkar-05-desire",
+    "rlo-adkar-06-knowledge",
+    "rlo-adkar-07-ability",
+    "rlo-adkar-08-reinforcement",
+    "rlo-adkar-09-identify-barrier-point",
+    "rlo-adkar-10-differentiated-interventions"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "The Prosci ADKAR Model Overview",
+      "reference": "Prosci Inc. (accessed 2026). Overview materials describing the ADKAR framework.",
+      "authority": "primary",
+      "note": "Prosci maintains the model and publishes reference materials describing each element."
+    }
+  ],
+  "terminal_objective": "State the name and one-sentence purpose of each of ADKAR's five elements in the correct order.",
+  "performance_context": "When encountering discussions of change management or reading Prosci-influenced materials, the learner should be able to recognize references to the model and place any single element in its correct position within the sequence.",
+  "enabling_objective": {
+    "id": "lo-01",
+    "statement": "State the name and one-sentence purpose of each of ADKAR's five elements in their correct order.",
+    "bloom_level": "remember",
+    "concepts_addressed": [
+      "c-01"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "The five ADKAR elements in sequence",
+      "definition": "ADKAR is an acronym for five elements that an individual must experience, in order, to successfully make a change: (A) Awareness of the need for change, (D) Desire to participate and support the change, (K) Knowledge of how to change, (A) Ability to implement required skills and behaviors, and (R) Reinforcement to sustain the change.",
+      "elaboration": "The acronym is the mnemonic. Each letter corresponds to one element, and the letters are ordered as A \u2192 D \u2192 K \u2192 A \u2192 R. This order is not arbitrary: each element is a prerequisite for the next within an individual. The model was developed by Jeff Hiatt at Prosci based on research into what individuals experience during change. Because ADKAR describes individual transitions rather than organizational activities, the five elements are states people are in, not tasks leaders perform.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The elements can be pursued in any order.",
+          "correction": "ADKAR is explicitly sequential within an individual. Awareness must exist before Desire can form; Desire must exist before Knowledge can be absorbed effectively; Knowledge must exist before Ability can be built; and Ability must be reinforced or it will decay. Reordering skips preconditions and typically leaves the later elements unachievable."
+        },
+        {
+          "id": "m-02",
+          "statement": "There are four elements (ADKA), since Reinforcement is optional maintenance.",
+          "correction": "ADKAR has exactly five elements, and Reinforcement is not optional. Without reinforcement, individuals routinely revert to prior behaviors even after achieving Ability. Prosci treats Reinforcement as the element most commonly under-executed and one of the most consequential to skip."
+        },
+        {
+          "id": "m-03",
+          "statement": "The two A's in ADKAR stand for the same concept.",
+          "correction": "The first A is Awareness (understanding why the change is needed); the second A is Ability (demonstrating the required skills and behaviors in practice). They are different elements at different points in the sequence."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "ADKAR is one of the most cited frameworks in change management, and its acronym appears constantly in project charters, change management plans, and communications materials. Recognizing the model \u2014 and knowing what each letter stands for \u2014 is a baseline literacy for anyone working near organizational change. This RLO gets you to that baseline."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The five elements, in order, are: (A) Awareness \u2014 the individual understands why the change is needed; (D) Desire \u2014 the individual chooses to participate in and support the change; (K) Knowledge \u2014 the individual knows what to do and how to do it; (A) Ability \u2014 the individual can demonstrate the required skills and behaviors in practice; (R) Reinforcement \u2014 mechanisms exist that sustain the change over time."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "The acronym as a memory device",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "The letters A-D-K-A-R spell the model itself, which is the primary memory aid.",
+        "grouping": "The elements group into three natural phases: preparing for change (Awareness, Desire), managing the change (Knowledge, Ability), and sustaining the change (Reinforcement).",
+        "reasoning": "Learners who struggle to recall the specific elements often recall the acronym first, then unpack each letter. The three-phase grouping is a secondary aid for learners who prefer conceptual chunking to the letter-based mnemonic."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The two A's, disambiguated",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "The first A (Awareness) is at the start of the sequence; the second A (Ability) is fourth.",
+        "distinction": "Awareness is about understanding \u2014 the individual knows why the change is needed. Ability is about demonstrated performance \u2014 the individual can actually do the new work in practice. Awareness is a state of understanding; Ability is a state of demonstrated competence.",
+        "reasoning": "The two A's are the most common source of confusion in the acronym. Naming the distinction explicitly saves learners from conflating early-sequence understanding with late-sequence performance."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Confusing ADKAR with other change models",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A colleague says: 'ADKAR is Awareness, Decision, Knowledge, Action, Results.'",
+        "why_wrong": "The letters are correct but the words are not. The D is Desire (not Decision), the second A is Ability (not Action), and the R is Reinforcement (not Results). Change management frameworks share vocabulary, and it is easy to misfill the acronym with plausible-sounding words.",
+        "correct_framing": "Awareness, Desire, Knowledge, Ability, Reinforcement. The five element names are technical terms with specific meanings \u2014 substituting synonyms shifts what the model is describing."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "prompt": "Without looking, list the five ADKAR elements in order.",
+        "expected_answer": "1. Awareness (of the need for change). 2. Desire (to participate and support the change). 3. Knowledge (of how to change). 4. Ability (to implement the required skills and behaviors). 5. Reinforcement (to sustain the change)."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "Which of the following correctly lists the five ADKAR elements in order?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Awareness \u2192 Desire \u2192 Knowledge \u2192 Ability \u2192 Reinforcement",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the ADKAR sequence in the order the acronym itself specifies."
+        },
+        {
+          "id": "B",
+          "text": "Awareness \u2192 Decision \u2192 Knowledge \u2192 Action \u2192 Results",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The letters are ADKAR, but the words are wrong. D is Desire (not Decision), the second A is Ability (not Action), and R is Reinforcement (not Results). These are technical terms with specific meanings that synonyms do not preserve."
+        },
+        {
+          "id": "C",
+          "text": "Knowledge \u2192 Awareness \u2192 Desire \u2192 Ability \u2192 Reinforcement",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The elements are out of order. Awareness must come first \u2014 an individual cannot desire a change or absorb knowledge about it before understanding why it is needed. Knowledge before Awareness inverts the model's central sequence."
+        },
+        {
+          "id": "D",
+          "text": "Awareness \u2192 Desire \u2192 Knowledge \u2192 Ability",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "This is only four elements. Reinforcement is the fifth and is not optional \u2014 without it, individuals routinely revert to prior behaviors even after achieving Ability. ADKAR is five elements, not four."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A colleague describes the fourth element (the second A) as 'Awareness that the change is working.' Is this correct?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes \u2014 the second A stands for Awareness, applied to the change's effects.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The second A stands for Ability, not a second use of Awareness. Awareness is the first element; Ability is the fourth. They are different concepts at different points in the sequence."
+        },
+        {
+          "id": "B",
+          "text": "No \u2014 the second A is Ability, meaning the individual can demonstrate the required skills and behaviors in practice.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The two A's stand for different elements: Awareness (understanding why) at the start, Ability (demonstrating the change in practice) toward the end. Confusing them is a common error worth catching."
+        },
+        {
+          "id": "C",
+          "text": "No \u2014 the second A is Action, meaning the individual is now acting on the change.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "'Action' is not one of the ADKAR elements. The second A is Ability, which is specifically about demonstrated skill and behavior in practice \u2014 not just taking action. Prosci's terminology is deliberately specific."
+        },
+        {
+          "id": "D",
+          "text": "No \u2014 the acronym does not include a second A.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The acronym is A-D-K-A-R, with two A's: Awareness (first) and Ability (fourth). The colleague's error is the word associated with the second A, not the existence of a second A."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Neutral, professional, direct. This is a memorization RLO; the tone should be unadorned and support recall without over-elaboration.",
+    "scaffolding_level": "high",
+    "scaffolding_notes": "Learners have no prior exposure to the model assumed. The acronym is the primary memory aid and should be surfaced early and often. The three-phase grouping (prepare / manage / sustain) is a secondary aid.",
+    "feedback_policy": "Feedback must name the specific element that was misidentified, not just say the answer is wrong. When a misconception is targeted, feedback must name the misconception and correct it directly. Feedback on the two-A confusion should always disambiguate both A's.",
+    "example_shape_hints": [
+      "The acronym itself is the primary memory device \u2014 any rendered form should surface A-D-K-A-R prominently.",
+      "Include at least one example that explicitly addresses the two-A disambiguation.",
+      "Do not use extended case studies \u2014 this RLO is about names and order, not about applying the model."
+    ],
+    "practice_shape_hints": [
+      "Practice should test ordering, not just recognition. A learner who can recognize the element names but cannot place them in sequence has not met the objective.",
+      "Distractors should include at least one plausible reordering and at least one wrong-word substitution (e.g., Decision instead of Desire).",
+      "At least one item should test the two-A distinction."
+    ],
+    "salience_hook_description": "Frame the model as vocabulary the learner will encounter in the wild \u2014 in change plans, communications, and consulting materials. Baseline recognition of what each letter stands for is the goal."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": null,
+    "event_4_present_content": [
+      "comp-rule-01"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level via related_rlos (subsequent RLOs revisit each element in depth, reinforcing the sequence and names)."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "flashcard_deck",
+      "rationale": "Straightforward memorization content \u2014 acronym expansion \u2014 pairs well with spaced repetition. Each letter as a flashcard is a natural structure.",
+      "priority": "primary"
+    },
+    {
+      "format": "visual_diagram_with_labels",
+      "rationale": "The five elements arranged linearly with the acronym letters and the three-phase grouping visible make an effective single-glance reference.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video",
+      "rationale": "A 2-3 minute narrated walkthrough of the acronym, one element at a time, with the two-A disambiguation surfaced explicitly.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This is the foundational RLO for the ADKAR sequence. Its only job is to establish that there are exactly five elements, in a specific order, with specific names \u2014 and that the acronym is the model's primary mnemonic. Deeper meaning is deferred to per-element RLOs. The two-A confusion is targeted explicitly because it is the most common recall error learners make with this acronym; the wrong-word-substitution failure (Decision, Action, Results) is targeted because change management vocabulary is generally soft and learners readily accept plausible synonyms.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

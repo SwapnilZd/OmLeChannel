@@ -1,0 +1,91 @@
+{
+  "plan": {
+    "workflow_id": "workflow-adkar-01-podcast-manager-l55",
+    "source_plan_id": "pp-adkar-01-podcast-manager-l55",
+    "modality": "podcast",
+    "tasks": [
+      {
+        "id": "speech-segment-1",
+        "task_type": "speech.synthesize",
+        "depends_on": [],
+        "inputs": {
+          "text": {
+            "kind": "literal",
+            "value": "Welcome to this learning journey on the ADKAR change management framework. ADKAR stands for Awareness, Desire, Knowledge, Ability, and Reinforcement — five elements that help individuals navigate change successfully."
+          },
+          "speaker": { "kind": "literal", "value": "Host" },
+          "line_id": { "kind": "literal", "value": "adkar-intro-host-01" }
+        },
+        "output_keys": ["audio_uri", "usage"],
+        "max_attempts": 2
+      },
+      {
+        "id": "speech-segment-2",
+        "task_type": "speech.synthesize",
+        "depends_on": [],
+        "inputs": {
+          "text": {
+            "kind": "literal",
+            "value": "Awareness is the first and most critical element. Before people can support a change, they need to understand why it is necessary. Without awareness, even the best change initiative will face resistance."
+          },
+          "speaker": { "kind": "literal", "value": "Expert" },
+          "line_id": { "kind": "literal", "value": "adkar-awareness-expert-01" }
+        },
+        "output_keys": ["audio_uri", "usage"],
+        "max_attempts": 2
+      },
+      {
+        "id": "assemble-podcast",
+        "task_type": "audio.assemble",
+        "depends_on": ["speech-segment-1", "speech-segment-2"],
+        "inputs": {
+          "deliverable_id": { "kind": "literal", "value": "podcast-adkar-01" },
+          "segments": {
+            "kind": "list",
+            "items": [
+              {
+                "kind": "object",
+                "fields": {
+                  "segment_id": { "kind": "literal", "value": "adkar-intro-host-01" },
+                  "audio_uri": {
+                    "kind": "task_output",
+                    "task_id": "speech-segment-1",
+                    "output_key": "audio_uri"
+                  },
+                  "speaker": { "kind": "literal", "value": "Host" },
+                  "pause_after_seconds": { "kind": "literal", "value": 0.35 },
+                  "usage": {
+                    "kind": "task_output",
+                    "task_id": "speech-segment-1",
+                    "output_key": "usage"
+                  }
+                }
+              },
+              {
+                "kind": "object",
+                "fields": {
+                  "segment_id": { "kind": "literal", "value": "adkar-awareness-expert-01" },
+                  "audio_uri": {
+                    "kind": "task_output",
+                    "task_id": "speech-segment-2",
+                    "output_key": "audio_uri"
+                  },
+                  "speaker": { "kind": "literal", "value": "Expert" },
+                  "pause_after_seconds": { "kind": "literal", "value": 0.0 },
+                  "usage": {
+                    "kind": "task_output",
+                    "task_id": "speech-segment-2",
+                    "output_key": "usage"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "output_keys": ["audio_uri", "costs_uri"],
+        "max_attempts": 2
+      }
+    ],
+    "deliverable_task_ids": ["assemble-podcast"]
+  }
+}

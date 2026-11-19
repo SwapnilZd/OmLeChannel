@@ -1,0 +1,12 @@
+{
+  "schema_version": "source-extraction-gold-v1",
+  "case_id": "synthetic-image-only",
+  "ordered_text": ["SCANNED PAGE", "Alpha precedes Beta", "Review is required"],
+  "hierarchy": [
+    {"node_id": "scan-page-1", "parent_id": null, "kind": "page", "order": 0}
+  ],
+  "tables": [],
+  "notes": [],
+  "visuals": [],
+  "locators": [{"node_id": "scan-page-1", "page": 1}]
+}

@@ -1,0 +1,361 @@
+{
+  "id": "rlo-adkar-07-ability",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR Element A \u2014 Ability to Implement Required Skills and Behaviors",
+  "topic": "ADKAR Element A \u2014 Ability to Implement Required Skills and Behaviors",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-06-knowledge"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-08-reinforcement"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what Ability means in ADKAR, and identify why Knowledge does not automatically produce Ability.",
+  "performance_context": "When observing individuals who have completed training but are struggling to perform the change in practice, the learner should be able to identify the specific gap and prescribe interventions that build Ability rather than repeat Knowledge.",
+  "enabling_objective": {
+    "id": "lo-07",
+    "statement": "Define Ability in ADKAR terms, and identify the specific reasons that Knowledge does not automatically translate into Ability.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Ability in ADKAR",
+      "definition": "Ability is the state in which an individual can demonstrate the required skills and behaviors in practice \u2014 actually performing the change fluently under real conditions, not just describing it in a classroom. It is the behavioral element of ADKAR: the individual can do the change, not merely explain it.",
+      "elaboration": "Prosci treats Ability as the state in which the individual can implement what they learned, under actual conditions, at the required level of performance. This includes handling variation and edge cases, sustaining performance under time pressure, adapting the new skills to their specific context, and integrating the change with the rest of their work. Ability is measured by observed performance, not by self-reports or by classroom demonstrations.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Ability is achieved when an employee successfully completes the new process once.",
+          "correction": "Ability requires demonstrated fluency, not one-time completion. An employee who executes the new process correctly on a monitored first attempt may still lack Ability if they cannot do so consistently, under pressure, or with the range of variation real work presents. The diagnostic is sustained performance across varied conditions, not isolated success."
+        },
+        {
+          "id": "m-02",
+          "statement": "Ability can be produced through more comprehensive training.",
+          "correction": "Training produces Knowledge, not Ability. Ability requires practice under conditions that resemble real work, with feedback and time to adapt. More training may address specific Knowledge gaps that emerge during practice, but it is not the primary intervention for Ability \u2014 practice is."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Why Knowledge does not automatically produce Ability",
+      "definition": "Knowledge is cognitive; Ability is behavioral. The gap between them is where practice, coaching, feedback, adaptation to context, and time do their work. Multiple specific barriers can prevent Knowledge from becoming Ability: psychological factors (fear, low confidence), physical or resource constraints, insufficient practice opportunity, lack of coaching or feedback, insufficient time to build fluency, and mismatch between training conditions and real conditions.",
+      "elaboration": "Prosci identifies specific barriers to Ability that Knowledge alone cannot overcome. Some are individual: an employee may fear making mistakes on real work, may lack confidence in the new skill, or may not have the physical or technical prerequisites. Some are environmental: the employee may not have access to the tools required, may not have the time carved out for practice, or may not have supervisor support for the learning curve. Some are structural: the training may have used simplified cases that do not match the variation of real work. Each barrier requires its own intervention, and none of them are addressed by delivering more Knowledge.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "If an employee has Knowledge but cannot perform, the problem is willingness \u2014 they must lack Desire.",
+          "correction": "Inability to perform after training is not the same as lack of Desire. An employee may fully want to make the change and still be unable to perform it \u2014 because they need more practice, because they lack confidence, because the conditions are wrong, or because the training did not prepare them for the variation of real work. Attributing Ability gaps to Desire misdiagnoses the problem and produces the wrong intervention."
+        },
+        {
+          "id": "m-04",
+          "statement": "The gap between Knowledge and Ability is small and closes quickly with time.",
+          "correction": "The gap can be substantial and does not close automatically. It requires specific interventions: opportunities to practice with feedback, coaching from someone skilled in the new work, exposure to varied cases, and time protected from other priorities. Waiting for the gap to close on its own is one of the more common failure modes \u2014 the affected population never reaches Ability and adoption stalls."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "Ability is where change efforts that survived the earlier elements most commonly fail. The training was good; the employees can describe the new work accurately; and yet they cannot yet do it. This is not a failure of the earlier steps \u2014 it is a specific gap that requires specific interventions. Change teams that treat Ability as an extension of Knowledge (more training) miss the fact that the gap is behavioral, not cognitive, and that the interventions required are different in kind."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Ability is the demonstrated capacity to perform the change fluently in practice \u2014 under real conditions, with the range of variation real work presents, at the required level of performance. It is measured by observed behavior, not by self-reports or classroom demonstrations."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Knowledge does not automatically produce Ability. The gap between them is closed by specific interventions: opportunities to practice with feedback, coaching, exposure to varied cases, and protected time. Multiple barriers can prevent the transition \u2014 fear of mistakes, low confidence, resource constraints, insufficient practice, mismatch between training and real conditions \u2014 and each requires its own intervention."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Ability built through structured practice",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A firm's change to a new client-onboarding process assigns each affected employee a coach \u2014 a colleague who has already achieved Ability in the new process. Each employee shadows their coach on three onboardings, then performs three onboardings themselves with the coach observing and giving feedback, then works independently with weekly check-ins for the next month.",
+        "what_happens": "By the end of the structured practice period, most employees have reached Ability \u2014 they can perform the new onboarding fluently, handle common variations, and identify when they need help on unusual cases. The training gave them Knowledge; the coached practice gave them Ability.",
+        "reasoning": "This is what closing the Knowledge-Ability gap actually looks like. It requires structure, time, and human support \u2014 not more content delivery. Notice what makes it work: real cases (not classroom simulations), observed practice with feedback, and time protected from other demands. Any of these missing and the transition slows or fails."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The specific barriers to Ability",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort has delivered strong Knowledge but is seeing weak Ability. Diagnostic conversations with 30 struggling employees produce five distinct barrier types.",
+        "barrier_categories": "Fear of mistakes: some employees are hesitant to attempt the new process on real client work because errors would be visible. Confidence gap: some can perform in practice but freeze under real pressure. Resource constraint: some lack the technical access or tools needed to practice. Insufficient practice opportunity: some have not yet had enough real cases to build fluency. Mismatch: some found the training oversimplified compared to the actual variation of their work.",
+        "reasoning": "Each barrier requires a different intervention. Fear responds to explicit permission to make early mistakes and management support during the learning curve. Confidence responds to structured practice with success experiences. Resource constraints require operational fixes. Insufficient practice requires deliberate case assignment. Mismatch requires supplementary training grounded in real cases. Treating all five as 'more training needed' is a category mistake five times over."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Ability gap misread as Desire problem",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "An employee has completed training, can describe the new process correctly, and expresses full support for the change. In actual work, however, she is slow and hesitant, and often falls back to the old process when under time pressure. Her manager concludes she must lack real Desire \u2014 'if she really wanted to change, she would.'",
+        "why_wrong": "The employee has both Awareness and Desire \u2014 she supports the change and wants to make it. What she lacks is Ability. Under time pressure, the old process is fluent and the new one is not, so she reverts to what she can perform. This is not a Desire failure; it is a specific Ability gap that requires practice, protected time to build fluency, and support during the learning curve.",
+        "correct_framing": "Reverting under pressure is a signature Ability gap, not a Desire gap. The two look similar externally \u2014 both produce old-behavior performance \u2014 but they diverge in what the employee will say about the change and what interventions would help. Diagnosing the Ability gap as Desire produces the wrong intervention (motivational engagement) instead of the right one (practice and fluency-building support)."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "More training applied to fluency gaps",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "Six months in, employees can describe the new process but are performing it slowly and with errors. The change team's response is a mandatory refresher training.",
+        "why_wrong": "Refresher training addresses Knowledge, and the employees already have Knowledge \u2014 they can describe the process. What they need is more practice under real conditions with feedback, not more instruction. The refresher will produce marginal Knowledge improvement and no meaningful improvement in fluency, because fluency is built through doing, not through hearing.",
+        "correct_framing": "When employees can describe the process but cannot yet perform it fluently, the intervention is coached practice \u2014 not more training. This is the specific category mistake the Knowledge/Ability distinction exists to prevent. If training is the answer, it is usually because a specific Knowledge gap was surfaced during practice; the diagnosis should be that specific, not 'add refresher training.'"
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is Ability in ADKAR, and what are two reasons Knowledge does not automatically produce it?",
+        "expected_answer": "Ability is the demonstrated capacity to perform the change fluently under real conditions; Knowledge does not automatically produce it because the gap requires practice with feedback and can be blocked by specific barriers such as fear of mistakes, low confidence, resource constraints, insufficient practice opportunity, or mismatch between training and real work."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "An employee has completed the training on a new operating model, can accurately describe every step of the process, and has expressed strong support for the change in conversation with her manager. In actual work, however, she is slow, hesitant, and frequently reverts to the old process when under time pressure. Her manager concludes that she must lack real commitment to the change. How should this diagnosis be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The manager is correct \u2014 reverting to old behavior indicates lack of Desire.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Reverting under pressure is not necessarily a Desire problem. The employee has expressed support for the change and can describe the new process \u2014 she has Awareness, Desire, and Knowledge. What she may lack is Ability: under time pressure, the old process is fluent and the new one is not, so she reverts to what she can perform. Diagnosing this as a Desire problem misidentifies the gap and produces the wrong intervention."
+        },
+        {
+          "id": "B",
+          "text": "The manager is misdiagnosing an Ability gap as a Desire problem. The employee's reversion under pressure indicates fluency is still developing, not that commitment is missing.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Reverting under pressure is a signature Ability gap, not a Desire gap. The employee has done everything the earlier ADKAR elements require \u2014 she supports the change, understands it, and can describe the new process. The gap is between describing and performing fluently, which requires practice under real conditions with support during the learning curve. The intervention is Ability-building, not Desire-building."
+        },
+        {
+          "id": "C",
+          "text": "The employee lacks Knowledge \u2014 otherwise she would perform correctly.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The stem specifies that the employee can accurately describe every step of the process \u2014 that is the Knowledge diagnostic. Her inability to perform fluently indicates an Ability gap. Assuming poor performance necessarily indicates missing Knowledge collapses the very distinction between the two elements that Prosci is careful to preserve."
+        },
+        {
+          "id": "D",
+          "text": "The employee needs more training to build fluency.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Training produces Knowledge, not fluency. The employee already has Knowledge; more training will produce marginally more Knowledge without addressing the actual gap, which is the transition from describing to performing. Fluency is built through practice with feedback, not through additional classroom instruction."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change team observes that six months into an effort, employees can describe the new process accurately but are performing it slowly and with frequent errors. Diagnostic conversations reveal that some employees are afraid to attempt the new process on real client work (fear of visible mistakes), some lack access to the new tools they need to practice (resource constraint), and some found that the training used simplified cases that do not match their actual work (mismatch). The change team is considering a single response: adding two more training modules to reinforce the concepts. How should this response be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The response addresses the range of issues by strengthening the foundation.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "None of the three identified barriers is a Knowledge gap. Fear of mistakes, resource constraints, and mismatch between training and real work all require different interventions \u2014 respectively: management support during the learning curve, operational fixes to tool access, and supplementary practice with real cases. More training addresses none of them."
+        },
+        {
+          "id": "B",
+          "text": "The response misdiagnoses three distinct Ability barriers as a single Knowledge gap. Each barrier requires a different intervention, and none is addressed by more training.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The three barriers identified \u2014 fear, resource constraint, mismatch \u2014 are all Ability barriers, and each requires a specific intervention: explicit management support and permission to make early mistakes; operational fixes to tool access; supplementary practice with real cases. Treating them all as 'more training needed' collapses the specific diagnosis into a generic response and misses the actual issues."
+        },
+        {
+          "id": "C",
+          "text": "The response is fine because training is the standard intervention in ADKAR.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Training is the standard intervention for Knowledge, not for all elements. Ability barriers require different interventions \u2014 practice, coaching, resource support, exposure to real cases. Treating training as an all-purpose ADKAR intervention is precisely the category mistake the Knowledge/Ability distinction exists to prevent."
+        },
+        {
+          "id": "D",
+          "text": "The team should escalate to leadership to force compliance with the new process.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Forcing compliance addresses none of the identified barriers. The employees are not resisting; they are unable to perform yet for specific reasons that require specific interventions. Adding management pressure to Ability gaps typically produces reversion to compliance under monitoring, not real Ability."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Practical and diagnostic. This RLO teaches learners to see Ability gaps as specific and diagnosable rather than as generic 'adoption problems.' The tone should support careful, category-specific analysis of what is actually blocking performance.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 06. The Knowledge/Ability distinction is established in RLO-06; this RLO develops it further by naming the specific barriers to Ability and the interventions each requires.",
+    "feedback_policy": "Feedback must name the specific Ability barrier at stake and the corresponding intervention. Do not treat 'more training' or 'more motivation' as generic answers to Ability gaps \u2014 they are usually wrong and specifically wrong.",
+    "example_shape_hints": [
+      "Include at least one example of coached practice as the intervention that closes the Knowledge-Ability gap.",
+      "Include an example that names multiple specific Ability barriers (fear, confidence, resources, practice, mismatch) so learners see the range.",
+      "Non-examples should target the two most common misdiagnoses: Ability gap as Desire problem, and Ability gap as Knowledge problem."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present observed performance issues and ask the learner to distinguish Ability gaps from Desire and Knowledge problems.",
+      "At least one item should require learners to match specific barriers to specific interventions rather than defaulting to a single response.",
+      "Distractors should include the two most common wrong intervention families: more training (for a Knowledge gap that isn't there) and more motivation (for a Desire gap that isn't there)."
+    ],
+    "salience_hook_description": "The hook should establish that Ability is where change efforts most commonly stall after the earlier elements have succeeded. Learners should leave believing that Ability gaps have specific causes with specific interventions, and that 'more training' is rarely the right answer."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-06: Knowledge is understanding what to do; Ability is being able to do it. This RLO develops the distinction by naming what specifically prevents the transition.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-08 (Reinforcement) requires Ability as its precondition and RLO-09 revisits Ability-Desire confusion as a diagnostic case."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "coached_practice_scenario_module",
+      "rationale": "Ability is built through coached practice, and a module that models coached practice \u2014 with feedback loops and varied cases \u2014 mirrors what real Ability-building looks like.",
+      "priority": "primary"
+    },
+    {
+      "format": "barrier_diagnostic_module",
+      "rationale": "The five-barrier framework (fear, confidence, resources, practice, mismatch) supports a diagnostic module that presents observed performance issues and asks learners to identify which barriers are at play.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 5-6 minute video walking through the specific barriers to Ability with a concrete case for each.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Ability is the ADKAR element most often confused with adjacent elements \u2014 Knowledge (learners assume performance issues are training gaps) and Desire (managers assume performance issues indicate lack of commitment). Both misdiagnoses produce the wrong interventions. The instructional payload is (a) the specific character of Ability as demonstrated fluent performance under real conditions, (b) the five-barrier framework for diagnosing what blocks the Knowledge-to-Ability transition, and (c) the recognition that different barriers require different interventions. The 'reverts under pressure' pattern is highlighted because it is the specific external symptom that most reliably signals an Ability gap, and it is the signal managers most often misread as a Desire problem.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

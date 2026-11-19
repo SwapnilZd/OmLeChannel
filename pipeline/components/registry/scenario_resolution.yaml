@@ -1,0 +1,40 @@
+id: scenario_resolution
+name: Scenario Resolution
+description: >
+  Synthesizes the lessons from a branching scenario after the learner has seen
+  the outcome. Provides the "what this means in practice" consolidation.
+when_to_use: >
+  Use once per branching scenario, after all scenario_branch screens.
+  Consolidates the learning from the decision the learner just faced.
+tags: [scenario, resolution, synthesis, mid-course]
+sequence_position: middle
+selection:
+  category: practice
+  purposes: [scenario_resolution, consolidate_decision_learning]
+  content_shapes: [single_resolution]
+  relationships: [convergence, synthesis]
+  interactions: []
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Practice synthesis slide where branching choices converge into one grounded resolution and
+    practical lesson. Best after scenario branch feedback. Not a standalone rule, opening, or
+    completion slide.
+
+slots:
+  title:
+    description: Resolution heading, e.g. "What This Means in Practice"
+    target_chars: 50
+    max_chars: 80
+    required: true
+  body:
+    description: >
+      2-4 sentences summarising what the scenario demonstrated and
+      the principle to carry forward.
+    target_chars: 200
+    max_chars: 400
+    required: true
+
+image_slots: []

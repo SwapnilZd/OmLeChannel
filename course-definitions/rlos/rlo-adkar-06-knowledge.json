@@ -1,0 +1,360 @@
+{
+  "id": "rlo-adkar-06-knowledge",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR Element K \u2014 Knowledge of How to Change",
+  "topic": "ADKAR Element K \u2014 Knowledge of How to Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-05-desire"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-07-ability"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what Knowledge means in ADKAR, and distinguish it from Ability.",
+  "performance_context": "When observing or planning training and enablement activities in a change effort, the learner should be able to distinguish activities that produce Knowledge (understanding of what to do) from activities that produce Ability (demonstrated performance), and recognize why the two are separate elements.",
+  "enabling_objective": {
+    "id": "lo-06",
+    "statement": "Define Knowledge in ADKAR terms, and distinguish it from Ability \u2014 the demonstrated capacity to perform the change in practice.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Knowledge in ADKAR",
+      "definition": "Knowledge is the state in which an individual understands how to make the change \u2014 what new skills, behaviors, processes, tools, roles, and responsibilities are required. It is the cognitive component of the change: the individual knows what they are supposed to do differently.",
+      "elaboration": "Prosci is specific that Knowledge covers both procedural content (the new steps, tools, and workflows) and behavioral content (the new attitudes, working relationships, and interactions the change requires). It is produced through training, documentation, coaching, and access to information. Importantly, Knowledge is a state of understanding \u2014 the individual can describe or explain what needs to happen \u2014 but it does not require that the individual can yet perform the change fluently. That is Ability, the next element.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Attending training produces Knowledge.",
+          "correction": "Attendance is not the same as Knowledge. An employee can sit through a training session, pass the completion assessment, and leave without retaining the material \u2014 particularly if they lack Desire or the training is disconnected from their actual work. Knowledge is measured by whether the individual can articulate what they are supposed to do, not by whether they attended the training."
+        },
+        {
+          "id": "m-02",
+          "statement": "Knowledge is the same as Ability \u2014 if you know how to do something, you can do it.",
+          "correction": "Knowledge and Ability are distinct elements in ADKAR precisely because knowing how to do something is not the same as being able to do it. An employee can know the steps of a new process (Knowledge) without being able to execute them fluently under real conditions (Ability). This is why Prosci treats them as separate elements \u2014 they require different interventions."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Knowledge vs. Ability",
+      "definition": "Knowledge is the understanding of what to do; Ability is the demonstrated capacity to do it in practice. Knowledge is cognitive; Ability is behavioral. Someone can have Knowledge without Ability \u2014 they can describe the steps without being able to execute them fluently.",
+      "elaboration": "Most change frameworks conflate these two states, and Prosci is unusual in insisting they are separate. The distinction matters because the interventions differ. Knowledge is built through training, documentation, and information access. Ability is built through practice, coaching, feedback, and time. A change team that provides only training addresses Knowledge but not Ability, and the affected population may pass the training assessments while still being unable to perform the change in real work. This is one of the most common patterns of failed change adoption.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "If Knowledge is complete, Ability will follow automatically.",
+          "correction": "Ability does not follow Knowledge automatically. Between Knowledge (understanding) and Ability (demonstrated performance) sits practice, feedback, and adaptation to real conditions. An employee can complete comprehensive training and still be unable to perform the change fluently the first time they encounter a real situation. Assuming Ability follows Knowledge is a common source of change failures where training is delivered but adoption never materializes."
+        },
+        {
+          "id": "m-04",
+          "statement": "A change effort should focus training on either Knowledge or Ability, whichever is missing.",
+          "correction": "Training primarily addresses Knowledge; Ability is built through practice under real or realistic conditions with feedback. Trying to address Ability through more training misses that the intervention required is different \u2014 it is not more instruction but more opportunity to practice. Treating both as 'training gaps' collapses the distinction the ADKAR sequence exists to preserve."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "Knowledge is the ADKAR element that gets the most investment and produces some of the most common change failures. Change teams deliver extensive training, produce comprehensive documentation, and check the Knowledge box \u2014 and then discover that the affected population still cannot perform the change when it matters. The gap is not in the training; it is in the assumption that Knowledge automatically produces Ability. Understanding what Knowledge is (and what it isn't) is what makes the difference between training that works and training that gets completed."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Knowledge in ADKAR is the state in which the individual understands what they are supposed to do differently \u2014 the new processes, tools, skills, behaviors, and responsibilities. It is produced by training, documentation, coaching, and access to information, and measured by whether the individual can articulate what the change requires of them."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Knowledge and Ability are separate ADKAR elements. Knowledge is cognitive: the individual understands what to do. Ability is behavioral: the individual can demonstrate the change in practice. Knowledge is a prerequisite for Ability but does not automatically produce it \u2014 practice, feedback, and adaptation to real conditions sit between them."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Knowledge assessed correctly",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A change manager wants to assess whether an employee has Knowledge of a new customer-service protocol. She asks the employee to walk her through the steps.",
+        "response_with_knowledge": "The employee describes the steps in order: 'First I confirm the customer's identity using the new verification process. Then I access their account through the new dashboard rather than the legacy system. Then I follow the escalation matrix for issues that used to go straight to my supervisor. Then I log the interaction in the new tool.' She can also describe why each step exists and what to do when the situation doesn't fit the standard flow.",
+        "response_without_knowledge": "The employee says: 'I know there's a new system. I got the training last month. I'd have to check my notes for the specific steps.'",
+        "reasoning": "The first response demonstrates Knowledge \u2014 the employee can articulate what the change requires. The second response demonstrates training attendance without retained Knowledge. The diagnostic is not whether training happened; it is whether the employee has retained and can describe the specific content."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Knowledge without Ability",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "An employee has completed all the training and can accurately describe every step of a new client-onboarding process. Asked to walk through the process in the classroom, she does so correctly and confidently. When she attempts her first real client onboarding a week later, however, she is slow, hesitant, and makes several errors \u2014 asking for information in the wrong order, missing a required verification step, and struggling with an edge case that was covered in training but does not match the case in front of her.",
+        "diagnosis": "She has Knowledge (she knows the steps) but not yet Ability (she cannot execute fluently under real conditions). This is not a training failure; the training worked, and she retained what it taught. The gap is in the transition from cognitive understanding to fluent performance, which requires practice, coaching, and adaptation to real cases.",
+        "reasoning": "This is what the Knowledge/Ability distinction looks like in practice. The employee is not underprepared or resistant \u2014 she has done what training can do. What she needs next is different: practice with feedback, coaching on her first real cases, and exposure to the range of variation that classroom training cannot fully cover. Providing more Knowledge would not address her gap; providing Ability-building support would."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Training attendance treated as Knowledge",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A change team reports: 'Knowledge complete. 100% of affected employees have attended the required training and passed the completion quiz.'",
+        "why_wrong": "The team is reporting activity metrics (attendance, quiz completion), not the state of Knowledge in the population. Attendance is not the same as retained understanding, and a completion quiz taken immediately after training does not indicate durable Knowledge weeks or months later. The diagnostic for Knowledge is whether employees can articulate what they are supposed to do differently \u2014 a diagnostic that should be run some time after training, not immediately after, and against a random sample of the population.",
+        "correct_framing": "Knowledge is measured in individuals over time. Immediate post-training quizzes measure what people remember for a few minutes; the ADKAR-relevant question is what they remember when they need to apply the material. If a sample of employees a month after training cannot describe the new processes accurately, Knowledge has not been achieved regardless of attendance metrics."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "More training applied to an Ability gap",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03",
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A change effort is six months in. Employees can describe the new processes accurately (Knowledge is present) but are performing them slowly, hesitantly, and with frequent errors in real work. The change team's response is to add more training modules.",
+        "why_wrong": "The team is treating an Ability gap as if it were a Knowledge gap. The employees already have Knowledge; more training produces marginally more Knowledge and does not address the actual issue, which is the transition from understanding to fluent execution. Ability is built through practice, coaching, and real-work feedback \u2014 not through more classroom time. The team's response will produce more training completion metrics and no meaningful improvement in adoption.",
+        "correct_framing": "When employees can describe what to do but cannot yet do it fluently, the intervention is Ability-building \u2014 supervised practice, coaching on real cases, feedback loops, and time for skills to develop. Applying Knowledge interventions (training) to Ability gaps is a common failure mode and represents a category mistake within the ADKAR framework."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is Knowledge in ADKAR, and how is it distinguished from Ability?",
+        "expected_answer": "Knowledge in ADKAR is the individual's understanding of what to do differently \u2014 a cognitive state produced through training and documentation \u2014 while Ability is the demonstrated capacity to perform the change fluently in practice; Knowledge is a prerequisite for Ability but does not automatically produce it."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change team reports the following at month 4 of an effort: '100% of affected employees have completed the new-process training. All passed the end-of-training quiz. Knowledge is complete.' A month later, a sample of employees is asked to describe the new process in their own words; only 40% can do so accurately. How should this be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Knowledge is complete \u2014 training attendance and quiz completion are the correct measures.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Attendance and immediate quiz completion measure exposure to the training, not retained Knowledge. The follow-up survey directly measures whether employees have Knowledge in the ADKAR sense (can articulate what to do differently), and 60% cannot. Regardless of what the activity metrics say, Knowledge has not been achieved for the majority of the sampled population."
+        },
+        {
+          "id": "B",
+          "text": "Knowledge is only partially achieved. The activity metrics (attendance, quiz completion) do not measure retained understanding, and the follow-up survey shows that 60% of employees cannot articulate the new process a month later.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Knowledge is a state in the individual, and the follow-up survey is the appropriate measure. Immediate post-training quizzes measure short-term recall, not durable understanding. The team's activity metrics tell them the training happened; the survey tells them what the training produced. The correct diagnosis is that Knowledge activities have run without producing the Knowledge outcome for the majority."
+        },
+        {
+          "id": "C",
+          "text": "The follow-up survey is unreliable \u2014 training completion is the authoritative measure.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The follow-up survey directly measures the state ADKAR is meant to describe. Dismissing it in favor of activity metrics substitutes the process indicator for the outcome indicator. Training completion tells us what was delivered; retained Knowledge tells us what stuck."
+        },
+        {
+          "id": "D",
+          "text": "The team should require employees to retake the training until quiz scores improve.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Retaking the training will produce another round of short-term recall without addressing why the Knowledge did not stick the first time. The intervention should target the underlying cause \u2014 perhaps Desire is low (unengaged learners do not retain), perhaps the training is disconnected from actual work, perhaps reinforcement is missing. More of the same training is unlikely to produce different Knowledge outcomes."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "Employees six months into a change effort can accurately describe the new operating model when asked. In actual work, however, they are slow, hesitant, and make frequent errors. The change team's proposed response is to add two more training modules to reinforce the concepts. How should this response be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The response is correct \u2014 more training will address the performance gap.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "The employees can already describe the new model \u2014 they have Knowledge. The gap is between describing (Knowledge) and performing (Ability), and additional training does not close that gap. It produces slightly more Knowledge and does not address the intervention actually needed, which is practice with feedback under real conditions."
+        },
+        {
+          "id": "B",
+          "text": "The response misdiagnoses the gap. Employees have Knowledge but not Ability; the intervention should be practice, coaching, and real-work feedback, not more training.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is a category mistake within ADKAR \u2014 applying a Knowledge intervention (training) to an Ability gap (fluent performance). Once Knowledge is in place, Ability requires practice under real or realistic conditions with feedback, not more classroom time. The distinction between Knowledge and Ability exists precisely to prevent this common misuse of training as an all-purpose intervention."
+        },
+        {
+          "id": "C",
+          "text": "The employees clearly do not have Knowledge \u2014 otherwise they would be performing well.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "The stem specifies that employees can accurately describe the new model \u2014 that is the Knowledge diagnostic. Their inability to perform fluently indicates an Ability gap, not a Knowledge gap. Assuming poor performance necessarily indicates missing Knowledge collapses the very distinction between the two elements."
+        },
+        {
+          "id": "D",
+          "text": "The training modules should be shortened rather than added.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Shortening or lengthening the training addresses the wrong element. The Knowledge intervention (training) is not the right tool for the Ability gap that has been identified. Practice, coaching, and feedback are what is needed \u2014 not adjustments to the amount of instruction."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Practical and precise. This RLO teaches a distinction (Knowledge vs. Ability) that is commonly ignored in change practice. The tone should support careful attention to which of the two elements is at stake in any given intervention decision.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 05. Desire is established as the prerequisite for Knowledge \u2014 without Desire, Knowledge does not stick. This RLO focuses on the specific character of Knowledge and its relationship to Ability.",
+    "feedback_policy": "Feedback must distinguish clearly between Knowledge and Ability in every relevant case. Do not treat 'performance problems' as a single failure mode \u2014 they can indicate a Knowledge gap or an Ability gap, and the interventions are different.",
+    "example_shape_hints": [
+      "Include at least one example that clearly shows Knowledge without Ability \u2014 an employee who can describe the process but cannot yet perform it fluently.",
+      "Include an example showing the diagnostic question for Knowledge ('walk me through the process') and how retained-Knowledge and training-attendance responses differ.",
+      "Non-examples should target both the 'attendance = Knowledge' and 'more training will fix Ability' failure modes."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present described performance issues and ask the learner to distinguish Knowledge gaps from Ability gaps.",
+      "At least one item should test the 'more training' rationalization applied to an Ability gap, since this is the most common category mistake in professional-services environments.",
+      "Distractors should include the 'performance problem = Knowledge problem' rationalization, since it is the intuitive-but-wrong response to observed adoption issues."
+    ],
+    "salience_hook_description": "The hook should establish that Knowledge is the element most commonly measured by activity metrics and most commonly confused with Ability. Learners should leave believing that knowing how to do something and being able to do it are separate states requiring separate interventions."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-05: Desire is the precondition for effective Knowledge absorption. This RLO builds on that: assuming Desire is in place, what does Knowledge specifically mean?",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-07 (Ability) explicitly develops the distinction further and provides interventions for closing Ability gaps."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_conversation_module",
+      "rationale": "The Knowledge diagnostic is a conversation \u2014 ask the employee to walk through the process. An interactive module that lets learners practice this diagnostic against varied responses supports the objective well.",
+      "priority": "primary"
+    },
+    {
+      "format": "paired_scenario_module",
+      "rationale": "The Knowledge vs. Ability distinction is best taught through paired scenarios \u2014 an employee who can describe but cannot perform, alongside one who can do both.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video that walks through the Knowledge diagnostic and its distinction from Ability with concrete cases.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Knowledge is the ADKAR element most commonly measured by activity metrics (attendance, quiz completion) rather than outcome indicators (retained articulation). The instructional payload is the shift toward outcome measurement, and specifically the distinction from Ability that Prosci is unusual in insisting on. The 'more training' misconception is targeted heavily because it is the specific instinct professional-services environments most often produce in response to adoption issues \u2014 and it is a category mistake that this RLO exists to correct. The paired example (Knowledge without Ability) is deliberately included to give learners a positive exemplar of the distinction so they can recognize the state in practice.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

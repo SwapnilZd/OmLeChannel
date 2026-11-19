@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source Intake · Omnichannel Learning</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <style>
+    .source-layout { max-width: 1160px; }
+    .source-intro { margin: -0.65rem 0 1.25rem; color: var(--ink-muted); line-height: 1.5; }
+    #drop-zone { padding: 2.75rem 1.5rem; text-align: center; cursor: pointer; border: 2px dashed #a9c7ca; }
+    #drop-zone:focus-visible { outline: 3px solid rgba(15, 135, 146, 0.25); outline-offset: 3px; }
+    .drop-icon { font-size: 2rem; margin-bottom: 0.55rem; }
+    .formats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 0.9rem; }
+    .format-tag { padding: 0.2rem 0.55rem; border-radius: 999px; background: var(--accent-light); color: var(--accent-strong); font: 700 0.72rem ui-monospace, monospace; }
+    #file-input { display: none; }
+    #file-preview { display: none; margin-top: 1rem; padding: 0.9rem 1rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-soft); }
+    .preview-name { font-weight: 750; }
+    .preview-meta { margin-top: 0.2rem; color: var(--ink-muted); font-size: 0.82rem; }
+    .actions { display: flex; align-items: center; gap: 0.75rem; margin-top: 1rem; }
+    button { border: 1px solid transparent; padding: 0.65rem 1rem; font-weight: 750; cursor: pointer; }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-danger { border-color: var(--error); background: #fff; color: var(--error); }
+    .card-title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    #upload-result { margin-top: 1rem; }
+    .notice { padding: 0.85rem 1rem; border-radius: 10px; font-size: 0.88rem; }
+    .notice.success { color: var(--success); background: var(--success-bg); }
+    .notice.error { color: var(--error); background: var(--error-bg); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    th, td { padding: 0.7rem 0.65rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--ink-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .filename { font-weight: 750; }
+    .job-id { color: var(--ink-muted); font: 0.78rem ui-monospace, monospace; }
+    .badge { display: inline-block; padding: 0.2rem 0.55rem; font-size: 0.72rem; font-weight: 750; }
+    .badge-ready { color: var(--success); background: var(--success-bg); }
+    .badge-failed { color: var(--error); background: var(--error-bg); }
+    .badge-queued { color: var(--warning); background: var(--warning-bg); }
+    .metadata { min-width: 190px; color: var(--ink-muted); line-height: 1.4; }
+    .empty-state { padding: 2rem; text-align: center; color: var(--ink-muted); }
+    .row-action { border: 0; background: transparent; color: var(--error); padding: 0.25rem; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+      <a class="brand-lockup" href="/commission" aria-label="Omnichannel Learning home">
+        <img class="brand-logo" src="/static/brand/deloitte-logo-web.png" alt="Deloitte">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="product-name">Omnichannel Learning</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/source-upload" class="active">Source Intake</a>
+        <a href="/objective-jobs">Objective Jobs</a>
+        <a href="/rlo-drafts">RLO Review</a>
+        <a href="/">RLO Registry</a>
+        <a href="/commission">Commission Learning</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/logout">Log out</a>
+      </nav>
+      <div class="page-heading"><h1>Source Intake</h1></div>
+  </header>
+  <main class="layout source-layout">
+
+    <section class="card">
+      <h2 class="card-title">Upload source material</h2>
+      <p class="source-intro">Store a source document and extract lightweight format metadata for downstream review. Text extraction and OCR are later pipeline stages.</p>
+      <div id="drop-zone" role="button" tabindex="0" aria-controls="file-input">
+        <div class="drop-icon" aria-hidden="true">↑</div>
+        <p>Drop one file here or <strong>choose a file</strong></p>
+        <div class="formats" aria-label="Supported formats">
+          <span class="format-tag">PDF</span><span class="format-tag">DOCX</span><span class="format-tag">PPTX</span>
+          <span class="format-tag">TXT</span><span class="format-tag">MD</span><span class="format-tag">HTML</span><span class="format-tag">EPUB</span>
+        </div>
+        <p class="preview-meta">Maximum file size: 50 MB</p>
+      </div>
+      <input type="file" id="file-input" accept=".pdf,.docx,.pptx,.txt,.md,.html,.htm,.epub">
+      <div id="file-preview" aria-live="polite"><div class="preview-name" id="preview-name"></div><div class="preview-meta" id="preview-meta"></div></div>
+      <div class="actions"><button class="btn-primary" id="upload-btn" disabled>Upload source</button><button class="btn-ghost" id="clear-btn" hidden>Clear selection</button></div>
+      <div id="upload-result" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-title-row"><h2 class="card-title">Source ingestion jobs</h2><button class="btn-danger" id="clear-all-btn">Clear all</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Status</th><th>Metadata</th><th>Uploaded</th><th></th></tr></thead>
+          <tbody id="jobs-table-body"><tr><td colspan="5" class="empty-state">Loading source jobs…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+<script>
+  const dropZone=document.getElementById('drop-zone'),fileInput=document.getElementById('file-input'),uploadBtn=document.getElementById('upload-btn'),clearBtn=document.getElementById('clear-btn'),preview=document.getElementById('file-preview'),previewName=document.getElementById('preview-name'),previewMeta=document.getElementById('preview-meta'),result=document.getElementById('upload-result'),jobsBody=document.getElementById('jobs-table-body');
+  const allowed=new Set(['pdf','docx','pptx','txt','md','html','htm','epub']),maxSize=50*1024*1024;
+  let currentFile=null,pollTimer=null;
+  const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const size=bytes=>bytes<1024?`${bytes} B`:bytes<1048576?`${(bytes/1024).toFixed(1)} KB`:`${(bytes/1048576).toFixed(2)} MB`;
+  const api=async(path,options={})=>{const response=await fetch(path,{...options,credentials:'include'});if(response.status===401){location.href='/login';throw new Error('Session expired.')}return response};
+  function setFile(file){currentFile=file;previewName.textContent=file.name;previewMeta.textContent=`${file.name.split('.').pop().toUpperCase()} · ${size(file.size)}`;preview.style.display='block';uploadBtn.disabled=false;clearBtn.hidden=false;result.innerHTML=''}
+  function clearSelection(){currentFile=null;fileInput.value='';preview.style.display='none';uploadBtn.disabled=true;clearBtn.hidden=true}
+  dropZone.addEventListener('click',()=>fileInput.click());
+  dropZone.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();fileInput.click()}});
+  dropZone.addEventListener('dragover',event=>{event.preventDefault();dropZone.classList.add('drag-over')});
+  dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('drag-over'));
+  dropZone.addEventListener('drop',event=>{event.preventDefault();dropZone.classList.remove('drag-over');if(event.dataTransfer.files[0])setFile(event.dataTransfer.files[0])});
+  fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0])});clearBtn.addEventListener('click',clearSelection);
+  uploadBtn.addEventListener('click',async()=>{if(!currentFile)return;const extension=currentFile.name.split('.').pop().toLowerCase();if(!allowed.has(extension)){showError('This file type is not supported.');return}if(!currentFile.size){showError('The selected file is empty.');return}if(currentFile.size>maxSize){showError('The selected file exceeds 50 MB.');return}uploadBtn.disabled=true;uploadBtn.textContent='Uploading…';try{const form=new FormData();form.append('file',currentFile);const response=await api('/api/source-uploads',{method:'POST',body:form});const body=await response.json().catch(()=>({}));if(!response.ok)throw new Error(body.detail||`HTTP ${response.status}`);result.innerHTML=`<div class="notice success"><strong>${esc(body.filename)}</strong> uploaded. Job ${esc(body.job_id.substring(0,8))}… is queued.</div>`;clearSelection();await loadJobs();startPolling()}catch(error){showError(error.message)}finally{uploadBtn.textContent='Upload source';uploadBtn.disabled=!currentFile}});
+  function showError(message){result.innerHTML=`<div class="notice error">${esc(message)}</div>`}
+  function metadata(meta){if(!meta)return 'Pending';const parts=[];if(meta.page_count!=null)parts.push(`${meta.page_count} pages`);if(meta.slide_count!=null)parts.push(`${meta.slide_count} slides`);if(meta.node_count!=null)parts.push(`${meta.node_count} nodes`);if(meta.warning_count!=null)parts.push(`${meta.warning_count} warnings`);if(meta.word_count!=null)parts.push(`${meta.word_count} words`);if(meta.chapter_count!=null)parts.push(`${meta.chapter_count} chapters`);if(meta.title)parts.push(esc(meta.title));if(meta.author)parts.push(`by ${esc(meta.author)}`);return parts.join(' · ')||'No metadata found'}
+  async function loadJobs(){const response=await api('/api/source-uploads');if(!response.ok)throw new Error(`HTTP ${response.status}`);const jobs=await response.json();jobsBody.innerHTML=jobs.length?jobs.map(job=>`<tr><td><div class="filename">${esc(job.original_filename)}</div><div class="job-id">${esc(job.job_id.substring(0,8))}… · ${size(job.size_bytes)}</div></td><td><span class="badge badge-${esc(job.status)}">${esc(job.status)}</span>${job.error_message?`<div class="preview-meta">${esc(job.error_message)}</div>`:''}</td><td class="metadata">${metadata(job.format_metadata)}</td><td>${job.uploaded_at?new Date(job.uploaded_at).toLocaleString():'—'}</td><td>${job.status==='ready'?`<a class="btn-ghost" href="/source-inspect/${encodeURIComponent(job.job_id)}">Inspect</a>`:''}<button class="row-action" data-delete="${esc(job.job_id)}">Remove</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty-state">No source files uploaded.</td></tr>';if(jobs.some(job=>['queued','processing'].includes(job.status)))startPolling();else stopPolling()}
+  function startPolling(){if(!pollTimer)pollTimer=setInterval(()=>loadJobs().catch(()=>{}),3000)}function stopPolling(){clearInterval(pollTimer);pollTimer=null}
+  jobsBody.addEventListener('click',async event=>{const button=event.target.closest('[data-delete]');if(!button||!confirm('Remove this source and its stored file?'))return;const response=await api(`/api/source-uploads/${encodeURIComponent(button.dataset.delete)}`,{method:'DELETE'});if(!response.ok)showError('The source could not be removed.');await loadJobs()});
+  document.getElementById('clear-all-btn').addEventListener('click',async()=>{if(!confirm('Remove every source and stored file?'))return;const response=await api('/api/source-uploads',{method:'DELETE'});if(!response.ok){showError('Sources could not be cleared.');return}await loadJobs()});
+  loadJobs().catch(error=>{jobsBody.innerHTML=`<tr><td colspan="5" class="empty-state">Could not load source jobs: ${esc(error.message)}</td></tr>`});
+</script>
+</body>
+</html>

@@ -1,0 +1,868 @@
+x-artifact-storage-env: &artifact-storage-env
+  ARTIFACT_STORE_BACKEND: minio
+  MINIO_ENDPOINT: ${MINIO_ENDPOINT:-http://minio:9000}
+  MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+  MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+  MINIO_ARTIFACT_BUCKET: ${MINIO_ARTIFACT_BUCKET:-workflow-artifacts}
+
+services:
+
+  litellm:
+    build:
+      context: .
+      dockerfile: litellm/Dockerfile
+    image: omnichannel-learning-litellm:1.93.0-py312
+    restart: unless-stopped
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://litellm:litellm-dev-password@litellm-postgres:5432/litellm}
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:-sk-local-dev}
+      LITELLM_BUDGET_DURATION: ${LITELLM_BUDGET_DURATION:-30d}
+      LITELLM_SALT_KEY: ${LITELLM_SALT_KEY:-local-dev-salt-change-me}
+      UI_USERNAME: ${LITELLM_UI_USERNAME:-admin}
+      UI_PASSWORD: ${LITELLM_UI_PASSWORD:-admin}
+      GOOGLE_APPLICATION_CREDENTIALS: /root/.config/gcloud/application_default_credentials.json
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:-}
+      GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION:-us-central1}
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-pk-lf-00000000000000000000000000000000}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-sk-lf-00000000000000000000000000000000}
+      LANGFUSE_OTEL_HOST: ${LANGFUSE_OTEL_HOST:-http://langfuse-web:3000}
+    volumes:
+      - ./litellm/config.yaml:/app/config.yaml:ro
+      # Mounting the directory is portable when ADC has not been created yet;
+      # a missing host credential file must not become a directory in-container.
+      - ${HOME}/.config/gcloud:/root/.config/gcloud:ro
+    ports:
+      - "${LITELLM_PORT:-4000}:4000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:4000/health/liveliness', timeout=5)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    depends_on:
+      litellm-postgres:
+        condition: service_healthy
+
+  litellm-postgres:
+    image: postgres:16.8-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-litellm}
+      POSTGRES_USER: ${POSTGRES_USER:-litellm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-litellm-dev-password}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-litellm} -d $${POSTGRES_DB:-litellm}"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - litellm-postgres:/var/lib/postgresql/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+    volumes:
+      - qdrant-storage:/qdrant/storage
+
+  pipeline:
+    build:
+      context: .
+      dockerfile: pipeline/Dockerfile
+    volumes:
+      - ./course-definitions:/course-definitions:ro
+      - ./generated:/generated
+    environment:
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      QDRANT_URL: ${QDRANT_URL:-http://qdrant:6333}
+      API_URL: ${API_URL:-http://api:8000}
+    depends_on:
+      litellm:
+        condition: service_started
+      qdrant:
+        condition: service_started
+    profiles:
+      - generate
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "mc ready local 2>/dev/null || curl -sf http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ── LLM observability (optional local Langfuse UI) ──────────────────────────
+  # Start with: docker compose --profile observability up -d
+  # UI: http://localhost:${LANGFUSE_PORT:-3000}
+  # The LiteLLM callback exports all centralized model calls to this deployment.
+  langfuse-worker:
+    image: docker.io/langfuse/langfuse-worker:3
+    restart: unless-stopped
+    environment: &langfuse-environment
+      NEXTAUTH_URL: ${LANGFUSE_URL:-http://localhost:3000}
+      DATABASE_URL: postgresql://langfuse:${LANGFUSE_POSTGRES_PASSWORD:-langfuse-local-password}@langfuse-postgres:5432/langfuse
+      SALT: ${LANGFUSE_SALT:-langfuse-local-salt-change-me}
+      ENCRYPTION_KEY: ${LANGFUSE_ENCRYPTION_KEY:-0000000000000000000000000000000000000000000000000000000000000000}
+      TELEMETRY_ENABLED: ${LANGFUSE_TELEMETRY_ENABLED:-false}
+      CLICKHOUSE_MIGRATION_URL: clickhouse://langfuse-clickhouse:9000
+      CLICKHOUSE_URL: http://langfuse-clickhouse:8123
+      CLICKHOUSE_USER: langfuse
+      CLICKHOUSE_PASSWORD: ${LANGFUSE_CLICKHOUSE_PASSWORD:-langfuse-local-password}
+      CLICKHOUSE_CLUSTER_ENABLED: "false"
+      LANGFUSE_S3_EVENT_UPLOAD_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+      LANGFUSE_S3_EVENT_UPLOAD_REGION: auto
+      LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID: ${MINIO_ACCESS_KEY:-minioadmin}
+      LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT: http://minio:9000
+      LANGFUSE_S3_EVENT_UPLOAD_FORCE_PATH_STYLE: "true"
+      LANGFUSE_S3_MEDIA_UPLOAD_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+      LANGFUSE_S3_MEDIA_UPLOAD_REGION: auto
+      LANGFUSE_S3_MEDIA_UPLOAD_ACCESS_KEY_ID: ${MINIO_ACCESS_KEY:-minioadmin}
+      LANGFUSE_S3_MEDIA_UPLOAD_SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      LANGFUSE_S3_MEDIA_UPLOAD_ENDPOINT: ${LANGFUSE_MINIO_EXTERNAL_ENDPOINT:-http://localhost:9000}
+      LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE: "true"
+      REDIS_HOST: langfuse-redis
+      REDIS_PORT: 6379
+      REDIS_AUTH: ${LANGFUSE_REDIS_PASSWORD:-langfuse-local-password}
+      REDIS_TLS_ENABLED: "false"
+    depends_on: &langfuse-dependencies
+      langfuse-postgres:
+        condition: service_healthy
+      langfuse-clickhouse:
+        condition: service_healthy
+      langfuse-redis:
+        condition: service_healthy
+      langfuse-minio-init:
+        condition: service_completed_successfully
+    profiles:
+      - observability
+
+  langfuse-web:
+    image: docker.io/langfuse/langfuse:3
+    restart: unless-stopped
+    ports:
+      - "${LANGFUSE_PORT:-3000}:3000"
+    environment:
+      <<: *langfuse-environment
+      NEXTAUTH_SECRET: ${LANGFUSE_NEXTAUTH_SECRET:-langfuse-local-nextauth-secret-change-me}
+      LANGFUSE_INIT_ORG_ID: ${LANGFUSE_INIT_ORG_ID:-omnichannel-learning}
+      LANGFUSE_INIT_ORG_NAME: ${LANGFUSE_INIT_ORG_NAME:-Omnichannel Learning}
+      LANGFUSE_INIT_PROJECT_ID: ${LANGFUSE_INIT_PROJECT_ID:-omnichannel-learning}
+      LANGFUSE_INIT_PROJECT_NAME: ${LANGFUSE_INIT_PROJECT_NAME:-Omnichannel Learning}
+      LANGFUSE_INIT_PROJECT_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-pk-lf-00000000000000000000000000000000}
+      LANGFUSE_INIT_PROJECT_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-sk-lf-00000000000000000000000000000000}
+      LANGFUSE_INIT_USER_EMAIL: ${LANGFUSE_INIT_USER_EMAIL:-admin@local.invalid}
+      LANGFUSE_INIT_USER_NAME: ${LANGFUSE_INIT_USER_NAME:-Local Admin}
+      LANGFUSE_INIT_USER_PASSWORD: ${LANGFUSE_INIT_USER_PASSWORD:-local-langfuse-password}
+    depends_on: *langfuse-dependencies
+    profiles:
+      - observability
+
+  langfuse-postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: langfuse
+      POSTGRES_USER: langfuse
+      POSTGRES_PASSWORD: ${LANGFUSE_POSTGRES_PASSWORD:-langfuse-local-password}
+      TZ: UTC
+      PGTZ: UTC
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U langfuse -d langfuse"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - langfuse-postgres-data:/var/lib/postgresql/data
+    profiles:
+      - observability
+
+  langfuse-clickhouse:
+    image: clickhouse/clickhouse-server:25.12
+    restart: unless-stopped
+    user: "101:101"
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: langfuse
+      CLICKHOUSE_PASSWORD: ${LANGFUSE_CLICKHOUSE_PASSWORD:-langfuse-local-password}
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8123/ping || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 1s
+    volumes:
+      - langfuse-clickhouse-data:/var/lib/clickhouse
+      - langfuse-clickhouse-logs:/var/log/clickhouse-server
+      - ./clickhouse/config.d/system-log-retention.xml:/etc/clickhouse-server/config.d/system-log-retention.xml:ro
+    profiles:
+      - observability
+
+  langfuse-redis:
+    image: redis:7
+    restart: unless-stopped
+    command: >
+      --requirepass ${LANGFUSE_REDIS_PASSWORD:-langfuse-local-password}
+      --maxmemory-policy noeviction
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a $${LANGFUSE_REDIS_PASSWORD:-langfuse-local-password} ping"]
+      interval: 3s
+      timeout: 10s
+      retries: 10
+    environment:
+      LANGFUSE_REDIS_PASSWORD: ${LANGFUSE_REDIS_PASSWORD:-langfuse-local-password}
+    volumes:
+      - langfuse-redis-data:/data
+    profiles:
+      - observability
+
+  langfuse-minio-init:
+    image: minio/mc:latest
+    entrypoint: /bin/sh
+    command:
+      - -c
+      - >-
+        mc alias set local http://minio:9000 "$${MINIO_ACCESS_KEY}" "$${MINIO_SECRET_KEY}" &&
+        mc mb --ignore-existing "local/$${LANGFUSE_S3_BUCKET}"
+    environment:
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      LANGFUSE_S3_BUCKET: ${LANGFUSE_S3_BUCKET:-langfuse}
+    depends_on:
+      minio:
+        condition: service_healthy
+    profiles:
+      - observability
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+      target: runtime
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-minio}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-http://minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-rlos}
+      GCS_BUCKET: ${GCS_BUCKET:-}
+      GOOGLE_APPLICATION_CREDENTIALS: /root/.config/gcloud/application_default_credentials.json
+      QDRANT_URL: ${QDRANT_URL:-http://qdrant:6333}
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      SEED_DIR: ${SEED_DIR:-/course-definitions/rlos}
+      POC_AUTH_ENABLED: ${POC_AUTH_ENABLED:-false}
+      POC_AUTH_PASSWORD: ${POC_AUTH_PASSWORD:-omnichannel}
+      POC_AUTH_SECRET: ${POC_AUTH_SECRET:-local-poc-auth-secret-change-me}
+      POC_AUTH_COOKIE_SECURE: ${POC_AUTH_COOKIE_SECURE:-false}
+      SOURCE_INGESTION_DATABASE_URL: postgresql+psycopg://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT: "${SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT:-15000}"
+      SOURCE_CONTENT_REQUEST_TOKEN_LIMIT: "${SOURCE_CONTENT_REQUEST_TOKEN_LIMIT:-100000}"
+    volumes:
+      - ./course-definitions:/course-definitions:ro
+      - ${HOME}/.config/gcloud:/root/.config/gcloud:ro
+    depends_on:
+      minio:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  api-test:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+      target: test
+    environment:
+      STORAGE_BACKEND: minio
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-rlos}
+      QDRANT_URL: http://qdrant:6333
+      LITE_LLM_BASE_URL: http://litellm:4000
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      POC_AUTH_ENABLED: "false"
+      SOURCE_INGESTION_DATABASE_URL: postgresql+psycopg://source_test:source-test-password@source-test-postgres:5432/source_content_test
+      SOURCE_POSTGRES_TEST_URL: postgresql+psycopg://source_test:source-test-password@source-test-postgres:5432/source_content_test
+    depends_on:
+      source-test-postgres:
+        condition: service_healthy
+    profiles:
+      - test
+
+  source-test-postgres:
+    image: postgres:16.8-bookworm
+    environment:
+      POSTGRES_DB: source_content_test
+      POSTGRES_USER: source_test
+      POSTGRES_PASSWORD: source-test-password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U source_test -d source_content_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+    tmpfs:
+      - /var/lib/postgresql/data
+    profiles:
+      - test
+
+  source-extraction-test:
+    build:
+      context: .
+      dockerfile: source_content/Dockerfile
+      target: test
+    network_mode: none
+    profiles:
+      - test
+
+  source-worker:
+    build:
+      context: .
+      dockerfile: source_content/Dockerfile
+      target: runtime
+    command: ["python", "-m", "src.source_ingestion.worker"]
+    restart: unless-stopped
+    environment:
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-minio}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-http://minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-rlos}
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      SOURCE_INGESTION_DATABASE_URL: postgresql+psycopg://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT: "${SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT:-15000}"
+      SOURCE_CONTENT_REQUEST_TOKEN_LIMIT: "${SOURCE_CONTENT_REQUEST_TOKEN_LIMIT:-100000}"
+      SOURCE_WORKER_POLL_SECONDS: "${SOURCE_WORKER_POLL_SECONDS:-1}"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from src.source_ingestion.repository import init_db; init_db()"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    profiles:
+      - commissioning
+
+  rlo-worker:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+      target: runtime
+    command: ["python", "-m", "src.source_authoring.worker"]
+    restart: unless-stopped
+    environment:
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-minio}
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT:-http://minio:9000}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-rlos}
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      SOURCE_INGESTION_DATABASE_URL: postgresql+psycopg://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT: "${SOURCE_CONTENT_TRANCHE_TOKEN_LIMIT:-15000}"
+      SOURCE_CONTENT_REQUEST_TOKEN_LIMIT: "${SOURCE_CONTENT_REQUEST_TOKEN_LIMIT:-100000}"
+      RLO_WORKER_POLL_SECONDS: "${RLO_WORKER_POLL_SECONDS:-1}"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      litellm:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python", "-c", "from src.source_ingestion.repository import init_db; init_db()"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    profiles:
+      - commissioning
+
+  commissioning-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: ["uvicorn", "learning_commissioning.api.app:app", "--host", "0.0.0.0", "--port", "8010"]
+    ports:
+      - "${COMMISSIONING_API_PORT:-8010}:8010"
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      RLO_CATALOG_URL: ${RLO_CATALOG_URL:-http://api:8000}
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      COMMISSIONING_UI_ORIGINS: ${COMMISSIONING_UI_ORIGINS:-http://localhost,http://127.0.0.1}
+      POC_AUTH_ENABLED: ${POC_AUTH_ENABLED:-false}
+      POC_AUTH_PASSWORD: ${POC_AUTH_PASSWORD:-omnichannel}
+      POC_AUTH_SECRET: ${POC_AUTH_SECRET:-local-poc-auth-secret-change-me}
+      POC_AUTH_COOKIE_SECURE: ${POC_AUTH_COOKIE_SECURE:-false}
+      LANGFUSE_API_URL: ${LANGFUSE_API_URL:-http://langfuse-web:3000}
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-}
+    depends_on:
+      api:
+        condition: service_healthy
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    profiles:
+      - commissioning
+
+  gateway:
+    image: nginx:1.28-alpine
+    ports:
+      - "${WEB_PORT:-80}:80"
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      api:
+        condition: service_healthy
+      commissioning-api:
+        condition: service_started
+    profiles:
+      - commissioning
+
+  commissioning-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: ["python", "-m", "learning_commissioning.worker"]
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      RLO_CATALOG_URL: ${RLO_CATALOG_URL:-http://api:8000}
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      COMMISSIONING_ASSEMBLY_MODE: ${COMMISSIONING_ASSEMBLY_MODE:-real}
+      COMMISSIONING_WORKER_POLL_SECONDS: ${COMMISSIONING_WORKER_POLL_SECONDS:-1}
+      PYTHONUNBUFFERED: "1"
+      # HeyGen planning gate — the e-learning planners offer avatar scenes only
+      # when the key AND at least one avatar+voice profile pair resolve here
+      # (see GenerationPlanningService). Leave unset to plan Manim-only courses.
+      HEYGEN_API_KEY: ${HEYGEN_API_KEY:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED:-1.0}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED:-1.0}
+    depends_on:
+      api:
+        condition: service_healthy
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    profiles:
+      - commissioning
+
+  video-generator:
+    build:
+      context: .
+      dockerfile: manim/Dockerfile
+    image: manim-renderer:latest
+    volumes:
+      - ./manim/input:/app/input:ro
+      - ./manim/video_output:/output
+      - ./secrets:/app/secrets:ro
+    environment:
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      VOICE: ${VOICE:-}
+    depends_on:
+      litellm:
+        condition: service_started
+    profiles:
+      - generate-video
+
+  # Build-only prerequisite for the real Manim worker.  The worker launches
+  # short-lived renderer containers through the Docker socket, so the image
+  # must exist in the host daemon before it can claim video.manim.render work.
+  manim-renderer-image:
+    build:
+      context: .
+      dockerfile: manim/Dockerfile
+    image: manim-renderer:latest
+    entrypoint: ["/bin/true"]
+    network_mode: none
+    profiles:
+      - real-manim
+      - commissioning
+
+  # ── Learning-pipeline CLI runner (ad hoc commands / test target) ──────────────
+  # Runs any learning_pipeline.cli subcommand inside the container.
+  # PIPELINE_MODE defaults to "reference" (no credentials required).
+  # Set PIPELINE_MODE=real and supply credentials for live LLM/HeyGen calls.
+  #
+  # NOTE: planning steps (assemble-course, plan-*) need an RLO directory.
+  # Mount it at runtime: docker compose run -v $(pwd)/examples/reference/rlos:/rlos ...
+  #
+  # Build:
+  #   docker compose build learning-pipeline
+  #
+  # Run tests:
+  #   docker compose --profile workflow run --rm learning-pipeline python -m pytest -v
+  #
+  # Run reference video workflow (no credentials):
+  #   docker compose --profile workflow run --rm learning-pipeline \
+  #     python -m learning_pipeline.cli run-workflow \
+  #     examples/reference/video/build_plan.json \
+  #     --run-dir /runs --mode reference
+  #
+  learning-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    volumes:
+      - ./generated/runs:/runs
+      - ./examples:/examples:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PIPELINE_MODE: ${PIPELINE_MODE:-reference}
+      # Shared LiteLLM connection for all model-backed capabilities.
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      PLANNER_TRACE_ROOT: ${PLANNER_TRACE_ROOT:-/runs/plan-traces}
+      # TTS execution (required when PIPELINE_MODE=real for podcast run-workflow)
+      PODCAST_HOST_VOICE: ${PODCAST_HOST_VOICE:-Aoede}
+      PODCAST_EXPERT_VOICE: ${PODCAST_EXPERT_VOICE:-Charon}
+      TTS_INPUT_COST_PER_TOKEN: ${TTS_INPUT_COST_PER_TOKEN:-0.000001}
+      TTS_OUTPUT_COST_PER_TOKEN: ${TTS_OUTPUT_COST_PER_TOKEN:-0.00002}
+      ARTIFACT_STORE_ROOT: /runs/artifacts
+      # HeyGen execution (required when PIPELINE_MODE=real for video run-workflow)
+      HEYGEN_API_KEY: ${HEYGEN_API_KEY:-}
+      HEYGEN_ARTIFACT_STORE_ROOT: ${HEYGEN_ARTIFACT_STORE_ROOT:-/runs/artifacts/heygen}
+      HEYGEN_OPERATION_STORE_ROOT: ${HEYGEN_OPERATION_STORE_ROOT:-/runs/artifacts/heygen-ops}
+      HEYGEN_ASSET_CACHE_ROOT: ${HEYGEN_ASSET_CACHE_ROOT:-/runs/artifacts/heygen-cache}
+      HEYGEN_POLL_INTERVAL: ${HEYGEN_POLL_INTERVAL:-15}
+      HEYGEN_MAX_POLL_WAIT: ${HEYGEN_MAX_POLL_WAIT:-1800}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED:-1.0}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED:-1.0}
+      # Manim video generation (shared LiteLLM endpoint — no separate MANIM_LITELLM_* vars)
+      MANIM_TTS_VOICE: ${MANIM_TTS_VOICE:-Kore}
+      MANIM_DOCKER_IMAGE: ${MANIM_DOCKER_IMAGE:-manim-renderer:latest}
+      MANIM_CPU_LIMIT: ${MANIM_CPU_LIMIT:-2}
+      MANIM_MEMORY_LIMIT: ${MANIM_MEMORY_LIMIT:-4g}
+      # Per-render wall clock — multi-minute scenes spend real time on TTS + frames
+      MANIM_RENDER_TIMEOUT_SECONDS: ${MANIM_RENDER_TIMEOUT_SECONDS:-900}
+      MANIM_DOCKER_NETWORK: ${MANIM_DOCKER_NETWORK:-omnichannel-learning_default}
+      # "off" disables the Deloitte tagline outro (required for A&A / T&L content)
+      MANIM_BRAND_OUTRO: ${MANIM_BRAND_OUTRO:-on}
+    depends_on:
+      litellm:
+        condition: service_started
+    profiles:
+      - workflow
+
+  # ── Phase 6: Persistent workflow execution ───────────────────────────────────
+  # workflow-postgres  — dedicated PostgreSQL for workflow state (no litellm overlap)
+  # workflow-api       — FastAPI submission/status/result endpoints
+  # workflow-worker    — background polling worker (fake executors, no TTS)
+  #
+  # Startup order:
+  #   docker compose build
+  #   docker compose run --rm workflow-api python -m learning_pipeline.db.migrate
+  #   docker compose up -d workflow-postgres workflow-api workflow-worker
+  #
+  # Submit the reference plan:
+  #   curl -X POST http://localhost:8080/workflow-runs \
+  #     -H "Content-Type: application/json" \
+  #     --data-binary @examples/reference/podcast/workflow_submission.json
+  #
+  workflow-postgres:
+    image: postgres:16.8-bookworm
+    environment:
+      POSTGRES_DB: learning_pipeline
+      POSTGRES_USER: learning_pipeline
+      POSTGRES_PASSWORD: ${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U learning_pipeline -d learning_pipeline"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - workflow-postgres-data:/var/lib/postgresql/data
+
+  workflow-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: uvicorn learning_pipeline.api.app:app --host 0.0.0.0 --port 8080
+    ports:
+      - "${WORKFLOW_API_PORT:-8080}:8080"
+    environment:
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      workflow-postgres:
+        condition: service_healthy
+
+  workflow-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: python -m learning_pipeline.worker.main
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PIPELINE_MODE: reference
+      WORKER_PROFILE: reference
+      WORKER_POLL_INTERVAL_SECONDS: "${WORKER_POLL_INTERVAL_SECONDS:-1}"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    profiles:
+      - reference
+
+  # ── Phase 7: Real speech synthesis worker ────────────────────────────────────
+  # Requires the real-tools profile and TTS credentials.
+  # This worker uses the same LITE_LLM_BASE_URL / LITE_LLM_API_KEY pair as
+  # every other model-backed service. The default worker does not need it.
+  #
+  # Start with:
+  #   docker compose --profile real-tools up -d workflow-worker-real
+  #
+  workflow-worker-real:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: python -m learning_pipeline.worker.main
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PIPELINE_MODE: real
+      WORKER_PROFILE: podcast-real
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      PODCAST_HOST_VOICE: ${PODCAST_HOST_VOICE:-Aoede}
+      PODCAST_EXPERT_VOICE: ${PODCAST_EXPERT_VOICE:-Charon}
+      TTS_INPUT_COST_PER_TOKEN: ${TTS_INPUT_COST_PER_TOKEN:-0.000001}
+      TTS_OUTPUT_COST_PER_TOKEN: ${TTS_OUTPUT_COST_PER_TOKEN:-0.00002}
+      WORKER_POLL_INTERVAL_SECONDS: "${WORKER_POLL_INTERVAL_SECONDS:-1}"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    profiles:
+      - real-tools
+      - commissioning
+
+  # ── Real Manim video worker (Phase 14C) ──────────────────────────────────────
+  # Polls for e-learning BuildPlans with video.manim.render tasks and runs
+  # ManimGenerationController, which delegates rendering to manim-renderer.
+  #
+  # Isolation requirements:
+  #   - The render container receives only the shared LiteLLM connection used by
+  #     the worker so VoiceoverScene can synthesize narration inline.
+  #   - The Docker socket is bind-mounted read-only so the worker can launch render containers.
+  #
+  # Start with:
+  #   export LITE_LLM_BASE_URL=http://litellm:4000         # shared with all other pipeline tools
+  #   export LITE_LLM_API_KEY=your-key                     # shared with all other pipeline tools
+  #   docker compose --profile real-manim up -d workflow-worker-real-manim
+  #
+  workflow-worker-real-manim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: python -m learning_pipeline.worker.main
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PIPELINE_MODE: real
+      WORKER_PROFILE: elearning-real-manim
+      WORKER_POLL_INTERVAL_SECONDS: "${WORKER_POLL_INTERVAL_SECONDS:-5}"
+      PYTHONUNBUFFERED: "1"
+      # Shared LiteLLM endpoint (e-learning authoring + Manim scene drafting)
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      MANIM_TTS_VOICE: ${MANIM_TTS_VOICE:-Kore}
+      MANIM_DOCKER_IMAGE: ${MANIM_DOCKER_IMAGE:-manim-renderer:latest}
+      MANIM_CPU_LIMIT: ${MANIM_CPU_LIMIT:-2}
+      MANIM_MEMORY_LIMIT: ${MANIM_MEMORY_LIMIT:-4g}
+      # Per-render wall clock — multi-minute scenes spend real time on TTS + frames
+      MANIM_RENDER_TIMEOUT_SECONDS: ${MANIM_RENDER_TIMEOUT_SECONDS:-900}
+      MANIM_DOCKER_NETWORK: ${MANIM_DOCKER_NETWORK:-omnichannel-learning_default}
+      # "off" disables the Deloitte tagline outro (required for A&A / T&L content)
+      MANIM_BRAND_OUTRO: ${MANIM_BRAND_OUTRO:-on}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+      manim-renderer-image:
+        condition: service_completed_successfully
+      minio:
+        condition: service_healthy
+    profiles:
+      - real-manim
+      - commissioning
+
+  # ── Full real e-learning worker (author + HeyGen avatar + Manim) ────────────
+  # Superset of workflow-worker-real-manim: additionally claims
+  # video.avatar.render so e-learning plans may include avatar scenes
+  # (course intros, presenter segments). Requires HEYGEN_API_KEY plus at
+  # least one avatar/voice profile ID pair — without them this worker exits
+  # at startup and workflow-worker-real-manim keeps HeyGen-less e-learning
+  # runs working (the planner also stops offering avatar scenes in that case).
+  workflow-worker-elearning:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: python -m learning_pipeline.worker.main
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PIPELINE_MODE: real
+      WORKER_PROFILE: elearning-real
+      WORKER_POLL_INTERVAL_SECONDS: "${WORKER_POLL_INTERVAL_SECONDS:-5}"
+      PYTHONUNBUFFERED: "1"
+      # Shared LiteLLM endpoint (authoring + Manim scene drafting)
+      LITE_LLM_BASE_URL: ${LITE_LLM_BASE_URL:-http://litellm:4000}
+      LITE_LLM_API_KEY: ${LITE_LLM_API_KEY:-${LITELLM_MASTER_KEY:-sk-local-dev}}
+      MANIM_TTS_VOICE: ${MANIM_TTS_VOICE:-Kore}
+      MANIM_DOCKER_IMAGE: ${MANIM_DOCKER_IMAGE:-manim-renderer:latest}
+      MANIM_CPU_LIMIT: ${MANIM_CPU_LIMIT:-2}
+      MANIM_MEMORY_LIMIT: ${MANIM_MEMORY_LIMIT:-4g}
+      # Per-render wall clock — multi-minute scenes spend real time on TTS + frames
+      MANIM_RENDER_TIMEOUT_SECONDS: ${MANIM_RENDER_TIMEOUT_SECONDS:-900}
+      MANIM_DOCKER_NETWORK: ${MANIM_DOCKER_NETWORK:-omnichannel-learning_default}
+      # "off" disables the Deloitte tagline outro (required for A&A / T&L content)
+      MANIM_BRAND_OUTRO: ${MANIM_BRAND_OUTRO:-on}
+      # HeyGen execution (operation store / asset cache default under /artifacts)
+      HEYGEN_API_KEY: ${HEYGEN_API_KEY:-}
+      HEYGEN_POLL_INTERVAL: ${HEYGEN_POLL_INTERVAL:-15}
+      HEYGEN_MAX_POLL_WAIT: ${HEYGEN_MAX_POLL_WAIT:-1800}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED:-1.0}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED:-1.0}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      litellm:
+        condition: service_started
+      workflow-postgres:
+        condition: service_healthy
+      manim-renderer-image:
+        condition: service_completed_successfully
+      minio:
+        condition: service_healthy
+    profiles:
+      - commissioning
+
+  # ── Real HeyGen avatar-video worker ─────────────────────────────────────────
+  # Polls for video BuildPlans and submits them to HeyGen.
+  # Requires a valid HEYGEN_API_KEY and at least one avatar/voice profile ID.
+  #
+  # Start with:
+  #   export HEYGEN_API_KEY=your-key
+  #   export HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID=your-avatar-id
+  #   export HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID=your-voice-id
+  #   docker compose --profile real-video-tools up -d workflow-worker-real-video
+  #
+  workflow-worker-real-video:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    command: python -m learning_pipeline.worker.main
+    environment:
+      <<: *artifact-storage-env
+      DATABASE_URL: postgresql://learning_pipeline:${WORKFLOW_POSTGRES_PASSWORD:-dev-only-password}@workflow-postgres:5432/learning_pipeline
+      PIPELINE_MODE: real
+      WORKER_PROFILE: video-real
+      WORKER_POLL_INTERVAL_SECONDS: "${WORKER_POLL_INTERVAL_SECONDS:-5}"
+      PYTHONUNBUFFERED: "1"
+      HEYGEN_API_KEY: ${HEYGEN_API_KEY:-}
+      HEYGEN_POLL_INTERVAL: "${HEYGEN_POLL_INTERVAL:-15}"
+      HEYGEN_MAX_POLL_WAIT: "${HEYGEN_MAX_POLL_WAIT:-1800}"
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_INSTRUCTOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_INSTRUCTOR_SPEED:-1.0}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE: ${HEYGEN_AVATAR_PROFILE_DEFAULT_NARRATOR_STYLE:-normal}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_ID:-}
+      HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED: ${HEYGEN_VOICE_PROFILE_DEFAULT_NARRATOR_SPEED:-1.0}
+    depends_on:
+      workflow-postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    profiles:
+      - real-video-tools
+
+volumes:
+  litellm-postgres:
+  qdrant-storage:
+  minio-data:
+  source-ingestion-data:
+  workflow-postgres-data:
+  langfuse-postgres-data:
+  langfuse-clickhouse-data:
+  langfuse-clickhouse-logs:
+  langfuse-redis-data:

@@ -1,0 +1,45 @@
+{
+  "schema_version": "source-extraction-gold-v1",
+  "case_id": "synthetic-structured-presentation",
+  "ordered_text": [
+    "Structured presentation fixture",
+    "Subtitle follows title",
+    "Process and evidence",
+    "Collect",
+    "Review",
+    "Approve",
+    "Quarterly review completion"
+  ],
+  "hierarchy": [
+    {"node_id": "slide-1", "parent_id": null, "kind": "slide", "order": 0},
+    {"node_id": "slide-2", "parent_id": null, "kind": "slide", "order": 1},
+    {"node_id": "slide-3", "parent_id": null, "kind": "slide", "order": 2}
+  ],
+  "tables": [
+    {
+      "node_id": "pptx-table-1",
+      "headers": ["Signal", "Action"],
+      "rows": [["Low confidence", "Review source"]]
+    }
+  ],
+  "notes": [
+    "Introduce the purpose before the process.",
+    "The order is Collect, Review, then Approve.",
+    "Completion increases across all three quarters."
+  ],
+  "visuals": [
+    {
+      "node_id": "pptx-chart-1",
+      "kind": "column_chart",
+      "title": "Quarterly review completion",
+      "categories": ["Q1", "Q2", "Q3"],
+      "series": {"Completed": [40, 65, 85]}
+    }
+  ],
+  "locators": [
+    {"node_id": "slide-1", "slide": 1},
+    {"node_id": "slide-2", "slide": 2},
+    {"node_id": "slide-3", "slide": 3},
+    {"node_id": "pptx-chart-1", "slide": 3}
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "id": "rlo-kotter-12-identify-skipped-step",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Identifying Skipped or Under-Executed Steps and Their Consequences",
+  "topic": "Identifying Skipped or Under-Executed Steps and Their Consequences",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 20,
+  "content_type": "procedure",
+  "performance_level": "decide",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-03-urgency",
+    "rlo-kotter-04-coalition",
+    "rlo-kotter-05-vision",
+    "rlo-kotter-06-volunteer-army",
+    "rlo-kotter-07-enable-action",
+    "rlo-kotter-08-short-term-wins",
+    "rlo-kotter-09-sustain-acceleration",
+    "rlo-kotter-10-institute-change",
+    "rlo-kotter-11-identify-current-step"
+  ],
+  "corequisites": [],
+  "follow_ons": [],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "Why Transformation Efforts Fail",
+      "reference": "Kotter, J. P. (1995). Harvard Business Review, March-April 1995.",
+      "authority": "primary",
+      "note": "The original article laying out the eight-step framework as a diagnostic model for change failure."
+    }
+  ],
+  "terminal_objective": "Given a described change effort, identify a step that has been skipped or under-executed, and explain the likely consequences.",
+  "performance_context": "When encountering a change effort that is struggling \u2014 whether as a participant, consultant, or observer \u2014 the learner should be able to trace the visible symptoms back to a specific skipped or under-executed step in Kotter's sequence, and predict what will fail next if the step is not remedied.",
+  "enabling_objective": {
+    "id": "lo-12",
+    "statement": "Given a described change effort showing signs of struggle, identify the step most likely skipped or under-executed, and explain the specific consequences that follow from the omission.",
+    "bloom_level": "analyze",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Signature failure modes",
+      "definition": "Each Kotter step, when skipped or under-executed, produces a characteristic pattern of downstream failure. The pattern is specific enough that observing the failure can be used to trace back to the missing step.",
+      "elaboration": "Kotter's central empirical claim is that change efforts fail in predictable ways because their preconditions are missing. This makes the model diagnostically useful: given a stalled or struggling change effort, the symptoms usually point to a specific skipped or under-executed step. Common patterns: (1) Urgency (Step 1) skipped \u2192 the effort produces activity but no conviction; nothing seems to matter enough to change anyone's behavior. (2) Coalition (Step 2) inadequate \u2192 the change is treated as one leader's initiative; middle management waits it out. (3) Vision (Step 3) skipped or weak \u2192 the effort has activity but no shared direction; teams work at cross purposes. (4) Volunteer army (Step 4) missing \u2192 the coalition is doing all the pulling; the change never reaches beyond the coalition's direct span. (5) Barriers (Step 5) unaddressed \u2192 motivated people cannot act; frustration and cynicism build. (6) Short-term wins (Step 6) absent \u2192 skeptics gain ground; political support erodes even if underlying work is real. (7) Sustained acceleration (Step 7) missing \u2192 the change stalls after early wins; premature victory declaration or change fatigue. (8) Institution (Step 8) skipped \u2192 the change reverts within 1-2 years of the coalition's dispersal.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "A struggling change effort has failed generally; the specific step that was skipped cannot be identified.",
+          "correction": "Struggles have specific causes. Kotter's model is designed to make those causes identifiable: each skipped step produces a characteristic failure pattern. The symptom points to the step, and the step points to the remedy."
+        },
+        {
+          "id": "m-02",
+          "statement": "The most recent step is the one that failed.",
+          "correction": "The visible failure is often several steps downstream of the actual skipped step. A Step 6 that cannot produce wins is often a Step 5 problem (barriers not removed) or a Step 4 problem (no volunteer army to execute) or even a Step 1 problem (no urgency to motivate the required effort). Tracing backwards is the diagnostic skill."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Diagnostic tracing",
+      "definition": "The skill of moving from an observed symptom of change failure back to the specific step whose absence or under-execution most likely produced the symptom. Diagnostic tracing works because each step provides preconditions for later steps; when a later step visibly fails, an earlier step's missing output is often the root cause.",
+      "elaboration": "Effective tracing is bidirectional: forward from a skipped step to predict what will fail, and backward from an observed failure to identify the skipped step. Learners should be able to do both. The most common practical use is backward: a change is failing in some visible way, and the learner must locate the root cause in the sequence. The most common practical error is stopping at the visible symptom rather than tracing back to the actual cause.",
+      "source_refs": [
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "The remedy for a skipped step is to add the step in later.",
+          "correction": "Skipped steps can sometimes be added retroactively, but the cost is much higher than doing them in sequence. A coalition assembled after a failed vision announcement has to overcome the credibility damage already done; a volunteer army recruited after barriers have crushed motivation has to overcome the existing cynicism. Retrofitting is expensive and sometimes impossible; the model exists to prevent the skip in the first place."
+        },
+        {
+          "id": "m-04",
+          "statement": "Multiple steps can be diagnosed as skipped, so the diagnosis is unclear.",
+          "correction": "Multiple weak steps often co-occur \u2014 a change effort that skipped Step 1 usually has a weak Step 2 as well \u2014 but the diagnostic is not paralyzed by this. Find the earliest skipped step in the sequence, because remedying earlier steps often unblocks later ones. A weak Step 2 that stems from a skipped Step 1 will improve once Step 1 is properly executed."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "This is the payoff RLO. Kotter's model was built from the study of change failure, and its practical value is diagnostic \u2014 given a struggling effort, the model tells you where to look for the cause. The skill of tracing visible symptoms back to skipped steps is what separates people who use the model as a checklist from people who use it as a working tool."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Each step, when skipped or under-executed, produces a characteristic downstream failure: skipped urgency produces activity without conviction; inadequate coalition produces treatment as one leader's initiative; weak vision produces cross-purpose activity; missing volunteer army produces limited reach beyond the coalition; unremoved barriers produce motivated people who cannot act; missing wins produce eroding political support; missing sustained acceleration produces stalling after early wins; skipped institution produces reversion after coalition dispersal."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "To diagnose a skipped step from an observed failure, trace backwards: (1) Name the visible symptom. (2) Identify which step's precondition, if missing, would produce that symptom. (3) Check whether that step was actually executed to the required standard, not merely marked complete. (4) When multiple weak steps are found, prioritize the earliest one in the sequence \u2014 remedying earlier steps often unblocks later ones."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Tracing 'activity without progress' to skipped Step 1",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort has a formed coalition, a documented vision, and a project plan with 30 workstreams. Six months in, activity is high, meetings are constant, but no meaningful progress is visible. Volunteers are hard to recruit; managers describe the effort as 'important but not urgent.'",
+        "diagnosis": "The symptom 'important but not urgent' points to skipped or weak Step 1 (urgency). The coalition and vision exist as formal artifacts, but the organization does not believe change cannot wait. This is why volunteers are scarce and progress is stalling despite high activity. The coalition was assembled without genuine urgency to motivate it, and the effort is now suffering the downstream consequences.",
+        "reasoning": "The tracing: symptom (activity without progress, volunteers scarce) \u2192 precondition missing (motivation to change now) \u2192 step responsible (Step 1). Notice that the coalition and vision are present, so the immediate temptation is to diagnose Step 2 or Step 3 as weak. But the actual root cause is one step earlier \u2014 without urgency, no downstream step will function correctly regardless of its formal completion."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Tracing reversion to skipped Step 8",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort was declared complete two years ago after achieving strong Step 6 wins and sustaining behavior through Step 7. The coalition dispersed. Eighteen months later, an audit finds that the organization has largely reverted to pre-change behaviors. New hires are being selected under the old criteria; promotion decisions reward pre-change behaviors; the new operating model exists on paper but not in practice.",
+        "diagnosis": "The reversion pattern points to skipped or inadequate Step 8 (institute change). The Step 6 wins were real, and Step 7 sustained behavior for a period, but the change was never anchored into the systems that produce behavior at scale \u2014 hiring, promotion, succession. When coalition attention withdrew, those systems pulled behavior back to the pre-change default.",
+        "reasoning": "The tracing: symptom (reversion after coalition dispersal) \u2192 precondition missing (behavior anchored in systems, not just in coalition pressure) \u2192 step responsible (Step 8). This is one of the most consequential skipped steps because the effort appears successful at the moment of the coalition's dispersal, and the failure only becomes visible over the following one to two years."
+      }
+    },
+    {
+      "id": "comp-example-03",
+      "cdt_type": "example",
+      "title": "Tracing 'motivated people, no progress' to skipped Step 5",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort has a strong coalition, a clear vision, and roughly 12% of the workforce actively volunteering. Twelve months in, however, execution is slow. Volunteers describe feeling frustrated: their day jobs, reporting structures, and performance metrics have not changed to support the new work. Meetings about the change happen constantly; changes to actual work do not.",
+        "diagnosis": "The symptom 'motivated people frustrated by inability to act' points squarely at skipped or under-executed Step 5 (enable action by removing barriers). The earlier steps have produced their outputs \u2014 urgency, coalition, vision, volunteers \u2014 but the structural and procedural barriers that would allow those volunteers to actually change how work is done have not been removed.",
+        "reasoning": "The tracing: symptom (motivated people cannot act) \u2192 precondition missing (barriers removed, systems aligned) \u2192 step responsible (Step 5). This is a common under-execution pattern because Step 5 requires the coalition to use its authority visibly \u2014 often against structures and policies that senior leaders themselves put in place. It is politically harder than Steps 1-4 and is frequently soft-pedaled."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Stopping at the visible symptom",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A learner observes that a change effort at month 15 has failed to produce visible wins and concludes: 'Step 6 has been skipped.'",
+        "why_wrong": "Step 6 not producing wins is a symptom, not a diagnosis. The question is why wins have not been produced. If it is because barriers still block action, the root cause is Step 5. If it is because volunteers are absent, the root cause is Step 4. If it is because there is no urgency motivating the required effort, the root cause is Step 1. Diagnosing 'Step 6 skipped' when the actual issue is upstream stops the analysis at the visible symptom rather than tracing to the cause.",
+        "correct_framing": "Trace backwards. 'Wins are not being produced' is the presenting symptom. Ask what would need to be true for wins to appear \u2014 volunteers, removed barriers, a coalition that can prioritize win-generation. Whichever of these preconditions is missing points to the actual skipped step."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Assuming all failures need all steps re-executed",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A learner identifies weakness in Steps 1, 2, 4, and 5 of a struggling change effort and concludes that the coalition should restart the entire sequence.",
+        "why_wrong": "Weak later steps often result from weak earlier ones. If Step 1 (urgency) was skipped, then Steps 2 (coalition), 4 (volunteer army), and 5 (barrier removal) will all appear weak \u2014 because none of them can function correctly without the motivation urgency provides. Restarting the whole sequence is expensive and unnecessary; remedying Step 1 will often unblock the downstream steps once genuine urgency is created.",
+        "correct_framing": "Prioritize the earliest weak step in the sequence. Fixing Step 1 will improve the coalition's ability to function, the vision's credibility, the volunteer army's growth, and the coalition's willingness to remove barriers \u2014 cascading forward through the sequence. Do not restart what does not need restarting."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "You observe a change effort where motivated volunteers exist but no progress is being made \u2014 the volunteers are frustrated by their inability to act. Which step is most likely under-executed, and what is the tracing that leads to that conclusion?",
+        "expected_answer": "Step 5 (enable action by removing barriers) is most likely under-executed. The tracing: the symptom is motivated people who cannot act; the precondition missing is the removal of barriers that would allow action; the step responsible for producing that precondition is Step 5. The earlier steps produced their outputs (urgency, coalition, vision, volunteers), but the barriers blocking those volunteers from executing have not been cleared."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change effort is described as follows: The coalition is well-composed and highly active. A clear vision has been articulated. Volunteers have enlisted. Barriers have been removed. Multiple visible short-term wins were produced eighteen months ago, at which point the CEO publicly declared the transformation successful in the annual report. Coalition members were reassigned to new priorities; the change program was scaled down. Today, six months later, an internal survey finds that most of the new behaviors have quietly reverted, and the organization has largely returned to pre-change operating patterns. Which step was most likely under-executed?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 6 (generate short-term wins) \u2014 the wins were not real.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "The stem describes multiple visible wins that appear to have been genuine. Step 6 was executed. The failure pattern \u2014 reversion after coalition dispersal \u2014 points further downstream, to Steps 7 and 8."
+        },
+        {
+          "id": "B",
+          "text": "Step 7 (sustain acceleration) \u2014 the coalition accepted premature victory declaration and scaled back rather than pressing the advantage.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The specific pattern \u2014 early wins followed by public 'success' declaration, reassignment of the coalition, and reversion \u2014 is the classic Step 7 under-execution pattern. The coalition accepted the 'transformation complete' narrative rather than countering it and using the wins to justify escalated ambition. Because Step 7 was skipped, Step 8 (institutional anchoring) never happened, and the change reverted."
+        },
+        {
+          "id": "C",
+          "text": "Step 8 (institute change) \u2014 the change was not anchored into culture.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Step 8 was indeed not accomplished, but that is a symptom of the earlier failure, not the root cause. Step 8 could not begin because Step 7 was skipped \u2014 the coalition dispersed after the wins rather than pressing the advantage. Diagnosing Step 8 misses the earlier decision point where the failure was actually created. The earliest under-executed step in the sequence is Step 7."
+        },
+        {
+          "id": "D",
+          "text": "Step 1 (urgency) \u2014 reversion indicates initial urgency was insufficient.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "An effort that produced a well-composed coalition, a clear vision, active volunteers, removed barriers, and visible wins had adequate initial urgency. The failure is late-stage, not initial. Diagnosing Step 1 in this scenario reaches too far back and misplaces the intervention."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change effort is described as follows: A senior executive coalition of eight has been meeting for a year. A clear vision has been published. However, only about 30 people across a 20,000-employee organization have engaged actively with the change; most employees describe the effort as 'something the executives are doing.' The coalition has become frustrated at what it perceives as employee resistance. Which step is most likely under-executed, and which downstream failure is the coalition currently misdiagnosing?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 5 (barriers) is under-executed; the coalition is misdiagnosing the barrier problem as employee resistance.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The stem does not describe motivated people blocked by barriers \u2014 it describes an organization that is not engaged at all. Only 30 people out of 20,000 have chosen to participate. That is a Step 4 problem (no volunteer army), not a Step 5 problem (barriers). If volunteers existed, then barriers would be the next question; but volunteers have not yet been enlisted."
+        },
+        {
+          "id": "B",
+          "text": "Step 4 (enlist a volunteer army) is under-executed; the coalition is misdiagnosing an enlistment failure as resistance.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. 30 engaged participants out of 20,000 is a Step 4 failure \u2014 the volunteer army has not been recruited, so the change has no reach beyond the executive coalition. The coalition's misdiagnosis (calling this 'resistance') is a common pattern: it reframes the coalition's own failure to enlist as a failure of the workforce to volunteer, which points to the wrong intervention (fighting resistance) instead of the right one (creating enlistment pathways)."
+        },
+        {
+          "id": "C",
+          "text": "Step 2 (coalition) is under-executed; the coalition is too small.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "An eight-person senior executive coalition is not too small in itself \u2014 Kotter's coalitions can range widely in size. The stem does not describe symptoms of coalition inadequacy (no missing characteristics identified). The specific failure \u2014 near-zero broad engagement \u2014 points to Step 4, not Step 2."
+        },
+        {
+          "id": "D",
+          "text": "The effort is proceeding normally; broad engagement takes years to develop.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Broad engagement does not appear on its own. Step 4 requires active enlistment \u2014 creating pathways for interested employees to choose to participate. An effort at year one with 30 engaged people out of 20,000 is showing a specific Step 4 failure pattern, not a normal timeline. Waiting will not fix it; enlistment activity will."
+        }
+      ]
+    },
+    {
+      "id": "q-03",
+      "stem": "A struggling change effort shows weaknesses in multiple steps: the coalition seems half-hearted (Step 2), the vision is generic (Step 3), and few employees are volunteering (Step 4). Which intervention is most likely to be effective?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Restart the entire effort from Step 1.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Restarting the entire sequence is expensive and often unnecessary. The correct move is to prioritize the earliest weakness and remedy it, then reassess. Downstream steps often improve without direct intervention once earlier steps are corrected."
+        },
+        {
+          "id": "B",
+          "text": "Address Step 1 (urgency) first, since it is the earliest step and its absence likely explains the weakness in Steps 2, 3, and 4.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. When multiple weak steps co-occur, prioritize the earliest one in the sequence. A half-hearted coalition, a generic vision, and low volunteering are all signature symptoms of skipped or weak urgency \u2014 without genuine urgency, none of the downstream steps can function fully. Remedying Step 1 will often cascade forward and improve the downstream steps without requiring direct intervention on each."
+        },
+        {
+          "id": "C",
+          "text": "Address the weakest step (whichever is currently worst) first.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Addressing the worst symptom often misses the root cause. A weak Step 3 vision may be a symptom of a Step 2 coalition without conviction, which may in turn be a symptom of a skipped Step 1. Working forward from the earliest weakness is more effective than working from the visibly worst symptom."
+        },
+        {
+          "id": "D",
+          "text": "Address all three steps simultaneously.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Simultaneous intervention on three steps is often less effective than sequential intervention starting from the earliest. If Step 1 is remedied, Steps 2, 3, and 4 will improve as a cascading consequence \u2014 reducing the intervention required on each. Attempting all three at once dilutes attention and misses the leverage of sequential dependency."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Analytical and slightly detective-like. This RLO teaches diagnostic reasoning \u2014 using symptoms to identify root causes in a sequenced model. The tone should support careful causal tracing rather than surface-level pattern matching.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed all eleven prior RLOs. This RLO synthesizes the entire sequence: each step's signature failure mode must be recognized on sight, and the tracing skill (backwards from symptom to skipped step) must be practiced. The prerequisite chain is dense but necessary.",
+    "feedback_policy": "Feedback must (1) name the correct step, (2) trace the symptom to that step explicitly, (3) name the most common wrong answer and explain why it is a downstream effect rather than the root cause. This RLO's instructional value is in the tracing reasoning, not in getting the answer.",
+    "example_shape_hints": [
+      "Include worked examples showing the tracing process explicitly: symptom \u2192 missing precondition \u2192 responsible step.",
+      "Cover early-, middle-, and late-stage failures to give learners practice across the whole sequence.",
+      "Non-examples should target the two most damaging errors: stopping at the visible symptom, and restarting the whole sequence when only the earliest weakness needs remediation."
+    ],
+    "practice_shape_hints": [
+      "Practice scenarios should be rich enough to include multiple weak steps, so learners can practice the 'earliest weakness first' rule.",
+      "Include distractors that are downstream symptoms of the root cause, since these are the most common wrong answers.",
+      "At least one item should target the Step 7 skip that produces reversion, since this is the most consequential and most commonly missed diagnosis in practice."
+    ],
+    "salience_hook_description": "The hook should establish that this is the payoff \u2014 where the model earns its keep as a diagnostic tool. Learners should leave believing that skipped steps have signature failure patterns and that the tracing skill is what makes Kotter's model practically useful."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLOs 03-10: each step's specific output is the basis for identifying its skip. Learners should have each step's signature failure pattern accessible.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-example-03",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02",
+      "q-03"
+    ],
+    "event_9_enhance_retention": "This is the capstone RLO. Retention is supported by the diagnostic skill being immediately usable in any change context the learner encounters after the sequence."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_case_workbook",
+      "rationale": "The tracing skill requires volume \u2014 learners need many cases to build the pattern recognition that lets them read symptoms accurately. A workbook of 10-15 diagnostic cases across the full range of skipped-step patterns is high-leverage.",
+      "priority": "primary"
+    },
+    {
+      "format": "interactive_diagnostic_tool",
+      "rationale": "An interactive tool that presents a described change effort and asks the learner to work through the tracing process (symptom \u2192 missing precondition \u2192 responsible step) reinforces the method rather than just the answer.",
+      "priority": "secondary"
+    },
+    {
+      "format": "video_case_walkthroughs",
+      "rationale": "Video walkthroughs of tracing on 3-4 rich case studies model the reasoning process explicitly and are useful before learners attempt cases on their own.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This is the capstone RLO. Its instructional payload is the diagnostic tracing skill \u2014 moving from observed symptoms of change failure back to the specific step whose omission produced them. Three assessment items rather than the usual two, because the range of skipped-step patterns is broad and the 'earliest weakness first' heuristic (q-03) is a separate skill from single-symptom tracing (q-01, q-02). The examples are chosen to span the sequence (Step 1, Step 5, Step 8) and to model the tracing explicitly \u2014 the reasoning shown in each example is the specific technique learners should carry forward. Kotter's original 1995 article is cited alongside the 1996 book because the 'why transformations fail' framing is the specific intellectual foundation of this RLO.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

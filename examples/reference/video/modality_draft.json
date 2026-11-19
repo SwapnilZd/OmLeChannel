@@ -1,0 +1,53 @@
+{
+  "draft_id": "adkar-01-video-manager-l55",
+  "title": "ADKAR Change Framework — Manager Introduction",
+  "narrative": "A two-scene avatar-led video for a Level 55 Manager audience. The first scene establishes relevance by surfacing the cost of unstructured change management. The second scene teaches the five ADKAR elements with role-specific examples that help managers diagnose where their team members are stuck in a change journey.",
+  "scenes": [
+    {
+      "scene_id": "video-hook",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": [],
+          "component_ids": [],
+          "assessment_item_ids": []
+        }
+      ],
+      "learning_objective": "Learner understands why structured change management matters for managers.",
+      "narrative_role": "hook",
+      "affordance_id": "avatar_led_hook",
+      "teaching_pattern": "hook_then_rule",
+      "content_direction": "Open with a brief scenario: a manager who rolled out a new workflow system without addressing team resistance. The initiative failed not because of the technology, but because the manager skipped the human side of change. Use this to surface the need for a structured approach. End with a forward-looking bridge: ADKAR gives managers a language for diagnosing and addressing exactly these situations.",
+      "presentation_direction": "Avatar presents directly to camera against an approved deep-navy solid-color background (#1A1A2E). The framing should feel direct and professional throughout. No on-screen text is required for this scene.",
+      "referenced_asset_id": null,
+      "learner_engagement": "Consider a recent change initiative you managed or observed. Where do you think resistance was highest — and why?",
+      "transition_direction": "Bridge naturally into the ADKAR explanation: 'Let me walk you through the framework that would have helped.'",
+      "target_duration_seconds": 60
+    },
+    {
+      "scene_id": "video-adkar-explanation",
+      "source_content": [
+        {
+          "rlo_id": "rlo-adkar-01-name-and-sequence",
+          "rlo_version": "1.1.0",
+          "objective_ids": ["lo-01"],
+          "concept_ids": ["c-01"],
+          "component_ids": [],
+          "assessment_item_ids": []
+        }
+      ],
+      "learning_objective": "Learner can name the five ADKAR elements in sequence and describe how each applies to a manager's role.",
+      "narrative_role": "explanation",
+      "affordance_id": "avatar_led_explanation",
+      "teaching_pattern": "direct_instruction",
+      "content_direction": "Explain each of the five ADKAR elements — Awareness, Desire, Knowledge, Ability, Reinforcement — in sequence. For each element, give one brief example that is specifically relevant to a manager coaching a team member through change. Emphasise the diagnostic value of the sequence: if a team member is struggling, identifying which element is missing tells the manager exactly what kind of support to provide. Highlight the two-A distinction (Awareness vs Ability) as the most common source of misdiagnosis.",
+      "presentation_direction": "Avatar presents directly to camera against an approved solid-color background throughout. Pacing should allow the learner to absorb each element before moving to the next. No supplementary visual assets are required for this scene.",
+      "referenced_asset_id": null,
+      "learner_engagement": null,
+      "transition_direction": null,
+      "target_duration_seconds": 120
+    }
+  ]
+}

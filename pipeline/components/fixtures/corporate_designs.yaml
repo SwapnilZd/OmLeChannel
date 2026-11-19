@@ -1,0 +1,102 @@
+version: 1
+description: Topic-neutral deterministic preview data for implemented corporate e-learning variants.
+screens:
+  - type: paired_comparison
+    layout_variant: before_after
+    heading: From Informal to Traceable Decisions
+    introduction: Compare the same decision before and after a consistent evidence practice is introduced.
+    left: {label: Before, summary: Decisions rely on personal recall., points: [Evidence is gathered inconsistently., Rationale is difficult to reconstruct., Review happens only after a problem.]}
+    right: {label: After, summary: Decisions follow an explicit evidence practice., points: [Relevant evidence is recorded., Rationale can be reviewed., Outcomes inform the next decision.]}
+  - type: paired_comparison
+    layout_variant: pros_cons
+    heading: Evaluate the Proposed Approach
+    introduction: The source presents genuine benefits and limitations rather than a correct and incorrect side.
+    left: {label: Advantages, summary: The approach improves consistency., points: [Creates a shared decision record., Makes review more efficient., Clarifies ownership.]}
+    right: {label: Limitations, summary: The approach adds deliberate effort., points: [Requires an agreed format., Adds time during adoption., Needs periodic maintenance.]}
+  - type: paired_comparison
+    layout_variant: do_dont
+    heading: Practical Communication Guidance
+    introduction: Translate a supplied behavioral standard into actions learners can recognize.
+    left: {label: Do, summary: Make the evidence visible., points: [State what was observed., Explain the applicable rule., Record the chosen response.]}
+    right: {label: Don't, summary: Hide uncertainty behind confidence., points: [Present assumptions as facts., Skip the governing rule., Omit unresolved questions.]}
+  - type: paired_comparison
+    layout_variant: current_future
+    heading: Current and Intended Conditions
+    introduction: Describe a target state without implying that the transformation has already occurred.
+    left: {label: Current, summary: Teams use several local approaches., points: [Terminology varies., Records are stored separately., Review criteria differ.]}
+    right: {label: Intended, summary: Teams use one adaptable standard., points: [Terms are consistently defined., Records can be located., Reviews use shared criteria.]}
+
+  - type: disclosure_list
+    layout_variant: accordion
+    heading: Explore the Decision Record
+    instruction: Expand the sections that are relevant to your role.
+    items:
+      - {label: Evidence, heading: "What was observed?", body: Record the facts and source material that directly informed the decision. Separate observations from interpretations.}
+      - {label: Rule, heading: "What governed the choice?", body: Identify the policy, principle, or criterion used to interpret the evidence.}
+      - {label: Response, heading: "What action followed?", body: Describe the selected action and why it was proportionate to the available evidence.}
+      - {label: Review, heading: "What happened next?", body: Capture the outcome, unresolved uncertainty, and any adjustment required.}
+  - type: disclosure_list
+    layout_variant: faq
+    heading: Common Questions
+    instruction: Open a question to review its grounded answer.
+    items:
+      - {label: "What counts as relevant evidence?", heading: Evidence connected to the decision, body: Relevant evidence can change the interpretation or choice. Interesting but unrelated information should not crowd the record.}
+      - {label: "What if a critical fact is missing?", heading: Make uncertainty explicit, body: Record the gap and choose only an action that the available evidence can support.}
+      - {label: "When should the decision be reviewed?", heading: Use a meaningful trigger, body: Review when new evidence appears, the outcome differs from expectations, or a stated review point is reached.}
+  - type: disclosure_list
+    layout_variant: click_reveal
+    heading: Predict Before You Reveal
+    instruction: Consider the prompt, then open the explanation. This reflection is not collected or graded.
+    items:
+      - {label: "Why separate observations from assumptions?", heading: Reveal the explanation, body: The separation makes uncertainty visible and prevents a plausible interpretation from being treated as established fact.}
+      - {label: "Why record the governing rule?", heading: Reveal the explanation, body: A stated rule makes the reasoning traceable and allows another reviewer to evaluate the same evidence.}
+
+  - type: relationship_diagram
+    layout_variant: cycle
+    heading: A Continuous Review Cycle
+    introduction: The final activity supplies evidence for the next observation.
+    nodes:
+      - {id: observe, label: Observe, detail: Gather relevant evidence.}
+      - {id: interpret, label: Interpret, detail: Apply the governing rule.}
+      - {id: respond, label: Respond, detail: Take a proportionate action.}
+      - {id: review, label: Review, detail: Examine the outcome.}
+  - type: relationship_diagram
+    layout_variant: hierarchy
+    heading: Levels of Decision Support
+    introduction: Each higher level depends on the foundation beneath it.
+    nodes:
+      - {id: foundation, label: Reliable evidence, detail: Observable and relevant information.}
+      - {id: reasoning, label: Explicit reasoning, detail: A visible connection between evidence and rule.}
+      - {id: action, label: Proportionate action, detail: A response supported by the reasoning.}
+      - {id: outcome, label: Reviewable outcome, detail: A result that can improve future choices.}
+  - type: relationship_diagram
+    layout_variant: continuum
+    heading: Response Proportionality
+    introduction: The appropriate response changes with the strength and consequence of the evidence.
+    x_axis_label: Lower commitment to higher commitment
+    nodes:
+      - {id: note, label: Record, detail: Preserve an observation.}
+      - {id: verify, label: Verify, detail: Seek confirming evidence.}
+      - {id: adjust, label: Adjust, detail: Change a limited part of the response.}
+      - {id: escalate, label: Escalate, detail: Involve additional authority.}
+  - type: relationship_diagram
+    layout_variant: matrix_2x2
+    heading: Classify the Response
+    introduction: Both axes and every item position are supplied by the source content.
+    x_axis_label: Lower to higher effort
+    y_axis_label: Lower to higher consequence
+    nodes:
+      - {id: monitor, label: Monitor, detail: Low consequence and low effort., position: bottom_left}
+      - {id: automate, label: Automate, detail: Low consequence and higher effort., position: bottom_right}
+      - {id: consult, label: Consult, detail: Higher consequence and low effort., position: top_left}
+      - {id: govern, label: Govern, detail: Higher consequence and higher effort., position: top_right}
+  - type: relationship_diagram
+    layout_variant: linear_flow
+    heading: A Simple Directional Flow
+    introduction: Use this variant only when the path does not branch or converge.
+    nodes:
+      - {id: input, label: Receive, detail: Capture the request.}
+      - {id: review, label: Review, detail: Check evidence and criteria.}
+      - {id: decide, label: Decide, detail: Select the supported response.}
+      - {id: record, label: Record, detail: Preserve the rationale.}
+      - {id: followup, label: Follow up, detail: Review the outcome.}

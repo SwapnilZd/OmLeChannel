@@ -1,0 +1,32 @@
+id: tabbed_content
+name: Tabbed Content
+description: Groups related details behind keyboard-accessible tabs.
+when_to_use: Use for 2-5 peer categories whose details should be explored without implying an order.
+tags: [tabs, categories, explore]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [explain_categories, explore_peer_details]
+  content_shapes: [peer_items, grouped_detail]
+  relationships: [parallel, independent]
+  interactions: [tabs, reveal]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 2, max_items: 5}
+  retrieval_text: >
+    Interactive content slide for two to five peer categories with substantial detail hidden
+    behind keyboard-accessible tabs. Best for balanced or text-heavy independent items where order
+    does not matter. Not for ordered steps, simultaneous comparison, or very short labels only.
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  instruction: {target_chars: 60, max_chars: 110}
+  tabs:
+    type: array
+    min_items: 2
+    max_items: 5
+    item_slots:
+      label: {target_chars: 20, max_chars: 35}
+      heading: {target_chars: 40, max_chars: 70}
+      body: {target_chars: 180, max_chars: 320}
+image_slots: []

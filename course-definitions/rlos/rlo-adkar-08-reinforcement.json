@@ -1,0 +1,361 @@
+{
+  "id": "rlo-adkar-08-reinforcement",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR Element R \u2014 Reinforcement to Sustain the Change",
+  "topic": "ADKAR Element R \u2014 Reinforcement to Sustain the Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-07-ability"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-09-identify-barrier-point",
+    "rlo-adkar-10-differentiated-interventions"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what Reinforcement means in ADKAR, and distinguish sustained reinforcement from initial reward or recognition.",
+  "performance_context": "When observing the late phase of a change effort, the learner should be able to assess whether reinforcement mechanisms are in place to sustain the change and distinguish these from one-time celebratory activities that do not produce sustained behavior.",
+  "enabling_objective": {
+    "id": "lo-08",
+    "statement": "Define Reinforcement in ADKAR terms, and distinguish sustained mechanisms that keep the change in place from one-time rewards or recognition events.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Reinforcement in ADKAR",
+      "definition": "Reinforcement is the state in which mechanisms are in place that sustain the change in the individual over time \u2014 preventing reversion to prior behaviors and continuing to support the new behaviors as circumstances change. It is the durability element of ADKAR.",
+      "elaboration": "Prosci is explicit that Reinforcement is not the same as celebration, recognition, or an end-of-project reward. It is an ongoing state in which the individual's environment continues to support the new behaviors: through performance systems that reward the change, through peer and manager reinforcement of the new norms, through regular measurement and feedback, through corrective intervention when reversion begins. Reinforcement is what happens between the change being adopted and the change becoming routine. Without it, individuals reliably drift back to prior behaviors even after achieving Ability.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Reinforcement is optional maintenance \u2014 the real work of change is over by the time Ability is reached.",
+          "correction": "Reinforcement is one of the five ADKAR elements and is not optional. Individuals routinely revert to prior behaviors within weeks or months of achieving Ability if reinforcement mechanisms are not in place. Prosci identifies Reinforcement as the element most commonly under-executed, and its absence produces the specific late-stage failure where the change appears successful and then quietly disappears."
+        },
+        {
+          "id": "m-02",
+          "statement": "Reinforcement means celebrating the successful completion of the change.",
+          "correction": "Celebration is a one-time event; Reinforcement is a sustained state. A celebration marks the end of the change effort's active phase; Reinforcement is what continues after that phase ends. Confusing the two produces the pattern where a change is celebrated and then reverts because no ongoing mechanisms were established."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Sustained mechanisms vs. one-time events",
+      "definition": "Reinforcement in the ADKAR sense requires mechanisms that operate continuously over time \u2014 performance systems that reward the new behaviors, peer and manager reinforcement of new norms, regular measurement, and corrective interventions when reversion begins. One-time rewards or recognition events do not constitute Reinforcement; they mark the change but do not sustain it.",
+      "elaboration": "The distinction between sustained mechanisms and one-time events matters because they behave very differently after the change effort's active phase ends. Sustained mechanisms \u2014 updated performance criteria, adjusted incentives, integrated measurement into regular management routines \u2014 continue to operate without dedicated change-team attention. One-time events (celebrations, awards, kickoff bonuses) do not. Change efforts that mistake one-time events for Reinforcement typically see the change revert within one to two years of the coalition or change team dispersing.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Recognizing early adopters at a celebration event constitutes Reinforcement.",
+          "correction": "Recognition at a one-time event is a legitimate motivator but does not by itself constitute Reinforcement. Reinforcement requires ongoing mechanisms that continue to operate after the event \u2014 updated performance criteria, sustained management attention, regular measurement. A recognition event without these ongoing mechanisms marks the change but does not sustain it."
+        },
+        {
+          "id": "m-04",
+          "statement": "Reinforcement is the responsibility of the change team.",
+          "correction": "The change team can set up Reinforcement mechanisms, but the mechanisms themselves must be embedded in the ongoing operations of the organization \u2014 HR systems, management routines, performance processes, peer norms. Change teams disperse after the active phase; Reinforcement must survive that dispersal, which means the ownership must transfer to line management and operational systems before the change effort ends."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Reinforcement is the ADKAR element most commonly skipped and most consequential to skip. By the time individuals have Ability, change efforts have typically been running for a year or more, budgets are tight, and there is enormous pressure to declare the change complete and move on. But behaviors that are not reinforced revert \u2014 reliably and often quickly. The change effort that treated Ability as the finish line rediscovers, six to eighteen months later, that the affected population has quietly returned to what they were doing before. Reinforcement is what prevents this specific outcome."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Reinforcement in ADKAR is the state in which mechanisms are in place that sustain the change over time. It is ongoing, not one-time. Without Reinforcement, individuals reliably revert to prior behaviors even after achieving Ability \u2014 because the surrounding environment (systems, incentives, norms) continues to operate as if the change had not occurred."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Sustained mechanisms are what constitute Reinforcement: updated performance criteria, adjusted incentives, integrated measurement, ongoing management attention, peer norms. One-time events (celebrations, awards, kickoff bonuses) are not Reinforcement \u2014 they mark the change but do not sustain it. The test is whether the mechanism continues to operate after the change team disperses; if it does not, it is not Reinforcement."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Reinforcement through updated performance systems",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change to a new customer-service protocol includes updates to the performance management system: employees' quarterly reviews now include specific criteria for the new behaviors, and their ratings depend meaningfully on whether they consistently follow the new protocol.",
+        "what_happens": "Over the next 18 months, the change effort's active phase ends. The change team disperses. But the performance system continues to operate \u2014 quarterly reviews continue to include the new criteria, ratings continue to depend on them, promotions and compensation decisions continue to reflect them. Employees who might otherwise have drifted back to old behaviors have ongoing reasons not to. Two years in, the change has not reverted.",
+        "reasoning": "This is what Reinforcement looks like in practice. The mechanism operates continuously and does not depend on the change team's attention. It is embedded in an existing operational system (performance management) that would run regardless of the change effort's status. The change is not merely adopted; it is anchored in what the organization measures and rewards."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Reinforcement through management routines",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A change effort establishes that managers now include a specific question in every one-on-one: 'How are you using the new [tool / process / behavior]? What is helping? What is getting in the way?' This becomes a permanent element of the one-on-one template used across the organization.",
+        "what_happens": "The question surfaces ongoing issues, keeps the change salient in managers' attention, provides continuous data on adoption, and creates a regular opportunity for coaching and course-correction. When early signs of reversion appear in one team, the manager notices during a one-on-one and intervenes before the pattern spreads.",
+        "reasoning": "This is Reinforcement embedded in an existing operational routine (one-on-ones) rather than added as a separate activity. Because it lives in a routine that continues regardless of the change effort's status, it survives the change team's dispersal. The mechanism is simple, low-cost, and continuous \u2014 exactly the character Reinforcement requires."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Celebration mistaken for Reinforcement",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02",
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "A change effort concludes with a company-wide celebration marking the successful adoption of the new operating model. Awards are given to teams that adopted early; the CEO thanks the change team publicly; a video montage of the effort is played. The change team then disperses and members return to their regular roles.",
+        "why_wrong": "This is a celebration, not Reinforcement. The event marks the change but does not sustain it. No ongoing mechanisms have been established: performance criteria are unchanged, incentives are unchanged, management routines continue to focus on other things. Within a year, adoption begins to decline \u2014 not through active resistance but through gradual drift, as employees encounter situations where old behaviors are faster or more convenient and there is nothing in the environment to hold them to the new ones.",
+        "correct_framing": "Celebration is a legitimate part of ending the active phase of a change, but it is not Reinforcement. Reinforcement is what happens after the celebration \u2014 the mechanisms that continue to operate for years, sustaining the change through the daily choices of individuals in ordinary work situations. A change effort that treats celebration as sufficient has skipped the Reinforcement element in all but name."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Reinforcement dependent on the change team",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A change team establishes what it calls Reinforcement: quarterly change-adoption reviews conducted by the change team, monthly newsletters from the change team, and a hotline for adoption questions run by the change team.",
+        "why_wrong": "All the mechanisms depend on the change team's continued existence. When the change team disperses \u2014 as it will, since change teams are temporary \u2014 the reviews stop, the newsletters end, and the hotline closes. The mechanisms cannot survive their author's dispersal, which means they do not provide durable Reinforcement.",
+        "correct_framing": "Reinforcement must be embedded in ongoing operations, not in the change team's own activities. Performance systems, management routines, HR processes, and peer norms continue after the change team leaves; change-team newsletters and reviews do not. The ownership of Reinforcement must transfer to line management and operational systems before the change effort ends \u2014 otherwise Reinforcement ends with the change effort itself."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is Reinforcement in ADKAR, and how is it distinguished from one-time recognition or celebration?",
+        "expected_answer": "Reinforcement is the state in which ongoing mechanisms (updated performance systems, management routines, peer norms) sustain the change over time; it is distinguished from one-time recognition or celebration by continuity \u2014 Reinforcement continues to operate after the change team disperses, while events do not."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change team, planning the closing phase of a two-year effort, proposes the following as their Reinforcement plan: (1) a company-wide celebration event, (2) awards for the top-performing adoption teams, and (3) a video montage of the change journey to be played at the event. The team disperses after the event, and members return to regular roles. How should this plan be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The plan is well-constructed \u2014 it recognizes the effort and marks the successful adoption of the change.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "The plan marks the change but does not sustain it. All three elements are one-time events with no continuing mechanism. Within a year, adoption is likely to decline through gradual drift as employees encounter situations where old behaviors are more convenient and there is nothing in the environment to hold them to the new ones. Reinforcement requires ongoing mechanisms, not a closing celebration."
+        },
+        {
+          "id": "B",
+          "text": "The plan is not Reinforcement. All three elements are one-time events; Reinforcement requires ongoing mechanisms that continue to operate after the change team disperses.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The plan is a celebration plan, not a Reinforcement plan. Celebration is a legitimate part of ending the active phase of a change, but it does not sustain the change. Reinforcement requires mechanisms that continue to operate for years \u2014 updated performance criteria, management routines that keep the change salient, peer norms that reinforce the new behaviors. A closing event without these ongoing mechanisms leaves the change unprotected against the drift that follows."
+        },
+        {
+          "id": "C",
+          "text": "The plan is adequate because Reinforcement is one of the less consequential ADKAR elements.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Reinforcement is not less consequential \u2014 Prosci identifies it as the element most commonly under-executed and one of the most consequential to skip. Individuals routinely revert to prior behaviors within months of achieving Ability if Reinforcement mechanisms are not in place. Treating Reinforcement as optional maintenance is a specific pattern of change failure that this element exists to prevent."
+        },
+        {
+          "id": "D",
+          "text": "The plan should add a newsletter from the change team to keep the change top-of-mind.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "A newsletter from the change team depends on the change team's continued existence. When the team disperses, the newsletter ends. Reinforcement must be embedded in ongoing operations \u2014 performance systems, management routines, HR processes \u2014 not in the change team's own activities. Adding change-team newsletters to a celebration plan does not address the underlying problem, which is that no durable mechanisms have been established."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change effort has produced strong Ability across the affected population. A leader argues that Reinforcement is unnecessary because 'the change is working \u2014 people are doing the new work, and we should let them continue rather than adding more bureaucracy.' How should this argument be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The leader is correct \u2014 if Ability is present, Reinforcement is redundant.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Ability is a state that decays without Reinforcement. Individuals who can perform the new behaviors will, over time, encounter situations where old behaviors are more convenient \u2014 and without Reinforcement mechanisms, they will drift back. Assuming that visible current adoption means the change will persist without Reinforcement is precisely the pattern that produces the most common late-stage change failure."
+        },
+        {
+          "id": "B",
+          "text": "The leader is misreading the situation. Ability does not automatically persist \u2014 without Reinforcement mechanisms, individuals reliably drift back to prior behaviors within months to years.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Reinforcement is not bureaucracy \u2014 it is the ongoing operation of mechanisms that prevent drift. Without it, even individuals who have achieved Ability revert as they encounter situations where old behaviors are faster or more convenient. The 'let them continue' framing assumes durability that the ADKAR sequence is specifically designed to teach is not automatic. The most common late-stage failures in change efforts are precisely this pattern."
+        },
+        {
+          "id": "C",
+          "text": "The leader is correct as long as Ability is broadly distributed across the population.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Broad Ability does not by itself produce durability. Individuals with Ability revert without Reinforcement just as reliably as individuals without it \u2014 perhaps more so, because the reversion is quiet and hard to spot when the population was previously performing. Distribution of Ability does not substitute for the mechanisms that sustain it."
+        },
+        {
+          "id": "D",
+          "text": "The leader is correct because Reinforcement adds cost without benefit.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The cost of Reinforcement is generally low relative to the cost of the change effort itself, and its absence produces exactly the outcome the change was meant to prevent \u2014 reversion to prior behaviors. Framing Reinforcement as cost-without-benefit inverts the actual calculation: the cost of skipping it is typically much higher than the cost of establishing it."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Cautionary and slightly patient. This RLO teaches a counterintuitive point \u2014 that visible success can be short-lived without ongoing mechanisms. The tone should support taking Reinforcement seriously even when the change appears to be working.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 07. Ability is established as the precondition \u2014 Reinforcement operates on individuals who have already reached Ability. The specific work of Reinforcement is preventing reversion in that population.",
+    "feedback_policy": "Feedback must distinguish between one-time events and ongoing mechanisms in every relevant case. Do not treat 'celebration' and 'Reinforcement' as similar responses to the same need \u2014 they address different things, and confusing them is the specific failure mode this RLO exists to prevent.",
+    "example_shape_hints": [
+      "Include at least one example of Reinforcement embedded in an existing operational system (performance management, one-on-ones) \u2014 these are the most durable and lowest-cost forms.",
+      "Include a non-example of celebration mistaken for Reinforcement, since this is the most common substitution.",
+      "The 'change team as ongoing mechanism' non-example is high-value because it teaches learners that Reinforcement must survive the change team's dispersal."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present described Reinforcement plans and ask the learner to evaluate whether they will actually sustain the change.",
+      "At least one item should target the 'Ability is enough' misconception, since it is the specific rationale for skipping Reinforcement in efforts that appear to be succeeding.",
+      "Distractors should include one-time events framed as Reinforcement, since this is the most common practical substitution."
+    ],
+    "salience_hook_description": "The hook should establish that Reinforcement is where successful change efforts most quietly disappear. Learners should leave believing that Reinforcement is not maintenance but a distinct element with its own specific work \u2014 sustaining the change against the ongoing drift that would otherwise erode it."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-07: Ability is the state of demonstrated performance. This RLO adds the next state \u2014 Reinforcement, which sustains Ability against the drift that would otherwise erode it.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLOs 09 and 10 revisit Reinforcement gaps as diagnostic cases and as differentiated intervention targets."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "mechanism_design_module",
+      "rationale": "Reinforcement is fundamentally about designing durable mechanisms. A module that walks learners through evaluating and designing Reinforcement mechanisms \u2014 embedded in performance systems, routines, and norms \u2014 supports the applied nature of the objective.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_evaluation_module",
+      "rationale": "Comparing Reinforcement plans (celebrations vs. embedded mechanisms) supports the specific instructional payload well.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video contrasting one-time events with sustained mechanisms and showing what each looks like over the two years after a change effort ends.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Reinforcement is the ADKAR element most commonly under-executed, and its absence produces the specific late-stage failure pattern where the change appears successful and then quietly reverts. The instructional payload is (a) the character of Reinforcement as ongoing rather than one-time, (b) the specific mechanism types that constitute durable Reinforcement (performance systems, management routines, embedded measurement), and (c) the recognition that Reinforcement must survive the change team's dispersal, which means ownership must transfer to line operations before the change effort ends. The celebration-vs-Reinforcement distinction is treated as central because the substitution of the former for the latter is the specific practical failure mode most likely in professional-services environments.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

@@ -1,0 +1,11 @@
+<section class="slide-video" data-screen-id="{{ s.screen_id }}">
+  {% if s.title %}<h2>{{ s.title }}</h2>{% endif %}
+  <div class="video-frame">
+    <video controls preload="metadata" {% if s.poster_path %}poster="{{ s.poster_path }}"{% endif %}>
+      <source src="{{ s.video_src }}" />
+      {% if s.captions_path %}<track kind="captions" src="{{ s.captions_path }}" srclang="en" label="English" default />{% endif %}
+      Your browser does not support embedded video.
+    </video>
+    {% if s.captions_path %}<button type="button" class="video-cc-toggle" aria-pressed="true" aria-label="Turn captions off" onclick="toggleCaptions(this)">CC</button>{% endif %}
+  </div>
+</section>

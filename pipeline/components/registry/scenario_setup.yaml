@@ -1,0 +1,60 @@
+id: scenario_setup
+name: Scenario Setup
+description: >
+  Presents a branching scenario to the learner: the situation, a decision
+  prompt, and clickable choice buttons that link to branch-outcome screens.
+when_to_use: >
+  Use once per branching scenario, at the point where the learner must make
+  a decision. Must be accompanied by one scenario_branch screen per choice
+  and one scenario_resolution screen.
+tags: [scenario, branching, decision, interactive, mid-course]
+sequence_position: middle
+selection:
+  category: practice
+  purposes: [decision_practice, branching_scenario]
+  content_shapes: [scenario_with_choices]
+  relationships: [branching]
+  interactions: [choice, branch]
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: true
+  capacity: {min_items: 2, max_items: 4}
+  retrieval_text: >
+    Practice slide presenting one scenario, a decision prompt, and two to four choices that branch
+    to separate outcomes. Best when the learner must make a consequential choice using supplied
+    evidence. Supports an optional scene-setting image. Requires matching branch outcome slides.
+
+slots:
+  title:
+    description: Scenario title
+    target_chars: 50
+    max_chars: 80
+    required: true
+  setup_text:
+    description: >
+      Scene-setting narrative. 2-4 sentences. Establishes who, what, and the
+      dilemma the learner faces.
+    target_chars: 200
+    max_chars: 350
+    required: true
+  prompt:
+    description: The decision question posed to the learner.
+    target_chars: 60
+    max_chars: 120
+    required: true
+  branches:
+    type: array
+    min_items: 2
+    max_items: 4
+    item_slots:
+      id:
+        description: >
+          Branch screen ID — must match the screen_id of the target
+          scenario_branch screen.
+        required: true
+      label:
+        description: Button label for this branch choice
+        target_chars: 60
+        max_chars: 100
+
+image_slots: []

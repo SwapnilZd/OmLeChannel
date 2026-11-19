@@ -1,0 +1,37 @@
+<section class="slide-worked-example" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.title }}</h2>
+
+  <div class="we-stepper">
+    <button class="we-step current" data-step="0" onclick="weActivate(this)">
+      <span class="we-icon">1</span>
+      <span class="we-label">Scenario</span>
+    </button>
+    <div class="we-line"></div>
+    <button class="we-step locked" data-step="1" disabled onclick="weActivate(this)">
+      <span class="we-icon">2</span>
+      <span class="we-label">Analysis</span>
+    </button>
+    <div class="we-line"></div>
+    <button class="we-step locked" data-step="2" disabled onclick="weActivate(this)">
+      <span class="we-icon">3</span>
+      <span class="we-label">Resolution</span>
+    </button>
+    <div class="we-line"></div>
+    <button class="we-step locked" data-step="3" disabled onclick="weActivate(this)">
+      <span class="we-icon">★</span>
+      <span class="we-label">Key Takeaway</span>
+    </button>
+  </div>
+
+  <div class="we-content">
+    <div class="we-panel" data-panel="0">{{ s.scenario | paragraphs }}</div>
+    <div class="we-panel" data-panel="1" hidden>{{ s.analysis | paragraphs }}</div>
+    <div class="we-panel" data-panel="2" hidden>{{ s.resolution | paragraphs }}</div>
+    <div class="we-panel we-takeaway" data-panel="3" hidden>{{ s.lesson | paragraphs }}</div>
+  </div>
+
+  <div class="we-nav">
+    <span class="we-progress">Step 1 of 4</span>
+    <button class="we-next-btn" onclick="weNext(this.closest('.slide-worked-example'))">Next →</button>
+  </div>
+</section>

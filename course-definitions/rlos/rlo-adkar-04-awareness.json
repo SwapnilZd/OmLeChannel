@@ -1,0 +1,362 @@
+{
+  "id": "rlo-adkar-04-awareness",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "ADKAR Element A \u2014 Awareness of the Need for Change",
+  "topic": "ADKAR Element A \u2014 Awareness of the Need for Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-03-sequenced-within-individual"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-adkar-05-desire"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what Awareness means in ADKAR, and distinguish awareness of the change from awareness of the need for change.",
+  "performance_context": "When observing or participating in the early phase of a change effort, the learner should be able to assess whether individuals have genuine Awareness in the ADKAR sense, or whether they have only been informed that a change is happening.",
+  "enabling_objective": {
+    "id": "lo-04",
+    "statement": "Define Awareness in ADKAR terms, and distinguish awareness of the need for change from awareness that a change is happening.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Awareness in ADKAR",
+      "definition": "Awareness is the state in which an individual understands why the change is needed \u2014 the specific business reasons, the risks of not changing, and the drivers behind the decision. It is a state of internalized understanding, not merely of exposure to information.",
+      "elaboration": "Prosci is specific that Awareness has particular content: the individual must understand what the change is, why it is happening now, what would happen if the organization did not change, and what is in it for the organization (and for the individual, where relevant). Simply being told that a change is coming does not produce Awareness in this sense \u2014 it produces informed observers who know an event is happening but not why it matters.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "If an employee has been told about the change, they have Awareness.",
+          "correction": "Being informed is not the same as having Awareness. Awareness requires understanding the reasons behind the change and the consequences of not changing \u2014 not just knowing that a change is happening. Employees who have received communications but cannot explain why the change is needed do not have Awareness in the ADKAR sense."
+        },
+        {
+          "id": "m-02",
+          "statement": "Awareness means the employee understands what will change \u2014 the specific new processes, systems, or behaviors.",
+          "correction": "That is Knowledge, not Awareness. Awareness is about why \u2014 the drivers, risks, and rationale for the change. Understanding what will change (the specific new processes) is Knowledge, which comes later in the sequence. Confusing the two collapses the first and third elements of the model."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Awareness of the change vs. awareness of the need for change",
+      "definition": "'Awareness of the change' means the employee knows a change is occurring. 'Awareness of the need for change' means the employee understands why the change is necessary. Only the latter is Awareness in the ADKAR sense.",
+      "elaboration": "The distinction is not semantic. An employee who has awareness of the change but not awareness of the need for change will treat the change as something being imposed on them \u2014 a decision they were not part of and do not endorse. This is compliance, not commitment, and it does not enable the Desire element to form. Prosci's specific definition \u2014 'awareness of the need for change' \u2014 is deliberately chosen to force this distinction. Announcements, project charters, and communication plans routinely produce the former without producing the latter.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Employees who read the announcement have Awareness.",
+          "correction": "Reading the announcement produces awareness of the change (they know it is happening). Awareness in the ADKAR sense requires understanding why the change is needed and what would happen without it. An announcement communicates what is changing; producing Awareness requires communicating the underlying rationale in a way that the employee internalizes."
+        },
+        {
+          "id": "m-04",
+          "statement": "Awareness is a communications problem \u2014 better communications will produce it.",
+          "correction": "Better communications help, but Awareness is a state in the individual, not a property of the communications. Two employees receiving the same communication may end up in different Awareness states depending on their engagement with the content, their prior beliefs, and their trust in the source. Awareness is measured by asking the individual to articulate the reasons for the change, not by counting the communications delivered."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "Awareness is the element most commonly confused with communication. Change teams frequently report that Awareness is complete because messages have been delivered \u2014 and are then surprised when the affected employees behave as if they have not heard a thing. The gap between delivered communications and internalized understanding is where most Awareness failures live."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Awareness in ADKAR is a state in the individual \u2014 they understand why the change is needed, what the risks of not changing are, and what drives the decision. Awareness is not a property of the change effort's communications; it is measured by whether the individual can articulate the reasons for the change in their own words."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Prosci's specific definition is 'awareness of the need for change,' not 'awareness of the change.' The distinction is load-bearing: an employee can know a change is happening (awareness of the change) without understanding why (awareness of the need). Only the latter is Awareness in the ADKAR sense."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Awareness assessed correctly",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A change manager wants to assess whether an employee has Awareness of an upcoming operating model change. She asks: 'Can you tell me, in your own words, why the company is making this change?'",
+        "response_with_awareness": "The employee answers: 'Our current model is producing longer response times to customer issues, and we're losing customers to competitors who resolve things faster. If we don't change, we'll continue losing accounts, especially in the segments that value responsiveness most.'",
+        "response_without_awareness": "The employee answers: 'I got the email. There's some kind of reorganization happening in Q3.'",
+        "reasoning": "The first response demonstrates Awareness \u2014 the employee has internalized the reasons and can articulate the drivers. The second response demonstrates awareness of the change (something is happening) without Awareness of the need for change. The diagnostic is not whether the employee has seen the communications; it is whether they can explain the reasoning."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The five things Awareness typically covers",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "Prosci identifies specific content that Awareness typically requires.",
+        "content": "(1) The nature of the change \u2014 what is changing. (2) Why the change is needed \u2014 the business drivers. (3) The risks of not changing \u2014 what happens if the status quo continues. (4) The nature of the change in the employee's own context \u2014 how it relates to their work. (5) 'What's in it for me' \u2014 the personal rationale, positive or negative, where relevant.",
+        "reasoning": "This is a checklist for producing Awareness, not for measuring it. An employee has Awareness when they can articulate these five things in their own terms \u2014 not when a communications team has published them. The content is the input; the state in the individual is the output."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Communications delivered, Awareness not achieved",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01",
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A change team reports: 'Awareness activities complete. Sent 12 emails, ran 4 town halls, published 3 intranet articles, reached 100% of employees with mandatory acknowledgment.'",
+        "why_wrong": "The team is reporting on activities delivered, not on Awareness achieved. 100% of employees can acknowledge receiving a communication while 60% of them cannot articulate why the change is needed. The activity metrics say nothing about the state of individuals.",
+        "correct_framing": "Awareness is measured in individuals. A random sample of employees asked 'why is this change happening?' produces the diagnostic \u2014 not the count of communications delivered. If most employees cannot answer the question, Awareness has not been achieved regardless of how many communications went out."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Awareness confused with Knowledge",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change manager reports that Awareness has been achieved because employees can now describe the new operating model \u2014 the specific processes, roles, and systems they will use after the change.",
+        "why_wrong": "The employees have Knowledge (they know what will change), but this does not tell us whether they have Awareness (they understand why it is changing). An employee could describe the new model in detail while still not understanding what business need it addresses or what would happen if the change did not occur.",
+        "correct_framing": "Awareness is about why. Knowledge is about what and how. The two elements are sequential, not equivalent. Producing Knowledge before Awareness is common (training happens before communications land) but is a specific violation of the ADKAR sequence, not a shortcut to it."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what is Awareness in ADKAR, and how is it distinguished from awareness of the change?",
+        "expected_answer": "Awareness in ADKAR is the state in which an individual understands why the change is needed \u2014 the drivers, risks, and rationale \u2014 as opposed to merely knowing that a change is happening; only the former is Awareness in the ADKAR sense."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change management team reports the following at month 3 of an effort: '95% of employees have received change communications through emails and town halls. 100% have acknowledged the mandatory awareness training. We consider the Awareness element complete for this population.' A subsequent survey asks a random sample of 50 employees 'why is this change happening?' \u2014 20 give substantive, accurate answers; 30 do not. How should this be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The team is correct \u2014 activity coverage indicates Awareness is complete.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Communications delivered is not the same as Awareness achieved. The survey directly measures the state in individuals, and 30 of 50 (60%) cannot articulate why the change is happening. Regardless of what percentage of employees received the communications, Awareness is not complete for this population \u2014 the majority remain at 'awareness of the change' without 'awareness of the need for change.'"
+        },
+        {
+          "id": "B",
+          "text": "Awareness is only partially achieved \u2014 40% of the sampled employees can articulate the rationale; 60% cannot. The team is confusing communication activity with the Awareness outcome.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Awareness is a state in individuals, and the survey is the appropriate measure. The activity metrics (communications delivered, acknowledgments received) tell us what the change team did, not what the population understands. The correct diagnosis is that Awareness activities have run without producing the Awareness outcome for the majority of the sampled population."
+        },
+        {
+          "id": "C",
+          "text": "The team should run additional communications until acknowledgment reaches 100%.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Acknowledgment is already at 100%, and yet 60% of the sample cannot articulate the reasoning. More acknowledgment will not fix an understanding problem. What is needed is different communications \u2014 content that addresses the specific gaps in employees' understanding \u2014 not more of the same activity that has already reached saturation without producing the outcome."
+        },
+        {
+          "id": "D",
+          "text": "The survey is unreliable and the team's assessment should be trusted.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The survey is the direct measure of the state ADKAR is meant to describe. Dismissing it in favor of activity metrics substitutes the process indicator for the outcome indicator \u2014 precisely the kind of confusion this RLO is teaching learners to avoid."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change manager asks an employee: 'What's changing?' The employee gives a detailed and accurate description of the new operating model, the new processes, and their role in it. The manager concludes that the employee has Awareness. Is this conclusion correct?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes \u2014 the employee's detailed knowledge of the change indicates Awareness.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "The employee has demonstrated Knowledge (they know what will change), which is a different ADKAR element. Awareness is about why the change is needed \u2014 the drivers and risks \u2014 not what the change consists of. The manager has diagnosed the wrong element."
+        },
+        {
+          "id": "B",
+          "text": "No \u2014 the employee has demonstrated Knowledge (understanding of what will change), which is a different ADKAR element. Awareness requires understanding why the change is needed.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Awareness and Knowledge are separate elements at different points in the ADKAR sequence. Understanding what is changing and how it will work is Knowledge; understanding why the change is needed and what would happen without it is Awareness. The employee has demonstrated one but not the other, and diagnosing them as having Awareness misses which element actually applies."
+        },
+        {
+          "id": "C",
+          "text": "Yes \u2014 an employee who knows the details necessarily knows the reasons.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Detailed knowledge of what is changing does not entail understanding why. An employee can memorize new processes, roles, and systems without ever internalizing the business case for the change. The two are separable states, which is why ADKAR treats them as separate elements."
+        },
+        {
+          "id": "D",
+          "text": "No \u2014 Awareness cannot be assessed through conversation.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Awareness can be assessed through conversation \u2014 it is one of the standard diagnostic methods. The problem with the manager's assessment is that they asked the wrong question ('what is changing') rather than the right one ('why is this change happening'). The method is fine; the diagnostic prompt was misaligned with the element being assessed."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Precise and diagnostic. This RLO teaches a specific distinction (Awareness vs. adjacent concepts) that requires careful reading of what a person actually understands versus what they have been told. The tone should support close attention to the difference.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01-03, so the individual-focus and sequenced-nature of ADKAR are established. This RLO adds the specific content and diagnostic of the first element.",
+    "feedback_policy": "Feedback must distinguish between the three most common confusions: (a) activity delivered vs. state achieved, (b) awareness of the change vs. awareness of the need for change, (c) Awareness vs. Knowledge. Each requires a distinct corrective framing.",
+    "example_shape_hints": [
+      "Include at least one example showing the diagnostic question in action ('why is this change happening?') and how different responses signal different states.",
+      "Include an example that explicitly disambiguates Awareness from Knowledge, since this is the most common adjacent-element confusion.",
+      "The five-content-elements checklist is high-value as a scaffold for producing (not merely measuring) Awareness; keep it prominent."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present situations where activity metrics and outcome measures diverge, and ask the learner to diagnose Awareness state.",
+      "At least one item should test the Awareness-vs-Knowledge confusion, since this is the specific adjacent-element error most likely in professional-services environments.",
+      "Distractors should include the 'activity = outcome' rationalization, since this is the most common practical misuse."
+    ],
+    "salience_hook_description": "The hook should establish that Awareness is where change teams most often mistake communication for understanding. Learners should leave believing that the diagnostic question ('why is this change happening?') is what matters, not the count of communications delivered."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-02: ADKAR describes states in individuals, not activities. This RLO applies that framing specifically to Awareness \u2014 a state, not a communications volume.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-05 (Desire) explicitly requires Awareness as its precondition."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_conversation_module",
+      "rationale": "The Awareness diagnostic is fundamentally a conversation \u2014 ask the employee why the change is happening, listen to what they say. An interactive module that lets learners practice this diagnostic against varied responses supports the objective well.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_vignette_module",
+      "rationale": "The contrast between employees with and without Awareness works well as paired vignettes with the same diagnostic question.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video that walks through the Awareness diagnostic with example responses at different states of understanding.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Awareness is the element most commonly diagnosed by activity metrics rather than outcome measures. The instructional payload is the shift from 'communications delivered' to 'individual understanding of why' as the measure. The two adjacent-element confusions (activity vs. state, Awareness vs. Knowledge) are targeted explicitly because they are the specific practical failure modes learners will encounter and reproduce. Prosci's five-content-elements checklist is included as a producing scaffold but not as the definition \u2014 the definition remains the state in the individual, not the checklist of inputs.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

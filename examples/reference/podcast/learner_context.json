@@ -1,0 +1,13 @@
+{
+  "role": "Manager",
+  "deloitte_level": 55,
+  "default_proficiency": "beginner",
+  "topic_proficiencies": {
+    "adkar": "beginner"
+  },
+  "goals": [
+    "Recognize the five ADKAR elements in the correct order and distinguish Awareness from Ability"
+  ],
+  "duration_limit_minutes": 10,
+  "business_context": {}
+}

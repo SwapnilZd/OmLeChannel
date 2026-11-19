@@ -1,0 +1,431 @@
+version: 1
+description: Searchable design inventory for corporate e-learning slide patterns.
+concepts:
+  # Intro and orientation
+  - id: agenda_roadmap
+    name: Agenda / Course Roadmap
+    implementation_status: planned
+    suggested_family: structured_list
+    implementation: {status: ready, family: structured_list, variant: agenda, notes: "Supports two to eight ordered topics near the opening."}
+    description: Ordered overview of modules or topics before instruction begins.
+    when_to_use: Use when learners benefit from seeing the scope and sequence up front.
+    selection: {category: intro, purposes: [preview_course, show_agenda], content_shapes: [ordered_topic_list], relationships: [ordered], interactions: [], densities: [sparse, balanced], sequence_positions: [intro], media_supported: false, capacity: {min_items: 2, max_items: 8}, retrieval_text: "Introductory roadmap for two to eight ordered modules or topics. Shows course scope and sequence without teaching the content."}
+  - id: audience_relevance
+    name: Why This Matters / WIIFM
+    implementation_status: planned
+    suggested_family: callout_focus
+    description: Connects the learning topic to the learner's role, risk, or business outcome.
+    when_to_use: Use near the opening when motivation or role relevance must be established.
+    selection: {category: intro, purposes: [establish_relevance, motivate_learner], content_shapes: [single_message_with_evidence], relationships: [cause_effect], interactions: [], densities: [sparse, balanced], sequence_positions: [intro], media_supported: true, capacity: {min_items: 1, max_items: 3}, retrieval_text: "Opening relevance slide explaining why the topic matters to the learner, their role, a business outcome, or a risk. Supports one strong message and up to three evidence points."}
+  - id: prerequisites_readiness
+    name: Prerequisites / Before You Begin
+    implementation_status: planned
+    suggested_family: structured_list
+    description: Lists required knowledge, access, materials, or preparation.
+    when_to_use: Use before technical, procedural, or system training with prerequisites.
+    selection: {category: intro, purposes: [confirm_readiness, list_prerequisites], content_shapes: [checklist], relationships: [requirements], interactions: [], densities: [sparse, balanced], sequence_positions: [intro], media_supported: false, capacity: {min_items: 1, max_items: 8}, retrieval_text: "Before-you-begin checklist for one to eight prerequisites such as prior knowledge, system access, materials, or preparation."}
+  - id: navigation_tutorial
+    name: How to Navigate
+    implementation_status: planned
+    suggested_family: labeled_diagram
+    description: Explains course controls and interaction conventions.
+    when_to_use: Use only when navigation or custom interactions are not self-evident.
+    selection: {category: intro, purposes: [explain_navigation, orient_interface], content_shapes: [labeled_interface], relationships: [spatial], interactions: [hotspots], densities: [sparse], sequence_positions: [intro], media_supported: true, capacity: {min_items: 2, max_items: 8}, retrieval_text: "Interface orientation slide labeling two to eight navigation controls or interaction conventions. Best when the course player has unfamiliar controls."}
+  - id: module_map
+    name: Module Map
+    implementation_status: planned
+    suggested_family: navigation_hub
+    description: Visual map of modules, dependencies, and current location.
+    when_to_use: Use for multi-module programs with non-trivial structure.
+    selection: {category: intro, purposes: [show_module_structure, locate_learner], content_shapes: [module_map], relationships: [hierarchy, dependency], interactions: [], densities: [balanced], sequence_positions: [intro, middle], media_supported: false, capacity: {min_items: 3, max_items: 12}, retrieval_text: "Visual map for three to twelve modules showing hierarchy, dependency, or current learner location in a larger program."}
+
+  # Content presentation
+  - id: text_image_explainer
+    name: Text + Supporting Image
+    implementation_status: planned
+    suggested_family: split_content
+    description: Explanatory prose paired with one meaningful visual.
+    when_to_use: Use for one concept that benefits from contextual or illustrative imagery.
+    selection: {category: content, purposes: [explain_concept, provide_context], content_shapes: [single_concept_with_visual], relationships: [single_focus], interactions: [], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Content slide for one concept with moderate or substantial explanatory text beside one meaningful image. Not for decorative imagery or multiple peer concepts."}
+  - id: icon_card_grid
+    name: Icon Card Grid
+    implementation_status: planned
+    suggested_family: card_grid
+    implementation: {status: ready, family: card_grid, variant: icon_cards, notes: "Uses concise peer items and optional supplied or generic icons."}
+    description: Short peer concepts presented as equal cards with icons.
+    when_to_use: Use for concise parallel categories that each have a recognizable icon.
+    selection: {category: content, purposes: [introduce_categories, summarize_concepts], content_shapes: [peer_items], relationships: [parallel], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: true, capacity: {min_items: 2, max_items: 6}, retrieval_text: "Grid of two to six equal peer cards, each with an icon, short heading, and concise explanation. Best for visually scannable categories; not text-heavy definitions."}
+  - id: image_card_grid
+    name: Image Card Grid
+    implementation_status: planned
+    suggested_family: card_grid
+    description: Peer items represented by thumbnail images and short captions.
+    when_to_use: Use when each category has a distinct meaningful visual.
+    selection: {category: content, purposes: [show_examples, compare_visual_categories], content_shapes: [image_caption_items], relationships: [parallel], interactions: [], densities: [sparse], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 4}, retrieval_text: "Two to four peer image cards with meaningful thumbnails, headings, and short captions. Best for visually distinct examples or categories, not long text."}
+  - id: statistic_dashboard
+    name: Key Statistics Dashboard
+    implementation_status: planned
+    suggested_family: card_grid
+    implementation: {status: ready, family: card_grid, variant: metric_cards, notes: "Supports two to six sourced metrics with concise interpretation."}
+    description: Highlights several quantitative facts with labels and context.
+    when_to_use: Use for two to six important metrics that support one message.
+    selection: {category: content, purposes: [highlight_metrics, establish_scale], content_shapes: [metric_cards], relationships: [parallel], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 6}, retrieval_text: "Dashboard of two to six key numbers or percentages, each with a label and concise interpretation. Best for establishing scale or evidence, not detailed data analysis."}
+  - id: expert_quote
+    name: Expert Quote / Leadership Voice
+    implementation_status: planned
+    suggested_family: callout_focus
+    implementation: {status: ready, family: callout_focus, variant: expert_quote, notes: "Quotation and attribution must come from the source."}
+    description: One sourced quotation with attribution and optional portrait.
+    when_to_use: Use sparingly when an authoritative voice materially reinforces the message.
+    selection: {category: content, purposes: [reinforce_authority, humanize_message], content_shapes: [quotation_with_attribution], relationships: [single_focus], interactions: [], densities: [sparse], sequence_positions: [middle], media_supported: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Single sourced quotation with clear attribution and optional portrait. Best for a concise authoritative or leadership voice; never fabricate a quote."}
+  - id: key_stat_callout
+    name: Single Key Statistic
+    implementation_status: planned
+    suggested_family: callout_focus
+    implementation: {status: ready, family: callout_focus, variant: key_stat, notes: "One sourced metric receives dominant emphasis."}
+    description: One high-impact number with interpretation and source.
+    when_to_use: Use when one quantitative fact deserves strong visual emphasis.
+    selection: {category: content, purposes: [emphasize_statistic, establish_urgency], content_shapes: [single_metric_with_context], relationships: [single_focus], interactions: [], densities: [sparse], sequence_positions: [middle], media_supported: false, capacity: {min_items: 1, max_items: 1}, retrieval_text: "High-emphasis slide for one sourced number, percentage, or metric plus a short interpretation. Not a dashboard or chart."}
+  - id: policy_callout
+    name: Policy / Mandatory Requirement
+    implementation_status: planned
+    suggested_family: callout_focus
+    implementation: {status: ready, family: callout_focus, variant: policy, notes: "Preserves mandatory source-authored language."}
+    description: Visually distinguishes a mandatory policy statement from supporting explanation.
+    when_to_use: Use for one source-authored requirement learners must recognize exactly.
+    selection: {category: content, purposes: [state_policy, emphasize_requirement], content_shapes: [mandatory_statement_with_detail], relationships: [single_focus], interactions: [], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: false, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Focused policy slide for one mandatory source-authored requirement with supporting explanation. Uses strong visual hierarchy without changing compliance language."}
+  - id: warning_risk_callout
+    name: Warning / Risk Callout
+    implementation_status: planned
+    suggested_family: callout_focus
+    implementation: {status: ready, family: callout_focus, variant: warning, notes: "Designed for one critical risk and consequence."}
+    description: Emphasizes one risk, consequence, or critical watch-out.
+    when_to_use: Use when overlooking the point has a meaningful consequence.
+    selection: {category: content, purposes: [highlight_risk, prevent_error], content_shapes: [warning_with_consequence], relationships: [cause_effect], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 1, max_items: 3}, retrieval_text: "Warning slide emphasizing one critical risk or up to three related watch-outs with consequences. Best for error prevention, not routine tips."}
+  - id: accordion_content
+    name: Accordion Detail
+    implementation_status: planned
+    suggested_family: disclosure_list
+    implementation: {status: ready, family: disclosure_list, variant: accordion, notes: "Native accessible disclosures support three to eight sections."}
+    description: Stacks expandable headings for several text-heavy peer topics.
+    when_to_use: Use when five to eight categories need substantial optional detail.
+    selection: {category: content, purposes: [explore_details, organize_reference], content_shapes: [peer_items], relationships: [parallel], interactions: [accordion, reveal], densities: [text_heavy], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 8}, retrieval_text: "Expandable accordion for three to eight peer topics with substantial detail. Better than tabs when there are many headings or learners may compare opened sections vertically."}
+  - id: faq_list
+    name: Frequently Asked Questions
+    implementation_status: planned
+    suggested_family: disclosure_list
+    implementation: {status: ready, family: disclosure_list, variant: faq, notes: "Use only for genuinely question-shaped source content."}
+    description: Question-and-answer pairs presented as expandable reference content.
+    when_to_use: Use when the source is genuinely organized around common learner questions.
+    selection: {category: content, purposes: [answer_questions, provide_reference], content_shapes: [question_answer_pairs], relationships: [question_answer], interactions: [accordion, reveal], densities: [balanced, text_heavy], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 2, max_items: 8}, retrieval_text: "FAQ slide for two to eight grounded question-and-answer pairs, usually expandable. Best for learner-centered reference questions, not arbitrary headings rewritten as questions."}
+  - id: before_after
+    name: Before / After
+    implementation_status: planned
+    suggested_family: paired_comparison
+    implementation: {status: ready, family: paired_comparison, variant: before_after, notes: "Requires exactly two corresponding source-grounded states."}
+    description: Shows a change from current state to future state.
+    when_to_use: Use for transformations with two directly corresponding states.
+    selection: {category: content, purposes: [show_transformation, compare_states], content_shapes: [paired_states], relationships: [before_after], interactions: [], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: true, capacity: {min_items: 2, max_items: 2}, retrieval_text: "Two-state comparison showing before/current and after/future conditions with directly corresponding details. Supports text or paired visuals."}
+  - id: pros_cons
+    name: Pros / Cons
+    implementation_status: planned
+    suggested_family: paired_comparison
+    implementation: {status: ready, family: paired_comparison, variant: pros_cons, notes: "Preserves neutral trade-off semantics."}
+    description: Balances advantages and disadvantages of one option.
+    when_to_use: Use when the source explicitly presents trade-offs rather than right and wrong.
+    selection: {category: content, purposes: [explain_tradeoffs, evaluate_option], content_shapes: [two_sided_lists], relationships: [tradeoff], interactions: [], densities: [balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Balanced two-sided slide listing genuine advantages and disadvantages or benefits and limitations. Not for acceptable-versus-unacceptable compliance guidance."}
+  - id: do_dont
+    name: Do / Don't
+    implementation_status: planned
+    suggested_family: paired_comparison
+    implementation: {status: ready, family: paired_comparison, variant: do_dont, notes: "Requires explicit recommended and discouraged behaviors."}
+    description: Pairs recommended and discouraged behaviors.
+    when_to_use: Use for practical behavioral guidance with clear action boundaries.
+    selection: {category: content, purposes: [guide_behavior, prevent_errors], content_shapes: [paired_behavior_lists], relationships: [contrast], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Practical two-column behavior guide pairing recommended actions with actions to avoid. Best for concise actionable guidance."}
+  - id: operational_checklist
+    name: Operational Checklist
+    implementation_status: planned
+    suggested_family: structured_list
+    implementation: {status: ready, family: structured_list, variant: checklist, notes: "Use for independent checks rather than ordered steps."}
+    description: Actionable list used during or after real work.
+    when_to_use: Use for independent checks rather than ordered procedural steps.
+    selection: {category: content, purposes: [support_performance, provide_checklist], content_shapes: [checklist], relationships: [independent], interactions: [], densities: [sparse, balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 3, max_items: 10}, retrieval_text: "Performance-support checklist for three to ten independent actions or verification points. Order is not essential; suitable for later job use."}
+  - id: cycle_diagram
+    name: Cycle / Continuous Loop
+    implementation_status: planned
+    suggested_family: relationship_diagram
+    implementation: {status: ready, family: relationship_diagram, variant: cycle, notes: "Source must explicitly establish a recurring loop."}
+    description: Shows recurring stages without a terminal endpoint.
+    when_to_use: Use when the process explicitly repeats or feeds back into itself.
+    selection: {category: content, purposes: [show_cycle, explain_continuous_process], content_shapes: [cyclic_stages], relationships: [cyclic], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 7}, retrieval_text: "Circular diagram for three to seven recurring stages where the final stage feeds the first. Not for a one-way process or unordered categories."}
+  - id: hierarchy_pyramid
+    name: Hierarchy / Pyramid
+    implementation_status: planned
+    suggested_family: relationship_diagram
+    implementation: {status: ready, family: relationship_diagram, variant: hierarchy, notes: "Source must supply ranked, nested, or foundational levels."}
+    description: Shows ranked, nested, or foundational levels.
+    when_to_use: Use when lower levels support or contain higher levels.
+    selection: {category: content, purposes: [show_hierarchy, explain_levels], content_shapes: [ranked_levels], relationships: [hierarchical], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 6}, retrieval_text: "Hierarchy or pyramid for three to six ranked or nested levels. Best when foundational levels support higher levels or authority increases vertically."}
+  - id: continuum_spectrum
+    name: Continuum / Spectrum
+    implementation_status: planned
+    suggested_family: relationship_diagram
+    implementation: {status: ready, family: relationship_diagram, variant: continuum, notes: "Source must supply the scale and item order."}
+    description: Positions states or examples along a meaningful scale.
+    when_to_use: Use when concepts differ by degree rather than category.
+    selection: {category: content, purposes: [show_degree, position_examples], content_shapes: [ordered_scale], relationships: [continuum], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 7}, retrieval_text: "Horizontal or vertical spectrum positioning two to seven states or examples by degree. Best for gradual distinctions, not discrete unrelated categories."}
+  - id: matrix_2x2
+    name: 2×2 Matrix
+    implementation_status: planned
+    suggested_family: relationship_diagram
+    implementation: {status: ready, family: relationship_diagram, variant: matrix_2x2, notes: "Both axes and quadrant assignments must be source-grounded."}
+    description: Positions items using two independent dimensions.
+    when_to_use: Use only when both axes are meaningful and supplied by the source.
+    selection: {category: content, purposes: [classify_items, show_tradeoff], content_shapes: [two_axis_matrix], relationships: [two_dimensional], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 12}, retrieval_text: "Two-by-two matrix plotting items against two meaningful supplied axes. Best for classification, portfolio, or trade-off views; never invent axis values."}
+  - id: flow_diagram
+    name: Flow / Decision Flow
+    implementation_status: planned
+    suggested_family: relationship_diagram
+    description: Shows directional movement with branches or convergence.
+    when_to_use: Use for non-linear flows that a simple ordered stepper cannot represent.
+    selection: {category: content, purposes: [show_flow, explain_dependencies], content_shapes: [nodes_and_edges], relationships: [directed, branching], interactions: [], densities: [balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 12}, retrieval_text: "Directional node-and-edge diagram for three to twelve stages with branching, convergence, or dependencies. Use when a linear sequence is insufficient."}
+  - id: labeled_diagram
+    name: Labeled Diagram / Anatomy
+    implementation_status: planned
+    suggested_family: labeled_diagram
+    description: Labels meaningful regions of a supplied image or system diagram.
+    when_to_use: Use when spatial location is essential to understanding parts.
+    selection: {category: content, purposes: [identify_parts, explain_anatomy], content_shapes: [image_with_labels], relationships: [spatial, part_whole], interactions: [], densities: [sparse, balanced], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Supplied diagram or image with two to ten labels identifying parts and their roles. Best when spatial location matters; requires a meaningful source visual."}
+  - id: interactive_hotspots
+    name: Interactive Hotspot Exploration
+    implementation_status: planned
+    suggested_family: labeled_diagram
+    description: Reveals details from selectable regions of a supplied image.
+    when_to_use: Use when learners should inspect spatially meaningful areas.
+    selection: {category: content, purposes: [explore_image, reveal_parts], content_shapes: [image_with_hotspots], relationships: [spatial, part_whole], interactions: [hotspots, reveal], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Interactive supplied image with two to ten keyboard-accessible hotspots revealing detail about spatially meaningful parts."}
+  - id: data_chart
+    name: Data Chart with Interpretation
+    implementation_status: planned
+    suggested_family: data_visualization
+    description: Displays sourced quantitative data and a concise interpretation.
+    when_to_use: Use when relationships or trends in actual data matter more than isolated metrics.
+    selection: {category: content, purposes: [explain_data, show_trend], content_shapes: [data_series_with_insight], relationships: [quantitative], interactions: [], densities: [balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 12}, retrieval_text: "Bar, line, or other chart for supplied quantitative values with one grounded interpretive takeaway. Best for trends, comparisons, or distributions, not decorative numbers."}
+
+  # Practice and application
+  - id: case_study
+    name: Case Study
+    implementation_status: planned
+    suggested_family: case_study
+    description: Presents situation, challenge, action, and result from a grounded case.
+    when_to_use: Use for one substantive real or canonical example.
+    selection: {category: practice, purposes: [analyze_case, connect_theory_to_practice], content_shapes: [situation_challenge_action_result], relationships: [narrative, causal], interactions: [], densities: [text_heavy], sequence_positions: [middle], media_supported: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Text-heavy grounded case study organized as situation, challenge, action, and result, optionally paired with one contextual image."}
+  - id: character_dialogue
+    name: Character Dialogue
+    implementation_status: planned
+    suggested_family: dialogue
+    description: Uses a short conversation to surface perspectives or model language.
+    when_to_use: Use when exact language, stakeholder perspectives, or social dynamics matter.
+    selection: {category: practice, purposes: [model_conversation, contrast_perspectives], content_shapes: [dialogue_turns], relationships: [conversational], interactions: [], densities: [balanced], sequence_positions: [middle], media_supported: true, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Conversation between two or more grounded roles across two to ten short turns. Best for modeling language or surfacing differing perspectives."}
+  - id: click_to_reveal
+    name: Click to Reveal
+    implementation_status: planned
+    suggested_family: disclosure_list
+    implementation: {status: ready, family: disclosure_list, variant: click_reveal, notes: "Ungraded reveal; no learner response is stored."}
+    description: Reveals one answer, explanation, or consequence after a prompt.
+    when_to_use: Use for prediction before explanation without collecting a scored response.
+    selection: {category: practice, purposes: [prompt_prediction, reveal_explanation], content_shapes: [prompt_and_reveal], relationships: [question_answer], interactions: [reveal], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: false, capacity: {min_items: 1, max_items: 3}, retrieval_text: "Ungraded prompt followed by one to three click-to-reveal explanations or consequences. Encourages prediction without collecting an answer."}
+  - id: guided_walkthrough
+    name: Guided Walkthrough
+    implementation_status: planned
+    suggested_family: guided_demo
+    description: Advances through annotated stages of a task or interface.
+    when_to_use: Use for procedural demonstration with supplied screenshots or states.
+    selection: {category: practice, purposes: [demonstrate_task, guide_procedure], content_shapes: [annotated_steps], relationships: [ordered], interactions: [stepper], densities: [balanced], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Guided stepper through two to ten supplied screenshots, interface states, or task stages with annotations. Requires meaningful visual assets."}
+  - id: software_simulation
+    name: Software Simulation
+    implementation_status: planned
+    suggested_family: simulation
+    description: Simulates interface actions with guided or assessed task completion.
+    when_to_use: Use when learners must practice operating a system rather than recall facts.
+    selection: {category: practice, purposes: [practice_system_task, simulate_workflow], content_shapes: [interactive_interface_task], relationships: [stateful, ordered], interactions: [simulation, hotspots, input], densities: [balanced], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 20}, retrieval_text: "Stateful software simulation for a supplied interface and task workflow. Learners select controls or enter values across multiple steps."}
+  - id: matching_practice
+    name: Matching Practice
+    implementation_status: planned
+    suggested_family: matching_interaction
+    description: Matches terms, examples, roles, or actions to corresponding targets.
+    when_to_use: Use when paired associations are the intended learning outcome.
+    selection: {category: practice, purposes: [practice_associations, classify_examples], content_shapes: [paired_items], relationships: [matching], interactions: [matching, drag_drop], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 2, max_items: 8}, retrieval_text: "Ungraded matching interaction for two to eight grounded pairs such as term-definition, role-responsibility, or example-category."}
+  - id: sorting_practice
+    name: Sorting / Categorization Practice
+    implementation_status: planned
+    suggested_family: sorting_interaction
+    description: Sorts examples into supplied categories.
+    when_to_use: Use when classification is the target performance.
+    selection: {category: practice, purposes: [practice_classification, sort_examples], content_shapes: [items_and_categories], relationships: [categorical], interactions: [sorting, drag_drop], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 12}, retrieval_text: "Practice interaction sorting three to twelve grounded examples into two to five supplied categories. Best when classification is the learning objective."}
+  - id: ordering_practice
+    name: Ordering / Sequencing Practice
+    implementation_status: planned
+    suggested_family: ordering_interaction
+    description: Reorders supplied stages into the correct sequence.
+    when_to_use: Use when sequence recall or dependency recognition is required.
+    selection: {category: practice, purposes: [practice_sequence, order_steps], content_shapes: [reorderable_steps], relationships: [ordered], interactions: [reorder, drag_drop], densities: [sparse, balanced], sequence_positions: [middle], media_supported: false, capacity: {min_items: 3, max_items: 10}, retrieval_text: "Ungraded ordering interaction for three to ten supplied steps or stages. Learners arrange items into the grounded sequence."}
+  - id: decision_tree_practice
+    name: Multi-Step Decision Tree
+    implementation_status: planned
+    suggested_family: branching_scenario
+    description: Supports several sequential decisions with stateful consequences.
+    when_to_use: Use when one decision changes the evidence or choices available next.
+    selection: {category: practice, purposes: [practice_decisions, explore_consequences], content_shapes: [multi_stage_branching_case], relationships: [branching, stateful], interactions: [choice, branch], densities: [balanced, text_heavy], sequence_positions: [middle], media_supported: true, capacity: {min_items: 2, max_items: 12}, retrieval_text: "Stateful multi-step decision scenario with grounded choices and consequences across two to twelve decision nodes. More complex than a single branching question."}
+  - id: role_play_response
+    name: Role-Play Response Choice
+    implementation_status: planned
+    suggested_family: branching_scenario
+    description: Chooses what to say next in a workplace conversation.
+    when_to_use: Use for communication, coaching, leadership, or client-interaction skills.
+    selection: {category: practice, purposes: [practice_conversation, choose_response], content_shapes: [dialogue_with_response_options], relationships: [branching, conversational], interactions: [choice, branch], densities: [balanced], sequence_positions: [middle], media_supported: true, capacity: {min_items: 2, max_items: 5}, retrieval_text: "Workplace role-play showing a grounded conversation and two to five possible responses, each leading to targeted feedback or a consequence."}
+
+  # Assessment variations
+  - id: true_false_assessment
+    name: True / False Assessment
+    implementation_status: planned
+    suggested_family: binary_assessment
+    description: Scores one binary factual or conceptual judgment.
+    when_to_use: Use sparingly when the claim is unambiguous and feedback is diagnostic.
+    selection: {category: assessment, purposes: [assess_judgment, check_fact], content_shapes: [binary_statement], relationships: [binary], interactions: [single_select, submit_feedback], densities: [sparse, balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 2, max_items: 2}, retrieval_text: "Scored true-or-false assessment for one unambiguous grounded statement with diagnostic feedback for both choices."}
+  - id: matching_assessment
+    name: Matching Assessment
+    implementation_status: planned
+    suggested_family: matching_interaction
+    description: Scores associations between two grounded sets.
+    when_to_use: Use when paired association is explicitly assessed.
+    selection: {category: assessment, purposes: [assess_associations, assess_classification], content_shapes: [paired_items], relationships: [matching], interactions: [matching, submit_feedback], densities: [balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 2, max_items: 8}, retrieval_text: "Scored matching assessment for two to eight grounded pairs with validation and corrective feedback."}
+  - id: ordering_assessment
+    name: Ordering Assessment
+    implementation_status: planned
+    suggested_family: ordering_interaction
+    description: Scores a learner's sequence of supplied stages.
+    when_to_use: Use when ordered recall is directly aligned to the objective.
+    selection: {category: assessment, purposes: [assess_sequence, assess_procedure], content_shapes: [reorderable_steps], relationships: [ordered], interactions: [reorder, submit_feedback], densities: [balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 3, max_items: 10}, retrieval_text: "Scored ordering assessment for three to ten grounded steps or stages with sequence-specific feedback."}
+  - id: fill_blank_assessment
+    name: Fill-in-the-Blank Assessment
+    implementation_status: planned
+    suggested_family: text_entry_assessment
+    description: Scores a constrained missing word or phrase.
+    when_to_use: Use only when exact recall is instructionally necessary and variants are controlled.
+    selection: {category: assessment, purposes: [assess_recall, complete_statement], content_shapes: [sentence_with_blank], relationships: [completion], interactions: [text_input, submit_feedback], densities: [sparse, balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 1, max_items: 3}, retrieval_text: "Scored fill-in-the-blank item for one to three constrained missing words or short phrases with controlled accepted answers."}
+  - id: numeric_assessment
+    name: Numeric Input Assessment
+    implementation_status: planned
+    suggested_family: numeric_assessment
+    description: Scores a numeric answer with tolerance, units, and feedback.
+    when_to_use: Use for calculations or quantitative application.
+    selection: {category: assessment, purposes: [assess_calculation, assess_numeric_application], content_shapes: [numeric_problem], relationships: [calculation], interactions: [numeric_input, submit_feedback], densities: [balanced, text_heavy], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Scored numeric-response problem with supplied units, accepted tolerance, and feedback. Best for calculation or quantitative application."}
+  - id: hotspot_assessment
+    name: Hotspot Assessment
+    implementation_status: planned
+    suggested_family: hotspot_interaction
+    description: Scores selection of a region in a supplied image.
+    when_to_use: Use when spatial recognition is the assessed skill.
+    selection: {category: assessment, purposes: [assess_spatial_recognition, identify_region], content_shapes: [image_with_scored_regions], relationships: [spatial], interactions: [hotspots, submit_feedback], densities: [sparse], sequence_positions: [middle, end], media_supported: true, media_required: true, capacity: {min_items: 2, max_items: 10}, retrieval_text: "Scored hotspot assessment requiring a supplied image and two to ten defined selectable regions. Best for spatial identification."}
+  - id: scenario_assessment
+    name: Scenario-Based Assessment
+    implementation_status: planned
+    suggested_family: scenario_assessment
+    description: Scores a decision made in a realistic grounded situation.
+    when_to_use: Use for application, analysis, or judgment rather than factual recall.
+    selection: {category: assessment, purposes: [assess_application, assess_judgment], content_shapes: [scenario_with_scored_choices], relationships: [decision], interactions: [choice, submit_feedback], densities: [balanced, text_heavy], sequence_positions: [middle, end], media_supported: true, capacity: {min_items: 2, max_items: 5}, retrieval_text: "Scored scenario assessment with realistic context, two to five grounded choices, and diagnostic feedback tied to the reasoning behind each option."}
+  - id: confidence_check
+    name: Confidence Check
+    implementation_status: planned
+    suggested_family: confidence_assessment
+    description: Captures confidence separately from correctness.
+    when_to_use: Use for calibration, metacognition, or adaptive remediation.
+    selection: {category: assessment, purposes: [measure_confidence, calibrate_knowledge], content_shapes: [question_and_confidence_scale], relationships: [self_rating], interactions: [rating, submit], densities: [sparse, balanced], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 3, max_items: 5}, retrieval_text: "Confidence-rating item using a three-to-five point scale, optionally paired with a knowledge response to identify confidence-correctness mismatch."}
+  - id: open_response_assessment
+    name: Open Response Assessment
+    implementation_status: planned
+    suggested_family: rubric_assessment
+    description: Collects a written answer evaluated against supplied criteria.
+    when_to_use: Use for higher-order performance when the RLO supplies response and scoring guidance.
+    selection: {category: assessment, purposes: [assess_explanation, assess_creation], content_shapes: [prompt_with_rubric], relationships: [constructed_response], interactions: [text_input, submit], densities: [balanced, text_heavy], sequence_positions: [middle, end], media_supported: false, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Constructed-response assessment with a grounded prompt, correct-response guidance, scoring criteria, and feedback guidance. Requires rubric-based evaluation."}
+
+  # Media and resources
+  - id: audio_player
+    name: Audio / Podcast Player
+    implementation_status: planned
+    suggested_family: media_player
+    description: Plays one supplied audio asset with transcript access.
+    when_to_use: Use when a delivery specification supplies audio and transcript assets.
+    selection: {category: media, purposes: [play_audio, deliver_podcast], content_shapes: [single_audio_asset], relationships: [single_focus], interactions: [audio_controls], densities: [sparse], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Media-first slide for one supplied audio or podcast asset with native controls and an accessible transcript. Never invent an audio source."}
+  - id: narrated_animation
+    name: Narrated Animation
+    implementation_status: planned
+    suggested_family: media_player
+    description: Plays one supplied animation with synchronized narration and captions.
+    when_to_use: Use when motion explains a process or relationship better than static content.
+    selection: {category: media, purposes: [show_animation, explain_with_motion], content_shapes: [animation_with_narration], relationships: [temporal], interactions: [media_controls], densities: [sparse], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Media-first slide for one supplied narrated animation with playback controls and captions or transcript."}
+  - id: interactive_embed
+    name: Interactive Embed
+    implementation_status: planned
+    suggested_family: embedded_experience
+    description: Hosts a supplied interactive simulation, visualization, or external tool.
+    when_to_use: Use only for trusted, accessible, explicitly supplied embeds.
+    selection: {category: media, purposes: [embed_interactive, use_external_tool], content_shapes: [single_embedded_experience], relationships: [single_focus], interactions: [embedded_interaction], densities: [sparse], sequence_positions: [middle], media_supported: true, media_required: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Full-slide host for one supplied trusted interactive embed, simulation, or visualization with fallback and accessibility handling."}
+  - id: document_viewer
+    name: Document / PDF Viewer
+    implementation_status: planned
+    suggested_family: document_resource
+    description: Displays or links one supplied reference document.
+    when_to_use: Use when learners must inspect a source document during instruction.
+    selection: {category: media, purposes: [view_document, inspect_reference], content_shapes: [single_document_asset], relationships: [single_focus], interactions: [document_controls], densities: [sparse], sequence_positions: [middle, end], media_supported: true, media_required: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Viewer or launch slide for one supplied PDF or document reference with accessible download fallback."}
+
+  # Navigation, support, and completion
+  - id: navigation_hub
+    name: Module Menu / Navigation Hub
+    implementation_status: planned
+    suggested_family: navigation_hub
+    description: Lets learners choose among modules or topics and shows progress.
+    when_to_use: Use for non-linear or hub-and-spoke course structures.
+    selection: {category: navigation, purposes: [choose_module, show_progress], content_shapes: [linked_module_cards], relationships: [hub_spoke], interactions: [navigation], densities: [sparse, balanced], sequence_positions: [intro, middle], media_supported: true, capacity: {min_items: 2, max_items: 12}, retrieval_text: "Navigation hub with two to twelve linked module or topic cards, optional imagery, and progress state. Best for non-linear or hub-and-spoke courses."}
+  - id: section_divider
+    name: Section Divider
+    implementation_status: planned
+    suggested_family: section_transition
+    description: Marks a major transition with minimal copy and optional visual.
+    when_to_use: Use between substantial sections, not before every slide.
+    selection: {category: navigation, purposes: [introduce_section, signal_transition], content_shapes: [section_title_and_teaser], relationships: [transition], interactions: [], densities: [sparse], sequence_positions: [middle], media_supported: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Sparse section-transition slide with section label, heading, short teaser, and optional visual. Not for substantive instruction."}
+  - id: resource_hub
+    name: Resources / Downloads
+    implementation_status: planned
+    suggested_family: resource_list
+    description: Collects supplied job aids, documents, links, and tools.
+    when_to_use: Use near the end or at point of need for grounded resources.
+    selection: {category: navigation, purposes: [provide_resources, support_transfer], content_shapes: [linked_resource_list], relationships: [reference], interactions: [links, downloads], densities: [sparse, balanced], sequence_positions: [middle, end], media_supported: true, capacity: {min_items: 1, max_items: 10}, retrieval_text: "Resource hub for one to ten supplied job aids, documents, links, or tools with type labels and accessible download behavior."}
+  - id: glossary_panel
+    name: Glossary / Key Terms
+    implementation_status: planned
+    suggested_family: disclosure_list
+    description: Searchable or expandable reference list of grounded terms.
+    when_to_use: Use when terminology support is needed throughout the course.
+    selection: {category: navigation, purposes: [provide_glossary, support_reference], content_shapes: [term_definition_list], relationships: [reference], interactions: [search, accordion], densities: [text_heavy], sequence_positions: [middle, end, any], media_supported: false, capacity: {min_items: 3, max_items: 30}, retrieval_text: "Reference glossary for three to thirty grounded terms and definitions, optionally searchable or expandable. Not a primary teaching sequence."}
+  - id: action_plan
+    name: Personal Action Plan
+    implementation_status: planned
+    suggested_family: action_planning
+    description: Structures intended workplace actions, timing, and support.
+    when_to_use: Use when transfer requires an explicit post-course plan and policy permits input capture.
+    selection: {category: completion, purposes: [plan_transfer, commit_actions], content_shapes: [action_timing_support_fields], relationships: [planning], interactions: [text_input], densities: [balanced], sequence_positions: [end], media_supported: false, capacity: {min_items: 1, max_items: 5}, retrieval_text: "End-of-course action-planning slide for one to five intended workplace actions, timing, and support. Use only when response capture and privacy policy are defined."}
+  - id: next_steps
+    name: Next Steps
+    implementation_status: planned
+    suggested_family: structured_list
+    description: Directs learners to grounded follow-on actions, learning, or resources.
+    when_to_use: Use near completion when specific follow-on actions exist.
+    selection: {category: completion, purposes: [direct_next_steps, continue_learning], content_shapes: [action_list], relationships: [ordered, recommended], interactions: [links], densities: [sparse, balanced], sequence_positions: [end], media_supported: false, capacity: {min_items: 1, max_items: 6}, retrieval_text: "Completion-stage slide listing one to six grounded next actions, follow-on learning items, contacts, or resources."}
+  - id: completion_certificate
+    name: Completion Certificate / Credential
+    implementation_status: planned
+    suggested_family: credential
+    description: Displays a credential after externally verified completion requirements.
+    when_to_use: Use only when the delivery platform supplies verified learner and completion data.
+    selection: {category: completion, purposes: [issue_credential, acknowledge_completion], content_shapes: [credential_metadata], relationships: [single_focus], interactions: [download], densities: [sparse], sequence_positions: [end], media_supported: true, capacity: {min_items: 1, max_items: 1}, retrieval_text: "Credential slide displaying externally verified learner, course, date, and completion metadata with optional certificate download. Never infer completion status."}

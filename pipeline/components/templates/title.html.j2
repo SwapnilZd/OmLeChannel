@@ -1,0 +1,25 @@
+<section class="slide-title" data-screen-id="{{ s.screen_id }}">
+  <div class="title-meta">
+    {% set firm = s.metadata.get('firm', '') or '' %}
+    {% set level = s.metadata.get('level', '') or '' %}
+    {% set mins = s.metadata.get('duration_minutes', 0) or 0 %}
+    {% if firm %}<span class="pill">{{ firm }}</span>{% endif %}
+    {% if level %}<span class="pill">{{ level }}</span>{% endif %}
+    {% if mins %}<span class="pill">{{ mins }} min</span>{% endif %}
+  </div>
+  <div class="title-body">
+    <div class="title-text">
+      <h1>{{ s.course_title }}</h1>
+      <p class="subtitle">{{ s.subtitle | first_sentence }}</p>
+      <div class="hook-card">
+        <span class="hook-label">Opening Scenario</span>
+        <p>{{ s.hook }}</p>
+      </div>
+    </div>
+    {% if s.image_path %}
+    <div class="title-image-col">
+      <img class="title-image" src="{{ s.image_path }}" alt="" />
+    </div>
+    {% endif %}
+  </div>
+</section>

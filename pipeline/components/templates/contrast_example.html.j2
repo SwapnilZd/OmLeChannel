@@ -1,0 +1,21 @@
+<section class="slide-contrast" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.title }}</h2>
+  <div class="contrast-grid">
+    <div class="contrast-col acceptable">
+      <div class="contrast-header">
+        <span class="ci">✓</span>
+        <span>{{ s.acceptable.label }}</span>
+      </div>
+      {{ s.acceptable.description | paragraphs }}
+      <p class="contrast-reason">{{ s.acceptable.reason }}</p>
+    </div>
+    <div class="contrast-col unacceptable">
+      <div class="contrast-header">
+        <span class="ci">✗</span>
+        <span>{{ s.unacceptable.label }}</span>
+      </div>
+      {{ s.unacceptable.description | paragraphs }}
+      <p class="contrast-reason">{{ s.unacceptable.reason }}</p>
+    </div>
+  </div>
+</section>

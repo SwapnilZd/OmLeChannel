@@ -1,0 +1,355 @@
+{
+  "id": "rlo-kotter-04-coalition",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 2 \u2014 Build a Guiding Coalition",
+  "topic": "Kotter Step 2 \u2014 Build a Guiding Coalition",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-03-urgency"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-05-vision"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain the purpose of building a guiding coalition (Step 2), and describe the characteristics that make a coalition effective.",
+  "performance_context": "When observing or participating in the leadership design of a change effort, the learner should be able to assess whether the coalition assembled has the composition needed to lead the change, or whether it is a committee in coalition's clothing.",
+  "enabling_objective": {
+    "id": "lo-04",
+    "statement": "Describe the purpose of a guiding coalition and the four characteristics Kotter identifies as making one effective: position power, expertise, credibility, and leadership.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "The guiding coalition",
+      "definition": "A group with enough collective authority, expertise, and credibility to lead a change effort, working together with sufficient trust and shared purpose to act as a single unit. It is not a steering committee, a project team, or a set of individual sponsors \u2014 it is a working leadership group for the change.",
+      "elaboration": "Kotter distinguishes the coalition from other structures common in organizations. A steering committee reviews and approves; a coalition leads. A project team executes; a coalition sets direction. Individual sponsors endorse; a coalition acts collectively. The distinction matters because the failure modes are different: a steering committee cannot mobilize; individual sponsors can be overridden; a project team lacks authority.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "A senior executive sponsor is sufficient \u2014 a coalition is unnecessary if the top leader is committed.",
+          "correction": "A single sponsor, however senior, cannot lead change alone. The sponsor's authority is real but narrow; the organization will resist or delay any change perceived as one person's initiative. Kotter is explicit that coalitions are required and single sponsors are insufficient."
+        },
+        {
+          "id": "m-02",
+          "statement": "The existing leadership team can serve as the coalition by default.",
+          "correction": "Sometimes yes, often no. The coalition needs specific characteristics (position power, expertise, credibility, and leadership skill relevant to the change), and the existing leadership team may lack one or more. Assuming the standing team is the coalition without checking is a common shortcut."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "The four characteristics of an effective coalition",
+      "definition": "Kotter identifies four attributes a coalition needs in aggregate: (1) position power \u2014 enough formal authority that decisions made by the group are respected; (2) expertise \u2014 relevant knowledge about the change domain; (3) credibility \u2014 reputational weight so the organization takes the group seriously; (4) leadership \u2014 the ability to drive change, not just manage current operations.",
+      "elaboration": "The four characteristics are held collectively, not individually. No single member needs all four. But the group as a whole must have all four represented, or it will fail in the specific way its missing characteristic implies. A coalition without position power cannot enforce decisions; without expertise, it makes bad ones; without credibility, no one follows; without leadership, it manages rather than changes.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Seniority is what matters \u2014 a coalition of senior people is by definition effective.",
+          "correction": "Seniority provides position power but not necessarily the other three characteristics. A coalition of senior managers who lack expertise in the change domain, or who are seen as caretakers rather than leaders, will fail despite the titles. Position power is one of four, not the whole picture."
+        },
+        {
+          "id": "m-04",
+          "statement": "The coalition should be small enough to move quickly \u2014 three to four people is ideal.",
+          "correction": "Coalition size is driven by what characteristics need to be represented, not by a general preference for smallness. Very small coalitions almost always lack at least one of the four attributes. Kotter's coalitions are typically larger than a working group but smaller than a full leadership team \u2014 often 10 to 30 people in a large organization."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The guiding coalition is what makes the change effort credible to the rest of the organization. Without it, a change effort is one person's opinion, however senior that person is. With it, the change becomes a leadership decision the organization can align around. Assembling the right coalition is unglamorous work \u2014 it feels like slow politics compared to visible action \u2014 but it is what turns a change plan into a change movement."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "A guiding coalition leads a change effort collectively. It is not a steering committee (which reviews), a project team (which executes), or a sponsor (who endorses). It is a group of leaders acting together with shared purpose to drive the change."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "An effective coalition needs four characteristics in aggregate: position power (formal authority), expertise (relevant knowledge), credibility (organizational reputation), and leadership (ability to drive change, not just manage). All four must be present in the group; no single member needs to have all four."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A coalition with all four characteristics",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "For a major operating-model change, the CEO assembles a coalition of 12 people: three C-suite executives (position power), two senior operations leaders with deep process expertise (expertise), a widely respected long-tenured manager known for candor (credibility), and two rising leaders with track records of driving successful change in their prior roles (leadership).",
+        "what_happens": "The coalition can make decisions the organization accepts (position power), makes technically sound decisions (expertise), is trusted when it communicates (credibility), and pushes the change forward rather than getting bogged down in administration (leadership). Each characteristic is contributed by different members, and the group functions as a unit.",
+        "reasoning": "The four characteristics are covered by different members. No one person needs to embody all of them, but the group as a whole must \u2014 and here it does."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "A coalition missing credibility",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A CEO assembles a coalition of five senior executives to lead a cultural transformation. All are recent external hires. The organization has seen three previous transformation efforts fail, and the incumbent workforce views the executive team as disconnected from the day-to-day work.",
+        "what_happens": "The coalition has position power (all senior), expertise (all hired for it), and leadership skill (all with prior track records). But it lacks credibility with the workforce being asked to change. The change is announced, endorsed by the coalition, and quietly resisted at every level below. Three months in, momentum has stalled.",
+        "reasoning": "Missing a single characteristic \u2014 credibility \u2014 is enough to derail the effort. The fix is not to work harder on the other three; it is to add members who carry credibility with the affected workforce. A long-tenured line manager known for straight talk, added to the coalition, changes what the organization believes about the effort."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "The sponsor-only structure",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A change effort is launched with a single executive sponsor \u2014 the COO \u2014 who is highly committed and personally credible. No coalition is formed; the COO speaks for the effort.",
+        "why_wrong": "This is a sponsor structure, not a coalition. The change becomes 'the COO's initiative.' Other executives are neutral or skeptical, giving the organization implicit permission to wait it out. When the COO's attention shifts to a different priority, the change collapses. A single sponsor, however senior and committed, cannot substitute for a coalition.",
+        "correct_framing": "The coalition's function is precisely to make the change more than one person's initiative. That is not a nice-to-have; it is the entire point of Step 2."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "The steering committee that mistakes itself for a coalition",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort is governed by a monthly steering committee of 15 senior leaders. The committee reviews progress reports, approves budget requests, and provides feedback on the change team's proposals.",
+        "why_wrong": "This is a steering committee, not a coalition. Its function is oversight, not leadership. The change team is doing the actual leading; the committee is reviewing what the team has already decided. The organization can see that the committee is not driving the effort, and treats the change accordingly.",
+        "correct_framing": "A guiding coalition is a working group of leaders, not an oversight body. Members of a coalition make decisions together, communicate the change personally, and put their reputations behind the effort. If the group meets monthly to review status, it is a steering committee \u2014 whatever it is called."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "Name the four characteristics of an effective guiding coalition.",
+        "expected_answer": "Position power (formal authority), expertise (relevant knowledge), credibility (organizational reputation), and leadership (ability to drive change)."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A CEO assembles a change coalition consisting of the CFO, the COO, and three other C-suite executives. All are senior, all have position power, and all publicly support the change. Six months in, the change effort has stalled: middle managers describe the effort as 'something the executive team is doing' and have not translated it into changes in their own areas. Which characteristic is the coalition most likely missing?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Position power \u2014 the coalition needs to include more senior executives.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The coalition is entirely composed of C-suite executives. Position power is not the missing characteristic; the coalition has an excess of it. The failure pattern \u2014 middle managers treating the change as an executive initiative rather than their own \u2014 points to credibility with the affected population, not to more seniority."
+        },
+        {
+          "id": "B",
+          "text": "Credibility with the middle-manager population \u2014 the coalition may have authority but lacks members trusted by the layer being asked to change.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The failure pattern is characteristic of a credibility gap. Middle managers do not see themselves represented in the coalition and treat the change as external to their work. The fix is to add members who carry weight in the middle-manager layer \u2014 respected long-tenured operational leaders, not more C-suite executives."
+        },
+        {
+          "id": "C",
+          "text": "Expertise \u2014 the coalition needs deeper technical knowledge of the change domain.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The stem does not describe a knowledge failure. The change is not stalling because decisions are technically wrong; it is stalling because middle managers are not adopting the change. That is a credibility problem, not an expertise problem."
+        },
+        {
+          "id": "D",
+          "text": "Nothing \u2014 a coalition of senior executives is by definition sufficient.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Seniority provides position power but not the other three characteristics. This is precisely the assumption Kotter warns against \u2014 that assembling senior people is the same as assembling an effective coalition."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change effort has been running for three months. Governance is provided by a monthly meeting of 15 senior leaders who review progress reports from the change team, approve budget requests, and provide feedback. The change team makes the day-to-day decisions. How should this structure be evaluated against Kotter's Step 2?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The 15-leader group is a guiding coalition, and the structure is consistent with Kotter's Step 2.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "The 15-leader group is a steering committee, not a coalition. Its function is oversight \u2014 reviewing, approving, providing feedback \u2014 not leadership. A coalition leads the change; it does not review what a change team has decided."
+        },
+        {
+          "id": "B",
+          "text": "The group is functioning as a steering committee rather than a coalition. The change effort has governance but does not have a guiding coalition in Kotter's sense.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The distinction between a steering committee and a coalition is not cosmetic \u2014 it is functional. A steering committee reviews; a coalition leads. The described structure has the change team doing the actual leading, with the senior group providing oversight. That is a common and reasonable governance pattern, but it is not what Step 2 calls for."
+        },
+        {
+          "id": "C",
+          "text": "The group is too large to be a coalition \u2014 coalitions should be small.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Size is not the issue here. Kotter's coalitions in large organizations often include 10 to 30 people. The problem with this structure is its function (reviewing rather than leading), not its size."
+        },
+        {
+          "id": "D",
+          "text": "The structure is fine because the change team has been empowered to make decisions.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Empowering a change team is not a substitute for a coalition. The team may have decision authority, but it does not have the position power, credibility, and reputational weight that a coalition of senior leaders would bring. The organization will treat the change as a team project rather than a leadership commitment."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Practical and structural. This RLO is teaching the anatomy of a coalition \u2014 what it needs to have, what it is not, and how to diagnose gaps. The tone should support that diagnostic stance.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01\u201303. This RLO can assume familiarity with sequenced-process thinking and urgency. The four-characteristic framework is the central instructional payload and should be surfaced early.",
+    "feedback_policy": "Feedback on missing-characteristic questions must name the specific characteristic missing and describe how its absence produces the observed failure. Do not conflate the four characteristics.",
+    "example_shape_hints": [
+      "Include at least one example of a fully-composed coalition (all four characteristics represented) and at least one example of a coalition missing exactly one characteristic \u2014 the diagnostic value is in the contrast.",
+      "The 'credibility gap' example is high-value because credibility is the characteristic most often missing in real coalitions; keep it prominent.",
+      "Non-examples should distinguish the coalition from adjacent structures (sponsor, steering committee, project team). These distinctions are the specific instructional content."
+    ],
+    "practice_shape_hints": [
+      "Practice items should describe a coalition's composition and a resulting failure pattern, and ask the learner to identify the missing characteristic.",
+      "Include at least one item that tests the coalition-vs-steering-committee distinction, since this is the most common structural confusion."
+    ],
+    "salience_hook_description": "The hook should establish that coalition-building is unglamorous but load-bearing. Learners should leave believing that assembling the coalition is the actual change work, not a preliminary to it."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-03: urgency motivates coalition formation. Without urgency, coalition-building becomes a staffing exercise rather than a change activity.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-05 (vision) explicitly requires the coalition as precondition, reinforcing the concept."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_framework_visual",
+      "rationale": "The four characteristics form a natural diagnostic checklist. A visual that supports learners in evaluating coalitions against the four dimensions is high-leverage.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_comparison_module",
+      "rationale": "Paired case studies (well-composed vs missing-characteristic coalitions) support the diagnostic framing well.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 4-5 minute video that walks through each of the four characteristics with an example and a counter-example.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "The four characteristics (position power, expertise, credibility, leadership) are the specific instructional payload of this RLO. Everything else is scaffolding. The coalition-vs-steering-committee distinction is included because it is the most common structural confusion in professional-services environments where governance patterns dominate. The 'credibility with middle managers' example is deliberately chosen as the failure mode most relevant to firm-scale change efforts.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

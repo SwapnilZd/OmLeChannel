@@ -1,0 +1,48 @@
+id: completion
+name: Completion Screen
+description: >
+  Course-end screen with a completion badge, a congratulatory message,
+  and a list of skills the learner has reinforced throughout the course.
+when_to_use: >
+  Always last. Exactly one per course. Signals course completion and
+  reinforces what the learner has achieved.
+tags: [end, completion, summary, closing]
+sequence_position: end
+selection:
+  category: completion
+  purposes: [course_completion, reinforce_achievement]
+  content_shapes: [completion_message_and_skill_list]
+  relationships: [summary]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [end]
+  media_supported: false
+  capacity: {min_items: 1, max_items: 6}
+  retrieval_text: >
+    Final course slide confirming completion with a short message and one to six reinforced
+    skills. Best as the single last slide. Not a content recap, assessment, or navigation hub.
+
+slots:
+  heading:
+    description: Completion heading, e.g. "Course Complete"
+    target_chars: 30
+    max_chars: 60
+    required: true
+  message:
+    description: >
+      Brief congratulatory message or summary of what was covered.
+      1-3 sentences.
+    target_chars: 120
+    max_chars: 250
+    required: true
+  skills_reinforced:
+    type: array
+    min_items: 1
+    max_items: 6
+    item_slots:
+      text:
+        description: A skill the learner has practised or demonstrated
+        target_chars: 50
+        max_chars: 100
+
+image_slots: []

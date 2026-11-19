@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RLO Registry</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --border: #dde1e7;
+      --ink: #1a1d23;
+      --ink-muted: #6b7280;
+      --accent: #005587;
+      --accent-light: #e8f0f6;
+      --success: #1a7a4a;
+      --success-bg: #edfaf3;
+      --error: #b91c1c;
+      --error-bg: #fef2f2;
+      --warning: #92400e;
+      --warning-bg: #fffbeb;
+      --radius: 8px;
+      --font: system-ui, -apple-system, sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117;
+        --surface: #1c1f28;
+        --border: #2e3340;
+        --ink: #e8eaf0;
+        --ink-muted: #8b93a6;
+        --accent: #4a9fd4;
+        --accent-light: #1a2535;
+        --success: #34d399;
+        --success-bg: #052e1a;
+        --error: #f87171;
+        --error-bg: #2a0a0a;
+        --warning: #fbbf24;
+        --warning-bg: #1f1500;
+      }
+    }
+    :root[data-theme="light"] {
+      --bg: #f5f6f8; --surface: #ffffff; --border: #dde1e7;
+      --ink: #1a1d23; --ink-muted: #6b7280; --accent: #005587;
+      --accent-light: #e8f0f6; --success: #1a7a4a; --success-bg: #edfaf3;
+      --error: #b91c1c; --error-bg: #fef2f2; --warning: #92400e; --warning-bg: #fffbeb;
+    }
+    :root[data-theme="dark"] {
+      --bg: #0f1117; --surface: #1c1f28; --border: #2e3340;
+      --ink: #e8eaf0; --ink-muted: #8b93a6; --accent: #4a9fd4;
+      --accent-light: #1a2535; --success: #34d399; --success-bg: #052e1a;
+      --error: #f87171; --error-bg: #2a0a0a; --warning: #fbbf24; --warning-bg: #1f1500;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .layout {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    header nav { margin-left: auto; display: flex; gap: 0.5rem; }
+    header nav a {
+      color: var(--ink-muted); text-decoration: none; font-size: 0.85rem;
+      font-weight: 600; padding: 0.4rem 0.7rem; border-radius: 5px;
+    }
+    header nav a:hover, header nav a.active { color: var(--accent); background: var(--accent-light); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Drop zone */
+    #drop-zone {
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    #drop-zone:hover, #drop-zone.drag-over {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    #drop-zone .drop-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    #drop-zone p { color: var(--ink-muted); font-size: 0.9rem; }
+    #drop-zone strong { color: var(--accent); }
+    #file-input { display: none; }
+
+    /* Actions row */
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: opacity 0.15s;
+    }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-ghost { background: transparent; color: var(--ink-muted); border-color: var(--border); }
+    #selected-file { font-size: 0.85rem; color: var(--ink-muted); font-family: var(--mono); }
+
+    /* Results list — one row per uploaded file */
+    #results-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .result-row {
+      border: 1px solid var(--border);
+      border-left-width: 3px;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+    }
+    .result-row.ok { border-left-color: var(--success); background: var(--success-bg); }
+    .result-row.err { border-left-color: var(--error); background: var(--error-bg); }
+    .result-row.pending { border-left-color: var(--ink-muted); }
+    .result-head {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .result-head .status-icon { font-size: 1rem; }
+    .result-row.ok .status-icon { color: var(--success); }
+    .result-row.err .status-icon { color: var(--error); }
+    .result-head .filename { font-family: var(--mono); font-size: 0.82rem; }
+    .result-head .warn-tag {
+      margin-left: auto;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--warning);
+      background: var(--warning-bg);
+      padding: 1px 7px;
+      border-radius: 4px;
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.4rem 1.5rem;
+      font-size: 0.82rem;
+      margin-top: 0.6rem;
+    }
+    .result-grid dt { color: var(--ink-muted); }
+    .result-grid dd { font-weight: 600; font-family: var(--mono); word-break: break-all; }
+    .error-list { margin-top: 0.5rem; font-size: 0.8rem; }
+    .error-list li { margin: 0.25rem 0; font-family: var(--mono); }
+    .summary-counts { display: flex; gap: 1rem; }
+    .summary-counts .ok-count { color: var(--success); }
+    .summary-counts .err-count { color: var(--error); }
+
+    /* RLO catalog table */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    th {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 0.625rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--accent-light); }
+    .rlo-id { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); }
+    .badge {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .delete-btn {
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      color: var(--error);
+      border-color: var(--error);
+      background: transparent;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: var(--ink-muted);
+      font-size: 0.9rem;
+    }
+    .field-grid { display: grid; grid-template-columns: 1fr 150px 110px; gap: 0.75rem; }
+    label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--ink-muted); margin-bottom: 0.35rem; }
+    textarea, select, input {
+      width: 100%; border: 1px solid var(--border); border-radius: 6px;
+      background: var(--bg); color: var(--ink); padding: 0.6rem 0.7rem; font: inherit;
+    }
+    textarea { min-height: 86px; resize: vertical; }
+    .search-results { display: grid; gap: 0.65rem; margin-top: 1rem; }
+    .search-hit { border: 1px solid var(--border); border-radius: 6px; padding: 0.8rem 1rem; }
+    .search-hit-head { display: flex; gap: 0.75rem; align-items: baseline; }
+    .search-hit-head strong { flex: 1; }
+    .score { font-family: var(--mono); color: var(--accent); font-size: 0.82rem; }
+    .search-meta { color: var(--ink-muted); font-size: 0.78rem; margin-top: 0.35rem; }
+    .notice { border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.85rem; }
+    .notice.error { background: var(--error-bg); color: var(--error); }
+    @media (max-width: 680px) {
+      header { flex-wrap: wrap; }
+      header nav { width: 100%; margin-left: 0; }
+      .field-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="app-header">
+      <a class="brand-lockup" href="/commission" aria-label="Omnichannel Learning home">
+        <img class="brand-logo" src="/static/brand/deloitte-logo-web.png" alt="Deloitte">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="product-name">Omnichannel Learning</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/source-upload">Source Intake</a>
+        <a href="/objective-jobs">Objective Jobs</a>
+        <a href="/rlo-drafts">RLO Review</a>
+        <a href="/" class="active">RLO Registry</a>
+        <a href="/commission">Commission Learning</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/logout">Log out</a>
+      </nav>
+      <div class="page-heading">
+        <h1>RLO Registry</h1>
+      </div>
+  </header>
+  <div class="layout">
+
+    <!-- Upload card -->
+    <div class="card">
+      <div class="card-title">Upload RLO</div>
+      <div id="drop-zone" role="button" tabindex="0" aria-label="Drop JSON files or click to browse">
+        <div class="drop-icon">📄</div>
+        <p>Drop one or more <strong>rlo.json</strong> files here, or <strong>click to browse</strong></p>
+      </div>
+      <input type="file" id="file-input" accept=".json,application/json" multiple>
+      <div class="actions">
+        <button class="btn-primary" id="upload-btn" disabled>Upload &amp; Validate</button>
+        <button class="btn-ghost" id="clear-btn" style="display:none">Clear</button>
+        <span id="selected-file"></span>
+      </div>
+    </div>
+
+    <!-- Results card -->
+    <div class="card" id="results-card" style="display:none">
+      <div class="card-title" id="results-summary">Results</div>
+      <div id="results-list"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Test semantic retrieval</div>
+      <div class="field-grid">
+        <div>
+          <label for="search-query">Learning subject or outcome</label>
+          <textarea id="search-query" placeholder="For example: diagnose which ADKAR barrier is preventing progress"></textarea>
+        </div>
+        <div>
+          <label for="search-status">Governance status</label>
+          <select id="search-status">
+            <option value="approved" selected>Approved</option>
+            <option value="signed">Signed (legacy)</option>
+            <option value="draft">Draft</option>
+            <option value="in_review">In review</option>
+          </select>
+        </div>
+        <div>
+          <label for="search-limit">Results</label>
+          <select id="search-limit">
+            <option>5</option><option selected>10</option><option>20</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-primary" id="search-btn">Run search</button>
+        <span id="search-summary" class="search-meta"></span>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <!-- Catalog card -->
+    <div class="card">
+      <div class="card-title">Stored RLOs</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Domain</th>
+              <th>Level</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="rlo-table-body">
+            <tr><td colspan="6" class="empty-state">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const uploadBtn = document.getElementById('upload-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const selectedFile = document.getElementById('selected-file');
+    const resultsCard = document.getElementById('results-card');
+    const resultsSummary = document.getElementById('results-summary');
+    const resultsList = document.getElementById('results-list');
+    const tableBody = document.getElementById('rlo-table-body');
+    const searchQuery = document.getElementById('search-query');
+    const searchStatus = document.getElementById('search-status');
+    const searchLimit = document.getElementById('search-limit');
+    const searchBtn = document.getElementById('search-btn');
+    const searchSummary = document.getElementById('search-summary');
+    const searchResults = document.getElementById('search-results');
+
+    let currentFiles = [];
+
+    // Drop zone interaction
+    dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      setFiles(Array.from(e.dataTransfer.files));
+    });
+    fileInput.addEventListener('change', () => {
+      setFiles(Array.from(fileInput.files));
+    });
+
+    function setFiles(files) {
+      const jsonFiles = files.filter(f => f.name.endsWith('.json') || f.type === 'application/json');
+      if (!jsonFiles.length) return;
+      currentFiles = jsonFiles;
+      selectedFile.textContent = jsonFiles.length === 1
+        ? jsonFiles[0].name
+        : `${jsonFiles.length} files selected`;
+      uploadBtn.disabled = false;
+      clearBtn.style.display = '';
+      resultsCard.style.display = 'none';
+    }
+
+    clearBtn.addEventListener('click', () => {
+      currentFiles = [];
+      fileInput.value = '';
+      selectedFile.textContent = '';
+      uploadBtn.disabled = true;
+      clearBtn.style.display = 'none';
+      resultsCard.style.display = 'none';
+    });
+
+    uploadBtn.addEventListener('click', async () => {
+      if (!currentFiles.length) return;
+      uploadBtn.disabled = true;
+      uploadBtn.textContent = 'Uploading…';
+      resultsList.innerHTML = '';
+      resultsCard.style.display = '';
+
+      let okCount = 0, errCount = 0;
+      for (const file of currentFiles) {
+        const row = renderResultRow(file.name, 'pending', 'Uploading…', null);
+        resultsList.appendChild(row);
+        const outcome = await uploadOne(file);
+        row.replaceWith(renderResult(file.name, outcome));
+        if (outcome.ok) okCount++; else errCount++;
+        updateSummary(okCount, errCount);
+      }
+
+      loadCatalog();
+      resetBtn();
+    });
+
+    async function uploadOne(file) {
+      let text;
+      try {
+        text = await file.text();
+      } catch {
+        return { ok: false, errors: ['Could not read file.'] };
+      }
+      try {
+        const res = await fetch('/api/rlos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: text,
+        });
+        const data = await res.json();
+        if (res.ok) return { ok: true, data };
+        const errors = Array.isArray(data.detail)
+          ? data.detail.map(e => `${e.loc?.join(' → ') ?? ''}: ${e.msg}`)
+          : [data.detail ?? 'Unknown error'];
+        return { ok: false, errors };
+      } catch (err) {
+        return { ok: false, errors: ['Request failed: ' + err.message] };
+      }
+    }
+
+    function updateSummary(ok, err) {
+      resultsSummary.innerHTML = `<span class="summary-counts">`
+        + `<span class="ok-count">✓ ${ok} accepted</span>`
+        + (err ? `<span class="err-count">✗ ${err} failed</span>` : '')
+        + `</span>`;
+    }
+
+    function renderResultRow(filename, cls, headText, bodyHtml) {
+      const row = document.createElement('div');
+      row.className = 'result-row ' + cls;
+      const icon = cls === 'ok' ? '✓' : cls === 'err' ? '✗' : '…';
+      row.innerHTML = `
+        <div class="result-head">
+          <span class="status-icon">${icon}</span>
+          <span class="filename">${esc(filename)}</span>
+          ${headText ? `<span style="margin-left:auto;font-weight:400;color:var(--ink-muted)">${esc(headText)}</span>` : ''}
+        </div>
+        ${bodyHtml ?? ''}`;
+      return row;
+    }
+
+    function renderResult(filename, outcome) {
+      if (outcome.ok) {
+        const d = outcome.data;
+        const warn = d.indexed ? '' : '<span class="warn-tag">Not indexed</span>';
+        const body = `
+          <dl class="result-grid">
+            <dt>ID</dt><dd>${esc(d.rlo_id)}</dd>
+            <dt>Schema</dt><dd>v${esc(d.schema_version)}</dd>
+            <dt>Title</dt><dd>${esc(d.title)}</dd>
+            <dt>Domain</dt><dd>${esc(d.domain)}</dd>
+            <dt>Level</dt><dd>${esc(d.level)}</dd>
+            <dt>Concepts</dt><dd>${d.concepts}</dd>
+            <dt>Components</dt><dd>${d.components}</dd>
+            <dt>Assessment items</dt><dd>${d.assessment_items}</dd>
+          </dl>`;
+        const row = renderResultRow(filename, 'ok', '', body);
+        if (warn) row.querySelector('.result-head').insertAdjacentHTML('beforeend', warn);
+        return row;
+      }
+      const body = `<ul class="error-list">${outcome.errors.map(e => `<li>${esc(e)}</li>`).join('')}</ul>`;
+      return renderResultRow(filename, 'err', 'Validation failed', body);
+    }
+
+    function resetBtn() {
+      uploadBtn.disabled = false;
+      uploadBtn.textContent = 'Upload & Validate';
+    }
+
+    function esc(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    async function loadCatalog() {
+      try {
+        const res = await fetch('/api/rlos');
+        const items = await res.json();
+        if (!items.length) {
+          tableBody.innerHTML = '<tr><td colspan="6" class="empty-state">No RLOs stored yet.</td></tr>';
+          return;
+        }
+        tableBody.innerHTML = items.map(item => `
+          <tr>
+            <td><span class="rlo-id">${esc(item.id)}</span></td>
+            <td>${esc(item.title)}</td>
+            <td>${esc(item.domain)}</td>
+            <td><span class="badge">${esc(item.level)}</span></td>
+            <td>${esc(item.status)}</td>
+            <td>
+              <button class="delete-btn" onclick="deleteRlo('${esc(item.id)}')">Remove</button>
+            </td>
+          </tr>`).join('');
+      } catch {
+        tableBody.innerHTML = '<tr><td colspan="6" class="empty-state">Could not load catalog.</td></tr>';
+      }
+    }
+
+    async function deleteRlo(id) {
+      if (!confirm(`Remove "${id}" from the registry?`)) return;
+      await fetch(`/api/rlos/${encodeURIComponent(id)}`, { method: 'DELETE' });
+      loadCatalog();
+    }
+
+    searchBtn.addEventListener('click', runSearch);
+    searchQuery.addEventListener('keydown', event => {
+      if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') runSearch();
+    });
+
+    async function runSearch() {
+      const text = searchQuery.value.trim();
+      if (!text) { searchQuery.focus(); return; }
+      searchBtn.disabled = true;
+      searchBtn.textContent = 'Searching…';
+      searchSummary.textContent = '';
+      searchResults.innerHTML = '';
+      try {
+        const res = await fetch('/api/rlo-search/batch', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ queries: [{
+            query_id: 'ui-query', text,
+            limit: Number(searchLimit.value),
+            filters: { statuses: [searchStatus.value], active_only: true },
+          }] }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(typeof data.detail === 'string' ? data.detail : JSON.stringify(data.detail));
+        const hits = data.results[0]?.hits ?? [];
+        searchSummary.textContent = `${hits.length} candidates · ${data.embedding_model} · ${data.index_revision}`;
+        searchResults.innerHTML = hits.length ? hits.map((hit, index) => `
+          <div class="search-hit">
+            <div class="search-hit-head">
+              <span class="badge">${index + 1}</span>
+              <strong>${esc(hit.title)}</strong>
+              <span class="score">${Number(hit.score).toFixed(4)}</span>
+            </div>
+            <div class="search-meta">
+              <span class="rlo-id">${esc(hit.rlo_id)}@${esc(hit.rlo_version)}</span>
+              · ${esc(hit.topic)} · ${esc(hit.level)} · ${esc(hit.governance_status)}
+            </div>
+          </div>`).join('') : '<div class="empty-state">No matching active RLOs for this status.</div>';
+      } catch (err) {
+        searchResults.innerHTML = `<div class="notice error">Search failed: ${esc(err.message)}</div>`;
+      } finally {
+        searchBtn.disabled = false;
+        searchBtn.textContent = 'Run search';
+      }
+    }
+
+    loadCatalog();
+  </script>
+</body>
+</html>

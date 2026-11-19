@@ -1,0 +1,9 @@
+<section class="slide-disclosure variant-{{ s.layout_variant or 'accordion' }}" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2><p class="instruction">{{ s.instruction }}</p>
+  <div class="disclosure-items">
+    {% for item in s['items'] %}<details class="disclosure-item"{% if s.layout_variant == 'click_reveal' and loop.first %} open{% endif %}>
+      <summary><span>{{ item.label }}</span><span class="disclosure-indicator" aria-hidden="true">+</span></summary>
+      <div class="disclosure-body">{% if item.heading %}<h3>{{ item.heading }}</h3>{% endif %}{{ item.body | paragraphs }}</div>
+    </details>{% endfor %}
+  </div>
+</section>

@@ -1,0 +1,30 @@
+id: misconception_buster
+name: Misconception Buster
+description: Pairs learner-held misconceptions with precise corrections.
+when_to_use: Use when concepts contain 1-4 explicit misconception and correction pairs.
+tags: [misconception, correction, diagnostic]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [correct_misconceptions, replace_mental_model]
+  content_shapes: [claim_correction_pairs]
+  relationships: [contrast, diagnostic]
+  interactions: []
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: false
+  capacity: {min_items: 1, max_items: 4}
+  retrieval_text: >
+    Content slide for one to four explicit misconception-and-correction pairs. Best when the
+    source names a learner-held wrong model and a substantive correction. Supports balanced or
+    text-heavy corrective explanations. Not for generic comparisons or unsupported assumptions.
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  pairs:
+    type: array
+    min_items: 1
+    max_items: 4
+    item_slots:
+      claim: {target_chars: 100, max_chars: 180}
+      correction: {target_chars: 150, max_chars: 260}
+image_slots: []

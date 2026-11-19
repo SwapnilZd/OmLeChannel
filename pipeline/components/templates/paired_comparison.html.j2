@@ -1,0 +1,9 @@
+<section class="slide-paired-comparison variant-{{ s.layout_variant or 'before_after' }}" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>{% if s.introduction %}<p class="instruction">{{ s.introduction }}</p>{% endif %}
+  <div class="paired-panels">
+    {% for side, panel in [('left', s.left), ('right', s.right)] %}<article class="paired-panel paired-{{ side }}">
+      <span class="paired-label">{{ panel.label }}</span>{% if panel.summary %}<p class="paired-summary">{{ panel.summary }}</p>{% endif %}
+      <ul>{% for point in panel.points %}<li>{{ point }}</li>{% endfor %}</ul>
+    </article>{% endfor %}
+  </div>
+</section>

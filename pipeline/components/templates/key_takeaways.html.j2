@@ -1,0 +1,3 @@
+<section class="slide-takeaways" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2><div class="takeaways-layout {{ 'has-visual' if s.image_path and (s.takeaways | length) <= 4 else '' }}"><ol class="takeaway-list takeaway-list-{{ s.takeaways | length }}">{% for takeaway in s.takeaways %}<li><span>{{ loop.index }}</span><p>{{ takeaway }}</p></li>{% endfor %}</ol>{% if s.image_path and (s.takeaways | length) <= 4 %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}</div>
+</section>

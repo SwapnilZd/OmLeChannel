@@ -1,0 +1,329 @@
+{
+  "id": "rlo-kotter-01-name-and-sequence",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter's 8-Step Change Model \u2014 Naming and Sequencing the Steps",
+  "topic": "Kotter's 8-Step Change Model \u2014 Naming and Sequencing the Steps",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 7,
+  "content_type": "concept",
+  "performance_level": "recall",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-03-urgency",
+    "rlo-kotter-04-coalition",
+    "rlo-kotter-05-vision",
+    "rlo-kotter-06-volunteer-army",
+    "rlo-kotter-07-enable-action",
+    "rlo-kotter-08-short-term-wins",
+    "rlo-kotter-09-sustain-acceleration",
+    "rlo-kotter-10-institute-change",
+    "rlo-kotter-11-identify-current-step",
+    "rlo-kotter-12-identify-skipped-step"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "Accelerate: Building Strategic Agility for a Faster-Moving World",
+      "reference": "Kotter, J. P. (2014). Accelerate. Harvard Business Review Press.",
+      "authority": "primary",
+      "note": "Kotter's 2014 update revised the step names (e.g., 'form a powerful coalition' became 'build a guiding coalition') and reframed the model for continuous rather than sequential use. This RLO uses the 2014 step names."
+    }
+  ],
+  "terminal_objective": "Given the Kotter 8-Step model, state the name and purpose of each of the eight steps in order.",
+  "performance_context": "When encountering discussions of organizational change or reading change-management materials, the learner should be able to recognize references to the model and place any single step in its correct position within the sequence.",
+  "enabling_objective": {
+    "id": "lo-01",
+    "statement": "State the name and one-sentence purpose of each of Kotter's 8 steps in their correct order.",
+    "bloom_level": "remember",
+    "concepts_addressed": [
+      "c-01"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "The 8 steps in sequence",
+      "definition": "Kotter's model consists of eight named steps that a change effort should progress through: (1) Create a sense of urgency, (2) Build a guiding coalition, (3) Form a strategic vision and initiatives, (4) Enlist a volunteer army, (5) Enable action by removing barriers, (6) Generate short-term wins, (7) Sustain acceleration, (8) Institute change.",
+      "elaboration": "Each step has a distinct purpose. Steps 1\u20134 establish the conditions for change (urgency, leadership, direction, and buy-in). Steps 5\u20136 produce visible momentum (removing obstacles and demonstrating early results). Steps 7\u20138 make the change last (maintaining pressure and embedding new behaviors into the culture). The names given here follow Kotter's 2014 revision in Accelerate; the 1996 original used slightly different wording but the same underlying steps.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The steps can be executed in any order that suits the situation.",
+          "correction": "Kotter's model is explicitly sequential. Each step establishes conditions the next step depends on \u2014 for example, a coalition (Step 2) cannot form without urgency (Step 1) to motivate participation."
+        },
+        {
+          "id": "m-02",
+          "statement": "There are 7 steps, or 10 steps, or the count varies by source.",
+          "correction": "Kotter's model has exactly 8 steps. Other change models (ADKAR, Lewin's 3-stage, Bridges' Transition Model) have different step counts and should not be confused with Kotter's."
+        },
+        {
+          "id": "m-03",
+          "statement": "'Instituting change' comes early, since it's what the effort is trying to do.",
+          "correction": "Instituting change is Step 8 \u2014 the final step. It refers to anchoring the change in culture after it has already been achieved, not to initiating or declaring the change at the outset."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Kotter's 8-Step model is one of the most cited frameworks in change management, and it appears in project charters, transformation plans, and executive communications constantly. Recognizing the model \u2014 and knowing which step is which \u2014 is a baseline literacy for anyone working near organizational change. This RLO gets you to that baseline."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The 8 steps, in order, are: (1) Create a sense of urgency \u2014 establish that change is necessary and cannot wait; (2) Build a guiding coalition \u2014 assemble a group with enough authority, credibility, and diversity to lead the effort; (3) Form a strategic vision and initiatives \u2014 articulate what the future looks like and the initiatives that will get there; (4) Enlist a volunteer army \u2014 recruit broad participation beyond the coalition; (5) Enable action by removing barriers \u2014 clear the structural, procedural, and behavioral obstacles in the way; (6) Generate short-term wins \u2014 produce visible, credible results early; (7) Sustain acceleration \u2014 press the advantage rather than declaring victory; (8) Institute change \u2014 anchor the new approach in the culture so it persists."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Grouping the steps by phase",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "The eight steps group naturally into three phases.",
+        "grouping": "Steps 1\u20134 create the climate for change (urgency, coalition, vision, volunteer army). Steps 5\u20136 engage and enable the organization (removing barriers, generating wins). Steps 7\u20138 implement and sustain the change (sustaining acceleration, instituting change).",
+        "reasoning": "The phase grouping is a memory aid. Learners who struggle to hold eight items in order often recall three phases first, then the steps within each phase."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The step most often misplaced",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "Learners frequently place 'Institute change' too early, reasoning that instituting the change is what the whole effort is about.",
+        "correction": "Step 8 (Institute change) is specifically about anchoring \u2014 making the change stick after it has been achieved. It is not the moment the change is announced or begun. The change is initiated by Steps 1\u20133 and executed through Steps 4\u20137; Step 8 makes it durable.",
+        "reasoning": "The word 'institute' in Kotter's terminology means 'embed into the institution,' not 'initiate.' This is a linguistic trap worth naming explicitly."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Confusion with other models",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A colleague says: 'Kotter's model is unfreeze, change, refreeze.'",
+        "why_wrong": "That is Lewin's 3-stage model, not Kotter's. Kotter has 8 named steps. Confusing change-management models is common because they share vocabulary; the step count is the fastest disambiguator.",
+        "correct_framing": "Kotter: 8 steps. Lewin: 3 stages. ADKAR: 5 elements (Awareness, Desire, Knowledge, Ability, Reinforcement). Bridges: 3 phases of transition."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "prompt": "Without looking, list the 8 steps in order.",
+        "expected_answer": "1. Create a sense of urgency. 2. Build a guiding coalition. 3. Form a strategic vision and initiatives. 4. Enlist a volunteer army. 5. Enable action by removing barriers. 6. Generate short-term wins. 7. Sustain acceleration. 8. Institute change."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "Which of the following correctly lists Kotter's 8 steps in order?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Urgency \u2192 Coalition \u2192 Vision \u2192 Volunteer army \u2192 Enable action \u2192 Short-term wins \u2192 Sustain acceleration \u2192 Institute change",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is Kotter's sequence, grouped as: create the climate (1\u20134), engage and enable (5\u20136), implement and sustain (7\u20138)."
+        },
+        {
+          "id": "B",
+          "text": "Vision \u2192 Urgency \u2192 Coalition \u2192 Volunteer army \u2192 Short-term wins \u2192 Enable action \u2192 Institute change \u2192 Sustain acceleration",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The steps are out of order. Urgency comes first \u2014 without it, there is no motivation to form a coalition or accept a vision. Also, 'Sustain acceleration' comes before 'Institute change,' not after."
+        },
+        {
+          "id": "C",
+          "text": "Institute change \u2192 Urgency \u2192 Coalition \u2192 Vision \u2192 Volunteer army \u2192 Enable action \u2192 Short-term wins \u2192 Sustain acceleration",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "'Institute change' is Step 8, not Step 1. In Kotter's terminology, 'institute' means to anchor the change into the culture after it has been achieved \u2014 not to initiate it."
+        },
+        {
+          "id": "D",
+          "text": "Unfreeze \u2192 Urgency \u2192 Coalition \u2192 Vision \u2192 Change \u2192 Short-term wins \u2192 Sustain acceleration \u2192 Refreeze",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "'Unfreeze' and 'Refreeze' are from Lewin's 3-stage model, not Kotter's. Kotter's model has 8 named steps and does not use freeze/refreeze terminology."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A colleague describes Step 5 as 'Enlist a volunteer army.' Is this correct?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes \u2014 'Enlist a volunteer army' is Step 5.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "'Enlist a volunteer army' is Step 4, not Step 5. Step 5 is 'Enable action by removing barriers.' The two are adjacent and often confused, but they are distinct: Step 4 recruits people, Step 5 clears their path."
+        },
+        {
+          "id": "B",
+          "text": "No \u2014 Step 5 is 'Enable action by removing barriers.'",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Step 4 is 'Enlist a volunteer army' (recruiting broad participation). Step 5 is 'Enable action by removing barriers' (clearing obstacles so that participation can produce results)."
+        },
+        {
+          "id": "C",
+          "text": "No \u2014 Step 5 is 'Generate short-term wins.'",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "'Generate short-term wins' is Step 6, not Step 5. Step 5 is 'Enable action by removing barriers.' The barriers must come down before wins can be generated at scale."
+        },
+        {
+          "id": "D",
+          "text": "No \u2014 there is no step called 'Enlist a volunteer army' in Kotter's model.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "'Enlist a volunteer army' is one of Kotter's steps \u2014 it is Step 4. The colleague's error is the position, not the existence of the step."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Neutral, professional, clear. Avoid change-management jargon beyond the step names themselves. This is a memorization RLO \u2014 the tone should be direct and unadorned.",
+    "scaffolding_level": "high",
+    "scaffolding_notes": "Learners have no prior exposure to the model assumed. The three-phase grouping (climate / engage / sustain) is the primary memory aid and should be surfaced in any rendered form.",
+    "feedback_policy": "Feedback must name the specific step number of any misidentified step, not just say the answer is wrong. When a misconception is targeted, feedback must name the misconception and correct it directly.",
+    "example_shape_hints": [
+      "Use the three-phase grouping as an organizing device for any visual rendering.",
+      "Include at least one example that explicitly addresses the 'institute means initiate' linguistic trap.",
+      "Do not use extended case studies \u2014 this RLO is about the labels and their order, not about applying them."
+    ],
+    "practice_shape_hints": [
+      "Practice should test ordering, not just recognition. A learner who can recognize the step names but cannot place them in sequence has not met the objective.",
+      "Distractors should include at least one plausible reordering and at least one confusion with another change model."
+    ],
+    "salience_hook_description": "Frame the model as vocabulary the learner will encounter in the wild \u2014 in project charters, executive communications, and consulting decks. Baseline recognition, not deep application, is the goal here."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": null,
+    "event_4_present_content": [
+      "comp-rule-01"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level via related_rlos (subsequent RLOs revisit each step in depth, reinforcing the sequence)."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "visual_diagram_with_labels",
+      "rationale": "The 8 steps grouped into three phases is inherently a diagrammatic structure. A single well-designed diagram may do most of the work of this RLO.",
+      "priority": "primary"
+    },
+    {
+      "format": "flashcard_deck",
+      "rationale": "Straightforward memorization content pairs well with spaced repetition.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video",
+      "rationale": "A 3-4 minute narrated walkthrough of the sequence, one step at a time, with the three-phase grouping surfaced at the end.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This is the foundational RLO for the Kotter sequence. Its only job is to establish that there are exactly 8 steps, in a specific order, with specific names. Deeper meaning is deferred to the per-step RLOs. The three-phase grouping is included as a memory aid rather than as content in its own right. The linguistic trap around 'institute' is called out explicitly because it is the single most common ordering error learners make.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

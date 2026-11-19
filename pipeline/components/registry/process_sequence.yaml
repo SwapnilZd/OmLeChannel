@@ -1,0 +1,37 @@
+id: process_sequence
+name: Process Sequence
+description: An ordered sequence showing how steps, stages, or dependencies progress.
+when_to_use: Use for structured procedures, processes, ordered stages, or dependency chains with 2-8 steps.
+tags: [process, sequence, procedure, timeline]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [explain_process, show_sequence, show_dependencies]
+  content_shapes: [ordered_steps]
+  relationships: [ordered, dependent]
+  interactions: []
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: true
+  capacity: {min_items: 2, max_items: 8}
+  retrieval_text: >
+    Content slide for two to eight ordered steps, stages, or dependencies. Each step has a short
+    label and explanatory detail. Best when order or progression is instructionally meaningful.
+    Supports a visual split for two to four steps and a dense grid for longer sequences. Not for
+    unordered peer concepts.
+layout_variants:
+  compact_horizontal: {when: 2-4 steps without an image, capacity: {min_items: 2, max_items: 4}}
+  visual_split: {when: 2-4 steps with a useful supporting image, capacity: {min_items: 2, max_items: 4}}
+  dense_grid: {when: 5-8 steps, capacity: {min_items: 5, max_items: 8}}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  introduction: {target_chars: 100, max_chars: 180}
+  steps:
+    type: array
+    min_items: 2
+    max_items: 8
+    item_slots:
+      label: {target_chars: 30, max_chars: 55}
+      detail: {target_chars: 90, max_chars: 160}
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

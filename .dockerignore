@@ -1,0 +1,55 @@
+# Version control
+.git
+.gitignore
+
+# macOS
+.DS_Store
+
+# Python caches and build artifacts
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# Test caches
+.pytest_cache
+.coverage
+htmlcov/
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files — never bake into image
+.env
+.env.*
+secrets/
+
+# Generated outputs — not source
+generated/
+manim/video_output/
+
+# Heavy local dependency trees
+node_modules/
+**/node_modules/
+slidev-bv101/
+ActualContent/
+
+# Docs and planning docs — exclude .md globally but keep prompt files
+*.md
+!prompts/**
+docs/
+AGENT_DOCUMENTATION/
+2026-*.md

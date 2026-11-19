@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+pydantic
+minio
+google-cloud-storage
+qdrant-client
+openai
+openpyxl
+sqlalchemy
+psycopg[binary]
+tiktoken==0.11.0
+pdfplumber
+python-docx
+python-pptx
+pytest

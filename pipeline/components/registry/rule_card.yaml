@@ -1,0 +1,34 @@
+id: rule_card
+name: Rule Card
+description: Focuses attention on one definition, principle, or governing rule.
+when_to_use: Use for a single high-value rule or definition with explanation and up to three examples.
+tags: [rule, principle, definition]
+sequence_position: middle
+selection:
+  category: content
+  purposes: [explain_rule, define_principle, focus_definition]
+  content_shapes: [single_rule_with_support]
+  relationships: [single_focus]
+  interactions: []
+  densities: [balanced, text_heavy]
+  sequence_positions: [middle]
+  media_supported: true
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Focused content slide for one important rule, principle, or definition with substantial
+    supporting detail and up to three short examples. Best for balanced or text-heavy single-focus
+    instruction. Can use an optional conceptual image. Not for several peer concepts or sequences.
+layout_variants:
+  text_focus: {when: the rule and detail provide sufficient density}
+  visual_split: {when: a useful conceptual image is available}
+slots:
+  heading: {target_chars: 45, max_chars: 80}
+  principle: {target_chars: 120, max_chars: 220}
+  supporting_detail: {target_chars: 180, max_chars: 320}
+  examples:
+    type: array
+    min_items: 0
+    max_items: 3
+    item_max_chars: 110
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

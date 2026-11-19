@@ -1,0 +1,46 @@
+# macOS
+.DS_Store
+
+# Storyline / LMS exports (large binary artifacts — not source)
+ActualContent/
+
+# Leftover working directories from experiment branch
+slidev-bv101/
+reveal-bv101/
+
+# Environment — never commit
+.env
+
+# Generated course outputs
+generated/
+
+# Agent planning and documentation — local only, not for version control
+AGENT_DOCUMENTATION/
+
+manim/course_output/*
+manim/__pycache__/*
+manim/media/*
+manim/slides/*
+manim/output_assets/*
+manim/packaged_slides/*
+manim/video_output/*
+
+secrets/*
+
+__pycache__/
+__pycache__/*
+*/__pycache__/
+
+**/_previews/
+
+# Local source-ingestion state
+*.db
+*.db-shm
+*.db-wal
+
+# Local trust roots used for container builds; never commit certificate material.
+source_content/certs/*
+!source_content/certs/.gitkeep
+
+# Generated source-extraction benchmark binaries.
+tests/source_content/fixtures/generated/

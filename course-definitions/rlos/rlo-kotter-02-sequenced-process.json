@@ -1,0 +1,349 @@
+{
+  "id": "rlo-kotter-02-sequenced-process",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter's 8-Step Model as a Sequenced Process",
+  "topic": "Kotter's 8-Step Model as a Sequenced Process",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "principle",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-03-urgency",
+    "rlo-kotter-11-identify-current-step",
+    "rlo-kotter-12-identify-skipped-step"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "Why Transformation Efforts Fail",
+      "reference": "Kotter, J. P. (1995). Harvard Business Review, March-April 1995.",
+      "authority": "primary",
+      "note": "The original article that introduced the 8-step framework and its 'skipping steps' argument."
+    }
+  ],
+  "terminal_objective": "Given a description of a change effort, explain why Kotter's model treats change as a sequenced process rather than a set of independent activities.",
+  "performance_context": "When encountering a change plan that treats the 8 steps as a checklist or a parallel workstream structure, the learner should be able to explain why sequence matters and what breaks when steps are executed out of order.",
+  "enabling_objective": {
+    "id": "lo-02",
+    "statement": "Explain the dependency relationship between Kotter's steps, and describe what typically fails when a step is skipped or executed out of order.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Step dependency",
+      "definition": "Each of Kotter's steps produces a condition that the following steps depend on. Urgency (Step 1) produces the motivation that makes coalition-building (Step 2) possible; a coalition produces the authority that makes a vision (Step 3) credible; and so on through the sequence.",
+      "elaboration": "This is why Kotter's model is described as sequenced rather than parallel. It is not that the steps cannot overlap in time \u2014 a coalition may continue evolving while a vision is being formed \u2014 but that starting a step before its predecessor has produced its output leads the later step to fail. The vision announced without a coalition is ignored; the coalition assembled without urgency does not act.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The 8 steps are a checklist that can be completed in any order.",
+          "correction": "The steps are ordered because each produces a condition that later steps require. Reordering breaks the dependency chain and typically causes later steps to fail \u2014 not because the steps are wrong, but because their preconditions are missing."
+        },
+        {
+          "id": "m-02",
+          "statement": "The steps can all be executed in parallel to save time.",
+          "correction": "Some overlap in execution is normal, but starting a step before its predecessor has produced its output leaves the later step without what it needs. A vision announced before a coalition exists has no authority behind it; a volunteer army enlisted before a vision exists has nothing to enlist for."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Skipped-step failure",
+      "definition": "Kotter's central empirical claim is that change efforts most often fail not because any single step is executed poorly, but because one or more steps are skipped entirely \u2014 usually because the skipped step feels slow or uncomfortable.",
+      "elaboration": "The steps most commonly skipped are those that involve creating discomfort or slowing down: creating urgency (uncomfortable), building a coalition (slow), generating short-term wins (feels like a distraction from the main goal), and sustaining acceleration (feels unnecessary once results appear). Skipping any of these produces a characteristic failure mode later in the sequence.",
+      "source_refs": [
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Steps can be skipped if the organization is already advanced in that area.",
+          "correction": "This is sometimes true but is more often a rationalization for avoiding a difficult step. Kotter's argument is that the appearance of already having urgency, already having a coalition, or already having buy-in is usually an illusion \u2014 and the illusion is what makes the step feel skippable."
+        },
+        {
+          "id": "m-04",
+          "statement": "A skipped step can be added in later if it becomes a problem.",
+          "correction": "Steps can be revisited, but the cost of adding a skipped step late is much higher than doing it in sequence. A coalition assembled after a failed vision announcement has to overcome the credibility damage already done. Retrofitting is expensive and sometimes impossible."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "The most important thing to understand about Kotter's model is not the steps themselves \u2014 it is why they are in that order. Kotter did not invent the 8 steps as a neutral list of activities. He identified them by studying change efforts that failed, and the failures were almost always failures of sequence, not of effort. Treating the model as a checklist is the single most common way to misapply it."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Kotter's steps have dependency relationships: each step produces something the next step requires. Urgency produces motivation. Coalition produces authority. Vision produces direction. Volunteer army produces scale. Removing barriers produces the ability to act. Short-term wins produce credibility. Sustained acceleration produces persistence. Institutionalization produces durability. Skip the producer, and the consumer has nothing to work with."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "The steps most often skipped are those that feel slow or uncomfortable \u2014 most commonly urgency (Step 1), coalition-building (Step 2), and short-term wins (Step 6). Skipping produces predictable failure modes: without urgency, coalitions do not act; without a coalition, visions have no authority; without short-term wins, the effort loses momentum before instituting change is possible."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Vision without coalition",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A CEO announces a new strategic direction at an all-hands meeting. No coalition of senior leaders has been formed to endorse the vision. The CEO is speaking alone.",
+        "what_happens": "The vision is heard but not adopted. Middle managers wait to see whether their functional leaders support it. Functional leaders wait to see whether the CEO is serious. Nothing moves.",
+        "reasoning": "Step 3 (vision) depends on the output of Step 2 (coalition). A vision without a coalition behind it has no authority \u2014 it is one person's opinion, however senior. The failure is not in the vision itself; it is in the missing precondition."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Coalition without urgency",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A senior executive convenes a cross-functional group to lead a transformation. The group meets, discusses, and produces recommendations, but no one in the organization believes the transformation is necessary or urgent.",
+        "what_happens": "The coalition's recommendations are received politely and ignored. Members of the coalition themselves lose interest as competing priorities take precedence. The group disbands within a year.",
+        "reasoning": "Step 2 (coalition) depends on the output of Step 1 (urgency). A coalition without urgency is a committee \u2014 it can meet, but it cannot mobilize action. Skipping urgency to move faster into coalition-building saves weeks and costs the entire effort."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "The parallel-workstream fallacy",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A program manager sets up eight parallel workstreams, one per Kotter step, running simultaneously with weekly status reports.",
+        "why_wrong": "This treats the steps as independent activities. They are not. The 'vision' workstream cannot produce anything usable until the 'coalition' workstream has produced a coalition; the 'volunteer army' workstream has nothing to recruit for until the vision exists. In practice, only Steps 1 and 2 will make progress; the others will stall waiting for their inputs, but the parallel structure will hide this until the whole program is behind.",
+        "correct_framing": "Kotter's model allows overlap and iteration, but not parallelization. Later steps require the outputs of earlier ones. A change plan structured around the model should show dependency, not parallel tracks."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: why does Kotter's model treat the 8 steps as a sequence rather than a checklist?",
+        "expected_answer": "Because each step produces a condition that later steps depend on, and skipping or reordering steps leaves the later steps without the preconditions they need to succeed."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A leadership team is planning a major change effort. To accelerate the timeline, they decide to run the announcement of a strategic vision (Step 3) at the same time as they begin forming the guiding coalition (Step 2). Which of the following best describes what is likely to happen?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The parallel approach will save time and produce faster results, since both steps make progress simultaneously.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "This treats the steps as independent. They are not. Announcing a vision (Step 3) before the coalition (Step 2) exists means the vision has no authority behind it \u2014 it is one leader's opinion. Parallel execution does not solve this; the vision is announced too early regardless of what the coalition workstream is doing."
+        },
+        {
+          "id": "B",
+          "text": "The vision announcement will likely be ignored or receive weak adoption, because it lacks the authority a formed coalition would provide.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Step 3 depends on the output of Step 2. Without a coalition already in place, the vision has no authority \u2014 the organization has no signal that the leadership as a whole is behind it. This is one of the most common failure modes Kotter identifies."
+        },
+        {
+          "id": "C",
+          "text": "The steps can be reordered freely as long as all 8 are completed by the end.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The steps are not order-independent. Each step produces a condition later steps require. Completing all 8 steps in the wrong order does not produce the same result as completing them in sequence \u2014 the outputs of the later steps depend on the preconditions the earlier steps establish."
+        },
+        {
+          "id": "D",
+          "text": "It will work as long as the vision is compelling enough on its own merits.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The quality of the vision is not the issue. Kotter's argument is that even a strong vision fails without the coalition to back it. The vision's merits are consumed by the missing precondition."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change program is 18 months in and has stalled. The leadership team has been strong (coalition formed), the vision was clear, barriers have been removed, and initial results were promising \u2014 but the effort has lost momentum in the last few months and people are quietly returning to old ways of working. Which of the following is the most likely explanation?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The team skipped generating short-term wins (Step 6), so credibility never accumulated.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The stem says initial results were promising \u2014 that suggests short-term wins were generated. The failure is happening after the wins, not before them. Look at what comes after Step 6."
+        },
+        {
+          "id": "B",
+          "text": "The team skipped sustaining acceleration (Step 7) \u2014 they treated the early wins as the finish line rather than pressing the advantage.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the classic Step 7 failure mode: the early wins are mistaken for victory, and the pressure to keep pushing eases. Without sustained acceleration, momentum decays and Step 8 (instituting change) becomes impossible. Kotter identifies this as one of the most common late-stage failures."
+        },
+        {
+          "id": "C",
+          "text": "The team skipped urgency (Step 1), which is why the effort has stalled.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "If urgency had been skipped, the effort would not have reached 18 months with a formed coalition, cleared barriers, and initial results. The failure pattern described \u2014 stalling after early wins \u2014 points to Step 7, not Step 1."
+        },
+        {
+          "id": "D",
+          "text": "The effort has succeeded \u2014 Kotter's model does not require anything past Step 6.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "The model has 8 steps precisely because reaching Step 6 is not the end. Steps 7 (sustain acceleration) and 8 (institute change) exist because change efforts routinely revert if the pressure eases after early wins."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Analytical and slightly cautionary. This RLO is arguing against a specific misapplication of the model, so the tone should convey that the checklist interpretation is a real and costly mistake, not a minor terminological quibble.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLO-01 and know the step names and order. This RLO builds on that by teaching why the order matters. Avoid re-teaching the step names; reference them and move on.",
+    "feedback_policy": "Feedback must trace the specific dependency that was violated (e.g., 'Step 3 depends on the output of Step 2'), not just say 'the order is wrong.' Naming the dependency is what makes the feedback educational rather than corrective.",
+    "example_shape_hints": [
+      "Use paired examples showing the same activity succeeding when its preconditions are in place and failing when they are not.",
+      "The 'vision without coalition' and 'coalition without urgency' examples are the two highest-value cases; keep them.",
+      "Do not use extended case studies with named organizations \u2014 the dependency logic should be visible in the structure of the example, not obscured by context."
+    ],
+    "practice_shape_hints": [
+      "Practice items should describe a change effort's state and ask the learner to identify the missing precondition, not just name a step.",
+      "At least one item should target the late-stage failure mode (Step 7 skipped), since this is the counterintuitive case learners most often miss."
+    ],
+    "salience_hook_description": "The hook should establish that sequence is the actual content of Kotter's model \u2014 the 8 steps as a bare list are not the insight. Learners who leave with 'there are 8 steps' but not 'the order is load-bearing' have missed the point."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-01 (learner should already be able to name and order the 8 steps).",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLOs 11 and 12 revisit sequenced-process reasoning in an applied context."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "dependency_diagram",
+      "rationale": "The step-by-step dependency chain is inherently visual. A diagram showing each step's output feeding the next step's input communicates the core content in a single image.",
+      "priority": "primary"
+    },
+    {
+      "format": "short_narrative_video",
+      "rationale": "The 'vision without coalition' and 'coalition without urgency' examples are naturally cinematic \u2014 a 4-5 minute video that walks through both scenarios can convey the dependency logic effectively.",
+      "priority": "secondary"
+    },
+    {
+      "format": "text_module_with_scenarios",
+      "rationale": "The two examples plus non-example are strong enough to carry a text-only rendering.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO is the conceptual keystone of the sequence. Every subsequent per-step RLO tacitly relies on the learner understanding that the steps are ordered for a reason. Placing this early \u2014 right after the naming RLO \u2014 inoculates against the 'checklist' misinterpretation before the learner encounters the per-step detail. The Step 7 assessment item is included deliberately: late-stage sequence failures are the most costly and the least intuitive, and testing for them here foreshadows the material in RLO-09.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

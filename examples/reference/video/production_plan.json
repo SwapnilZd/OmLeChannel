@@ -1,0 +1,79 @@
+{
+  "plan_id": "pp-adkar-01-video-manager-l55",
+  "modality": "video",
+  "narrative": "Two modality scenes collapsed into a single avatar-video render task producing one MP4 deliverable.",
+  "jobs": [
+    {
+      "id": "render-avatar-video",
+      "source_scene_ids": ["video-hook", "video-adkar-explanation"],
+      "capability": "video.avatar.render",
+      "depends_on": [],
+      "inputs": {
+        "deliverable_id": {
+          "kind": "literal",
+          "value": "video-adkar-01"
+        },
+        "scenes": {
+          "kind": "literal",
+          "value": [
+            {
+              "scene_id": "video-hook",
+              "source_scene_ids": ["video-hook"],
+              "title": "Why Change Management Matters",
+              "script": "Change initiatives fail at an alarming rate — not because the strategy is wrong, but because people aren't brought along for the journey. As a manager, you're on the front line of every change your organisation undertakes. The ADKAR framework gives you a structured way to guide your team through change successfully.",
+              "background": {
+                "kind": "color",
+                "color": "#1A1A2E"
+              },
+              "estimated_duration_seconds": 60
+            },
+            {
+              "scene_id": "video-adkar-explanation",
+              "source_scene_ids": ["video-adkar-explanation"],
+              "title": "The Five Elements of ADKAR",
+              "script": "ADKAR stands for five essential elements. Awareness — people need to understand why the change is necessary. Desire — they must want to support and participate in the change. Knowledge — they need to know how to change. Ability — they must be able to implement the change in their day-to-day work. And Reinforcement — the change must be sustained over time. As a manager, your role spans all five. You build awareness through communication, foster desire through coaching, and reinforce change through recognition and accountability.",
+              "background": {
+                "kind": "color",
+                "color": "#1A1A2E"
+              },
+              "estimated_duration_seconds": 120
+            }
+          ]
+        },
+        "avatar": {
+          "kind": "literal",
+          "value": {
+            "profile": "default_instructor"
+          }
+        },
+        "voice": {
+          "kind": "literal",
+          "value": {
+            "profile": "default_instructor",
+            "speed": 1.0
+          }
+        },
+        "dimensions": {
+          "kind": "literal",
+          "value": {
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "captions": {
+          "kind": "literal",
+          "value": false
+        }
+      },
+      "output_keys": [
+        "video_uri",
+        "subtitle_uri",
+        "cost_report_uri",
+        "duration_seconds",
+        "usage"
+      ],
+      "max_attempts": 2
+    }
+  ],
+  "deliverable_job_ids": ["render-avatar-video"]
+}

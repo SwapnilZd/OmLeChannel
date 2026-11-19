@@ -1,0 +1,51 @@
+{
+  "sources": [
+    {
+      "id": "src-manual",
+      "title": "Coffee machine manual",
+      "reference": "Example manufacturer. Coffee machine operating manual.",
+      "authority": "primary",
+      "ingested_source_id": "source-coffee-manual",
+      "source_version_id": "source-coffee-manual-v1",
+      "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+      "canonical_locator": "Coffee machine manual"
+    },
+    {
+      "id": "src-soil",
+      "title": "Colombian coffee-growing conditions",
+      "reference": "Example agronomy reference on Colombian coffee-growing conditions.",
+      "authority": "secondary",
+      "ingested_source_id": "source-colombian-soil",
+      "source_version_id": "source-colombian-soil-v1",
+      "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+      "canonical_locator": "Colombian coffee-growing conditions"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-brew-procedure",
+      "source_ref": "src-manual",
+      "source_version_id": "source-coffee-manual-v1",
+      "node_ids": ["node-page-4-step-2"],
+      "locator": "page 4, step 2",
+      "role": "objective_defining"
+    },
+    {
+      "id": "ev-soil-flavor",
+      "source_ref": "src-soil",
+      "source_version_id": "source-colombian-soil-v1",
+      "node_ids": ["node-page-12-soil"],
+      "locator": "page 12, Soil and flavor",
+      "role": "supporting_context",
+      "usage_note": "May enrich flavor context but must not expand assessment scope."
+    }
+  ],
+  "references": {
+    "enabling_objective": ["ev-brew-procedure"],
+    "concept": ["ev-brew-procedure", "ev-soil-flavor"],
+    "misconception": ["ev-brew-procedure"],
+    "component": ["ev-brew-procedure", "ev-soil-flavor"],
+    "assessment_item": ["ev-brew-procedure"],
+    "assessment_option": ["ev-brew-procedure"]
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "id": "rlo-kotter-06-volunteer-army",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 4 \u2014 Enlist a Volunteer Army",
+  "topic": "Kotter Step 4 \u2014 Enlist a Volunteer Army",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-05-vision"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-07-enable-action"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    },
+    {
+      "id": "src-02",
+      "title": "Accelerate",
+      "reference": "Kotter, J. P. (2014). Accelerate. Harvard Business Review Press.",
+      "authority": "primary",
+      "note": "The 'volunteer army' framing is Kotter's 2014 revision; the 1996 version framed this step as 'communicating the change vision.'"
+    }
+  ],
+  "terminal_objective": "Explain what it means to enlist a volunteer army (Step 4), and distinguish broad enlistment from top-down communication.",
+  "performance_context": "When observing or leading the middle phase of a change effort, the learner should be able to distinguish genuine enlistment of participants from broadcast communications that inform without engaging.",
+  "enabling_objective": {
+    "id": "lo-06",
+    "statement": "Describe what enlisting a volunteer army means, and distinguish it from broadcasting the change to employees.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Volunteer army",
+      "definition": "A broad body of employees who have actively chosen to help move the change forward. The word 'volunteer' is deliberate: these people are participating because they want to, not because they have been assigned to.",
+      "elaboration": "The volunteer army is larger than the coalition and different from the affected employee population as a whole. Not everyone in the organization needs to volunteer, but enough must volunteer to give the change momentum beyond the coalition's direct reach. Kotter's 2014 revision emphasizes this step because he observed that changes led by coalitions alone, without broader enlistment, could not scale beyond the coalition's own span of influence.",
+      "source_refs": [
+        "src-01",
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "Communicating the change to all employees is the same as enlisting them.",
+          "correction": "Broadcasting information is not enlistment. Enlistment requires an active choice by the employee to participate. Emails, town halls, and all-hands announcements inform; they do not enlist. Enlistment happens when someone decides to spend discretionary effort on the change."
+        },
+        {
+          "id": "m-02",
+          "statement": "The volunteer army is optional if the change is being driven top-down.",
+          "correction": "Top-down direction can produce compliance but cannot produce the broad discretionary effort a change effort needs to succeed at scale. Kotter's argument is that the coalition alone, however senior, cannot reach every corner of the organization; a volunteer army is what extends the coalition's reach."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "The distinction between assignment and volunteering",
+      "definition": "Assigned participation is required and produces compliance. Volunteered participation is chosen and produces discretionary effort. Kotter's step specifically calls for the latter \u2014 employees who are pulled toward the change by its vision, not pushed into it by their reporting line.",
+      "elaboration": "The distinction is not about org-chart neutrality \u2014 a change effort will always draw on assigned resources for specific work. It is about whether the broader body of engaged participants is there by choice or by direction. A change with a small assigned change team and a large volunteer army looks very different from a change with a large assigned change team and no volunteers, even if the total headcount is similar.",
+      "source_refs": [
+        "src-02"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Assigning people to change workstreams counts as enlisting them.",
+          "correction": "Assignment produces compliance. Volunteering produces discretionary effort. The two are not substitutes: an assigned participant will do what is required, while a volunteer will do more than is required. A change effort that treats assigned resources as its volunteer army will discover the difference the first time discretionary effort is needed."
+        },
+        {
+          "id": "m-04",
+          "statement": "A volunteer army must include a majority of the organization.",
+          "correction": "The volunteer army does not need to be a majority \u2014 Kotter often cites figures in the 10-15% range as sufficient for a large organization. What matters is that the volunteers are distributed across the organization (not clustered in a few teams) and that they are numerous enough to give the change presence outside the coalition's direct influence."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "By the time you have a coalition and a vision, you have the leadership of a change effort. What you do not yet have is a change movement. Step 4 is the shift from the former to the latter. It is where the coalition finds out whether the vision it created has any pull outside the coalition itself \u2014 whether people who were not asked to lead nonetheless choose to help."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Enlisting a volunteer army means recruiting a broad body of employees who choose to participate in the change beyond what their job requires. The volunteers do not need to be a majority, but they need to be numerous enough and distributed enough to extend the change beyond the coalition's direct reach."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Volunteering and assignment are different. Assigned participants comply \u2014 they do what is required. Volunteer participants contribute discretionary effort \u2014 they do more than is required. A change effort needs both, but Step 4 specifically calls for the second kind."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "The vision that recruits",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A pharmaceutical company launches a change effort around patient-centered drug development. The coalition articulates a vision that resonates with a specific group: scientists who joined the company because they wanted their work to matter to patients. Over the first six months, several hundred scientists \u2014 none assigned to the effort \u2014 begin volunteering time to advisory sessions, cross-functional experiments, and internal talks.",
+        "what_happens": "The change effort now has presence in labs and teams the coalition never visited. The volunteers do not report to the coalition, but they carry the vision into rooms where the coalition would not otherwise be heard. When the coalition needs to make a decision, it has real signal from across the organization to draw on.",
+        "reasoning": "This is what a volunteer army does. It gives the change reach and legitimacy that the coalition alone cannot produce. Notice that no one had to be told to participate \u2014 the vision itself did the recruiting."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "The distributed volunteer base",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change effort has 800 volunteers across 30,000 employees \u2014 under 3%. But the volunteers are distributed across every region, function, and level.",
+        "what_happens": "The change effort has presence everywhere. Any conversation about the change, anywhere in the organization, is likely to include at least one volunteer who can speak to it directly. The change is felt as pervasive even though the volunteer base is a small fraction of the total.",
+        "reasoning": "Distribution matters more than raw count. A 3% volunteer base spread across every corner of the organization gives the change more reach than a 15% base clustered in headquarters functions."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Broadcast mistaken for enlistment",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A change team sends a series of well-crafted emails to all 20,000 employees explaining the vision, hosts a company-wide town hall, and publishes an intranet site with detailed materials. The team reports that the change has been 'communicated to the full employee base.'",
+        "why_wrong": "Communication is not enlistment. The employees have been informed; they have not been asked to do anything, and they have not chosen to do anything. The change has 20,000 informed observers, not 20,000 volunteers \u2014 and the coalition still has to do all the pulling itself.",
+        "correct_framing": "Enlistment requires a pathway from 'I heard about it' to 'I chose to help.' Broadcasting the vision is a precondition for that pathway, but it is not the pathway itself."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Assignment mistaken for volunteering",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03"
+      ],
+      "canonical_content": {
+        "setup": "A change program assigns 200 employees to change-adjacent roles: change agents, transformation office members, workstream leads. The program manager reports that the change has 200 enlisted volunteers.",
+        "why_wrong": "These are assigned resources, not volunteers. They will do what is required of them, but they cannot be counted as a volunteer army \u2014 they were not asked whether they wanted to participate, and their contribution is bounded by what their assignment requires. The change may have solid staffing but no volunteer army.",
+        "correct_framing": "Volunteers are people who join without being assigned. They can and often do include people whose jobs are unrelated to the change. The 200 assigned employees are a separate structure \u2014 necessary but not sufficient."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what distinguishes a volunteer army from an employee base that has been informed of the change?",
+        "expected_answer": "A volunteer army consists of employees who have actively chosen to contribute discretionary effort to the change, whereas an informed employee base has only received communications about it."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change team reports the following results at the six-month mark: 'We have communicated the vision to 100% of employees through town halls, emails, and manager cascades. We have assigned 150 employees to formal change roles. We consider Step 4 complete.' How should this be evaluated against Kotter's Step 4?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 4 is complete. The team has both communicated broadly and assigned dedicated resources.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Communication and assignment are not enlistment. Kotter's Step 4 requires a volunteer army \u2014 employees who have chosen to participate beyond what their role requires. The team has completed communication and staffing, both of which are necessary, but neither of which produces the volunteer army the model calls for."
+        },
+        {
+          "id": "B",
+          "text": "Step 4 is not complete. Broadcast communication informs employees; assignment staffs the effort. Neither produces the discretionary participation that a volunteer army requires.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Both broadcast communication and assignment are commonly mistaken for enlistment because they produce visible activity. But the specific thing Step 4 asks for \u2014 people who choose to help \u2014 is absent from what the team has done. The next step is to create paths for interested employees to actively contribute, not just receive information or accept assignments."
+        },
+        {
+          "id": "C",
+          "text": "Step 4 does not require a volunteer army in most organizations; the described approach is sufficient.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Step 4 in Kotter's 2014 revision specifically requires a volunteer army, and the reasoning applies broadly. The coalition alone cannot reach every part of the organization; the volunteer army is what extends its reach. Skipping this step usually produces the pattern where the change is 'happening' at the top but has not penetrated the middle or the front line."
+        },
+        {
+          "id": "D",
+          "text": "The team should assign the remaining employees to change roles to reach volunteer-army scale.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "Adding assignments does not create volunteers \u2014 assigned participation produces compliance, not discretionary effort. Scaling up assignments would give the change more staffing, not more volunteers. The two structures are different."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change effort in a 30,000-employee organization has enlisted approximately 900 volunteers \u2014 3% of the workforce. A skeptical stakeholder argues this is 'nowhere near enough' for a real volunteer army. Which of the following best evaluates the situation?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The stakeholder is correct \u2014 a volunteer army needs to include a majority of employees to be meaningful.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "A majority is not the threshold. Kotter typically cites figures in the 10-15% range as sufficient for a large organization, and even smaller percentages can be effective if distributed well. The 'majority required' framing is not part of Kotter's model."
+        },
+        {
+          "id": "B",
+          "text": "It depends on distribution \u2014 3% concentrated in one function is inadequate, but 3% distributed across every function and level provides meaningful reach.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Distribution is the key variable, not raw percentage. A volunteer army's function is to give the change presence in every corner of the organization \u2014 and that can be achieved by a small percentage that is well-distributed, or fail with a larger percentage that is clustered. The stakeholder's critique is answerable only by looking at where the 900 volunteers are, not just how many there are."
+        },
+        {
+          "id": "C",
+          "text": "The number is irrelevant \u2014 any volunteer army satisfies Step 4.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Numbers matter, but distribution matters more. A volunteer army too small or too clustered to reach the affected population will not do what Step 4 requires. 'Any number will do' is not the correct reading."
+        },
+        {
+          "id": "D",
+          "text": "The stakeholder is correct, and the effort should be paused until enrollment reaches at least 50%.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Pausing to reach 50% would delay the change for reasons Kotter's model does not require. The threshold is functional (enough distributed presence to extend the coalition's reach), not proportional (a specific percentage of headcount)."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Practical and slightly skeptical. This RLO is teaching learners to see through common substitutes for enlistment (broadcast communication, assignment). The tone should support critical evaluation of change activity claims.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 05. The vision from Step 3 is what does the recruiting in Step 4, so the connection should be explicit.",
+    "feedback_policy": "Feedback must distinguish between the three failure modes (broadcast-only, assignment-only, low or poorly-distributed enrollment). Each has a different corrective action, and generic 'you need more enlistment' feedback obscures the diagnosis.",
+    "example_shape_hints": [
+      "Include at least one example where a small but well-distributed volunteer base is effective, since the distribution-vs-percentage point is counterintuitive.",
+      "Non-examples should specifically target the broadcast-as-enlistment and assignment-as-enlistment confusions, both of which are common in practice.",
+      "The vision-that-recruits example is high-value because it connects Steps 3 and 4 explicitly; keep it prominent."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present a described change effort's engagement approach and ask the learner to diagnose whether a volunteer army exists.",
+      "At least one item should test the distribution-vs-percentage point, since this is where learners most often reach for the wrong intuition."
+    ],
+    "salience_hook_description": "The hook should establish that Step 4 is where a leadership-led change becomes a movement. Coalition plus vision is necessary but not sufficient; the volunteer army is what turns the two into scale."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-05: the vision is what recruits the volunteer army. A vision that does not pull people to volunteer is not doing its Step 3 job.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-07 (removing barriers) depends on volunteer effort to identify and remove barriers at scale."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "diagnostic_module",
+      "rationale": "The main instructional payload is diagnosing what counts as enlistment vs communication vs assignment. A diagnostic module that walks learners through several examples is well-suited.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_vignette_video",
+      "rationale": "The 'vision that recruits' example and the 'broadcast mistaken for enlistment' non-example both benefit from short video treatment.",
+      "priority": "secondary"
+    },
+    {
+      "format": "text_module_with_scenarios",
+      "rationale": "Straightforward text rendering is sufficient; the examples do most of the instructional work.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Step 4 is the step most transformed by Kotter's 2014 revision (from 'communicate the vision' to 'enlist a volunteer army'). This RLO leans into the 2014 framing because the volunteer army concept is the more useful and differentiated instructional payload. The broadcast-vs-enlistment and assignment-vs-volunteering distinctions are the specific practical content. Distribution-over-percentage is included because it is counterintuitive and produces more useful diagnostic thinking than a target-percentage framing.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

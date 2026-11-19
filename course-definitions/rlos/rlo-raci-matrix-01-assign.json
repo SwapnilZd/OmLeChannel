@@ -1,0 +1,312 @@
+{
+  "id": "rlo-raci-matrix-01-assign",
+  "version": "1.0.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Assigning Clear Ownership Using the RACI Matrix",
+  "topic": "RACI responsibility assignment",
+  "domain": "Project & Operational Management",
+  "level": "introductory",
+  "audience": ["individual contributors", "people managers", "executives"],
+  "estimated_duration_minutes": 30,
+  "content_type": "procedure",
+  "performance_level": "do",
+  "prerequisites": [],
+  "corequisites": [],
+  "follow_ons": [],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "A Guide to the Project Management Body of Knowledge (PMBOK Guide)",
+      "reference": "Project Management Institute. A Guide to the Project Management Body of Knowledge (PMBOK Guide).",
+      "authority": "reference",
+      "note": "PMBOK identifies RACI as a standard example of a Responsibility Assignment Matrix. RACI has no single founding author and descends from mid-20th-century linear responsibility chart practice; this RLO therefore presents it as a stable practitioner convention rather than attributing it to a founding paper."
+    }
+  ],
+  "terminal_objective": "Given a list of project tasks and stakeholders, assign RACI roles correctly for each task, with exactly one Accountable and at least one Responsible per task.",
+  "performance_context": "Use a RACI matrix before or during cross-functional project and operational work to clarify who performs work, owns outcomes, contributes input, and receives updates.",
+  "enabling_objective": {
+    "id": "eo-raci-assign",
+    "statement": "Assign Responsible, Accountable, Consulted, and Informed roles to a task while applying the structural rules of a valid RACI matrix.",
+    "bloom_level": "apply",
+    "concepts_addressed": ["c-responsible", "c-accountable", "c-consulted", "c-informed", "c-raci-rules"]
+  },
+  "concepts": [
+    {
+      "id": "c-responsible",
+      "name": "Responsible",
+      "definition": "The person or people who do the work required to complete the task.",
+      "elaboration": "Responsible describes execution, not ultimate ownership. Ask who is actually performing the work. A task must have at least one Responsible person or role.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-r-vs-a",
+          "statement": "Responsible and Accountable are interchangeable labels for the person most involved in a task.",
+          "correction": "Responsible performs the work; Accountable is the one person who ultimately answers for the outcome. One person may hold both roles, but the roles describe different responsibilities."
+        }
+      ]
+    },
+    {
+      "id": "c-accountable",
+      "name": "Accountable",
+      "definition": "The single person who ultimately answers for whether the task is completed correctly.",
+      "elaboration": "Every task row has exactly one Accountable person or role, even when several people are Responsible. Ask whose name is called if the outcome is not delivered correctly.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-multiple-a",
+          "statement": "Assigning multiple Accountable people creates shared ownership and reduces risk.",
+          "correction": "Multiple Accountable assignments diffuse ownership and recreate the ambiguity RACI is intended to remove. Select exactly one Accountable per task."
+        },
+        {
+          "id": "m-zero-a",
+          "statement": "A task can omit Accountable when the team shares responsibility informally.",
+          "correction": "A valid RACI row names exactly one Accountable owner; shared informal ownership does not establish who ultimately answers for the result."
+        }
+      ]
+    },
+    {
+      "id": "c-consulted",
+      "name": "Consulted",
+      "definition": "People whose input is actively sought before or during the work through two-way communication.",
+      "elaboration": "Consulted roles contribute expertise, requirements, or review that can influence the work before it moves forward.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-c-vs-i",
+          "statement": "Anyone who should know about a task should be marked Consulted.",
+          "correction": "Consulted requires two-way dialogue that can influence the work. A person who only needs a status or outcome notification is Informed."
+        }
+      ]
+    },
+    {
+      "id": "c-informed",
+      "name": "Informed",
+      "definition": "People who receive one-way updates on progress or outcome without needing to weigh in first.",
+      "elaboration": "Informed roles need awareness, not participation in the decision or work. Distinguishing them from Consulted roles prevents unnecessary review cycles.",
+      "source_refs": ["src-01"],
+      "misconceptions": [
+        {
+          "id": "m-overconsult",
+          "statement": "Marking more stakeholders Consulted is always safer than marking them Informed.",
+          "correction": "Unnecessary consultation can slow decisions. Use Consulted only when two-way input is needed; otherwise use Informed."
+        }
+      ]
+    },
+    {
+      "id": "c-raci-rules",
+      "name": "RACI matrix structural rules",
+      "definition": "A valid RACI matrix uses tasks or decisions as rows, people or roles as columns, and R, A, C, I, or blank as cell values; each row has exactly one A and at least one R.",
+      "elaboration": "A row may have zero or more Consulted and Informed assignments. The same person may hold R and A on a small team, but that combination should be deliberate. The one-Accountable and at-least-one-Responsible rules can be validated mechanically.",
+      "source_refs": ["src-01"],
+      "misconceptions": []
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "title": "Ownership before work begins",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed"],
+      "canonical_content": {
+        "situation": "A task stalls because several people believed someone else owned the decision, while stakeholders expected to be consulted only hear about it after completion.",
+        "purpose": "A RACI matrix makes execution, outcome ownership, input, and notification explicit before ambiguity delays the work."
+      }
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "title": "The four RACI roles",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed"],
+      "canonical_content": {
+        "responsible": {"meaning": "Does the work", "diagnostic_question": "Who is actually sitting down and doing this?"},
+        "accountable": {"meaning": "Ultimately owns the outcome", "diagnostic_question": "If this goes wrong, whose name gets called, and is it exactly one person?"},
+        "consulted": {"meaning": "Provides two-way input", "diagnostic_question": "Whose expertise must influence the work before it moves forward?"},
+        "informed": {"meaning": "Receives one-way updates", "diagnostic_question": "Who needs a heads-up without needing to weigh in first?"}
+      }
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "title": "Build and validate each row",
+      "concepts_referenced": ["c-raci-rules", "c-responsible", "c-accountable"],
+      "misconceptions_addressed": ["m-multiple-a", "m-zero-a"],
+      "canonical_content": {
+        "shape": "Matrix with tasks or decisions as rows and people or roles as columns.",
+        "allowed_cell_values": "R, A, C, I, or blank.",
+        "rules": {
+          "accountable": "Exactly one A per row: never zero and never more than one.",
+          "responsible": "At least one R per row so someone performs the work.",
+          "consulted_informed": "C requires two-way dialogue; I requires only one-way communication.",
+          "combined_role": "The same person may hold R and A when intentional, particularly on small teams."
+        }
+      }
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A valid generic RACI row",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed", "c-raci-rules"],
+      "canonical_content": {
+        "render_as": "matrix_row",
+        "task": "Publish the final project report",
+        "assignments": {
+          "Analyst": "R",
+          "Department Head": "A",
+          "Legal": "C",
+          "Adjacent Teams": "I"
+        },
+        "reasoning": "The analyst drafts the report, the department head owns the final result, Legal contributes input before publication, and adjacent teams receive the completed update. The row has exactly one A and at least one R."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Two Accountable owners",
+      "concepts_referenced": ["c-accountable", "c-raci-rules"],
+      "misconceptions_addressed": ["m-multiple-a"],
+      "canonical_content": {
+        "render_as": "matrix_row",
+        "task": "Approve the final project report",
+        "assignments": {"Project Manager": "A", "Department Head": "A", "Analyst": "R"},
+        "violation": "The row has two Accountable assignments.",
+        "correction": "Choose the one person who ultimately answers for approval. If the other person's input is required, assign that person C rather than a second A."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "title": "Validate a task row",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed", "c-raci-rules"],
+      "canonical_content": {
+        "prompt": "Review one task row. Confirm exactly one A and at least one R, then ask whether each C truly needs two-way input and each I needs only an update.",
+        "validation_order": ["Count A assignments", "Count R assignments", "Test C assignments for dialogue", "Test I assignments for notification only"]
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A RACI row assigns the Project Sponsor and Department Head as Accountable for the same task. What is the primary problem?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-accountable", "c-raci-rules"],
+      "options": [
+        {"id": "A", "text": "The row diffuses outcome ownership by assigning more than one Accountable.", "correct": true, "misconception_targeted": null, "feedback": "Correct. Each task must have exactly one Accountable owner."},
+        {"id": "B", "text": "Every task must use a different person for Responsible and Accountable.", "correct": false, "misconception_targeted": "m-r-vs-a", "feedback": "R and A describe different roles, but one person may intentionally hold both. The violation here is two A assignments."},
+        {"id": "C", "text": "The row needs an additional Accountable as a tie-breaker.", "correct": false, "misconception_targeted": "m-multiple-a", "feedback": "Adding another A increases ambiguity. Select exactly one person who ultimately owns the outcome."},
+        {"id": "D", "text": "There is no problem because accountability should always be shared.", "correct": false, "misconception_targeted": "m-multiple-a", "feedback": "RACI uses exactly one A per row specifically to avoid diffuse accountability."}
+      ],
+      "aligned_to_performance_level": "find"
+    },
+    {
+      "id": "q-02",
+      "stem": "Legal must review a proposed public statement and provide changes before release. Which RACI role best fits Legal?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-consulted", "c-informed"],
+      "options": [
+        {"id": "A", "text": "Responsible", "correct": false, "misconception_targeted": "m-r-vs-a", "feedback": "Legal is not described as producing the statement; its required contribution is input before release."},
+        {"id": "B", "text": "Accountable", "correct": false, "misconception_targeted": "m-r-vs-a", "feedback": "The scenario does not make Legal the single owner of the statement's outcome."},
+        {"id": "C", "text": "Consulted", "correct": true, "misconception_targeted": null, "feedback": "Correct. Legal provides two-way input that can change the work before it proceeds."},
+        {"id": "D", "text": "Informed", "correct": false, "misconception_targeted": "m-c-vs-i", "feedback": "Informed is one-way communication. Required review and changes make Legal Consulted."}
+      ],
+      "aligned_to_performance_level": "find"
+    },
+    {
+      "id": "q-03",
+      "stem": "Which assignment is structurally valid for one task row?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": ["c-raci-rules", "c-responsible", "c-accountable"],
+      "options": [
+        {"id": "A", "text": "Two A assignments, one R assignment, and one I assignment", "correct": false, "misconception_targeted": "m-multiple-a", "feedback": "The row has more than one Accountable owner."},
+        {"id": "B", "text": "One A assignment, zero R assignments, and two C assignments", "correct": false, "misconception_targeted": "m-r-vs-a", "feedback": "The row needs at least one Responsible person to perform the work."},
+        {"id": "C", "text": "One A assignment, two R assignments, one C assignment, and one I assignment", "correct": true, "misconception_targeted": null, "feedback": "Correct. The row has exactly one A and at least one R; multiple R assignments and optional C and I assignments are allowed."},
+        {"id": "D", "text": "Zero A assignments, one R assignment, and one C assignment", "correct": false, "misconception_targeted": "m-zero-a", "feedback": "The row needs exactly one Accountable owner."}
+      ],
+      "aligned_to_performance_level": "decide"
+    }
+  ],
+  "variant_examples": [
+    {
+      "id": "variant-financial-services",
+      "type": "variant",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed", "c-raci-rules"],
+      "industry_tags": ["financial_services"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "render_as": "matrix_row",
+        "task": "Approve a new product launch for compliance review",
+        "assignments": {"Product Manager": "R", "Head of Compliance": "A", "Legal / Risk": "C", "Sales Leadership": "I"}
+      },
+      "annotations": []
+    },
+    {
+      "id": "variant-manufacturing",
+      "type": "variant",
+      "concepts_referenced": ["c-responsible", "c-accountable", "c-consulted", "c-informed", "c-raci-rules"],
+      "industry_tags": ["manufacturing"],
+      "service_line_tags": [],
+      "role_tags": [],
+      "content": {
+        "render_as": "matrix_row",
+        "task": "Approve a change to a production-line safety procedure",
+        "assignments": {"Plant Engineer": "R", "Plant Manager": "A", "EHS Team": "C", "Line Workers / Shift Supervisors": "I"}
+      },
+      "annotations": []
+    }
+  ],
+  "design_brief": {
+    "tone": "Practical, direct, and precise corporate training. Emphasize decisions teams must make rather than abstract organizational theory.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Assume no prior knowledge of RACI. Teach the R-versus-A and C-versus-I distinctions before asking learners to validate or complete a row.",
+    "feedback_policy": "Name the violated rule or confused role, point to the relevant assignment, and state the correction. Do not place correctness explanations in visible answer-option text; reveal them after submission.",
+    "example_shape_hints": [
+      "Render assignments as a matrix with tasks as rows and stakeholder roles as columns, not as a substitute bulleted list.",
+      "Show exactly one A visually and explicitly validate at least one R.",
+      "Select a matching approved industry variant when available; definitions and structural rules must not change with context."
+    ],
+    "practice_shape_hints": [
+      "Present one row at a time and ask learners to identify a structural or role-assignment error.",
+      "Use distractors that target multiple A assignments, missing R assignments, R-versus-A confusion, and C-versus-I confusion.",
+      "A format may provide a matrix-building practice interaction, but scored assessment must use approved objective items until constructed-response matrix scoring is supported downstream."
+    ],
+    "salience_hook_description": "Establish that unclear ownership causes stalled decisions, duplicated work, and surprise accountability; RACI makes those expectations explicit before work starts."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Ask the learner to recall a task where ownership or required input was unclear.",
+    "event_4_present_content": ["comp-rule-01", "comp-rule-02"],
+    "event_5_provide_guidance": ["comp-example-01", "comp-nonexample-01"],
+    "event_6_elicit_performance": ["comp-recall-01"],
+    "event_7_provide_feedback": "Use the per-option feedback in each assessment item and the design brief feedback policy.",
+    "event_8_assess_performance": ["q-01", "q-02", "q-03"],
+    "event_9_enhance_retention": "Invite the learner to validate one current project task using the one-A, at-least-one-R, C-versus-I checks."
+  },
+  "content_type_recommendations": [
+    {"format": "interactive_elearning", "rationale": "A matrix interaction can make assignments visible and validate the one-A and at-least-one-R rules immediately.", "priority": "primary"},
+    {"format": "short_video_explainer", "rationale": "A visual walkthrough can build and correct a matrix row while highlighting common role confusions.", "priority": "secondary"},
+    {"format": "coached_conversation_podcast", "rationale": "A project-kickoff conversation can illustrate how a team decides between R and A or C and I for one manageable task.", "priority": "optional"},
+    {"format": "matrix_job_aid", "rationale": "A blank grid with the four diagnostic questions supports immediate use during project planning.", "priority": "secondary"}
+  ],
+  "authoring_rationale": "This RLO treats RACI assignment as one integrated procedure because learners must apply the four role definitions and structural constraints together to produce a valid task row. The one-Accountable rule is the central mechanically testable constraint. Definitions, rules, and assessment logic remain constant across contexts; only tasks and stakeholder roles vary.",
+  "role_tags": [],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": ["project_management", "decision_rights", "cross_functional_collaboration", "operating_model"],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-30",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial RACI matrix sample authored in the unified RLO schema (2026-07-30)."
+  },
+  "accessibility": {"features": ["plain_language", "screen_reader_optimised_structure"], "wcag_conformance": null},
+  "rights": {"rights": "internal_use_all_service_lines", "sharing_constraints": "Internal only; not for external distribution."}
+}

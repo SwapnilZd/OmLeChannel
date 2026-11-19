@@ -1,0 +1,29 @@
+id: reflection_prompt
+name: Reflection Prompt
+description: A passive consideration prompt that connects content to the learner's context without collecting a response.
+when_to_use: Use sparingly for a source-authored recall or consideration prompt. Never imply that the learner must type, submit, or store an answer.
+tags: [reflection, self-check, ungraded]
+sequence_position: middle
+selection:
+  category: practice
+  purposes: [prompt_consideration, stimulate_recall]
+  content_shapes: [single_prompt_and_guidance]
+  relationships: [reflection]
+  interactions: []
+  densities: [sparse, balanced]
+  sequence_positions: [middle]
+  media_supported: true
+  capacity: {min_items: 1, max_items: 1}
+  retrieval_text: >
+    Passive practice slide for one source-authored consideration or recall prompt with brief
+    guidance. It does not collect, submit, persist, or grade a response. Best used sparingly for
+    contextual application. Can include an optional supporting image. Not an assessment form.
+layout_variants:
+  prompt_focus: {when: no useful image is available}
+  visual_split: {when: a supporting image adds context without answering the prompt}
+slots:
+  heading: {target_chars: 40, max_chars: 75}
+  prompt: {target_chars: 140, max_chars: 240}
+  guidance: {target_chars: 100, max_chars: 180}
+image_slots:
+  - {id: illustration, optional: true, role: supporting_illustration, generate: true, fallback: none}

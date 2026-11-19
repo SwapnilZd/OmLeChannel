@@ -1,0 +1,358 @@
+{
+  "id": "rlo-kotter-05-vision",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 3 \u2014 Form a Strategic Vision and Initiatives",
+  "topic": "Kotter Step 3 \u2014 Form a Strategic Vision and Initiatives",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-04-coalition"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-06-volunteer-army"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what a strategic vision and initiatives (Step 3) consist of, and distinguish a vision from a plan or a goal.",
+  "performance_context": "When reviewing the artifacts of a change effort, the learner should be able to distinguish a strategic vision from adjacent documents (plans, goals, mission statements) and assess whether the vision provides the direction the model requires.",
+  "enabling_objective": {
+    "id": "lo-05",
+    "statement": "Describe what a strategic vision provides in a change effort, and distinguish it from a plan, a goal, and a mission statement.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Strategic vision",
+      "definition": "A picture of a desired future state that is specific enough to guide decisions, appealing enough to motivate effort, and communicable in a few minutes. A vision answers: 'What will be true when this change has succeeded?'",
+      "elaboration": "Kotter emphasizes that an effective vision must be imaginable (paints a picture), desirable (appeals to the interests of stakeholders), feasible (realistic), focused (clear enough to guide decisions), flexible (allows individual initiative), and communicable (can be explained in five minutes or less). A vision missing any of these features fails in a corresponding specific way.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "A vision is a mission statement or set of corporate values.",
+          "correction": "A mission statement describes what the organization does; a vision describes what the future looks like after a specific change succeeds. Values describe how people should behave. All three are distinct documents with distinct purposes. A vision for a specific change is not the same as a corporate mission statement, and one cannot substitute for the other."
+        },
+        {
+          "id": "m-02",
+          "statement": "A vision is a detailed plan for how the change will be executed.",
+          "correction": "A vision describes the destination, not the route. Plans (which include timelines, dependencies, and resource allocations) are downstream artifacts. Kotter's model separates vision from plan deliberately: the vision guides the plan, but the plan is not the vision."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Strategic initiatives",
+      "definition": "The specific, high-level projects or workstreams that the coalition selects as the primary means of pursuing the vision. Initiatives sit between the vision (the destination) and the plan (the detailed route).",
+      "elaboration": "In Kotter's 2014 revision, initiatives were added as a companion to the vision \u2014 the vision alone was too abstract to guide action, and detailed plans were too tactical to communicate broadly. Initiatives are the intermediate layer: 'To reach the vision, we will pursue these three or four things.' They are how the coalition translates direction into focus without collapsing into project management.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Initiatives are the same as the tasks or workstreams that will be executed.",
+          "correction": "Initiatives are strategic \u2014 they answer 'what are the big bets that make the vision achievable?' Tasks and workstreams are tactical \u2014 they answer 'what do we do next week?' A change effort with 30 workstreams and no strategic initiatives has no organizing structure between vision and execution."
+        },
+        {
+          "id": "m-04",
+          "statement": "The vision is enough; initiatives are optional detail.",
+          "correction": "Without initiatives, a vision cannot be acted on. Kotter added initiatives to the model precisely because vision alone was too abstract to guide decisions. Vision plus initiatives together make the direction actionable."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "The vision is the artifact of the change effort that most people will actually encounter \u2014 the sentence or paragraph they will remember, quote, and align to. Get the vision wrong and every conversation about the change becomes harder; get it right and the organization does much of the alignment work on its own. But 'vision' is a word that gets attached to almost anything, and most documents called visions are not."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "An effective vision has six features (from Kotter): imaginable (paints a picture of the future), desirable (appeals to stakeholder interests), feasible (realistic to achieve), focused (clear enough to guide decisions), flexible (allows individual initiative in pursuit), and communicable (explainable in five minutes or less). A vision missing any of these fails in a specific way."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Strategic initiatives are the small number of high-level projects the coalition selects as the primary path to the vision. They sit between the vision (destination) and the plan (route). Together, vision plus initiatives make the direction actionable without collapsing into task-level detail."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A vision that meets Kotter's features",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A regional bank facing declining branch traffic articulates the following vision: 'Within three years, every customer relationship will be as easy to manage from a phone as from a branch, and our staff will spend more time on advice than on transactions.'",
+        "evaluation": "Imaginable \u2014 the picture is concrete. Desirable \u2014 customers get convenience, staff get more meaningful work. Feasible \u2014 three years is credible for the described change. Focused \u2014 decisions about branch investments, mobile capabilities, and staff roles can be tested against it. Flexible \u2014 leaves room for different implementation approaches. Communicable \u2014 one sentence, understandable in seconds.",
+        "reasoning": "This is what Kotter is asking for. Not every vision will be one sentence, but the features above are the test \u2014 not eloquence, not aspiration, but whether the vision does what a vision is supposed to do."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Vision plus initiatives",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "The same bank pairs its vision with three strategic initiatives: (1) rebuild the mobile experience end-to-end; (2) redesign branch staff roles around advice rather than transaction processing; (3) migrate all account-servicing tasks to self-service or digital-assisted channels.",
+        "evaluation": "The vision provides direction; the three initiatives provide focus. A branch manager considering a new product knows to test it against both the vision ('easier from a phone') and the initiatives (does this support the advice-oriented staff model?). Without the initiatives, the vision could be interpreted many ways; with them, the organization has a shared map.",
+        "reasoning": "This is why Kotter added initiatives to the model. Vision alone is too abstract; a full plan is too tactical. Three to five initiatives is the working range."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Mission statement in place of vision",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A leader introducing a change effort points to the company's existing mission statement \u2014 'We help customers achieve financial security' \u2014 as the vision for the change.",
+        "why_wrong": "The mission statement describes what the company does at all times, in all circumstances. It says nothing about what should be different after the change. A vision for a change effort must specify the change \u2014 what will be true afterward that is not true now.",
+        "correct_framing": "Mission statements are stable; visions are change-specific. Using the mission statement as a vision is a common shortcut that leaves the organization without any specific direction for the change."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "A detailed plan presented as a vision",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change team presents a 40-page document titled 'Vision' that includes work breakdown structures, timelines, resource allocations, and vendor selections.",
+        "why_wrong": "This is a plan, not a vision. The features of a vision (imaginable, desirable, communicable) are absent. A vision must be communicable in five minutes; a 40-page document is not.",
+        "correct_framing": "The 40 pages may be valuable, but they belong in the plan artifact, not the vision. A vision precedes and guides the plan \u2014 it is what the plan is trying to achieve, not the plan itself."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what does a vision provide that a plan does not, and what do initiatives provide that a vision alone does not?",
+        "expected_answer": "A vision provides a picture of the desired future state that guides and motivates action; initiatives translate the vision into a small set of strategic bets that make it actionable without descending into task-level detail."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A leader announces the following as the vision for an organizational change: 'We are launching a 24-month transformation program with three phases, twelve workstreams, and a governance model detailed in the attached 60-page document.' How should this be evaluated against Kotter's Step 3?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The document is a well-formed vision because it is specific and detailed.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Specificity and detail are not what a vision requires. Kotter's vision must be communicable in five minutes, which a 60-page phased program plan is not. What is being described is a plan, not a vision."
+        },
+        {
+          "id": "B",
+          "text": "The document is a plan, not a vision. The change effort has a plan but is missing the vision that should guide it.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. A plan describes how the change will be executed; a vision describes what will be true after it succeeds. Kotter's model treats these as separate and sequential \u2014 vision guides plan, not the other way around. A change with a plan but no vision has execution structure but no shared direction."
+        },
+        {
+          "id": "C",
+          "text": "The document is fine because visions can take any form the organization prefers.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Visions are not stylistically free. Kotter identifies specific features (imaginable, desirable, feasible, focused, flexible, communicable). A 60-page document violates the 'communicable in five minutes' feature and provides no picture of the future state that stakeholders can align to."
+        },
+        {
+          "id": "D",
+          "text": "The change effort should skip the vision and proceed with the plan, since the plan is more actionable.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Skipping the vision is precisely the failure this RLO warns against. Without a vision, the plan has no organizing purpose \u2014 the workstreams will execute, but the organization will not know why. Plans are tools; visions are direction."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A CEO presents the vision for a major change as: 'To be the most trusted partner to our customers.' She adds no strategic initiatives, saying that the vision is 'enough for now' and that specific initiatives will be developed by workstream leads. What is the most likely consequence?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The change effort will proceed smoothly because a clear vision has been articulated.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "The vision as stated is too abstract to guide decisions. 'Most trusted partner' could mean many different things \u2014 a service investment, a product change, a pricing change, a communications change. Without strategic initiatives, workstream leads will each interpret the vision differently, and the organization's efforts will diverge rather than converge."
+        },
+        {
+          "id": "B",
+          "text": "Workstream leads will interpret the vision in different ways, and the change effort will lack shared focus. Initiatives are needed to convert the vision into aligned action.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is precisely why Kotter added initiatives to the model. A vision alone is too abstract to guide execution \u2014 different leaders will make different reasonable interpretations. Three to five strategic initiatives provide the intermediate layer that turns direction into aligned focus."
+        },
+        {
+          "id": "C",
+          "text": "The vision is too vague to be a vision at all, and should be replaced with a mission statement.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "A mission statement would make the problem worse, not better. Mission statements describe what the organization does at all times; they are not change-specific and therefore cannot direct a change effort. The vision here is a real vision \u2014 the missing piece is initiatives, not a different type of document."
+        },
+        {
+          "id": "D",
+          "text": "Individual workstream leads should each develop their own initiatives \u2014 the coalition does not need to define them centrally.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "This is what will happen by default and is precisely the failure the question is asking about. When each workstream lead defines their own initiatives, the change effort loses convergence. Initiatives are a coalition-level responsibility; they exist to produce alignment across workstreams, not within them."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Precise and slightly pedantic. This RLO is drawing careful distinctions between adjacent terms (vision vs mission vs goal vs plan) that get used interchangeably in practice. The tone should support the distinctions without becoming lecturing.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01\u201304. The coalition context is important because visions are coalition products \u2014 a vision developed without a coalition, however good, has no authority behind it.",
+    "feedback_policy": "Feedback must name the specific feature of a vision that is violated (e.g., 'not communicable in five minutes,' 'not change-specific'). Do not treat 'not a vision' as a single failure mode \u2014 the different failures produce different corrections.",
+    "example_shape_hints": [
+      "Include at least one example evaluating a vision against all six of Kotter's features \u2014 the six-feature framework is the specific instructional content and should be practiced explicitly.",
+      "Include at least one example that pairs a vision with initiatives, so the two-layer structure is visible.",
+      "Non-examples should distinguish visions from adjacent document types (mission statement, plan, goal) \u2014 these confusions are the main practical failure mode."
+    ],
+    "practice_shape_hints": [
+      "Practice should present artifacts (vision statements, plans, mission statements) and ask the learner to evaluate them.",
+      "At least one item should target the vision-without-initiatives failure, since this is the specific gap Kotter's 2014 revision was addressing."
+    ],
+    "salience_hook_description": "The hook should establish that most artifacts called 'visions' are not, and that getting the vision right does more organizational work than any other Step 3 activity."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-04: the coalition is the author of the vision. Without the coalition, the vision has no authority; without the vision, the coalition has no product.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-06 (volunteer army) explicitly requires the vision as the recruiting message."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "checklist_diagnostic",
+      "rationale": "The six features of a vision form a natural diagnostic checklist. A tool that supports evaluating draft visions against the six features is high-utility.",
+      "priority": "primary"
+    },
+    {
+      "format": "artifact_comparison_module",
+      "rationale": "Side-by-side comparisons of vision, mission, goal, and plan documents make the distinctions concrete.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_with_examples",
+      "rationale": "A 4-5 minute video that walks through the six features with a well-formed vision as the running example.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "The specific instructional payload is (a) the six features of an effective vision and (b) the vision/initiatives two-layer structure. The distinctions between vision and adjacent document types (mission, goal, plan) are included because these are the most common practical confusions in professional-services settings. The 'vision-without-initiatives' case is emphasized because it maps to Kotter's 2014 revision and to a very common failure mode where leaders articulate a compelling vision but leave the organization without an actionable path to it.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

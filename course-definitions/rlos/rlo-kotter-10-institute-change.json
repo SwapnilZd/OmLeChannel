@@ -1,0 +1,359 @@
+{
+  "id": "rlo-kotter-10-institute-change",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Kotter Step 8 \u2014 Institute Change",
+  "topic": "Kotter Step 8 \u2014 Institute Change",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 12,
+  "content_type": "concept",
+  "performance_level": "find",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-09-sustain-acceleration"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-11-identify-current-step",
+    "rlo-kotter-12-identify-skipped-step"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Explain what it means to institute change (Step 8), and distinguish anchored change from change that reverts once attention shifts.",
+  "performance_context": "When observing the late phase of a change effort, the learner should be able to assess whether the change has been anchored into the culture and organizational systems, or whether it remains dependent on the coalition's continued attention.",
+  "enabling_objective": {
+    "id": "lo-10",
+    "statement": "Describe what it means to institute change, and distinguish change that has been anchored in the culture from change that remains dependent on active leadership pressure.",
+    "bloom_level": "understand",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Instituting change",
+      "definition": "Embedding the change into the organization's culture, systems, and leadership succession so that it persists after the coalition's active attention ends. 'Institute' here means 'anchor in the institution' \u2014 not 'initiate.'",
+      "elaboration": "Kotter is explicit that Step 8 is the anchoring step, not the launching step. Its purpose is durability. A change that has produced Step 6 wins and been sustained through Step 7 is still not permanent \u2014 the moment the coalition disperses and attention shifts, the old behaviors resurface unless the change has been embedded into the systems that produce behavior at scale: hiring criteria, promotion criteria, onboarding, performance systems, leadership succession, and shared narrative about 'how we do things here.'",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "'Institute change' means to initiate or launch the change effort.",
+          "correction": "In Kotter's terminology, 'institute' means 'embed into the institution.' It is the anchoring step, not the launching step. The change is initiated by Steps 1-3 and executed through Steps 4-7; Step 8 makes it durable after the effort's active phase ends."
+        },
+        {
+          "id": "m-02",
+          "statement": "Once new behaviors are visible across the organization, the change has been instituted.",
+          "correction": "Visible behavior under coalition pressure is not yet anchored behavior. The test of institution is what happens when the pressure is withdrawn \u2014 when the coalition disperses, when leadership turns over, when attention shifts to a new priority. Behavior that persists through those transitions is anchored; behavior that requires the coalition to sustain it is not."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Culture as medium, not method",
+      "definition": "Culture is the medium in which changes must be anchored to persist, but 'changing the culture' is not a technique that can be directly executed. Culture changes as a consequence of sustained behavioral change reinforced by systems (hiring, promotion, succession, narrative), not as a first-order intervention.",
+      "elaboration": "Kotter is explicit that culture change is a lagging outcome, not a leading action. Attempts to change culture directly \u2014 through values statements, culture programs, or communication campaigns \u2014 do not work if the underlying systems still reward the old behaviors. The systems that shape behavior at scale must be updated first; culture follows. This is why Step 8 is last: it can only work after the earlier steps have produced sustained new behaviors that the updated systems can then reinforce.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "A training program on the new values is sufficient to institute the change.",
+          "correction": "Training changes what people know; it does not change what the organization rewards. If hiring, promotion, and performance systems still reward the old behaviors, training will not overcome them \u2014 the systems produce far more behavioral signal than training does. Training is part of Step 8 but not sufficient by itself."
+        },
+        {
+          "id": "m-04",
+          "statement": "A new policy or values statement changes the culture.",
+          "correction": "Written policies and stated values are documents, not culture. Culture is what people actually do when no one is watching, and that is shaped by what the organization has consistently rewarded, promoted, and told stories about \u2014 not by what is written on the wall. Policy changes may support institution of change but do not accomplish it by themselves."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Step 8 is where a change effort finds out whether it did the previous work well enough to survive its own end. Every change effort eventually stops \u2014 coalitions disperse, leadership turns over, attention moves to new priorities. What determines whether the change persists is whether it was anchored deeply enough into the systems that produce behavior at scale. Change that is not anchored reverts, not from any single failure, but from the steady pressure of everything else in the organization returning to its default."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Instituting change means embedding it into the systems that produce behavior at scale \u2014 hiring criteria, promotion criteria, onboarding, performance management, leadership succession, and organizational narrative. The test of successful institution is whether the change survives the withdrawal of coalition attention and the turnover of leadership."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "Culture is a lagging outcome of sustained behavior reinforced by systems \u2014 not something that can be changed directly. Training programs, values statements, and communication campaigns do not institute change on their own. The systems that shape behavior (hiring, promotion, performance) must be updated first; culture follows behavior, not the reverse."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Anchoring through leadership succession",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A change effort toward cross-functional collaboration has produced sustained new behaviors over two years. The coalition, planning for Step 8, works with HR to update promotion criteria so that demonstrated cross-functional collaboration is a required competency for advancement to senior roles. Over the next three years, promotion decisions consistently reflect the new criteria; the leaders who rise are those who exemplify the new behaviors.",
+        "what_happens": "Five years after the original effort, the coalition has long since dispersed, but the change has persisted. The current leadership was selected under the new criteria \u2014 collaborative behavior is not something they were trained to perform; it is a trait they were promoted for demonstrating. The change is now anchored in the leadership succession pipeline itself.",
+        "reasoning": "This is what institution looks like. The change is no longer dependent on the coalition or on active attention \u2014 it is built into the mechanism that determines who leads. Leadership succession is one of the most durable anchors precisely because it shapes who is in the rooms where behavior is set for the next generation."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Anchoring through the new-hire pipeline",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": {
+        "setup": "A firm's change to a customer-centric operating model has been sustained through Step 7 with visible improvements. To anchor the change, the coalition works with recruiting to update hiring criteria across the organization: customer-facing behaviors are now assessed in interviews, and hiring decisions reflect the new criteria.",
+        "what_happens": "Over the following four years, natural turnover replaces roughly 40% of the workforce with people hired under the new criteria. The change is now embedded not just in the behavior of existing employees under sustained pressure, but in the composition of the workforce itself. The customer-centric orientation is a feature of who works at the firm, not an initiative it is running.",
+        "reasoning": "The hiring pipeline is a durable anchor because it operates continuously and reshapes the workforce over time. Unlike training (which fades), hiring criteria produce compounding effects \u2014 each cohort of new hires further embeds the change into the organization's baseline character."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "'Institute' misread as 'initiate'",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A project manager, planning a change effort at kickoff, includes 'Institute change' as an early milestone in the project plan \u2014 a formal launch event at week 4.",
+        "why_wrong": "This misreads 'institute' as 'initiate.' Step 8 is not the launch of the change; it is the anchoring of a change that has already been successfully sustained through Steps 1-7. Attempting Step 8 in week 4 is not just early \u2014 it is a category mistake. There is nothing yet to anchor.",
+        "correct_framing": "The change is launched by Steps 1-3, executed through Steps 4-7, and anchored by Step 8. 'Institute' means 'embed into the institution,' which requires that behaviors have already been established and sustained before anchoring is possible."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Policy change mistaken for cultural change",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-03",
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A coalition, at the point of transitioning to Step 8, publishes a new set of corporate values and requires all employees to complete a two-hour training module on the changed operating model. The coalition then disperses, declaring Step 8 complete.",
+        "why_wrong": "The values statement is a document, and the training is a knowledge intervention. Neither updates the systems that produce behavior at scale \u2014 hiring criteria, promotion decisions, performance management. Within a year, promotion decisions continue to reward the old behaviors, new hires are selected under the old criteria, and the change begins to revert. The published values and completed training do not overcome the systems pulling behavior back toward the old default.",
+        "correct_framing": "Instituting change requires updating the systems that produce behavior. Values statements and training are supportive artifacts, not the primary mechanism. Without changes to hiring, promotion, and succession, the effort has not been instituted regardless of what has been published."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "In one sentence: what does it mean to institute change, and what is the test of whether it has been done?",
+        "expected_answer": "Instituting change means embedding it into the systems that produce behavior at scale (hiring, promotion, succession, performance); the test is whether the change survives the withdrawal of coalition attention and the turnover of leadership."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A coalition, at the completion of Step 7, wants to institute the change. They publish a revised set of corporate values on the intranet, deliver a company-wide training module on the new operating model, and hold a celebration event marking the transformation. The coalition then transitions to new priorities. Two years later, an audit finds that the organization has largely reverted to pre-change behaviors. What is the most likely explanation?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 8 was successfully completed, but the change was not resilient enough for external market conditions.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Step 8 was not successfully completed. Publishing values, delivering training, and holding a celebration do not institute change \u2014 they are supportive activities. The reversion reflects that the underlying systems (hiring, promotion, performance) were not updated to reinforce the new behaviors, so the organization drifted back to its default."
+        },
+        {
+          "id": "B",
+          "text": "The change was not anchored in the systems that produce behavior at scale \u2014 hiring, promotion, and succession. Published values and training cannot substitute for updated systems.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the classic Step 8 failure. Values and training address knowledge and intent, but the systems that reward and select behavior \u2014 hiring, promotion, performance management \u2014 continued to operate under the old model. When coalition attention withdrew, those systems pulled behavior back to the pre-change default. Instituting change requires updating those systems, not just documenting the intended behaviors."
+        },
+        {
+          "id": "C",
+          "text": "The coalition should have delivered more extensive training with follow-up sessions.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "More training would not have solved the underlying problem. Training changes what people know; it does not change what the organization rewards. If the promotion criteria, hiring criteria, and performance metrics still reward the old behaviors, additional training produces additional knowledge that is then routinely overridden by system-level incentives."
+        },
+        {
+          "id": "D",
+          "text": "The change effort was flawed from Step 1 \u2014 reversion at this stage indicates the initial urgency was insufficient.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The stem describes an effort that reached Step 7 with sustained behavior \u2014 that is not consistent with insufficient initial urgency. The failure is specifically at Step 8: the anchoring did not happen. Diagnosing this as a Step 1 problem misplaces the intervention."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A leader reviewing a change effort at the twelve-month mark notes: 'We are seeing widespread adoption of the new behaviors across the organization. Employees are following the new model, managers are reinforcing it, and everyone knows the vision. We have successfully instituted the change.' How should this assessment be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The assessment is correct \u2014 widespread adoption of new behaviors is the definition of instituted change.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Widespread adoption under sustained coalition attention is not yet instituted change. The test of institution is whether the behavior persists when coalition attention is withdrawn and leadership turns over. At the twelve-month mark, with the coalition still actively engaged, the change is being sustained \u2014 not yet anchored."
+        },
+        {
+          "id": "B",
+          "text": "The assessment is premature. Widespread behavior under active coalition attention is Step 7 (sustaining acceleration), not yet Step 8. The true test is whether the behavior survives the coalition's dispersal and future leadership transitions.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. This is the specific distinction between Steps 7 and 8. Visible behavior under sustained pressure is what Step 7 produces; instituting the change (Step 8) is the further work of anchoring the behavior so that it persists after that pressure ends. The leader has confused the effect of ongoing effort with the durability that survives its withdrawal."
+        },
+        {
+          "id": "C",
+          "text": "The assessment is correct if the behaviors have been in place for at least six months.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Duration under coalition attention is not the test. Kotter's threshold for institution is what happens when the attention is withdrawn \u2014 and that has not been tested at twelve months with the coalition still active. Six months of sustained behavior demonstrates Step 7 success, not Step 8 completion."
+        },
+        {
+          "id": "D",
+          "text": "The assessment is correct because 'instituted' is defined by behavior, not by systems.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Behavior is what should be instituted, but institution refers to how the behavior is embedded, not just its presence. Behavior sustained by coalition pressure is not the same as behavior sustained by the organization's own systems. The distinction between the two is precisely what Step 8 is about."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Reflective and slightly patient. This RLO is teaching learners a subtle distinction \u2014 behavior under pressure vs. anchored behavior \u2014 that requires them to look past visible activity to underlying durability. The tone should support that longer view.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01, 02, and 09. The distinction from Step 7 is essential \u2014 Step 8 is not 'more of Step 7' but a different kind of work, focused on systems rather than behavior.",
+    "feedback_policy": "Feedback must distinguish between the two most common misreadings: 'institute means initiate' (the launch-timing error) and 'visible behavior equals instituted behavior' (the durability confusion). These require different corrective framings.",
+    "example_shape_hints": [
+      "Include at least one example of anchoring through a durable system (leadership succession, hiring criteria) and one non-example of relying on non-durable artifacts (training, values statements).",
+      "The distinction between behavior under pressure and anchored behavior should be surfaced explicitly through the examples.",
+      "Non-examples should target both the linguistic confusion ('institute = initiate') and the substantive confusion ('publishing values = instituting change')."
+    ],
+    "practice_shape_hints": [
+      "Practice items should present a claim of instituted change and ask the learner to assess whether the underlying anchoring mechanisms are actually in place.",
+      "At least one item should test the specific distinction between Step 7 sustained behavior and Step 8 anchored behavior."
+    ],
+    "salience_hook_description": "The hook should establish that Step 8 is about durability \u2014 surviving the effort's own end. Learners should leave believing that visible adoption under coalition pressure is not the same as anchored change and that the specific work of Step 8 is updating the systems that produce behavior at scale."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLO-09: sustained acceleration produces the behavior; institution anchors it. Without Step 7, there is nothing sustained to anchor; without Step 8, the sustained behavior reverts once the coalition disperses.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-12 revisits Step 8 skipping as one of the most consequential failure patterns, since the change reverts even after apparent success."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "longitudinal_case_module",
+      "rationale": "Step 8 outcomes unfold over years, not months. A case format that traces a change effort from Step 7 completion through 3-5 years of institution (or reversion) makes the durability question visible.",
+      "priority": "primary"
+    },
+    {
+      "format": "systems_diagram_visual",
+      "rationale": "The relationship between behavior, systems (hiring, promotion, succession), and culture is inherently structural. A visual mapping the systems that anchor change supports the framework.",
+      "priority": "secondary"
+    },
+    {
+      "format": "text_module_with_scenarios",
+      "rationale": "The core content is compact enough to render in text with worked examples of successful and unsuccessful institution.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "Step 8 is teacher-facing challenging because its outcomes are invisible on short timescales \u2014 the failure appears only when the coalition disperses and pressure is withdrawn. The instructional focus is therefore on the mechanism of anchoring (systems that produce behavior at scale) rather than on activities. The linguistic trap ('institute' as 'initiate') is called out explicitly because it is a common source of misplacing Step 8 early in project plans. The connection to Step 7 is emphasized because the distinction between sustained behavior and anchored behavior is the specific instructional payload that separates the two steps.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

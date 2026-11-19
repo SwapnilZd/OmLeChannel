@@ -1,0 +1,9 @@
+<section class="slide-card-grid variant-{{ s.layout_variant or 'text_cards' }}" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>{% if s.introduction %}<p class="instruction">{{ s.introduction }}</p>{% endif %}
+  <div class="generic-card-grid card-count-{{ s.cards | length }}">
+    {% for card in s.cards %}<article class="generic-card">
+      {% if s.layout_variant == 'numbered_cards' %}<span class="generic-card-marker">{{ loop.index }}</span>{% elif card.icon %}<span class="generic-card-icon" aria-hidden="true">{{ card.icon }}</span>{% endif %}
+      {% if card.eyebrow %}<span class="generic-card-eyebrow">{{ card.eyebrow }}</span>{% endif %}<h3>{{ card.heading }}</h3><p>{{ card.body }}</p>
+    </article>{% endfor %}
+  </div>
+</section>

@@ -1,0 +1,59 @@
+{
+  "blueprint_id": "bp-adkar-01-podcast-manager-l55",
+  "learner": {
+    "role": "Manager",
+    "deloitte_level": 55,
+    "default_proficiency": "beginner",
+    "topic_proficiencies": {
+      "adkar": "beginner"
+    },
+    "goals": [
+      "Recognize the five ADKAR elements in the correct order and distinguish Awareness from Ability"
+    ],
+    "duration_limit_minutes": 10,
+    "business_context": {}
+  },
+  "title": "ADKAR Fundamentals — Podcast for Managers",
+  "learning_outcomes": [
+    "State the five ADKAR elements in their correct order",
+    "Distinguish Awareness (first A, position 1) from Ability (second A, position 4)"
+  ],
+  "ordered_rlo_refs": [
+    {
+      "rlo_id": "rlo-adkar-01-name-and-sequence",
+      "rlo_version": "1.1.0",
+      "order": 1,
+      "selected_content": {
+        "objective_ids": ["lo-01"],
+        "concept_ids": ["c-01"],
+        "component_ids": [
+          "comp-hook-01",
+          "comp-rule-01",
+          "comp-example-01",
+          "comp-example-02",
+          "comp-nonexample-01",
+          "comp-recall-01"
+        ],
+        "assessment_item_ids": ["q-01", "q-02"]
+      },
+      "starting_proficiency": "beginner",
+      "target_proficiency": "intermediate",
+      "content_depth": "working",
+      "role_relevance": "Managers at Deloitte regularly encounter ADKAR in change project documentation, stakeholder communications, and team coaching conversations. Recognising the model and correctly naming each element is a baseline competency for managers who guide teams through change.",
+      "personalization_rationale": "A Level 55 Manager with no prior ADKAR exposure needs the foundational naming and sequence before any application-level content. The two-A disambiguation is the highest-value insight for this audience because confusion between Awareness and Ability leads to misdiagnosing where a team member is stuck in a change journey.",
+      "sequencing_rationale": "This is the only RLO in this blueprint. It covers the full ADKAR naming and sequence objective as a self-contained unit. Follow-on RLOs (rlo-adkar-02 through rlo-adkar-10) cover each element in depth.",
+      "adaptation_instructions": [
+        "Frame examples using team-management scenarios rather than individual contributor scenarios where practical.",
+        "Emphasise the diagnostic value of the sequence — managers use ADKAR to identify barrier points, so element order is not merely academic."
+      ]
+    }
+  ],
+  "prerequisite_bridges": [],
+  "brand_contract": {},
+  "sequencing_rationale": "Single RLO. No cross-unit sequencing required for this prototype.",
+  "assessment_strategy": "Two multiple-choice items embedded in the second podcast segment test recall of the full sequence and the two-A distinction. No formal scoring is required at this stage.",
+  "estimated_duration_minutes": 10,
+  "source_rlo_versions": {
+    "rlo-adkar-01-name-and-sequence": "1.1.0"
+  }
+}

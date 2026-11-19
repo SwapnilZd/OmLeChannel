@@ -1,0 +1,12 @@
+<section class="slide-process" data-screen-id="{{ s.screen_id }}">
+  <h2>{{ s.heading }}</h2>
+  <p class="instruction">{{ s.introduction }}</p>
+  <div class="process-layout {{ 'has-visual' if s.image_path and (s.steps | length) <= 4 else '' }}">
+  <ol class="process-list process-list-{{ s.steps | length }}" data-item-count="{{ s.steps | length }}">
+    {% for step in s.steps %}
+    <li><span class="process-number">{{ loop.index }}</span><div><h3>{{ step.label }}</h3><p>{{ step.detail }}</p></div></li>
+    {% endfor %}
+  </ol>
+  {% if s.image_path and (s.steps | length) <= 4 %}<img class="supporting-visual" src="{{ s.image_path }}" alt="" />{% endif %}
+  </div>
+</section>

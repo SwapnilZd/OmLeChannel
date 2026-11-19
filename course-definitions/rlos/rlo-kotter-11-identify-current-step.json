@@ -1,0 +1,383 @@
+{
+  "id": "rlo-kotter-11-identify-current-step",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Identifying the Current Step in a Change Effort",
+  "topic": "Identifying the Current Step in a Change Effort",
+  "domain": "Organizational Change Management",
+  "level": "introductory",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 18,
+  "content_type": "procedure",
+  "performance_level": "do",
+  "prerequisites": [
+    "rlo-kotter-01-name-and-sequence",
+    "rlo-kotter-02-sequenced-process",
+    "rlo-kotter-03-urgency",
+    "rlo-kotter-04-coalition",
+    "rlo-kotter-05-vision",
+    "rlo-kotter-06-volunteer-army",
+    "rlo-kotter-07-enable-action",
+    "rlo-kotter-08-short-term-wins",
+    "rlo-kotter-09-sustain-acceleration",
+    "rlo-kotter-10-institute-change"
+  ],
+  "corequisites": [],
+  "follow_ons": [
+    "rlo-kotter-12-identify-skipped-step"
+  ],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "Leading Change",
+      "reference": "Kotter, J. P. (1996). Leading Change. Harvard Business Review Press.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Given a described change effort, identify which of Kotter's 8 steps the effort is currently in, and justify the identification.",
+  "performance_context": "When encountering an active change effort \u2014 as a participant, a consultant, or an observer \u2014 the learner should be able to place the effort in Kotter's sequence and use that placement to reason about what should come next.",
+  "enabling_objective": {
+    "id": "lo-11",
+    "statement": "Given a description of a change effort's current activities, identify the Kotter step the effort is in and justify the identification against the definitions of the surrounding steps.",
+    "bloom_level": "apply",
+    "concepts_addressed": [
+      "c-01",
+      "c-02"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Step identification by primary activity",
+      "definition": "A change effort's current step is determined by the primary work the coalition and volunteer army are engaged in \u2014 not by the effort's calendar age, budget stage, or project-plan phase. Identifying the step requires reading what is actually happening, not what was scheduled to be happening.",
+      "elaboration": "In practice, change efforts often have multiple steps in play simultaneously \u2014 Step 5 barrier removal continues into Step 6, Step 4 volunteer recruitment continues throughout. The 'current step' is the one where the coalition's active leadership attention is focused, and where the effort's progress depends on the next output being produced. A useful question: what is the coalition currently trying to produce, and what would 'done' look like?",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "The current step is whatever the project plan says the current phase is.",
+          "correction": "Project plans can be aspirational or out of date. The actual step is determined by what the coalition is doing and what conditions have been produced \u2014 not by what a schedule declares. A plan that says 'Step 5' while the coalition is still recruiting volunteers is describing intent, not reality."
+        },
+        {
+          "id": "m-02",
+          "statement": "A change effort can only be in one step at a time.",
+          "correction": "Steps overlap in execution \u2014 Step 4 volunteer recruitment continues alongside Step 5 barrier removal, and both continue into Step 6. The 'current step' framing refers to where the coalition's active attention is focused, not to a strict single-step discipline."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Adjacent-step confusion",
+      "definition": "Identifying the current step correctly requires distinguishing it from the steps immediately before and after, which share many surface features. Adjacent-step confusions are the most common identification errors.",
+      "elaboration": "The most common confusion pairs are: Step 3 (vision) vs. Step 4 (volunteer army) \u2014 both involve communication; Step 5 (barriers) vs. Step 6 (wins) \u2014 both involve visible action; Step 7 (sustain) vs. Step 8 (institute) \u2014 both involve durability. Distinguishing between adjacent steps requires attending to the specific output each step is meant to produce, not to the general activity level.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "If the coalition is communicating about the change, the effort is in Step 3 or 4.",
+          "correction": "Communication happens throughout the change effort \u2014 during barrier removal (Step 5), around wins (Step 6), and in service of institution (Step 8). The presence of communication does not identify a step; the specific content and purpose of the communication does."
+        },
+        {
+          "id": "m-04",
+          "statement": "If new behaviors are widely visible, the change has reached Step 8.",
+          "correction": "Widely visible behavior under coalition pressure is Step 7, not Step 8. Step 8 requires the behavior to be anchored in systems (hiring, promotion, succession) so that it persists after coalition attention withdraws. Confusing visible behavior with instituted behavior is the most common late-stage identification error."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Kotter's model is useful only if you can locate a real change effort inside it. Naming the eight steps is the entry price; identifying which step a specific effort is in \u2014 and being able to defend that identification \u2014 is the working skill. This RLO is where that skill starts."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Identify the current step by asking: (1) What is the coalition actively trying to produce right now? (2) What condition has been established, and what condition is still missing? The current step is the one whose output the coalition is currently working to create. Ignore what the project plan says the step is; read what is actually happening."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "When identifying a step, actively check adjacent steps. Ask: could this be the step before? Could this be the step after? Distinguish based on the specific output each step produces \u2014 the coalition assembled (Step 2 done), the vision articulated (Step 3 done), volunteers actively contributing (Step 4 done), and so on. Ambiguity between two adjacent steps is a signal that both should be considered explicitly."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "Diagnosing a mid-effort scenario",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change effort has been running for eight months. The coalition (12 senior leaders) meets weekly. A vision has been published and referenced in all leadership communications. Roughly 400 employees across regions have volunteered to participate in change activities. The coalition is currently focused on removing reporting-line conflicts that have been slowing collaboration between product and customer service teams.",
+        "diagnosis": "The current step is Step 5 (enable action by removing barriers). The evidence: coalition formed (Step 2 done), vision published and used (Step 3 done), volunteers enlisted (Step 4 done), and the coalition's active attention is on structural barriers \u2014 reporting-line conflicts \u2014 that are blocking action. The output being produced is 'removed barriers,' which is Step 5's specific output.",
+        "reasoning": "Notice what is not the diagnosis. This is not Step 3 (vision) \u2014 the vision exists and is not the coalition's current focus. It is not Step 6 (wins) \u2014 no visible wins have been produced yet. It is not Step 4 (volunteer army) \u2014 volunteers exist, though enrollment continues in the background. The current step is defined by where the coalition's active work is, not by what other activities remain in flight."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Diagnosing an ambiguous late-stage scenario",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A firm's change effort has produced clear Step 6 wins twelve months ago. The coalition remains active. Executive stakeholders have congratulated the team and are discussing whether to redirect resources. The coalition is currently working to expand the effort into two more ambitious initiatives and is actively countering the 'transformation complete' narrative in leadership communications.",
+        "diagnosis": "The current step is Step 7 (sustain acceleration). The evidence: wins have been produced (Step 6 done), the coalition is actively pushing for expanded ambition rather than accepting the 'complete' narrative, and the specific work is escalation of scope \u2014 the defining activity of Step 7. This is not Step 8 (institute) because the coalition is still active and the change has not yet been anchored into hiring, promotion, or succession systems.",
+        "reasoning": "The adjacent-step check matters here. Is it Step 6? No \u2014 wins are already produced; the current work is what to do with them. Is it Step 8? No \u2014 no anchoring of the change into systems has begun; the coalition's presence is what is sustaining the effort, not embedded institutional mechanisms. The correct identification is Step 7."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "Identification by project-plan phase",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "misconceptions_addressed": [
+        "m-01"
+      ],
+      "canonical_content": {
+        "setup": "A learner asked to identify the current step of a change effort responds: 'The project plan says we're in the execution phase, so we must be in Step 6 (short-term wins).'",
+        "why_wrong": "The project plan is describing intent, not reality. The actual step is determined by what the coalition is doing and what conditions have been produced. If the coalition is still forming \u2014 if the vision is still being drafted, or barriers are still being removed \u2014 then no amount of project-plan labeling puts the effort in Step 6.",
+        "correct_framing": "Read what is happening, not what was scheduled. The question to ask is: what is the coalition currently trying to produce? The answer identifies the step, regardless of what the plan says."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "Confusing visible behavior with Step 8",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-04"
+      ],
+      "canonical_content": {
+        "setup": "A learner observes that new behaviors are visible across the organization and concludes the effort is in Step 8 (institute change).",
+        "why_wrong": "Visible behavior under sustained coalition attention is Step 7, not Step 8. Step 8 specifically requires the behavior to be anchored in systems (hiring, promotion, succession) so that it persists once coalition attention withdraws. Visible behavior is a necessary but not sufficient condition for Step 8.",
+        "correct_framing": "Ask what would happen if the coalition dispersed tomorrow. If the behavior would persist because it is embedded in hiring criteria, promotion decisions, and leadership succession, the effort has reached Step 8. If the behavior would revert because it is sustained by coalition pressure, the effort is still in Step 7."
+      }
+    },
+    {
+      "id": "comp-example-03",
+      "cdt_type": "example",
+      "title": "Worked identification process",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A change effort is described as follows: 'A guiding coalition of 15 executives has been meeting for three months. They have produced a draft vision that is under discussion. No broader communication has been made to the organization.'",
+        "process": "Step 1 (urgency): assumed done \u2014 the coalition would not have formed without it. Step 2 (coalition): done \u2014 15 executives are meeting. Step 3 (vision): in progress \u2014 vision is drafted but not yet finalized or communicated. Step 4 (volunteer army): not started \u2014 no broader communication has been made. The current step is Step 3 (form a strategic vision and initiatives). The coalition's active work is producing the vision, and until the vision is finalized and communicable, later steps cannot begin.",
+        "reasoning": "The identification process is: mark each step as done, in progress, or not started, based on the described conditions. The current step is the one 'in progress' \u2014 the coalition's active focus. This process makes identifications defensible and surfaces cases where more than one step is in play."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "What two questions should you ask to identify the current step of a change effort?",
+        "expected_answer": "(1) What is the coalition actively trying to produce right now? (2) What condition has been established, and what condition is still missing? The current step is the one whose specific output is currently being created."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change effort is described as follows: A coalition of senior leaders has been meeting for six months. A clear vision has been articulated and communicated to all employees through town halls and cascading manager meetings. Roughly 15% of the workforce has volunteered to participate in specific change initiatives. The coalition is currently working with HR and Legal to resolve policy conflicts that are preventing volunteers from executing the changes they have been asked to make. Which step best describes the current state of the effort?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 3 (form a strategic vision and initiatives).",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "The vision has been articulated and communicated. Step 3 is done. The coalition's active work is now on resolving policy conflicts \u2014 which is Step 5 (barrier removal), not vision-formation."
+        },
+        {
+          "id": "B",
+          "text": "Step 4 (enlist a volunteer army).",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Volunteers have been enlisted (15% is well within the effective range). Step 4 is functionally done, though enrollment may continue in the background. The coalition's active attention is on policy conflicts blocking the volunteers \u2014 which is Step 5."
+        },
+        {
+          "id": "C",
+          "text": "Step 5 (enable action by removing barriers).",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The specific work described \u2014 resolving policy conflicts that prevent volunteers from executing \u2014 is Step 5 (barrier removal). Steps 1-4 have produced their outputs (urgency to convene the coalition, coalition itself, vision communicated, volunteers enlisted). The current step is the one whose output the coalition is now working to produce: removed barriers."
+        },
+        {
+          "id": "D",
+          "text": "Step 6 (generate short-term wins).",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "No wins have been described \u2014 the coalition is still resolving the barriers that are preventing action. Step 6 begins once barriers are cleared enough for visible wins to be produced. The effort is one step earlier."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A change effort is described as follows: The coalition has been active for two years. Multiple visible improvements have been produced. Widespread new behaviors are observable across the organization. The coalition is currently working with HR to update promotion criteria so that the new behaviors become required competencies for advancement. Which step best describes the current state of the effort?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-02"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Step 6 (generate short-term wins).",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "Wins have already been produced ('multiple visible improvements'). Step 6 is done. The current work is anchoring the change, not generating more early wins."
+        },
+        {
+          "id": "B",
+          "text": "Step 7 (sustain acceleration).",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Sustained behavior is present, but the coalition's current work is specifically on updating promotion criteria \u2014 an anchoring mechanism. Step 7 is done; the coalition is now working on Step 8. The specific activity (updating systems that shape behavior at scale) is the defining feature."
+        },
+        {
+          "id": "C",
+          "text": "Step 8 (institute change).",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Updating promotion criteria to require the new behaviors is a Step 8 anchoring activity \u2014 embedding the change into the system that determines who advances. The visible behaviors described are the output of successful Step 7; Step 8 is the further work of making those behaviors durable through system-level anchors like promotion, hiring, and succession."
+        },
+        {
+          "id": "D",
+          "text": "The effort is complete \u2014 all 8 steps have been executed.",
+          "correct": false,
+          "misconception_targeted": "m-04",
+          "feedback": "Step 8 is in progress, not complete. The coalition is currently updating promotion criteria; the anchoring is being built, not yet built. Declaring the effort complete before Step 8 finishes is the specific late-stage failure mode Step 8 exists to counter."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Diagnostic and methodical. This RLO is teaching a working skill \u2014 reading a described change effort and placing it in the model. The tone should support careful reading and defensible identification, not confident labeling.",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed all ten prior RLOs. This is the first application-level RLO, where step definitions must be used as diagnostic criteria rather than as content to be recalled. The identification process (step-by-step check) should be surfaced explicitly.",
+    "feedback_policy": "Feedback must name both the correct step and the specific evidence that identifies it. It should also name the adjacent step most commonly confused for the correct one, and explain the distinguishing feature. Do not accept 'the answer is X' feedback; the reasoning is the instructional content.",
+    "example_shape_hints": [
+      "Include at least one worked example that shows the identification process step-by-step \u2014 this is the model learners should apply.",
+      "Include at least one late-stage example (Step 7 vs. Step 8) because it is the most difficult and consequential identification.",
+      "Non-examples should target the most common identification errors: reading the project plan instead of the situation, and confusing visible behavior with instituted behavior."
+    ],
+    "practice_shape_hints": [
+      "Practice items should be scenario-based, presenting enough situational detail that adjacent-step confusion is a genuine risk.",
+      "Include distractors that are one step off (the most common actual error), not distant steps.",
+      "At least one item should test the Step 7 vs. Step 8 distinction, since this is where identification errors are most consequential."
+    ],
+    "salience_hook_description": "The hook should establish that identification is the working skill \u2014 Kotter's model is a diagnostic tool, and this RLO is where the tool is put to use for the first time."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "Reference to RLOs 03-10: each step's specific output is the basis for identification. Learners should mentally check each step's definition against the described scenario.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-example-03",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "Handled at learning-path level; RLO-12 applies the identification skill to the additional task of detecting skipped steps."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "interactive_scenario_module",
+      "rationale": "Identification is an application skill best practiced through varied scenarios with immediate feedback. An interactive module presenting change scenarios and asking for step identification supports the objective well.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_workbook",
+      "rationale": "A workbook of 6-10 change scenarios with worked identifications provides the volume of examples needed for confident application.",
+      "priority": "secondary"
+    },
+    {
+      "format": "diagnostic_checklist_visual",
+      "rationale": "A visual checklist walking through the identification process (mark each step as done, in progress, not started) supports systematic application.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This is the first Apply-level RLO and requires all ten prior RLOs as prerequisites \u2014 identification depends on knowing what each step's specific output is. The instructional payload is the identification process itself: reading the situation rather than the plan, and using adjacent-step checks to catch the most common errors. The worked-identification example (comp-example-03) is the specific technique learners should carry forward \u2014 it makes their reasoning defensible and surfaces cases of genuine ambiguity. The Step 7 vs. Step 8 distinction is emphasized because it is both the most difficult identification and the most consequential to get right.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "organizational_change_leadership",
+    "transformation_delivery"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}

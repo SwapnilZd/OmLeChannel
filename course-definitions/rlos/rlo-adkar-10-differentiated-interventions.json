@@ -1,0 +1,388 @@
+{
+  "id": "rlo-adkar-10-differentiated-interventions",
+  "version": "1.1.0",
+  "schema_version": "1.0.0",
+  "language": "en",
+  "locale": "en-US",
+  "title": "Differentiated Interventions Across a Population at Different ADKAR States",
+  "topic": "Differentiated Interventions Across a Population at Different ADKAR States",
+  "domain": "Organizational Change Management",
+  "level": "intermediate",
+  "audience": [
+    "professionals encountering change initiatives",
+    "new managers",
+    "consulting staff"
+  ],
+  "estimated_duration_minutes": 18,
+  "content_type": "principle",
+  "performance_level": "do",
+  "prerequisites": [
+    "rlo-adkar-01-name-and-sequence",
+    "rlo-adkar-02-individual-model",
+    "rlo-adkar-03-sequenced-within-individual",
+    "rlo-adkar-04-awareness",
+    "rlo-adkar-05-desire",
+    "rlo-adkar-06-knowledge",
+    "rlo-adkar-07-ability",
+    "rlo-adkar-08-reinforcement",
+    "rlo-adkar-09-identify-barrier-point"
+  ],
+  "corequisites": [],
+  "follow_ons": [],
+  "related_rlos": [],
+  "sources": [
+    {
+      "id": "src-01",
+      "title": "ADKAR: A Model for Change in Business, Government and our Community",
+      "reference": "Hiatt, J. M. (2006). ADKAR: A Model for Change in Business, Government and our Community. Prosci Learning Center Publications.",
+      "authority": "primary"
+    }
+  ],
+  "terminal_objective": "Given a change effort where different individuals or groups are at different ADKAR states, describe how the appropriate interventions differ by state and explain why a single organization-wide intervention is usually inadequate.",
+  "performance_context": "When planning or advising on a change effort at scale, the learner should be able to reason about the distribution of the affected population across ADKAR states, match interventions to states, and avoid the common failure mode of applying one-size-fits-all interventions to a differentiated population.",
+  "enabling_objective": {
+    "id": "lo-10",
+    "statement": "Given a described change effort with a population distributed across multiple ADKAR states, describe the differentiated interventions appropriate for each state and explain why one-size-fits-all interventions miss most of the actual population.",
+    "bloom_level": "apply",
+    "concepts_addressed": [
+      "c-01",
+      "c-02",
+      "c-03"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "c-01",
+      "name": "Intervention matched to element",
+      "definition": "Each ADKAR element has a corresponding intervention type: Awareness is addressed through communication of the rationale, drivers, and risks; Desire is addressed through engagement with individual concerns and sponsor influence; Knowledge is addressed through training, documentation, and access to information; Ability is addressed through coached practice, feedback, and time; Reinforcement is addressed through embedded mechanisms (performance systems, management routines, sustained measurement).",
+      "elaboration": "The matching between element and intervention is not incidental \u2014 it follows from what each element actually is. Awareness is a state of understanding, so communication is the appropriate tool. Desire is a personal choice, so engagement with the specific concerns behind that choice is the appropriate tool. Knowledge is cognitive content, so instruction is appropriate. Ability is behavioral fluency, so practice is appropriate. Reinforcement is sustained state, so ongoing mechanisms are appropriate. Applying the wrong intervention to an element does not just fail; it produces the specific failure modes described in the earlier RLOs \u2014 training that does not stick, communications that do not move opinion, celebrations that do not sustain.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-01",
+          "statement": "A well-designed change intervention should work across all ADKAR states.",
+          "correction": "No single intervention effectively addresses multiple ADKAR elements at scale. Interventions designed to build Awareness (communications) do not build Desire; interventions designed to build Knowledge (training) do not build Ability. Attempting a universal intervention typically means selecting one element's intervention type (usually training or communications) and delivering it to everyone regardless of where they actually are. This produces the specific failure mode of missing most of the population."
+        }
+      ]
+    },
+    {
+      "id": "c-02",
+      "name": "Population distribution across states",
+      "definition": "In any active change effort, the affected population is distributed across the five ADKAR states rather than clustered at a single one. At any given point in the effort, some individuals are still at Awareness, some at Desire, some at Knowledge, some at Ability, and some are in need of Reinforcement. This distribution is the normal state, not a failure state.",
+      "elaboration": "The distribution shifts over time as the change effort progresses \u2014 early in the effort, more individuals are at Awareness and Desire; later, more are at Knowledge, Ability, and Reinforcement \u2014 but at any given moment, there are individuals at multiple states. Effective change management uses periodic diagnostic sampling (surveys, focus groups, manager reports) to estimate the distribution and target interventions to where the population actually is. Treating the population as if it were at a single state produces interventions calibrated for a fictional average that fits no one.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-02",
+          "statement": "The distribution should be narrow \u2014 most people should be at the same state at the same time.",
+          "correction": "Distribution across multiple states is the normal state, not a sign of a poorly-run effort. Individuals bring different starting positions, contexts, and receptiveness. A well-run effort acknowledges this distribution and targets accordingly; a poorly-run one tries to force synchronization or ignores the distribution entirely."
+        }
+      ]
+    },
+    {
+      "id": "c-03",
+      "name": "Intervention mismatch",
+      "definition": "Intervention mismatch occurs when a change effort applies an intervention type appropriate for one element to a population at a different element. Common patterns include: applying training (Knowledge intervention) to a population with a Desire gap, applying communications (Awareness intervention) to a population with an Ability gap, applying celebration (mistaken for Reinforcement) to a population that has not yet reached Ability.",
+      "elaboration": "Intervention mismatch is the practical consequence of failing to differentiate. It manifests as change efforts that deliver activities without producing outcomes \u2014 training completed but not applied, communications delivered but not moving opinion, celebrations conducted but not sustaining behavior. The pattern is diagnostic: when an intervention consistently fails to produce its expected outcome, the likely cause is not the quality of the intervention but the mismatch between the intervention type and the actual element gap in the target population.",
+      "source_refs": [
+        "src-01"
+      ],
+      "misconceptions": [
+        {
+          "id": "m-03",
+          "statement": "Intervention mismatch is a design flaw that can be fixed with better content.",
+          "correction": "Mismatch is not a content problem \u2014 it is a targeting problem. Better training does not close a Desire gap; better communications do not close an Ability gap. The fix for mismatch is not content improvement but retargeting the intervention type to the actual barrier point of the population being addressed."
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "comp-hook-01",
+      "cdt_type": "hook",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": "The practical payoff of ADKAR is here: because different individuals in a change effort are at different states, the interventions that reach them must also differ. A single organization-wide intervention \u2014 one training program, one communications campaign, one celebration event \u2014 is calibrated for a fictional average population and misses the actual one. Change efforts that treat their population as a single monolith reliably discover, months later, that their well-executed activities did not produce the adoption they were meant to. Differentiation is what changes that outcome."
+    },
+    {
+      "id": "comp-rule-01",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-01"
+      ],
+      "canonical_content": "Interventions match elements: communication for Awareness; engagement with concerns for Desire; training for Knowledge; coached practice for Ability; embedded mechanisms for Reinforcement. Applying the wrong intervention to an element does not just underperform \u2014 it reliably fails to produce the outcome, because the intervention is calibrated for something the population is not lacking."
+    },
+    {
+      "id": "comp-rule-02",
+      "cdt_type": "rule",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "canonical_content": "At any given moment in a change effort, the affected population is distributed across multiple ADKAR states. Effective interventions are targeted to where individuals actually are \u2014 not to a single average. The starting point is diagnostic sampling to estimate the distribution; the delivery is differentiated interventions matched to each state."
+    },
+    {
+      "id": "comp-example-01",
+      "cdt_type": "example",
+      "title": "A population distribution and its matching interventions",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "setup": "A retailer's change effort has been running for six months. Diagnostic sampling across 200 affected employees produces this distribution: 15% at Awareness (30 people who cannot clearly explain the rationale), 30% at Desire (60 people who understand but have not committed), 25% at Knowledge (50 people who know what to do but have not built fluency), 20% at Ability (40 people performing the new work), 10% approaching Reinforcement need (20 early adopters showing signs of drift).",
+        "differentiated_plan": "For the 30 at Awareness: targeted communications addressing the specific gaps in their understanding \u2014 one-on-one conversations with their managers, materials calibrated to their questions. For the 60 at Desire: engagement with their specific concerns about the change \u2014 sponsor conversations, opportunities to influence the implementation, addressing what the change means for them personally. For the 50 at Knowledge: coached practice opportunities and support during their first real cases. For the 40 at Ability: continued practice support and time protected from other priorities. For the 20 approaching Reinforcement need: establishing the ongoing mechanisms \u2014 performance criteria, manager routines, embedded measurement \u2014 that will sustain the change.",
+        "reasoning": "Notice what is different about this plan versus a typical one-size-fits-all approach: five interventions, each targeted to a specific population, each addressing that population's actual barrier point. The total effort is not necessarily larger than a universal approach \u2014 it is different. Instead of running full communications and full training for all 200 employees, the effort runs targeted communications for 30, engagement conversations for 60, and coached practice for the 90 who need it. The activity budget is reallocated toward matching, not multiplied across everyone."
+      }
+    },
+    {
+      "id": "comp-example-02",
+      "cdt_type": "example",
+      "title": "Intervention mismatch: training applied to a Desire gap",
+      "concepts_referenced": [
+        "c-03"
+      ],
+      "canonical_content": {
+        "setup": "A change effort's diagnostic reveals that 60% of the affected population is at Desire \u2014 they understand the change but have not committed. The change team, under pressure to show activity, decides to roll out mandatory training to the full population.",
+        "what_happens": "The training runs on schedule. Attendance is high (mandatory). Completion metrics are strong. Six months later, adoption of the new process is still low. The population that had a Desire gap now has a Desire gap and additional Knowledge (which they cannot apply, because they still have not committed). The population that had Knowledge (which they already had) received redundant Knowledge, at cost. No one's actual barrier point has been addressed.",
+        "reasoning": "This is intervention mismatch. Training is the wrong tool for a Desire gap; running it anyway does not accidentally succeed. The activity happens, the metrics report strong completion, and the actual outcome (adoption) does not move. The fix is not better training; it is different intervention \u2014 engagement with the specific concerns behind the Desire gap. Better training would produce the same outcome slightly more elegantly."
+      }
+    },
+    {
+      "id": "comp-example-03",
+      "cdt_type": "example",
+      "title": "Intervention mismatch: communications applied to an Ability gap",
+      "concepts_referenced": [
+        "c-03"
+      ],
+      "canonical_content": {
+        "setup": "A change effort has produced Knowledge across the affected population, but Ability is lagging \u2014 employees can describe the new process but cannot yet perform it fluently. The senior sponsor, wanting to reinvigorate the effort, launches a new round of inspirational communications about why the change matters.",
+        "what_happens": "The communications are well-received. Employees appreciate the sponsor's engagement. Six months later, Ability has not improved. The population had Awareness (they already understood why); they now have reinforced Awareness. The Ability gap \u2014 which required coached practice, feedback, and protected time \u2014 has been untouched.",
+        "reasoning": "The sponsor addressed the wrong element. Communications build Awareness; Ability requires practice. The intervention is not bad in isolation \u2014 it is well-executed communication \u2014 but it is mismatched to the barrier point of the target population. The specific pattern of communications-applied-to-Ability-gaps is common in senior-led change efforts where communication is the sponsor's most natural tool and it gets applied everywhere regardless of what is actually needed."
+      }
+    },
+    {
+      "id": "comp-nonexample-01",
+      "cdt_type": "non_example",
+      "title": "One-size-fits-all as change strategy",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-01",
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change team designs its plan around three universal activities: quarterly all-hands communications, a comprehensive training program delivered to all employees, and a launch celebration at the six-month mark. The plan is delivered on schedule to the full affected population.",
+        "why_wrong": "The plan treats the population as if it were at a single state moving through a single timeline. The communications reach people at Awareness (who need them) and people at Ability (who do not); the training reaches people at Knowledge (who need it) and people at Desire (who will not absorb it); the celebration marks a milestone but does nothing to establish Reinforcement. The activities happen; the population's actual distribution across states goes unaddressed.",
+        "correct_framing": "A well-targeted change plan starts with diagnostic estimation of the population's distribution and matches intervention types to the states individuals are actually in. This typically means five or more distinct workstreams running in parallel \u2014 smaller and more targeted than a universal plan, but each of them actually reaching its intended population. The total volume of activity is comparable; the outcome is fundamentally different."
+      }
+    },
+    {
+      "id": "comp-nonexample-02",
+      "cdt_type": "non_example",
+      "title": "'Sequential phases' as substitute for differentiation",
+      "concepts_referenced": [
+        "c-02"
+      ],
+      "misconceptions_addressed": [
+        "m-02"
+      ],
+      "canonical_content": {
+        "setup": "A change team, aware that ADKAR has multiple elements, plans a phased rollout: Q1 focuses entirely on Awareness activities, Q2 on Desire, Q3 on Knowledge, Q4 on Ability, Q5 on Reinforcement. All activities are delivered organization-wide during their designated phase.",
+        "why_wrong": "This plan appears to address multiple elements but still delivers each intervention universally. The Q1 Awareness communications reach employees who already have Awareness (wasted) and employees who will need Awareness in Q4 when they finally get around to engaging with the change (mistimed). The Q3 Knowledge activities reach employees who still lack Desire and will not absorb the training (mismatched). Sequential phases replace one-size-fits-all with 'one-size-fits-all-per-quarter,' which is not differentiation.",
+        "correct_framing": "Differentiation is by population state, not by timeline. At any given moment, the plan should be running Awareness-building for the population still at Awareness, Desire-building for the population still at Desire, and so on \u2014 simultaneously. The workstreams run in parallel and shift in weight as the distribution evolves, not in sequence across the whole organization."
+      }
+    },
+    {
+      "id": "comp-recall-01",
+      "cdt_type": "recall_prompt",
+      "concepts_referenced": [
+        "c-01",
+        "c-02"
+      ],
+      "canonical_content": {
+        "prompt": "Given a change effort with 40% of the population at Awareness, 30% at Desire, 20% at Knowledge, and 10% at Ability, describe the differentiated interventions you would apply and why a universal intervention would fail.",
+        "expected_answer": "For the 40% at Awareness: targeted communications explaining the drivers, risks, and rationale \u2014 reaching this specific population where they have gaps in understanding. For the 30% at Desire: engagement with specific concerns, sponsor conversations, and opportunities to influence implementation \u2014 since they understand but have not committed. For the 20% at Knowledge: coached practice and real-work support to build fluency. For the 10% at Ability: continued practice and beginning to establish Reinforcement mechanisms. A universal intervention (such as full organizational training) would produce redundant Knowledge for the 60% who do not need it, would not absorb into the 30% at Desire, and would not build fluency for anyone \u2014 matching no one's actual barrier point."
+      }
+    }
+  ],
+  "assessment_items": [
+    {
+      "id": "q-01",
+      "stem": "A change effort has been running for four months. Diagnostic sampling shows the following population distribution: 50% of employees are at Desire (they understand the rationale but have not committed to supporting the change), 30% are at Knowledge (they support the change but have not built fluency), 20% are at Ability (they are performing the new work). The change team is deciding what to prioritize next quarter. They propose a large-scale training program delivered to all employees. How should this proposal be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-03"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The proposal is well-designed \u2014 training will support all three populations.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Training does not effectively support all three populations. For the 50% at Desire, training is a mismatch \u2014 they have not committed to the change and will not absorb the material regardless of its quality. For the 30% at Knowledge, they already have Knowledge; more training is redundant. For the 20% at Ability, they need practice, not more classroom time. The proposal delivers a single intervention type across three distinct populations with different barrier points, and it will only marginally help any of them."
+        },
+        {
+          "id": "B",
+          "text": "The proposal misdiagnoses the population. Training addresses Knowledge, but 50% of the population is at Desire (where training does not stick) and 20% is at Ability (where practice is needed, not more instruction). Differentiated interventions matched to each state would be more effective.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. The largest population segment (50% at Desire) needs engagement with their specific concerns, not training \u2014 training that people have not committed to sits unabsorbed. The 30% at Knowledge and 20% at Ability need different things again \u2014 practice and coached fluency-building. A differentiated approach would run three parallel workstreams: engagement conversations for the 50%, coached practice for the 30%, and continuing support (plus beginning Reinforcement) for the 20%. This is more work than a universal training program, but it actually addresses each population's actual barrier point."
+        },
+        {
+          "id": "C",
+          "text": "The proposal is fine because training is the standard ADKAR intervention.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "Training is not the standard ADKAR intervention \u2014 it is the intervention for Knowledge specifically. Each ADKAR element has its own intervention type, and applying training universally treats it as an all-purpose tool. This is a common failure pattern in change practice and one this RLO exists specifically to counter."
+        },
+        {
+          "id": "D",
+          "text": "The proposal should sequence training first, then communications, then practice.",
+          "correct": false,
+          "misconception_targeted": "m-02",
+          "feedback": "Sequencing universal interventions in phases does not differentiate \u2014 it just delivers each mismatched intervention in a different quarter. The 50% at Desire will not absorb the training regardless of whether it comes first, second, or last. Differentiation is by population state, not by timeline. All three intervention types should run in parallel, each targeted to the appropriate population."
+        }
+      ]
+    },
+    {
+      "id": "q-02",
+      "stem": "A senior sponsor, concerned about adoption, decides to give a series of inspirational speeches across the organization emphasizing why the change matters. The population distribution is: 10% at Awareness (they do not yet understand why), 20% at Desire (they understand but have not committed), 40% at Knowledge (they need practice), 30% at Ability (they are performing but Reinforcement mechanisms have not been established). How should this intervention be evaluated?",
+      "type": "multiple_choice_single",
+      "concepts_assessed": [
+        "c-01",
+        "c-03"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The intervention will effectively reinvigorate the change effort across the organization.",
+          "correct": false,
+          "misconception_targeted": "m-01",
+          "feedback": "The inspirational speeches address Awareness (they explain why the change matters). Only 10% of the population is at Awareness. The other 90% \u2014 at Desire, Knowledge, and Ability \u2014 have already moved past the point where these speeches would be the right intervention. The speeches will be well-received but will not meaningfully address the actual barrier points of most of the population."
+        },
+        {
+          "id": "B",
+          "text": "The intervention matches only the 10% at Awareness; the other 90% need different interventions (engagement, practice, Reinforcement mechanisms) that these speeches do not provide.",
+          "correct": true,
+          "misconception_targeted": null,
+          "feedback": "Correct. Inspirational speeches from a senior sponsor are an Awareness intervention. This is the correct intervention type for the 10% at Awareness, but it is mismatched to the 90% who are further along. The 20% at Desire need engagement with their specific concerns; the 40% at Knowledge need coached practice; the 30% at Ability need Reinforcement mechanisms being established. Communications-applied-to-later-elements is one of the most common intervention mismatches in senior-led change efforts."
+        },
+        {
+          "id": "C",
+          "text": "The intervention is a poor use of the sponsor's time and should be canceled.",
+          "correct": false,
+          "misconception_targeted": null,
+          "feedback": "The intervention is not useless \u2014 it correctly addresses the 10% at Awareness, and sponsor visibility can also contribute indirectly to Desire (by signaling commitment) and Reinforcement (by showing sustained attention). The issue is not that the intervention should not happen; it is that this alone will not address the barrier points of most of the population. Differentiated interventions for the other 90% should run in parallel."
+        },
+        {
+          "id": "D",
+          "text": "The sponsor should give more speeches to reach a wider audience.",
+          "correct": false,
+          "misconception_targeted": "m-03",
+          "feedback": "More speeches would increase Awareness coverage for the 10% who need it (already reached by the current speeches), but would still not address the 90% at later elements. Volume does not fix intervention mismatch \u2014 targeting does. The fix is different intervention types for different population segments, not more of the same intervention type."
+        }
+      ]
+    }
+  ],
+  "variant_examples": [],
+  "design_brief": {
+    "tone": "Applied and pragmatic. This RLO teaches learners to think about change interventions in terms of population targeting rather than universal delivery. The tone should support the shift from 'what should we do?' to 'what should we do for whom?'",
+    "scaffolding_level": "medium",
+    "scaffolding_notes": "Learners have completed RLOs 01-09. All five elements are established, the diagnostic skill (RLO-09) is in place, and the many-clocks framing (RLO-03) provides the population-distribution context. This RLO combines these into a differentiated-intervention capability.",
+    "feedback_policy": "Feedback must explicitly name (a) which population segment is served by the proposed intervention, (b) which population segments are not served, and (c) what interventions would address the unserved segments. Do not treat 'more of the same intervention' as a workable fix for mismatch \u2014 the fix is different intervention types for different segments.",
+    "example_shape_hints": [
+      "Include at least one worked example showing a differentiated plan for a population distributed across all five states \u2014 this is the positive exemplar the RLO's payoff depends on.",
+      "Include examples of the two most common intervention mismatches: training applied to Desire gap, and communications applied to Ability gap.",
+      "Non-examples should target one-size-fits-all as a strategy and 'sequential phases' as a false substitute for differentiation."
+    ],
+    "practice_shape_hints": [
+      "Practice items should provide population distributions and ask learners to evaluate proposed interventions.",
+      "At least one item should require learners to design a differentiated plan given a distribution \u2014 not just critique a bad plan.",
+      "Distractors should include 'more of the same intervention' as a wrong fix for mismatch."
+    ],
+    "salience_hook_description": "The hook should establish that differentiation is what turns ADKAR from a framework into a practical planning tool. Learners should leave believing that intervention design at scale requires matching intervention types to population segments \u2014 and that skipping this matching is what produces the specific failure of activities-happening-without-outcomes."
+  },
+  "gagne_event_mapping": {
+    "event_1_gain_attention": "comp-hook-01",
+    "event_2_inform_objective": "terminal_objective",
+    "event_3_stimulate_recall": "This RLO combines the many-clocks framing (RLO-03), the individual element understanding (RLOs 04-08), and the barrier-point diagnostic (RLO-09). The recall event should surface the distributional framing from RLO-03 and note that the diagnostic skill from RLO-09 now scales up to the population level.",
+    "event_4_present_content": [
+      "comp-rule-01",
+      "comp-rule-02"
+    ],
+    "event_5_provide_guidance": [
+      "comp-example-01",
+      "comp-example-02",
+      "comp-example-03",
+      "comp-nonexample-01",
+      "comp-nonexample-02"
+    ],
+    "event_6_elicit_performance": [
+      "comp-recall-01"
+    ],
+    "event_7_provide_feedback": "See feedback fields on each assessment_item option",
+    "event_8_assess_performance": [
+      "q-01",
+      "q-02"
+    ],
+    "event_9_enhance_retention": "This is the final RLO in the ADKAR series. Retention is supported by the applied nature of the objective \u2014 learners who have worked through this RLO have integrated the full ADKAR framework into a planning capability."
+  },
+  "content_type_recommendations": [
+    {
+      "format": "intervention_planning_module",
+      "rationale": "The core skill is intervention planning against a distributed population. An interactive module that lets learners design plans for varied distributions supports the objective directly.",
+      "priority": "primary"
+    },
+    {
+      "format": "case_evaluation_module",
+      "rationale": "Evaluating proposed change plans against a given population distribution is the diagnostic version of the planning skill and reinforces the same underlying capability.",
+      "priority": "secondary"
+    },
+    {
+      "format": "short_video_walkthrough",
+      "rationale": "A 5-6 minute video walking through a differentiated plan for a specific population distribution, with commentary on why each intervention matches its segment.",
+      "priority": "secondary"
+    }
+  ],
+  "authoring_rationale": "This RLO is the payoff of the ADKAR sequence \u2014 the point at which the individual-focus framing (RLO-02), the many-clocks distribution (RLO-03), and the barrier-point diagnostic (RLO-09) become operational as a planning capability. The instructional payload is (a) the matching of intervention types to elements, (b) the reality of population distribution across states, and (c) the recognition that one-size-fits-all interventions are calibrated for a population that does not exist. The two mismatch examples (training-for-Desire, communications-for-Ability) are chosen because they are the two most common practical failures in professional-services change efforts, and both are surfaced explicitly to teach learners to recognize and avoid them. The 'sequential phases' non-example is included because it is the most sophisticated-looking but still-incorrect response to differentiation \u2014 it appears to address the ADKAR sequence while actually still delivering universal interventions per phase.",
+  "role_tags": [
+    "consultant",
+    "senior_consultant",
+    "manager",
+    "senior_manager"
+  ],
+  "industry_tags": [],
+  "service_line_tags": [],
+  "competency_map": [
+    "change_management",
+    "individual_change_diagnosis",
+    "stakeholder_engagement"
+  ],
+  "regulatory_tags": [],
+  "governance": {
+    "status": "approved",
+    "authoring_sme": "Learning Design (AI-drafted sample)",
+    "reviewing_sme": null,
+    "signoff_date": "2026-07-22",
+    "signoff_authority": "Learning Governance",
+    "review_cadence_months": 12,
+    "next_review_date": null,
+    "change_history": "v1.0.0 initial authoring (2026-07-15) -> v1.1.0 migrated to unified RLO schema (2026-07-15)."
+  },
+  "accessibility": {
+    "features": [
+      "plain_language",
+      "screen_reader_optimised_structure"
+    ],
+    "wcag_conformance": null
+  }
+}
